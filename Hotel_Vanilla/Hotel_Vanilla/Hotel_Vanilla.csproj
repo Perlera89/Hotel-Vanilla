@@ -1,0 +1,393 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{AE60A3C1-6C07-47C6-8095-7EB4D95192E2}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>Hotel_Vanilla</RootNamespace>
+    <AssemblyName>Hotel Vanilla</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <PublishUrl>C:\Users\Manuel Perlera\Downloads\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>3</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <PublishWizardCompleted>true</PublishWizardCompleted>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>Logo.ico</ApplicationIcon>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestCertificateThumbprint>982363AC5EB2C086A521508FCE91A0CD07E2D96F</ManifestCertificateThumbprint>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestKeyFile>Hotel_Vanilla_TemporaryKey.pfx</ManifestKeyFile>
+  </PropertyGroup>
+  <PropertyGroup>
+    <GenerateManifests>true</GenerateManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignManifests>true</SignManifests>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Bunifu_UI_v1.5.3">
+      <HintPath>..\..\..\..\Downloads\Bunifu_UI_v1.5.3.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="Guna.UI2, Version=2.0.1.4, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Guna.UI2.WinForms.2.0.1.4\lib\net40\Guna.UI2.dll</HintPath>
+    </Reference>
+    <Reference Include="MaterialSkin, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Debug\MaterialSkin.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualBasic" />
+    <Reference Include="Microsoft.VisualBasic.Compatibility" />
+    <Reference Include="stdole, Version=7.0.3300.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Design" />
+    <Reference Include="System.Management" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="Xamarin.Forms.Core, Version=2.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Xamarin.Forms.2.0.0.6482\lib\portable-win+net45+wp80+win81+wpa81+MonoAndroid10+MonoTouch10+Xamarin.iOS10\Xamarin.Forms.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Xamarin.Forms.Platform, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Xamarin.Forms.2.0.0.6482\lib\portable-win+net45+wp80+win81+wpa81+MonoAndroid10+MonoTouch10+Xamarin.iOS10\Xamarin.Forms.Platform.dll</HintPath>
+    </Reference>
+    <Reference Include="Xamarin.Forms.Xaml, Version=2.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Xamarin.Forms.2.0.0.6482\lib\portable-win+net45+wp80+win81+wpa81+MonoAndroid10+MonoTouch10+Xamarin.iOS10\Xamarin.Forms.Xaml.dll</HintPath>
+    </Reference>
+    <Reference Include="Zeroit.Framework.ListView, Version=1.0.7152.14415, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Zeroit.Framework.ListView.1.0.0\lib\Zeroit.Framework.ListView.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Vista\frmHuespedes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vista\frmHuespedes.Designer.cs">
+      <DependentUpon>frmHuespedes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vista\frmDefault.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vista\frmDefault.Designer.cs">
+      <DependentUpon>frmDefault.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vista\frmHabitaciones.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vista\frmHabitaciones.Designer.cs">
+      <DependentUpon>frmHabitaciones.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vista\frmInicio.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vista\frmInicio.Designer.cs">
+      <DependentUpon>frmInicio.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vista\frmLogin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vista\frmLogin.Designer.cs">
+      <DependentUpon>frmLogin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Vista\frmManejoReservas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vista\frmManejoReservas.Designer.cs">
+      <DependentUpon>frmManejoReservas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vista\frmMensajeAdvertencia.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vista\frmMensajeAdvertencia.Designer.cs">
+      <DependentUpon>frmMensajeAdvertencia.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vista\frmMensajeAviso.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vista\frmMensajeAviso.Designer.cs">
+      <DependentUpon>frmMensajeAviso.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vista\frmMensajeExito.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vista\frmMensajeExito.Designer.cs">
+      <DependentUpon>frmMensajeExito.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vista\frmReservaciones.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vista\frmReservaciones.Designer.cs">
+      <DependentUpon>frmReservaciones.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vista\frmRegister.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vista\frmRegister.Designer.cs">
+      <DependentUpon>frmRegister.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vista\frmSplash.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vista\frmSplash.Designer.cs">
+      <DependentUpon>frmSplash.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vista\frmSucesos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vista\frmSucesos.Designer.cs">
+      <DependentUpon>frmSucesos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vista\frmUsuarios.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vista\frmUsuarios.Designer.cs">
+      <DependentUpon>frmUsuarios.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vista\frmManejoHabitaciones.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vista\frmManejoHabitaciones.Designer.cs">
+      <DependentUpon>frmManejoHabitaciones.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vista\frmManejoHuespedes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vista\frmManejoHuespedes.Designer.cs">
+      <DependentUpon>frmManejoHuespedes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vista\frmManejoUsuarios.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vista\frmManejoUsuarios.Designer.cs">
+      <DependentUpon>frmManejoUsuarios.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Vista\frmHuespedes.resx">
+      <DependentUpon>frmHuespedes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vista\frmDefault.resx">
+      <DependentUpon>frmDefault.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vista\frmHabitaciones.resx">
+      <DependentUpon>frmHabitaciones.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vista\frmInicio.resx">
+      <DependentUpon>frmInicio.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vista\frmLogin.resx">
+      <DependentUpon>frmLogin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="Vista\frmManejoHabitaciones.resx">
+      <DependentUpon>frmManejoHabitaciones.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vista\frmManejoReservas.resx">
+      <DependentUpon>frmManejoReservas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vista\frmManejoUsuarios.resx">
+      <DependentUpon>frmManejoUsuarios.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vista\frmMensajeAdvertencia.resx">
+      <DependentUpon>frmMensajeAdvertencia.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vista\frmMensajeAviso.resx">
+      <DependentUpon>frmMensajeAviso.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vista\frmMensajeExito.resx">
+      <DependentUpon>frmMensajeExito.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vista\frmReservaciones.resx">
+      <DependentUpon>frmReservaciones.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vista\frmRegister.resx">
+      <DependentUpon>frmRegister.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vista\frmSplash.resx">
+      <DependentUpon>frmSplash.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vista\frmSucesos.resx">
+      <DependentUpon>frmSucesos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vista\frmUsuarios.resx">
+      <DependentUpon>frmUsuarios.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vista\frmManejoHuespedes.resx">
+      <DependentUpon>frmManejoHuespedes.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="Hotel_Vanilla_TemporaryKey.pfx" />
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Logo.ico" />
+    <None Include="Resources\Icono.png" />
+    <None Include="Resources\cancelar.png" />
+    <None Include="Resources\guardar.png" />
+    <None Include="Resources\buscarReservacion.png" />
+    <None Include="Resources\eliminarHabitacion.png" />
+    <None Include="Resources\editarHabitacion.png" />
+    <None Include="Resources\agregarhabitacion.png" />
+    <None Include="Resources\buscarHabitacion.png" />
+    <None Include="Resources\eliminarHuesped.png" />
+    <None Include="Resources\editarHuesped.png" />
+    <None Include="Resources\agregarHuesped.png" />
+    <None Include="Resources\buscarHuesped.png" />
+    <None Include="Resources\buscarUsuario.png" />
+    <None Include="Resources\editarUsuario.png" />
+    <None Include="Resources\eliminarUsuario.png" />
+    <None Include="Resources\agregarUsuario.png" />
+    <None Include="Resources\anadirReservacion.png" />
+    <None Include="Resources\editarReservacion.png" />
+    <None Include="Resources\eliminarReservacion.png" />
+    <None Include="Resources\eliminarReserva.png" />
+    <None Include="Resources\LogoVanilla.png" />
+    <None Include="Resources\notificacion.png" />
+    <None Include="Resources\habitaciones.png" />
+    <None Include="Resources\huespedes.png" />
+    <None Include="Resources\reservas.png" />
+    <None Include="Resources\usuario2.png" />
+    <None Include="Resources\casa.png" />
+    <None Include="Resources\aviso.png" />
+    <None Include="Resources\advertencia.png" />
+    <None Include="Resources\logo.png" />
+    <None Include="Resources\article.png" />
+    <None Include="Resources\plus %282%29.png" />
+    <None Include="Resources\remove.png" />
+    <None Include="Resources\search %281%29.png" />
+    <None Include="Resources\search.png" />
+    <None Include="Resources\carritoCompra.png" />
+    <None Include="Resources\carrito.png" />
+    <None Include="Resources\cart.png" />
+    <None Include="Resources\basura.png" />
+    <None Include="Resources\disco-flexible.png" />
+    <None Include="Resources\video-chat.png" />
+    <None Include="Resources\edit.png" />
+    <None Include="Resources\group.png" />
+    <None Include="Resources\shopping-cart.png" />
+    <None Include="Resources\dentro.png" />
+    <None Include="Resources\fuera.png" />
+    <None Include="Resources\id-card.png" />
+    <None Include="Resources\usuario1.png" />
+    <None Include="Resources\agregar-usuario.png" />
+    <None Include="Resources\participacion.png" />
+    <None Include="Resources\cerrar %281%29.png" />
+    <None Include="Resources\menos %281%29.png" />
+    <None Include="Resources\cerrar.png" />
+    <None Include="Resources\minimizar %281%29.png" />
+    <None Include="Resources\minimizar.png" />
+    <None Include="Resources\menos.png" />
+    <None Include="Resources\eliminar %281%29.png" />
+    <None Include="Resources\enter.png" />
+    <None Include="Resources\user %281%29.png" />
+    <None Include="Resources\user %282%29.png" />
+    <None Include="Resources\user.png" />
+    <None Include="Resources\usuario.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="DAO\" />
+    <Folder Include="Modelo\" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.7.2">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.7.2 %28x86 y x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <Import Project="..\packages\Xamarin.Forms.2.0.0.6482\build\portable-win+net45+wp80+win81+wpa81+MonoAndroid10+MonoTouch10+Xamarin.iOS10\Xamarin.Forms.targets" Condition="Exists('..\packages\Xamarin.Forms.2.0.0.6482\build\portable-win+net45+wp80+win81+wpa81+MonoAndroid10+MonoTouch10+Xamarin.iOS10\Xamarin.Forms.targets')" />
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>Este proyecto hace referencia a los paquetes NuGet que faltan en este equipo. Use la restauración de paquetes NuGet para descargarlos. Para obtener más información, consulte http://go.microsoft.com/fwlink/?LinkID=322105. El archivo que falta es {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\Xamarin.Forms.2.0.0.6482\build\portable-win+net45+wp80+win81+wpa81+MonoAndroid10+MonoTouch10+Xamarin.iOS10\Xamarin.Forms.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Xamarin.Forms.2.0.0.6482\build\portable-win+net45+wp80+win81+wpa81+MonoAndroid10+MonoTouch10+Xamarin.iOS10\Xamarin.Forms.targets'))" />
+  </Target>
+</Project>

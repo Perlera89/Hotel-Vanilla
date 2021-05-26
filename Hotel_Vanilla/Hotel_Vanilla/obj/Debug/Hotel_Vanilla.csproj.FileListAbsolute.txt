@@ -1,0 +1,42 @@
+C:\Users\Manuel Perlera\Desktop\Hotel_Vanilla\Hotel_Vanilla\Hotel_Vanilla\bin\Debug\EntityFramework.dll
+C:\Users\Manuel Perlera\Desktop\Hotel_Vanilla\Hotel_Vanilla\Hotel_Vanilla\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\Manuel Perlera\Desktop\Hotel_Vanilla\Hotel_Vanilla\Hotel_Vanilla\bin\Debug\Guna.UI2.dll
+C:\Users\Manuel Perlera\Desktop\Hotel_Vanilla\Hotel_Vanilla\Hotel_Vanilla\bin\Debug\EntityFramework.xml
+C:\Users\Manuel Perlera\Desktop\Hotel_Vanilla\Hotel_Vanilla\Hotel_Vanilla\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\Manuel Perlera\Desktop\Hotel_Vanilla\Hotel_Vanilla\Hotel_Vanilla\obj\Debug\Hotel_Vanilla.csprojAssemblyReference.cache
+C:\Users\Manuel Perlera\Desktop\Hotel_Vanilla\Hotel_Vanilla\Hotel_Vanilla\obj\Debug\Hotel_Vanilla.Vista.frmHuespedes.resources
+C:\Users\Manuel Perlera\Desktop\Hotel_Vanilla\Hotel_Vanilla\Hotel_Vanilla\obj\Debug\Hotel_Vanilla.Vista.frmDefault.resources
+C:\Users\Manuel Perlera\Desktop\Hotel_Vanilla\Hotel_Vanilla\Hotel_Vanilla\obj\Debug\Hotel_Vanilla.Vista.frmHabitaciones.resources
+C:\Users\Manuel Perlera\Desktop\Hotel_Vanilla\Hotel_Vanilla\Hotel_Vanilla\obj\Debug\Hotel_Vanilla.Vista.frmInicio.resources
+C:\Users\Manuel Perlera\Desktop\Hotel_Vanilla\Hotel_Vanilla\Hotel_Vanilla\obj\Debug\Hotel_Vanilla.Form1.resources
+C:\Users\Manuel Perlera\Desktop\Hotel_Vanilla\Hotel_Vanilla\Hotel_Vanilla\obj\Debug\Hotel_Vanilla.Properties.Resources.resources
+C:\Users\Manuel Perlera\Desktop\Hotel_Vanilla\Hotel_Vanilla\Hotel_Vanilla\obj\Debug\Hotel_Vanilla.Vista.frmManejoHabitaciones.resources
+C:\Users\Manuel Perlera\Desktop\Hotel_Vanilla\Hotel_Vanilla\Hotel_Vanilla\obj\Debug\Hotel_Vanilla.Vista.frmManejoReservas.resources
+C:\Users\Manuel Perlera\Desktop\Hotel_Vanilla\Hotel_Vanilla\Hotel_Vanilla\obj\Debug\Hotel_Vanilla.Vista.frmManejoUsuarios.resources
+C:\Users\Manuel Perlera\Desktop\Hotel_Vanilla\Hotel_Vanilla\Hotel_Vanilla\obj\Debug\Hotel_Vanilla.Vista.frmMensajeAdvertencia.resources
+C:\Users\Manuel Perlera\Desktop\Hotel_Vanilla\Hotel_Vanilla\Hotel_Vanilla\obj\Debug\Hotel_Vanilla.Vista.frmMensajeAviso.resources
+C:\Users\Manuel Perlera\Desktop\Hotel_Vanilla\Hotel_Vanilla\Hotel_Vanilla\obj\Debug\Hotel_Vanilla.Vista.frmMensajeExito.resources
+C:\Users\Manuel Perlera\Desktop\Hotel_Vanilla\Hotel_Vanilla\Hotel_Vanilla\obj\Debug\Hotel_Vanilla.Vista.frmReservaciones.resources
+C:\Users\Manuel Perlera\Desktop\Hotel_Vanilla\Hotel_Vanilla\Hotel_Vanilla\obj\Debug\Hotel_Vanilla.Vista.frmRegister.resources
+C:\Users\Manuel Perlera\Desktop\Hotel_Vanilla\Hotel_Vanilla\Hotel_Vanilla\obj\Debug\Hotel_Vanilla.Vista.frmSplash.resources
+C:\Users\Manuel Perlera\Desktop\Hotel_Vanilla\Hotel_Vanilla\Hotel_Vanilla\obj\Debug\Hotel_Vanilla.Vista.frmSucesos.resources
+C:\Users\Manuel Perlera\Desktop\Hotel_Vanilla\Hotel_Vanilla\Hotel_Vanilla\obj\Debug\Hotel_Vanilla.Vista.frmUsuarios.resources
+C:\Users\Manuel Perlera\Desktop\Hotel_Vanilla\Hotel_Vanilla\Hotel_Vanilla\obj\Debug\Hotel_Vanilla.Vista.frmManejoHuespedes.resources
+C:\Users\Manuel Perlera\Desktop\Hotel_Vanilla\Hotel_Vanilla\Hotel_Vanilla\obj\Debug\Hotel_Vanilla.csproj.GenerateResource.cache
+C:\Users\Manuel Perlera\Desktop\Hotel_Vanilla\Hotel_Vanilla\Hotel_Vanilla\obj\Debug\Hotel_Vanilla.csproj.CoreCompileInputs.cache
+C:\Users\Manuel Perlera\Desktop\Hotel_Vanilla\Hotel_Vanilla\Hotel_Vanilla\obj\Debug\Hotel_Vanilla.csproj.CopyComplete
+C:\Users\Manuel Perlera\Desktop\Hotel_Vanilla\Hotel_Vanilla\Hotel_Vanilla\bin\Debug\Hotel Vanilla.exe.config
+C:\Users\Manuel Perlera\Desktop\Hotel_Vanilla\Hotel_Vanilla\Hotel_Vanilla\bin\Debug\Hotel Vanilla.exe.manifest
+C:\Users\Manuel Perlera\Desktop\Hotel_Vanilla\Hotel_Vanilla\Hotel_Vanilla\bin\Debug\Hotel Vanilla.application
+C:\Users\Manuel Perlera\Desktop\Hotel_Vanilla\Hotel_Vanilla\Hotel_Vanilla\bin\Debug\Hotel Vanilla.exe
+C:\Users\Manuel Perlera\Desktop\Hotel_Vanilla\Hotel_Vanilla\Hotel_Vanilla\bin\Debug\Hotel Vanilla.pdb
+C:\Users\Manuel Perlera\Desktop\Hotel_Vanilla\Hotel_Vanilla\Hotel_Vanilla\obj\Debug\Hotel Vanilla.exe.manifest
+C:\Users\Manuel Perlera\Desktop\Hotel_Vanilla\Hotel_Vanilla\Hotel_Vanilla\obj\Debug\Hotel Vanilla.application
+C:\Users\Manuel Perlera\Desktop\Hotel_Vanilla\Hotel_Vanilla\Hotel_Vanilla\obj\Debug\Hotel Vanilla.exe
+C:\Users\Manuel Perlera\Desktop\Hotel_Vanilla\Hotel_Vanilla\Hotel_Vanilla\obj\Debug\Hotel Vanilla.pdb
+C:\Users\Manuel Perlera\Desktop\Hotel_Vanilla\Hotel_Vanilla\Hotel_Vanilla\bin\Debug\Xamarin.Forms.Core.dll
+C:\Users\Manuel Perlera\Desktop\Hotel_Vanilla\Hotel_Vanilla\Hotel_Vanilla\bin\Debug\Xamarin.Forms.Platform.dll
+C:\Users\Manuel Perlera\Desktop\Hotel_Vanilla\Hotel_Vanilla\Hotel_Vanilla\bin\Debug\Xamarin.Forms.Xaml.dll
+C:\Users\Manuel Perlera\Desktop\Hotel_Vanilla\Hotel_Vanilla\Hotel_Vanilla\bin\Debug\Zeroit.Framework.ListView.dll
+C:\Users\Manuel Perlera\Desktop\Hotel_Vanilla\Hotel_Vanilla\Hotel_Vanilla\bin\Debug\Xamarin.Forms.Core.xml
+C:\Users\Manuel Perlera\Desktop\Hotel_Vanilla\Hotel_Vanilla\Hotel_Vanilla\bin\Debug\Xamarin.Forms.Xaml.xml
