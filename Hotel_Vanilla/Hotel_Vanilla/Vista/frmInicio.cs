@@ -170,6 +170,7 @@ namespace Hotel_Vanilla.Vista
         private void btnDefault_Click(object sender, EventArgs e)
         {
             AbrirFormulario<frmDefault>();
+            this.Text = "Hotel Vanilla - Inicio";
         }
 
         [DllImport("user32.DLL", EntryPoint = "ReleaseCapture")]
@@ -186,26 +187,37 @@ namespace Hotel_Vanilla.Vista
         private void btnReservaciones_Click(object sender, EventArgs e)
         {
             AbrirFormulario<frmReservaciones>();
+            this.Text = "Hotel Vanilla - Reservaciones";
         }
 
         private void btnHuespedes_Click(object sender, EventArgs e)
         {
             AbrirFormulario<frmHuespedes>();
+            this.Text = "Hotel Vanilla - Huespedes";
         }
 
         private void btnHabitaciones_Click(object sender, EventArgs e)
         {
             AbrirFormulario<frmHabitaciones>();
+            this.Text = "Hotel Vanilla - Habitaciones";
         }
 
         private void btnSucesos_Click(object sender, EventArgs e)
         {
             AbrirFormulario<frmSucesos>();
+            this.Text = "Hotel Vanilla - Sucesos";
         }
 
         private void btnUsuarios_Click_1(object sender, EventArgs e)
         {
             AbrirFormulario<frmUsuarios>();
+            this.Text = "Hotel Vanilla - Usuarios";
+        }
+
+        private void btnAjustes_Click(object sender, EventArgs e)
+        {
+            AbrirFormulario<frmAjustes>();
+            this.Text = "Hotel Vanilla - Ajustes";
         }
 
         private void btnCerrar_MouseLeave(object sender, EventArgs e)

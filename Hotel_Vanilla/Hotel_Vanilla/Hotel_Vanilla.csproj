@@ -118,6 +118,12 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Vista\frmAjustes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vista\frmAjustes.Designer.cs">
+      <DependentUpon>frmAjustes.cs</DependentUpon>
+    </Compile>
     <Compile Include="Vista\frmHuespedes.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -222,6 +228,9 @@
     <Compile Include="Vista\frmManejoUsuarios.Designer.cs">
       <DependentUpon>frmManejoUsuarios.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="Vista\frmAjustes.resx">
+      <DependentUpon>frmAjustes.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Vista\frmHuespedes.resx">
       <DependentUpon>frmHuespedes.cs</DependentUpon>
     </EmbeddedResource>
@@ -300,6 +309,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Logo.ico" />
+    <None Include="Resources\ajustes.png" />
     <None Include="Resources\Icono.png" />
     <None Include="Resources\cancelar.png" />
     <None Include="Resources\guardar.png" />

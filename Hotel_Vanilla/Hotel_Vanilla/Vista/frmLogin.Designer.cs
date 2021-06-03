@@ -83,7 +83,7 @@ namespace Hotel_Vanilla
             this.txtPass.Margin = new System.Windows.Forms.Padding(4);
             this.txtPass.Name = "txtPass";
             this.txtPass.Size = new System.Drawing.Size(379, 33);
-            this.txtPass.TabIndex = 10;
+            this.txtPass.TabIndex = 2;
             this.txtPass.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.txtPass.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtPass_KeyDown);
             // 
@@ -103,7 +103,7 @@ namespace Hotel_Vanilla
             this.txtEmail.Margin = new System.Windows.Forms.Padding(4);
             this.txtEmail.Name = "txtEmail";
             this.txtEmail.Size = new System.Drawing.Size(379, 33);
-            this.txtEmail.TabIndex = 10;
+            this.txtEmail.TabIndex = 1;
             this.txtEmail.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             // 
             // bunifuCustomLabel1
@@ -113,7 +113,7 @@ namespace Hotel_Vanilla
             this.bunifuCustomLabel1.Location = new System.Drawing.Point(216, 231);
             this.bunifuCustomLabel1.Name = "bunifuCustomLabel1";
             this.bunifuCustomLabel1.Size = new System.Drawing.Size(91, 17);
-            this.bunifuCustomLabel1.TabIndex = 12;
+            this.bunifuCustomLabel1.TabIndex = 3;
             this.bunifuCustomLabel1.Text = "Mostrar clave";
             // 
             // chkClave
@@ -151,7 +151,7 @@ namespace Hotel_Vanilla
             this.btnLogin.Margin = new System.Windows.Forms.Padding(5);
             this.btnLogin.Name = "btnLogin";
             this.btnLogin.Size = new System.Drawing.Size(181, 41);
-            this.btnLogin.TabIndex = 6;
+            this.btnLogin.TabIndex = 4;
             this.btnLogin.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.btnLogin.Click += new System.EventHandler(this.btnLogin_Click);
             // 

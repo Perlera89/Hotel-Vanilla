@@ -118,9 +118,10 @@ namespace Hotel_Vanilla
         private void btnLogin_Click(object sender, EventArgs e)
         {
             frmMensajeExito.Confirmar("Inicio de sesion valido");
+            frmInicio principal = new frmInicio();
 
-            inicio.lblCorreo.Text = txtEmail.Text;
-            inicio.Show();
+            principal.Show();
+            principal.lblUsuario.Text = txtEmail.Text;
             this.Hide();
         }
 

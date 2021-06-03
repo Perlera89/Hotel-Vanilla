@@ -85,7 +85,7 @@ namespace Hotel_Vanilla.Vista
             this.txtUsuario.Margin = new System.Windows.Forms.Padding(4);
             this.txtUsuario.Name = "txtUsuario";
             this.txtUsuario.Size = new System.Drawing.Size(379, 33);
-            this.txtUsuario.TabIndex = 10;
+            this.txtUsuario.TabIndex = 1;
             this.txtUsuario.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             // 
             // txtPass
@@ -104,7 +104,7 @@ namespace Hotel_Vanilla.Vista
             this.txtPass.Margin = new System.Windows.Forms.Padding(4);
             this.txtPass.Name = "txtPass";
             this.txtPass.Size = new System.Drawing.Size(379, 33);
-            this.txtPass.TabIndex = 10;
+            this.txtPass.TabIndex = 3;
             this.txtPass.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.txtPass.KeyUp += new System.Windows.Forms.KeyEventHandler(this.txtPass_KeyUp);
             // 
@@ -124,7 +124,7 @@ namespace Hotel_Vanilla.Vista
             this.txtEmail.Margin = new System.Windows.Forms.Padding(4);
             this.txtEmail.Name = "txtEmail";
             this.txtEmail.Size = new System.Drawing.Size(379, 33);
-            this.txtEmail.TabIndex = 10;
+            this.txtEmail.TabIndex = 2;
             this.txtEmail.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             // 
             // bunifuCustomLabel1
@@ -134,7 +134,7 @@ namespace Hotel_Vanilla.Vista
             this.bunifuCustomLabel1.Location = new System.Drawing.Point(218, 252);
             this.bunifuCustomLabel1.Name = "bunifuCustomLabel1";
             this.bunifuCustomLabel1.Size = new System.Drawing.Size(91, 17);
-            this.bunifuCustomLabel1.TabIndex = 10;
+            this.bunifuCustomLabel1.TabIndex = 4;
             this.bunifuCustomLabel1.Text = "Mostrar clave";
             // 
             // chkClave
@@ -172,7 +172,7 @@ namespace Hotel_Vanilla.Vista
             this.btnRegister.Margin = new System.Windows.Forms.Padding(5);
             this.btnRegister.Name = "btnRegister";
             this.btnRegister.Size = new System.Drawing.Size(181, 41);
-            this.btnRegister.TabIndex = 7;
+            this.btnRegister.TabIndex = 5;
             this.btnRegister.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.btnRegister.Click += new System.EventHandler(this.btnRegister_Click);
             // 
