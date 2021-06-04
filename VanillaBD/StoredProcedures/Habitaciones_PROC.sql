@@ -47,7 +47,7 @@ BEGIN
 END
 go
 -------------------------------------------------------------------------------------------------
-
+select * from Habitaciones
 --Prueba
 EXEC sp_EliminarHabitacion 1
 go
