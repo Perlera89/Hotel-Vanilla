@@ -1,6 +1,6 @@
 USE MASTER
 GO
-DROP DATABASE IF exists  VainillaBD
+DROP DATABASE IF exists  VanillaBD
 GO
 CREATE DATABASE VanillaBD
 GO

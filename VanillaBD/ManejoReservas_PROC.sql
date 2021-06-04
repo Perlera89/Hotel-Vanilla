@@ -3,7 +3,7 @@
 --======================================================================================
 
 -- Procedimiento para mostrar ManejoReservas
-alter PROC sp_MostrarManejoReservas
+Create PROC sp_MostrarManejoReservas
 AS
 BEGIN
 	SET NOCOUNT ON;
