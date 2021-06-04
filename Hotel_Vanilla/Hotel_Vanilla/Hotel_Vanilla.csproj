@@ -118,6 +118,11 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="VanillaBDDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>VanillaBDDataSet.xsd</DependentUpon>
+    </Compile>
     <Compile Include="Vista\frmAjustes.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -303,6 +308,17 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+    <None Include="VanillaBDDataSet.xsc">
+      <DependentUpon>VanillaBDDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="VanillaBDDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>VanillaBDDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="VanillaBDDataSet.xss">
+      <DependentUpon>VanillaBDDataSet.xsd</DependentUpon>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
@@ -377,8 +393,8 @@
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="DAO\" />
-    <Folder Include="Modelo\" />
+    <Folder Include="CONTROLADOR\" />
+    <Folder Include="MODELO\" />
   </ItemGroup>
   <ItemGroup>
     <BootstrapperPackage Include=".NETFramework,Version=v4.7.2">

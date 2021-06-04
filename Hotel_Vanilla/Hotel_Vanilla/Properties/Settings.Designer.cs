@@ -32,5 +32,15 @@ namespace Hotel_Vanilla.Properties {
                 return ((string)(this["sistema_ventasConnectionString"]));
             }
         }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
+        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=.;Initial Catalog=VanillaBD;Integrated Security=True")]
+        public string VanillaBDConnectionString {
+            get {
+                return ((string)(this["VanillaBDConnectionString"]));
+            }
+        }
     }
 }

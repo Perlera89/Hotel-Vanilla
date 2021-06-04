@@ -73,6 +73,5 @@ go
 select * from Habitaciones
 --Prueba
 EXEC sp_ActualizarHabitacion 2, 32, 35, 2;
-go
 
 

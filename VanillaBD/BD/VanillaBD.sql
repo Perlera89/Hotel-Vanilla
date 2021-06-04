@@ -1,4 +1,4 @@
-USE MASTER
+USE master
 GO
 DROP DATABASE IF exists  VainillaBD
 GO
@@ -40,11 +40,11 @@ Create table ManejoReservas(
 	idReserva int primary key identity not null,
 	fechaReserva date not null,
 	fechaCheckIn date not null,
-	fechaCheckOut date not null,
+	fechaCheckOut date,
 	numeroDias int not null,
 	pagoAdelantado money,
 	descuento smallmoney,
-	total money not null,
+	total money,
 	idHabitacion_FK int REFERENCES Habitaciones(idHabitacion),
 	idHuesped_FK int REFERENCES Huespedes(idHuesped)
 );
@@ -56,9 +56,11 @@ Create table Usuarios(
 	clave varchar(20),
 );
 
-Create table Suceso(
+Create table Sucesos(
 	idSuceso int primary key identity not null,
-	descripcion varchar(50) not null
+	fechaSuceso datetime,
+	tipoSuceso varchar(50),
+	descripcion varchar(300)
 );
 
 --==============================================================================
