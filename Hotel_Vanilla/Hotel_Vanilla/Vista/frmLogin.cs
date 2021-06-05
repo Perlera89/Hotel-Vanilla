@@ -109,20 +109,20 @@ namespace Hotel_Vanilla
 
         private void chkClave_OnChange(object sender, EventArgs e)
         {
-            if (chkClave.Checked == true && txtPass.Text != "Password")
-                txtPass.isPassword = false;
-            else
-                txtPass.isPassword = true;
+            //if (chkClave.Checked == true && txtPass.Text != "Password")
+            //    txtPass.isPassword = false;
+            //else
+            //    txtPass.isPassword = true;
         }
 
         private void btnLogin_Click(object sender, EventArgs e)
         {
-            frmMensajeExito.Confirmar("Inicio de sesion valido");
-            frmInicio principal = new frmInicio();
+            //frmMensajeExito.Confirmar("Inicio de sesion valido");
+            //frmInicio principal = new frmInicio();
 
-            principal.Show();
-            principal.lblUsuario.Text = txtEmail.Text;
-            this.Hide();
+            //principal.Show();
+            //principal.lblUsuario.Text = txtEmail.Text;
+            //this.Hide();
         }
 
         private void txtPass_KeyDown(object sender, KeyEventArgs e)

@@ -118,6 +118,13 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ENTIDAD\Estados.cs" />
+    <Compile Include="ENTIDAD\Habitaciones.cs" />
+    <Compile Include="ENTIDAD\Huespedes.cs" />
+    <Compile Include="ENTIDAD\ManejoReservas.cs" />
+    <Compile Include="ENTIDAD\Sucesos.cs" />
+    <Compile Include="ENTIDAD\TipoHabitaciones.cs" />
+    <Compile Include="ENTIDAD\Usuarios.cs" />
     <Compile Include="VanillaBDDataSet.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -299,6 +306,13 @@
     </EmbeddedResource>
     <None Include="Hotel_Vanilla_TemporaryKey.pfx" />
     <None Include="packages.config" />
+    <None Include="Properties\DataSources\Hotel_Vanilla.ENTIDAD.Estados.datasource" />
+    <None Include="Properties\DataSources\Hotel_Vanilla.ENTIDAD.Habitaciones.datasource" />
+    <None Include="Properties\DataSources\Hotel_Vanilla.ENTIDAD.Huespedes.datasource" />
+    <None Include="Properties\DataSources\Hotel_Vanilla.ENTIDAD.ManejoReservas.datasource" />
+    <None Include="Properties\DataSources\Hotel_Vanilla.ENTIDAD.Sucesos.datasource" />
+    <None Include="Properties\DataSources\Hotel_Vanilla.ENTIDAD.TipoHabitaciones.datasource" />
+    <None Include="Properties\DataSources\Hotel_Vanilla.ENTIDAD.Usuarios.datasource" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>

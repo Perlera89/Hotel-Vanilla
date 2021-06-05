@@ -30,13 +30,14 @@ namespace Hotel_Vanilla.Vista
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.Windows.Forms.Label apellidosLabel;
+            System.Windows.Forms.Label correoLabel;
+            System.Windows.Forms.Label direccionLabel;
+            System.Windows.Forms.Label idEstado_FKLabel;
+            System.Windows.Forms.Label idHuespedLabel;
+            System.Windows.Forms.Label nombresLabel;
+            System.Windows.Forms.Label telefonoLabel;
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmManejoHuespedes));
-            this.cbbtEstado = new Guna.UI2.WinForms.Guna2ComboBox();
-            this.txtCorreo = new Bunifu.Framework.UI.BunifuMaterialTextbox();
-            this.txtTelefono = new Bunifu.Framework.UI.BunifuMaterialTextbox();
-            this.txtDireccion = new Bunifu.Framework.UI.BunifuMaterialTextbox();
-            this.txtApellidos = new Bunifu.Framework.UI.BunifuMaterialTextbox();
-            this.txtNombres = new Bunifu.Framework.UI.BunifuMaterialTextbox();
             this.panelSuperior = new System.Windows.Forms.Panel();
             this.bunifuCustomLabel1 = new Bunifu.Framework.UI.BunifuCustomLabel();
             this.btnDefault = new Bunifu.Framework.UI.BunifuImageButton();
@@ -48,131 +49,25 @@ namespace Hotel_Vanilla.Vista
             this.guna2DragControl1 = new Guna.UI2.WinForms.Guna2DragControl(this.components);
             this.btnCancelar = new Bunifu.Framework.UI.BunifuFlatButton();
             this.btnGuardar = new Bunifu.Framework.UI.BunifuFlatButton();
+            this.huespedesBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.apellidosTextBox = new System.Windows.Forms.TextBox();
+            this.correoTextBox = new System.Windows.Forms.TextBox();
+            this.direccionTextBox = new System.Windows.Forms.TextBox();
+            this.idEstado_FKTextBox = new System.Windows.Forms.TextBox();
+            this.idHuespedTextBox = new System.Windows.Forms.TextBox();
+            this.nombresTextBox = new System.Windows.Forms.TextBox();
+            this.telefonoTextBox = new System.Windows.Forms.TextBox();
+            apellidosLabel = new System.Windows.Forms.Label();
+            correoLabel = new System.Windows.Forms.Label();
+            direccionLabel = new System.Windows.Forms.Label();
+            idEstado_FKLabel = new System.Windows.Forms.Label();
+            idHuespedLabel = new System.Windows.Forms.Label();
+            nombresLabel = new System.Windows.Forms.Label();
+            telefonoLabel = new System.Windows.Forms.Label();
             this.panelSuperior.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btnDefault)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.huespedesBindingSource)).BeginInit();
             this.SuspendLayout();
-            // 
-            // cbbtEstado
-            // 
-            this.cbbtEstado.Animated = true;
-            this.cbbtEstado.BackColor = System.Drawing.Color.Transparent;
-            this.cbbtEstado.BorderColor = System.Drawing.Color.RoyalBlue;
-            this.cbbtEstado.BorderThickness = 2;
-            this.cbbtEstado.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
-            this.cbbtEstado.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cbbtEstado.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.cbbtEstado.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.cbbtEstado.FocusedState.Parent = this.cbbtEstado;
-            this.cbbtEstado.Font = new System.Drawing.Font("Century Gothic", 11.25F);
-            this.cbbtEstado.ForeColor = System.Drawing.Color.Black;
-            this.cbbtEstado.HoverState.Parent = this.cbbtEstado;
-            this.cbbtEstado.ItemHeight = 30;
-            this.cbbtEstado.Items.AddRange(new object[] {
-            "Pendiente",
-            "Rechazada",
-            "Aceptada"});
-            this.cbbtEstado.ItemsAppearance.Parent = this.cbbtEstado;
-            this.cbbtEstado.Location = new System.Drawing.Point(61, 373);
-            this.cbbtEstado.Name = "cbbtEstado";
-            this.cbbtEstado.ShadowDecoration.Parent = this.cbbtEstado;
-            this.cbbtEstado.Size = new System.Drawing.Size(379, 36);
-            this.cbbtEstado.TabIndex = 42;
-            this.cbbtEstado.Tag = "Huesped";
-            // 
-            // txtCorreo
-            // 
-            this.txtCorreo.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtCorreo.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtCorreo.ForeColor = System.Drawing.Color.Black;
-            this.txtCorreo.HintForeColor = System.Drawing.Color.Empty;
-            this.txtCorreo.HintText = "Correo";
-            this.txtCorreo.isPassword = false;
-            this.txtCorreo.LineFocusedColor = System.Drawing.Color.CornflowerBlue;
-            this.txtCorreo.LineIdleColor = System.Drawing.Color.RoyalBlue;
-            this.txtCorreo.LineMouseHoverColor = System.Drawing.Color.Blue;
-            this.txtCorreo.LineThickness = 4;
-            this.txtCorreo.Location = new System.Drawing.Point(61, 323);
-            this.txtCorreo.Margin = new System.Windows.Forms.Padding(4);
-            this.txtCorreo.Name = "txtCorreo";
-            this.txtCorreo.Size = new System.Drawing.Size(379, 33);
-            this.txtCorreo.TabIndex = 37;
-            this.txtCorreo.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            // 
-            // txtTelefono
-            // 
-            this.txtTelefono.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtTelefono.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtTelefono.ForeColor = System.Drawing.Color.Black;
-            this.txtTelefono.HintForeColor = System.Drawing.Color.Empty;
-            this.txtTelefono.HintText = "Telefono";
-            this.txtTelefono.isPassword = false;
-            this.txtTelefono.LineFocusedColor = System.Drawing.Color.CornflowerBlue;
-            this.txtTelefono.LineIdleColor = System.Drawing.Color.RoyalBlue;
-            this.txtTelefono.LineMouseHoverColor = System.Drawing.Color.Blue;
-            this.txtTelefono.LineThickness = 4;
-            this.txtTelefono.Location = new System.Drawing.Point(61, 282);
-            this.txtTelefono.Margin = new System.Windows.Forms.Padding(4);
-            this.txtTelefono.Name = "txtTelefono";
-            this.txtTelefono.Size = new System.Drawing.Size(379, 33);
-            this.txtTelefono.TabIndex = 36;
-            this.txtTelefono.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            // 
-            // txtDireccion
-            // 
-            this.txtDireccion.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtDireccion.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtDireccion.ForeColor = System.Drawing.Color.Black;
-            this.txtDireccion.HintForeColor = System.Drawing.Color.Empty;
-            this.txtDireccion.HintText = "Direccion";
-            this.txtDireccion.isPassword = false;
-            this.txtDireccion.LineFocusedColor = System.Drawing.Color.CornflowerBlue;
-            this.txtDireccion.LineIdleColor = System.Drawing.Color.RoyalBlue;
-            this.txtDireccion.LineMouseHoverColor = System.Drawing.Color.Blue;
-            this.txtDireccion.LineThickness = 4;
-            this.txtDireccion.Location = new System.Drawing.Point(61, 241);
-            this.txtDireccion.Margin = new System.Windows.Forms.Padding(4);
-            this.txtDireccion.Name = "txtDireccion";
-            this.txtDireccion.Size = new System.Drawing.Size(379, 33);
-            this.txtDireccion.TabIndex = 35;
-            this.txtDireccion.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            // 
-            // txtApellidos
-            // 
-            this.txtApellidos.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtApellidos.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtApellidos.ForeColor = System.Drawing.Color.Black;
-            this.txtApellidos.HintForeColor = System.Drawing.Color.Empty;
-            this.txtApellidos.HintText = "Apellidos";
-            this.txtApellidos.isPassword = false;
-            this.txtApellidos.LineFocusedColor = System.Drawing.Color.CornflowerBlue;
-            this.txtApellidos.LineIdleColor = System.Drawing.Color.RoyalBlue;
-            this.txtApellidos.LineMouseHoverColor = System.Drawing.Color.Blue;
-            this.txtApellidos.LineThickness = 4;
-            this.txtApellidos.Location = new System.Drawing.Point(61, 200);
-            this.txtApellidos.Margin = new System.Windows.Forms.Padding(4);
-            this.txtApellidos.Name = "txtApellidos";
-            this.txtApellidos.Size = new System.Drawing.Size(379, 33);
-            this.txtApellidos.TabIndex = 34;
-            this.txtApellidos.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            // 
-            // txtNombres
-            // 
-            this.txtNombres.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtNombres.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtNombres.ForeColor = System.Drawing.Color.Black;
-            this.txtNombres.HintForeColor = System.Drawing.Color.Empty;
-            this.txtNombres.HintText = "Nombres";
-            this.txtNombres.isPassword = false;
-            this.txtNombres.LineFocusedColor = System.Drawing.Color.CornflowerBlue;
-            this.txtNombres.LineIdleColor = System.Drawing.Color.RoyalBlue;
-            this.txtNombres.LineMouseHoverColor = System.Drawing.Color.Blue;
-            this.txtNombres.LineThickness = 4;
-            this.txtNombres.Location = new System.Drawing.Point(61, 159);
-            this.txtNombres.Margin = new System.Windows.Forms.Padding(4);
-            this.txtNombres.Name = "txtNombres";
-            this.txtNombres.Size = new System.Drawing.Size(379, 33);
-            this.txtNombres.TabIndex = 33;
-            this.txtNombres.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             // 
             // panelSuperior
             // 
@@ -182,19 +77,21 @@ namespace Hotel_Vanilla.Vista
             this.panelSuperior.Controls.Add(this.btnCerrar);
             this.panelSuperior.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelSuperior.Location = new System.Drawing.Point(0, 0);
+            this.panelSuperior.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.panelSuperior.Name = "panelSuperior";
-            this.panelSuperior.Size = new System.Drawing.Size(800, 50);
+            this.panelSuperior.Size = new System.Drawing.Size(1200, 77);
             this.panelSuperior.TabIndex = 32;
             // 
             // bunifuCustomLabel1
             // 
             this.bunifuCustomLabel1.AutoSize = true;
             this.bunifuCustomLabel1.BackColor = System.Drawing.Color.RoyalBlue;
-            this.bunifuCustomLabel1.Font = new System.Drawing.Font("Century Gothic", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bunifuCustomLabel1.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bunifuCustomLabel1.ForeColor = System.Drawing.Color.White;
-            this.bunifuCustomLabel1.Location = new System.Drawing.Point(217, 9);
+            this.bunifuCustomLabel1.Location = new System.Drawing.Point(326, 14);
+            this.bunifuCustomLabel1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.bunifuCustomLabel1.Name = "bunifuCustomLabel1";
-            this.bunifuCustomLabel1.Size = new System.Drawing.Size(370, 28);
+            this.bunifuCustomLabel1.Size = new System.Drawing.Size(635, 40);
             this.bunifuCustomLabel1.TabIndex = 15;
             this.bunifuCustomLabel1.Text = "MANTENIMIENTO DE HUESPEDES";
             // 
@@ -203,9 +100,10 @@ namespace Hotel_Vanilla.Vista
             this.btnDefault.BackColor = System.Drawing.Color.Transparent;
             this.btnDefault.Image = global::Hotel_Vanilla.Properties.Resources.Icono;
             this.btnDefault.ImageActive = null;
-            this.btnDefault.Location = new System.Drawing.Point(12, 0);
+            this.btnDefault.Location = new System.Drawing.Point(18, 0);
+            this.btnDefault.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btnDefault.Name = "btnDefault";
-            this.btnDefault.Size = new System.Drawing.Size(50, 50);
+            this.btnDefault.Size = new System.Drawing.Size(75, 77);
             this.btnDefault.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.btnDefault.TabIndex = 14;
             this.btnDefault.TabStop = false;
@@ -218,12 +116,13 @@ namespace Hotel_Vanilla.Vista
             this.btnCerrar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnCerrar.FlatAppearance.BorderSize = 0;
             this.btnCerrar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnCerrar.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCerrar.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCerrar.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.btnCerrar.Image = global::Hotel_Vanilla.Properties.Resources.cerrar__1_;
-            this.btnCerrar.Location = new System.Drawing.Point(764, 3);
+            this.btnCerrar.Location = new System.Drawing.Point(1146, 5);
+            this.btnCerrar.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btnCerrar.Name = "btnCerrar";
-            this.btnCerrar.Size = new System.Drawing.Size(33, 33);
+            this.btnCerrar.Size = new System.Drawing.Size(50, 51);
             this.btnCerrar.TabIndex = 13;
             this.btnCerrar.UseVisualStyleBackColor = false;
             this.btnCerrar.Click += new System.EventHandler(this.btnCerrar_Click);
@@ -231,11 +130,12 @@ namespace Hotel_Vanilla.Vista
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.RoyalBlue;
-            this.label1.Location = new System.Drawing.Point(650, 93);
+            this.label1.Location = new System.Drawing.Point(975, 143);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(32, 19);
+            this.label1.Size = new System.Drawing.Size(49, 29);
             this.label1.TabIndex = 44;
             this.label1.Text = "Id: ";
             // 
@@ -255,11 +155,11 @@ namespace Hotel_Vanilla.Vista
             this.guna2TextBox1.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
             this.guna2TextBox1.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.guna2TextBox1.FocusedState.Parent = this.guna2TextBox1;
-            this.guna2TextBox1.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold);
+            this.guna2TextBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold);
             this.guna2TextBox1.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.guna2TextBox1.HoverState.Parent = this.guna2TextBox1;
-            this.guna2TextBox1.Location = new System.Drawing.Point(639, 68);
-            this.guna2TextBox1.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.guna2TextBox1.Location = new System.Drawing.Point(958, 105);
+            this.guna2TextBox1.Margin = new System.Windows.Forms.Padding(8, 8, 8, 8);
             this.guna2TextBox1.Name = "guna2TextBox1";
             this.guna2TextBox1.PasswordChar = '\0';
             this.guna2TextBox1.PlaceholderText = "";
@@ -267,7 +167,7 @@ namespace Hotel_Vanilla.Vista
             this.guna2TextBox1.SelectedText = "";
             this.guna2TextBox1.SelectionStart = 1;
             this.guna2TextBox1.ShadowDecoration.Parent = this.guna2TextBox1;
-            this.guna2TextBox1.Size = new System.Drawing.Size(101, 67);
+            this.guna2TextBox1.Size = new System.Drawing.Size(152, 103);
             this.guna2TextBox1.TabIndex = 43;
             this.guna2TextBox1.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
@@ -280,9 +180,10 @@ namespace Hotel_Vanilla.Vista
             // 
             this.panelInferior.BackColor = System.Drawing.Color.Gold;
             this.panelInferior.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panelInferior.Location = new System.Drawing.Point(0, 450);
+            this.panelInferior.Location = new System.Drawing.Point(0, 692);
+            this.panelInferior.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.panelInferior.Name = "panelInferior";
-            this.panelInferior.Size = new System.Drawing.Size(800, 50);
+            this.panelInferior.Size = new System.Drawing.Size(1200, 77);
             this.panelInferior.TabIndex = 45;
             // 
             // guna2DragControl1
@@ -314,18 +215,19 @@ namespace Hotel_Vanilla.Vista
             this.btnCancelar.IconVisible = true;
             this.btnCancelar.IconZoom = 90D;
             this.btnCancelar.IsTab = false;
-            this.btnCancelar.Location = new System.Drawing.Point(490, 359);
+            this.btnCancelar.Location = new System.Drawing.Point(735, 552);
+            this.btnCancelar.Margin = new System.Windows.Forms.Padding(6, 8, 6, 8);
             this.btnCancelar.Name = "btnCancelar";
             this.btnCancelar.Normalcolor = System.Drawing.SystemColors.Control;
             this.btnCancelar.OnHovercolor = System.Drawing.Color.Red;
             this.btnCancelar.OnHoverTextColor = System.Drawing.SystemColors.Control;
             this.btnCancelar.selected = false;
-            this.btnCancelar.Size = new System.Drawing.Size(250, 51);
+            this.btnCancelar.Size = new System.Drawing.Size(375, 78);
             this.btnCancelar.TabIndex = 31;
             this.btnCancelar.Text = "Cancelar";
             this.btnCancelar.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.btnCancelar.Textcolor = System.Drawing.Color.Red;
-            this.btnCancelar.TextFont = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCancelar.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             // 
             // btnGuardar
             // 
@@ -351,59 +253,186 @@ namespace Hotel_Vanilla.Vista
             this.btnGuardar.IconVisible = true;
             this.btnGuardar.IconZoom = 90D;
             this.btnGuardar.IsTab = false;
-            this.btnGuardar.Location = new System.Drawing.Point(490, 292);
+            this.btnGuardar.Location = new System.Drawing.Point(735, 449);
+            this.btnGuardar.Margin = new System.Windows.Forms.Padding(6, 8, 6, 8);
             this.btnGuardar.Name = "btnGuardar";
             this.btnGuardar.Normalcolor = System.Drawing.SystemColors.Control;
             this.btnGuardar.OnHovercolor = System.Drawing.Color.RoyalBlue;
             this.btnGuardar.OnHoverTextColor = System.Drawing.SystemColors.Control;
             this.btnGuardar.selected = false;
-            this.btnGuardar.Size = new System.Drawing.Size(250, 51);
+            this.btnGuardar.Size = new System.Drawing.Size(375, 78);
             this.btnGuardar.TabIndex = 30;
             this.btnGuardar.Text = "Guardar";
             this.btnGuardar.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.btnGuardar.Textcolor = System.Drawing.Color.RoyalBlue;
-            this.btnGuardar.TextFont = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnGuardar.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            // 
+            // huespedesBindingSource
+            // 
+            this.huespedesBindingSource.DataSource = typeof(Hotel_Vanilla.ENTIDAD.Huespedes);
+            // 
+            // apellidosLabel
+            // 
+            apellidosLabel.AutoSize = true;
+            apellidosLabel.Location = new System.Drawing.Point(162, 408);
+            apellidosLabel.Name = "apellidosLabel";
+            apellidosLabel.Size = new System.Drawing.Size(75, 20);
+            apellidosLabel.TabIndex = 46;
+            apellidosLabel.Text = "apellidos:";
+            // 
+            // apellidosTextBox
+            // 
+            this.apellidosTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.huespedesBindingSource, "apellidos", true));
+            this.apellidosTextBox.Location = new System.Drawing.Point(272, 405);
+            this.apellidosTextBox.Name = "apellidosTextBox";
+            this.apellidosTextBox.Size = new System.Drawing.Size(100, 26);
+            this.apellidosTextBox.TabIndex = 47;
+            // 
+            // correoLabel
+            // 
+            correoLabel.AutoSize = true;
+            correoLabel.Location = new System.Drawing.Point(162, 527);
+            correoLabel.Name = "correoLabel";
+            correoLabel.Size = new System.Drawing.Size(58, 20);
+            correoLabel.TabIndex = 48;
+            correoLabel.Text = "correo:";
+            // 
+            // correoTextBox
+            // 
+            this.correoTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.huespedesBindingSource, "correo", true));
+            this.correoTextBox.Location = new System.Drawing.Point(272, 524);
+            this.correoTextBox.Name = "correoTextBox";
+            this.correoTextBox.Size = new System.Drawing.Size(100, 26);
+            this.correoTextBox.TabIndex = 49;
+            // 
+            // direccionLabel
+            // 
+            direccionLabel.AutoSize = true;
+            direccionLabel.Location = new System.Drawing.Point(162, 440);
+            direccionLabel.Name = "direccionLabel";
+            direccionLabel.Size = new System.Drawing.Size(76, 20);
+            direccionLabel.TabIndex = 50;
+            direccionLabel.Text = "direccion:";
+            // 
+            // direccionTextBox
+            // 
+            this.direccionTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.huespedesBindingSource, "direccion", true));
+            this.direccionTextBox.Location = new System.Drawing.Point(272, 437);
+            this.direccionTextBox.Name = "direccionTextBox";
+            this.direccionTextBox.Size = new System.Drawing.Size(100, 26);
+            this.direccionTextBox.TabIndex = 51;
+            // 
+            // idEstado_FKLabel
+            // 
+            idEstado_FKLabel.AutoSize = true;
+            idEstado_FKLabel.Location = new System.Drawing.Point(162, 562);
+            idEstado_FKLabel.Name = "idEstado_FKLabel";
+            idEstado_FKLabel.Size = new System.Drawing.Size(104, 20);
+            idEstado_FKLabel.TabIndex = 52;
+            idEstado_FKLabel.Text = "id Estado FK:";
+            // 
+            // idEstado_FKTextBox
+            // 
+            this.idEstado_FKTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.huespedesBindingSource, "idEstado_FK", true));
+            this.idEstado_FKTextBox.Location = new System.Drawing.Point(272, 559);
+            this.idEstado_FKTextBox.Name = "idEstado_FKTextBox";
+            this.idEstado_FKTextBox.Size = new System.Drawing.Size(100, 26);
+            this.idEstado_FKTextBox.TabIndex = 53;
+            // 
+            // idHuespedLabel
+            // 
+            idHuespedLabel.AutoSize = true;
+            idHuespedLabel.Location = new System.Drawing.Point(711, 149);
+            idHuespedLabel.Name = "idHuespedLabel";
+            idHuespedLabel.Size = new System.Drawing.Size(94, 20);
+            idHuespedLabel.TabIndex = 54;
+            idHuespedLabel.Text = "id Huesped:";
+            // 
+            // idHuespedTextBox
+            // 
+            this.idHuespedTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.huespedesBindingSource, "idHuesped", true));
+            this.idHuespedTextBox.Location = new System.Drawing.Point(821, 146);
+            this.idHuespedTextBox.Name = "idHuespedTextBox";
+            this.idHuespedTextBox.Size = new System.Drawing.Size(100, 26);
+            this.idHuespedTextBox.TabIndex = 55;
+            // 
+            // nombresLabel
+            // 
+            nombresLabel.AutoSize = true;
+            nombresLabel.Location = new System.Drawing.Point(162, 376);
+            nombresLabel.Name = "nombresLabel";
+            nombresLabel.Size = new System.Drawing.Size(75, 20);
+            nombresLabel.TabIndex = 56;
+            nombresLabel.Text = "nombres:";
+            // 
+            // nombresTextBox
+            // 
+            this.nombresTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.huespedesBindingSource, "nombres", true));
+            this.nombresTextBox.Location = new System.Drawing.Point(272, 373);
+            this.nombresTextBox.Name = "nombresTextBox";
+            this.nombresTextBox.Size = new System.Drawing.Size(100, 26);
+            this.nombresTextBox.TabIndex = 57;
+            // 
+            // telefonoLabel
+            // 
+            telefonoLabel.AutoSize = true;
+            telefonoLabel.Location = new System.Drawing.Point(162, 481);
+            telefonoLabel.Name = "telefonoLabel";
+            telefonoLabel.Size = new System.Drawing.Size(71, 20);
+            telefonoLabel.TabIndex = 58;
+            telefonoLabel.Text = "telefono:";
+            // 
+            // telefonoTextBox
+            // 
+            this.telefonoTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.huespedesBindingSource, "telefono", true));
+            this.telefonoTextBox.Location = new System.Drawing.Point(272, 478);
+            this.telefonoTextBox.Name = "telefonoTextBox";
+            this.telefonoTextBox.Size = new System.Drawing.Size(100, 26);
+            this.telefonoTextBox.TabIndex = 59;
             // 
             // frmManejoHuespedes
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(800, 500);
+            this.ClientSize = new System.Drawing.Size(1200, 769);
+            this.Controls.Add(apellidosLabel);
+            this.Controls.Add(this.apellidosTextBox);
+            this.Controls.Add(correoLabel);
+            this.Controls.Add(this.correoTextBox);
+            this.Controls.Add(direccionLabel);
+            this.Controls.Add(this.direccionTextBox);
+            this.Controls.Add(idEstado_FKLabel);
+            this.Controls.Add(this.idEstado_FKTextBox);
+            this.Controls.Add(idHuespedLabel);
+            this.Controls.Add(this.idHuespedTextBox);
+            this.Controls.Add(nombresLabel);
+            this.Controls.Add(this.nombresTextBox);
+            this.Controls.Add(telefonoLabel);
+            this.Controls.Add(this.telefonoTextBox);
             this.Controls.Add(this.panelInferior);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.guna2TextBox1);
-            this.Controls.Add(this.cbbtEstado);
             this.Controls.Add(this.btnCancelar);
-            this.Controls.Add(this.txtCorreo);
-            this.Controls.Add(this.txtTelefono);
-            this.Controls.Add(this.txtDireccion);
-            this.Controls.Add(this.txtApellidos);
-            this.Controls.Add(this.txtNombres);
             this.Controls.Add(this.panelSuperior);
             this.Controls.Add(this.btnGuardar);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Name = "frmManejoHuespedes";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Manejo de Huespedes";
             this.panelSuperior.ResumeLayout(false);
             this.panelSuperior.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btnDefault)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.huespedesBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
         }
 
         #endregion
-
-        private Guna.UI2.WinForms.Guna2ComboBox cbbtEstado;
         private Bunifu.Framework.UI.BunifuFlatButton btnCancelar;
-        private Bunifu.Framework.UI.BunifuMaterialTextbox txtCorreo;
-        private Bunifu.Framework.UI.BunifuMaterialTextbox txtTelefono;
-        private Bunifu.Framework.UI.BunifuMaterialTextbox txtDireccion;
-        private Bunifu.Framework.UI.BunifuMaterialTextbox txtApellidos;
-        private Bunifu.Framework.UI.BunifuMaterialTextbox txtNombres;
         private System.Windows.Forms.Panel panelSuperior;
         private Bunifu.Framework.UI.BunifuCustomLabel bunifuCustomLabel1;
         private Bunifu.Framework.UI.BunifuImageButton btnDefault;
@@ -414,5 +443,13 @@ namespace Hotel_Vanilla.Vista
         private Bunifu.Framework.UI.BunifuElipse bunifuElipse1;
         private System.Windows.Forms.Panel panelInferior;
         private Guna.UI2.WinForms.Guna2DragControl guna2DragControl1;
+        private System.Windows.Forms.TextBox apellidosTextBox;
+        private System.Windows.Forms.BindingSource huespedesBindingSource;
+        private System.Windows.Forms.TextBox correoTextBox;
+        private System.Windows.Forms.TextBox direccionTextBox;
+        private System.Windows.Forms.TextBox idEstado_FKTextBox;
+        private System.Windows.Forms.TextBox idHuespedTextBox;
+        private System.Windows.Forms.TextBox nombresTextBox;
+        private System.Windows.Forms.TextBox telefonoTextBox;
     }
 }

@@ -91,14 +91,14 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Hotel Vanilla.exe" size="362520">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Hotel Vanilla.exe" size="399384">
       <assemblyIdentity name="Hotel Vanilla" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>cybeSuo2/gJywugjqkbv15p4XvlBQK1s2k11b65EZ1E=</dsig:DigestValue>
+        <dsig:DigestValue>2oQlTvkRDvO3LIyVf3RnhAjr9CKyqremsvbIX6I6+Q4=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -162,13 +162,13 @@
       </hash>
     </dependentAssembly>
   </dependency>
-  <file name="Hotel Vanilla.exe.config" size="1688">
+  <file name="Hotel Vanilla.exe.config" size="1903">
     <hash>
       <dsig:Transforms>
         <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
       </dsig:Transforms>
       <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-      <dsig:DigestValue>Fu9AuEhMIAhAOoujsXgQEt5so6E102WQjiNUIcex0dM=</dsig:DigestValue>
+      <dsig:DigestValue>LPME2AuD273KpMDfBtjF4jC0USstdcYV4CRsjH/dckU=</dsig:DigestValue>
     </hash>
   </file>
   <file name="Logo.ico" size="5064">
