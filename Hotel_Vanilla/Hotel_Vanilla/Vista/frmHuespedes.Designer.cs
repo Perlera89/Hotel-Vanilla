@@ -209,6 +209,7 @@ namespace Hotel_Vanilla.Vista
             this.btnEliminar.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.btnEliminar.Textcolor = System.Drawing.Color.RoyalBlue;
             this.btnEliminar.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnEliminar.Click += new System.EventHandler(this.btnEliminar_Click);
             // 
             // huespedesBindingSource
             // 
@@ -216,6 +217,8 @@ namespace Hotel_Vanilla.Vista
             // 
             // huespedesDataGridView
             // 
+            this.huespedesDataGridView.AllowUserToAddRows = false;
+            this.huespedesDataGridView.AllowUserToDeleteRows = false;
             this.huespedesDataGridView.AutoGenerateColumns = false;
             this.huespedesDataGridView.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.huespedesDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
@@ -230,6 +233,7 @@ namespace Hotel_Vanilla.Vista
             this.huespedesDataGridView.DataSource = this.huespedesBindingSource;
             this.huespedesDataGridView.Location = new System.Drawing.Point(159, 188);
             this.huespedesDataGridView.Name = "huespedesDataGridView";
+            this.huespedesDataGridView.ReadOnly = true;
             this.huespedesDataGridView.RowHeadersWidth = 62;
             this.huespedesDataGridView.RowTemplate.Height = 28;
             this.huespedesDataGridView.Size = new System.Drawing.Size(1148, 465);
@@ -238,51 +242,58 @@ namespace Hotel_Vanilla.Vista
             // dataGridViewTextBoxColumn1
             // 
             this.dataGridViewTextBoxColumn1.DataPropertyName = "idHuesped";
-            this.dataGridViewTextBoxColumn1.HeaderText = "idHuesped";
+            this.dataGridViewTextBoxColumn1.HeaderText = "Id Huesped";
             this.dataGridViewTextBoxColumn1.MinimumWidth = 8;
             this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
+            this.dataGridViewTextBoxColumn1.ReadOnly = true;
             // 
             // dataGridViewTextBoxColumn2
             // 
             this.dataGridViewTextBoxColumn2.DataPropertyName = "nombres";
-            this.dataGridViewTextBoxColumn2.HeaderText = "nombres";
+            this.dataGridViewTextBoxColumn2.HeaderText = "Nombres";
             this.dataGridViewTextBoxColumn2.MinimumWidth = 8;
             this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
+            this.dataGridViewTextBoxColumn2.ReadOnly = true;
             // 
             // dataGridViewTextBoxColumn3
             // 
             this.dataGridViewTextBoxColumn3.DataPropertyName = "apellidos";
-            this.dataGridViewTextBoxColumn3.HeaderText = "apellidos";
+            this.dataGridViewTextBoxColumn3.HeaderText = "Apellidos";
             this.dataGridViewTextBoxColumn3.MinimumWidth = 8;
             this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
+            this.dataGridViewTextBoxColumn3.ReadOnly = true;
             // 
             // dataGridViewTextBoxColumn4
             // 
             this.dataGridViewTextBoxColumn4.DataPropertyName = "direccion";
-            this.dataGridViewTextBoxColumn4.HeaderText = "direccion";
+            this.dataGridViewTextBoxColumn4.HeaderText = "Direccion";
             this.dataGridViewTextBoxColumn4.MinimumWidth = 8;
             this.dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
+            this.dataGridViewTextBoxColumn4.ReadOnly = true;
             // 
             // dataGridViewTextBoxColumn5
             // 
             this.dataGridViewTextBoxColumn5.DataPropertyName = "telefono";
-            this.dataGridViewTextBoxColumn5.HeaderText = "telefono";
+            this.dataGridViewTextBoxColumn5.HeaderText = "Teléfono";
             this.dataGridViewTextBoxColumn5.MinimumWidth = 8;
             this.dataGridViewTextBoxColumn5.Name = "dataGridViewTextBoxColumn5";
+            this.dataGridViewTextBoxColumn5.ReadOnly = true;
             // 
             // dataGridViewTextBoxColumn6
             // 
             this.dataGridViewTextBoxColumn6.DataPropertyName = "correo";
-            this.dataGridViewTextBoxColumn6.HeaderText = "correo";
+            this.dataGridViewTextBoxColumn6.HeaderText = "Correo";
             this.dataGridViewTextBoxColumn6.MinimumWidth = 8;
             this.dataGridViewTextBoxColumn6.Name = "dataGridViewTextBoxColumn6";
+            this.dataGridViewTextBoxColumn6.ReadOnly = true;
             // 
             // dataGridViewTextBoxColumn7
             // 
             this.dataGridViewTextBoxColumn7.DataPropertyName = "idEstado_FK";
-            this.dataGridViewTextBoxColumn7.HeaderText = "idEstado_FK";
+            this.dataGridViewTextBoxColumn7.HeaderText = "Estado";
             this.dataGridViewTextBoxColumn7.MinimumWidth = 8;
             this.dataGridViewTextBoxColumn7.Name = "dataGridViewTextBoxColumn7";
+            this.dataGridViewTextBoxColumn7.ReadOnly = true;
             // 
             // frmHuespedes
             // 
@@ -300,6 +311,7 @@ namespace Hotel_Vanilla.Vista
             this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Name = "frmHuespedes";
             this.Text = "frmClientes";
+            this.Load += new System.EventHandler(this.frmHuespedes_Load);
             ((System.ComponentModel.ISupportInitialize)(this.btnBuscar)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.huespedesBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.huespedesDataGridView)).EndInit();

@@ -69,6 +69,9 @@
     <Reference Include="Bunifu_UI_v1.5.3">
       <HintPath>..\..\..\..\Downloads\Bunifu_UI_v1.5.3.dll</HintPath>
     </Reference>
+    <Reference Include="Dapper, Version=2.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Dapper.2.0.90\lib\net461\Dapper.dll</HintPath>
+    </Reference>
     <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
       <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.dll</HintPath>
     </Reference>
@@ -89,6 +92,7 @@
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Configuration" />
     <Reference Include="System.Core" />
     <Reference Include="System.Design" />
     <Reference Include="System.Management" />
@@ -118,6 +122,8 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Conexion.cs" />
+    <Compile Include="CONTROLADOR\CHuespedes.cs" />
     <Compile Include="ENTIDAD\Estados.cs" />
     <Compile Include="ENTIDAD\Habitaciones.cs" />
     <Compile Include="ENTIDAD\Huespedes.cs" />
@@ -125,6 +131,7 @@
     <Compile Include="ENTIDAD\Sucesos.cs" />
     <Compile Include="ENTIDAD\TipoHabitaciones.cs" />
     <Compile Include="ENTIDAD\Usuarios.cs" />
+    <Compile Include="MODELO\MHuespedes.cs" />
     <Compile Include="VanillaBDDataSet.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -168,6 +175,12 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Vista\frmManejoHuespedesActualizar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vista\frmManejoHuespedesActualizar.Designer.cs">
+      <DependentUpon>frmManejoHuespedesActualizar.cs</DependentUpon>
+    </Compile>
     <Compile Include="Vista\frmManejoReservas.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -270,6 +283,9 @@
     </Compile>
     <EmbeddedResource Include="Vista\frmManejoHabitaciones.resx">
       <DependentUpon>frmManejoHabitaciones.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vista\frmManejoHuespedesActualizar.resx">
+      <DependentUpon>frmManejoHuespedesActualizar.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Vista\frmManejoReservas.resx">
       <DependentUpon>frmManejoReservas.cs</DependentUpon>
@@ -406,10 +422,7 @@
   <ItemGroup>
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="CONTROLADOR\" />
-    <Folder Include="MODELO\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <BootstrapperPackage Include=".NETFramework,Version=v4.7.2">
       <Visible>False</Visible>

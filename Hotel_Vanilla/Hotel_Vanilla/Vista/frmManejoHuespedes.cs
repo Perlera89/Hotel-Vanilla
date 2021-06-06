@@ -1,4 +1,6 @@
-﻿using System;
+﻿using Hotel_Vanilla.CONTROLADOR;
+using Hotel_Vanilla.ENTIDAD;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,14 +14,49 @@ namespace Hotel_Vanilla.Vista
 {
     public partial class frmManejoHuespedes : Form
     {
+        public Huespedes huesped = new Huespedes();
         public frmManejoHuespedes()
         {
             InitializeComponent();
         }
-
+        public frmManejoHuespedes(Huespedes huespedes) {
+            InitializeComponent();
+            this.huesped = huespedes;
+        }
+        void cargarControles()
+        {
+            idHuespedTextBox.Text = huesped.idHuesped.ToString();
+            nombresTextBox.Text = huesped.nombres;
+            apellidosTextBox.Text = huesped.apellidos;
+            direccionTextBox.Text = huesped.direccion;
+            telefonoTextBox.Text = huesped.telefono;
+            correoTextBox.Text = huesped.correo;
+            idEstado_FKTextBox.Text = huesped.idEstado_FK.ToString();
+        }
         private void btnCerrar_Click(object sender, EventArgs e)
         {
             Close();
+        }
+        private void btnGuardar_Click(object sender, EventArgs e)
+        {
+                CHuespedes cHuespedes = new CHuespedes();
+                Huespedes huespedes = new Huespedes();
+                huespedesBindingSource.EndEdit();
+                huespedes = (Huespedes)huespedesBindingSource.Current;
+
+                cHuespedes.AgregarHuesped(huespedes);
+                this.Close();
+        }
+
+        private void frmManejoHuespedes_Load(object sender, EventArgs e)
+        {
+            huespedesBindingSource.AddNew();
+        }
+
+        private void btnCancelar_Click(object sender, EventArgs e)
+        {
+            huesped = null;
+            this.Close();
         }
     }
 }

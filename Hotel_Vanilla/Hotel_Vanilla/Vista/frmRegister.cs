@@ -89,10 +89,10 @@ namespace Hotel_Vanilla.Vista
 
         private void chkClave_OnChange(object sender, EventArgs e)
         {
-            if (chkClave.Checked == true && txtPass.Text != "Password")
-                txtPass.isPassword = false;
-            else
-                txtPass.isPassword = true;
+            //if (chkClave.Checked == true && txtPass.Text != "Password")
+            //    txtPass.isPassword = false;
+            //else
+            //    txtPass.isPassword = true;
         }
 
         private void txtPass_KeyUp(object sender, KeyEventArgs e)
