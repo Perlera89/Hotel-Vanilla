@@ -40,12 +40,15 @@ namespace Hotel_Vanilla.Vista
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmManejoHuespedes));
             this.panelSuperior = new System.Windows.Forms.Panel();
             this.bunifuCustomLabel1 = new Bunifu.Framework.UI.BunifuCustomLabel();
+            this.btnDefault = new Bunifu.Framework.UI.BunifuImageButton();
+            this.btnCerrar = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.guna2TextBox1 = new Guna.UI2.WinForms.Guna2TextBox();
             this.bunifuElipse1 = new Bunifu.Framework.UI.BunifuElipse(this.components);
             this.panelInferior = new System.Windows.Forms.Panel();
             this.guna2DragControl1 = new Guna.UI2.WinForms.Guna2DragControl(this.components);
             this.apellidosTextBox = new System.Windows.Forms.TextBox();
+            this.huespedesBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.correoTextBox = new System.Windows.Forms.TextBox();
             this.direccionTextBox = new System.Windows.Forms.TextBox();
             this.idEstado_FKTextBox = new System.Windows.Forms.TextBox();
@@ -53,11 +56,8 @@ namespace Hotel_Vanilla.Vista
             this.nombresTextBox = new System.Windows.Forms.TextBox();
             this.telefonoTextBox = new System.Windows.Forms.TextBox();
             this.btnCancelar = new Bunifu.Framework.UI.BunifuFlatButton();
-            this.btnDefault = new Bunifu.Framework.UI.BunifuImageButton();
-            this.btnCerrar = new System.Windows.Forms.Button();
             this.btnGuardar = new Bunifu.Framework.UI.BunifuFlatButton();
             this.guna2BorderlessForm1 = new Guna.UI2.WinForms.Guna2BorderlessForm(this.components);
-            this.huespedesBindingSource = new System.Windows.Forms.BindingSource(this.components);
             apellidosLabel = new System.Windows.Forms.Label();
             correoLabel = new System.Windows.Forms.Label();
             direccionLabel = new System.Windows.Forms.Label();
@@ -159,6 +159,38 @@ namespace Hotel_Vanilla.Vista
             this.bunifuCustomLabel1.TabIndex = 15;
             this.bunifuCustomLabel1.Text = "MANTENIMIENTO DE HUESPEDES";
             // 
+            // btnDefault
+            // 
+            this.btnDefault.BackColor = System.Drawing.Color.Transparent;
+            this.btnDefault.Image = global::Hotel_Vanilla.Properties.Resources.Icono;
+            this.btnDefault.ImageActive = null;
+            this.btnDefault.Location = new System.Drawing.Point(18, 0);
+            this.btnDefault.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.btnDefault.Name = "btnDefault";
+            this.btnDefault.Size = new System.Drawing.Size(75, 77);
+            this.btnDefault.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.btnDefault.TabIndex = 14;
+            this.btnDefault.TabStop = false;
+            this.btnDefault.Zoom = 10;
+            // 
+            // btnCerrar
+            // 
+            this.btnCerrar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnCerrar.BackColor = System.Drawing.Color.RoyalBlue;
+            this.btnCerrar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnCerrar.FlatAppearance.BorderSize = 0;
+            this.btnCerrar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnCerrar.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCerrar.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.btnCerrar.Image = global::Hotel_Vanilla.Properties.Resources.cerrar__1_;
+            this.btnCerrar.Location = new System.Drawing.Point(1146, 5);
+            this.btnCerrar.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.btnCerrar.Name = "btnCerrar";
+            this.btnCerrar.Size = new System.Drawing.Size(50, 51);
+            this.btnCerrar.TabIndex = 13;
+            this.btnCerrar.UseVisualStyleBackColor = false;
+            this.btnCerrar.Click += new System.EventHandler(this.btnCerrar_Click);
+            // 
             // label1
             // 
             this.label1.AutoSize = true;
@@ -230,6 +262,10 @@ namespace Hotel_Vanilla.Vista
             this.apellidosTextBox.Name = "apellidosTextBox";
             this.apellidosTextBox.Size = new System.Drawing.Size(393, 26);
             this.apellidosTextBox.TabIndex = 47;
+            // 
+            // huespedesBindingSource
+            // 
+            this.huespedesBindingSource.DataSource = typeof(Hotel_Vanilla.ENTIDAD.Huespedes);
             // 
             // correoTextBox
             // 
@@ -318,38 +354,6 @@ namespace Hotel_Vanilla.Vista
             this.btnCancelar.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
             // 
-            // btnDefault
-            // 
-            this.btnDefault.BackColor = System.Drawing.Color.Transparent;
-            this.btnDefault.Image = global::Hotel_Vanilla.Properties.Resources.Icono;
-            this.btnDefault.ImageActive = null;
-            this.btnDefault.Location = new System.Drawing.Point(18, 0);
-            this.btnDefault.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.btnDefault.Name = "btnDefault";
-            this.btnDefault.Size = new System.Drawing.Size(75, 77);
-            this.btnDefault.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.btnDefault.TabIndex = 14;
-            this.btnDefault.TabStop = false;
-            this.btnDefault.Zoom = 10;
-            // 
-            // btnCerrar
-            // 
-            this.btnCerrar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnCerrar.BackColor = System.Drawing.Color.RoyalBlue;
-            this.btnCerrar.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnCerrar.FlatAppearance.BorderSize = 0;
-            this.btnCerrar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnCerrar.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCerrar.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.btnCerrar.Image = global::Hotel_Vanilla.Properties.Resources.cerrar__1_;
-            this.btnCerrar.Location = new System.Drawing.Point(1146, 5);
-            this.btnCerrar.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.btnCerrar.Name = "btnCerrar";
-            this.btnCerrar.Size = new System.Drawing.Size(50, 51);
-            this.btnCerrar.TabIndex = 13;
-            this.btnCerrar.UseVisualStyleBackColor = false;
-            this.btnCerrar.Click += new System.EventHandler(this.btnCerrar_Click);
-            // 
             // btnGuardar
             // 
             this.btnGuardar.Activecolor = System.Drawing.Color.CornflowerBlue;
@@ -392,10 +396,6 @@ namespace Hotel_Vanilla.Vista
             // guna2BorderlessForm1
             // 
             this.guna2BorderlessForm1.ContainerControl = this;
-            // 
-            // huespedesBindingSource
-            // 
-            this.huespedesBindingSource.DataSource = typeof(Hotel_Vanilla.ENTIDAD.Huespedes);
             // 
             // frmManejoHuespedes
             // 
@@ -445,20 +445,20 @@ namespace Hotel_Vanilla.Vista
         private Bunifu.Framework.UI.BunifuCustomLabel bunifuCustomLabel1;
         private Bunifu.Framework.UI.BunifuImageButton btnDefault;
         private System.Windows.Forms.Button btnCerrar;
-        private Bunifu.Framework.UI.BunifuFlatButton btnGuardar;
         private System.Windows.Forms.Label label1;
         private Guna.UI2.WinForms.Guna2TextBox guna2TextBox1;
         private Bunifu.Framework.UI.BunifuElipse bunifuElipse1;
         private System.Windows.Forms.Panel panelInferior;
         private Guna.UI2.WinForms.Guna2DragControl guna2DragControl1;
-        private System.Windows.Forms.TextBox apellidosTextBox;
         private System.Windows.Forms.BindingSource huespedesBindingSource;
-        private System.Windows.Forms.TextBox correoTextBox;
-        private System.Windows.Forms.TextBox direccionTextBox;
-        private System.Windows.Forms.TextBox idEstado_FKTextBox;
-        private System.Windows.Forms.TextBox idHuespedTextBox;
-        private System.Windows.Forms.TextBox nombresTextBox;
-        private System.Windows.Forms.TextBox telefonoTextBox;
         private Guna.UI2.WinForms.Guna2BorderlessForm guna2BorderlessForm1;
+        public System.Windows.Forms.TextBox apellidosTextBox;
+        public System.Windows.Forms.TextBox correoTextBox;
+        public System.Windows.Forms.TextBox direccionTextBox;
+        public System.Windows.Forms.TextBox idEstado_FKTextBox;
+        public System.Windows.Forms.TextBox idHuespedTextBox;
+        public System.Windows.Forms.TextBox nombresTextBox;
+        public System.Windows.Forms.TextBox telefonoTextBox;
+        public Bunifu.Framework.UI.BunifuFlatButton btnGuardar;
     }
 }

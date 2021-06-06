@@ -27,7 +27,7 @@ namespace Hotel_Vanilla.CONTROLADOR
         }
         public void ModificarHuesped(Huespedes huesped)
         {
-            mHuespedes.ModificarHuesped(huesped);
+            mHuespedes.ActualizarHuesped(huesped);
         }
     }
 }

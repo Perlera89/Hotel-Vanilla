@@ -47,7 +47,7 @@ namespace Hotel_Vanilla.MODELO
             cn.Execute(consulta, parametros, commandType: CommandType.StoredProcedure);
             cn.Close();
         }
-        public void ModificarHuesped(Huespedes huesped)
+        public void ActualizarHuesped(Huespedes huesped)
         {
             string consulta = "sp_actualizarHuesped";
             DynamicParameters parametros = new DynamicParameters();

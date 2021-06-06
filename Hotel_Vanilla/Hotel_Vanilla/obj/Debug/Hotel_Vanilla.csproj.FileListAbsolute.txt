@@ -171,4 +171,3 @@ C:\Users\kembe\OneDrive\Documentos\GitHub\Hotel_Vainilla\Hotel_Vanilla\Hotel_Van
 C:\Users\kembe\OneDrive\Documentos\GitHub\Hotel_Vainilla\Hotel_Vanilla\Hotel_Vanilla\obj\Debug\Hotel_Vanilla.csproj.CopyComplete
 C:\Users\kembe\OneDrive\Documentos\GitHub\Hotel_Vainilla\Hotel_Vanilla\Hotel_Vanilla\obj\Debug\Hotel Vanilla.exe
 C:\Users\kembe\OneDrive\Documentos\GitHub\Hotel_Vainilla\Hotel_Vanilla\Hotel_Vanilla\obj\Debug\Hotel Vanilla.pdb
-C:\Users\kembe\OneDrive\Documentos\GitHub\Hotel_Vainilla\Hotel_Vanilla\Hotel_Vanilla\obj\Debug\Hotel_Vanilla.Vista.frmManejoHuespedesActualizar.resources

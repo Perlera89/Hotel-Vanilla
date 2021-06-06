@@ -14,15 +14,14 @@ namespace Hotel_Vanilla.Vista
 {
     public partial class frmManejoHuespedes : Form
     {
-        public Huespedes huesped = new Huespedes();
-        public frmManejoHuespedes()
+
+        public frmManejoHuespedes(/*Huespedes huesped*/)
         {
             InitializeComponent();
+            //this.huesped = huesped;
         }
-        public frmManejoHuespedes(Huespedes huespedes) {
-            InitializeComponent();
-            this.huesped = huespedes;
-        }
+
+        Huespedes huesped = new Huespedes();
         void cargarControles()
         {
             idHuespedTextBox.Text = huesped.idHuesped.ToString();
@@ -39,6 +38,23 @@ namespace Hotel_Vanilla.Vista
         }
         private void btnGuardar_Click(object sender, EventArgs e)
         {
+            if (btnGuardar.Text.Equals("Actualizar"))
+            {
+                huesped.idHuesped = Convert.ToInt32(idHuespedTextBox.Text);
+                huesped.nombres = nombresTextBox.Text;
+                huesped.apellidos = apellidosTextBox.Text;
+                huesped.direccion = direccionTextBox.Text;
+                huesped.telefono = telefonoTextBox.Text;
+                huesped.correo = correoTextBox.Text;
+                huesped.idEstado_FK = Convert.ToInt32(idEstado_FKTextBox.Text);
+
+                CHuespedes ch = new CHuespedes();
+                ch.ModificarHuesped(huesped);
+                this.Close();
+
+            }
+            else if (btnGuardar.Text.Equals("Guardar"))
+            {
                 CHuespedes cHuespedes = new CHuespedes();
                 Huespedes huespedes = new Huespedes();
                 huespedesBindingSource.EndEdit();
@@ -46,11 +62,21 @@ namespace Hotel_Vanilla.Vista
 
                 cHuespedes.AgregarHuesped(huespedes);
                 this.Close();
+            }
         }
+        public Boolean accion = false;
 
         private void frmManejoHuespedes_Load(object sender, EventArgs e)
         {
-            huespedesBindingSource.AddNew();
+            if (accion == false)
+            {
+                huespedesBindingSource.AddNew();
+            }
+            else
+            {
+                huespedesBindingSource.EndEdit();
+            }
+            //cargarControles();
         }
 
         private void btnCancelar_Click(object sender, EventArgs e)

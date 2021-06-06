@@ -18,16 +18,16 @@ namespace Hotel_Vanilla.Vista
         public frmHuespedes()
         {
             InitializeComponent();
-          
+
         }
 
         private void Clean()
         {
 
         }
-         void Cargar()
+        void Cargar()
         {
-        
+
         }
 
         private void Buscar()
@@ -37,16 +37,17 @@ namespace Hotel_Vanilla.Vista
 
         private void btnAgregar_Click(object sender, EventArgs e)
         {
-            frmManejoHuespedes frm = new frmManejoHuespedes();
+            Huespedes huespedes = new Huespedes();
+            frmManejoHuespedes frm = new frmManejoHuespedes(/*huespedes*/);
             frm.ShowDialog();
-       
-            huespedesBindingSource.DataSource = null;
+
+            //huespedesBindingSource.DataSource = null;
             huespedesBindingSource.DataSource = cHuespedes.ConsultarHuespedes();
         }
 
         private void btnActualizar_Click(object sender, EventArgs e)
         {
-            String idS = huespedesDataGridView.CurrentRow.Cells[0].Value.ToString();
+            String Id = huespedesDataGridView.CurrentRow.Cells[0].Value.ToString();
             String nombre = huespedesDataGridView.CurrentRow.Cells[1].Value.ToString();
             String apellido = huespedesDataGridView.CurrentRow.Cells[2].Value.ToString();
             String direccion = huespedesDataGridView.CurrentRow.Cells[3].Value.ToString();
@@ -57,19 +58,28 @@ namespace Hotel_Vanilla.Vista
             int id = 0;
             int IdEstadoFk1 = 0;
 
-            id = Convert.ToInt32(idS);
+            id = Convert.ToInt32(Id);
             IdEstadoFk1 = Convert.ToInt32(IdEstadoFk);
 
-            Huespedes huespedes = new Huespedes();
-            huespedes.idHuesped = id;
-            huespedes.nombres = nombre;
-            huespedes.apellidos = apellido;
-            huespedes.direccion = direccion;
-            huespedes.telefono = telefono;
-            huespedes.correo = correo;
-            huespedes.idEstado_FK = IdEstadoFk1;
+            //Huespedes huespedes = new Huespedes();
+            //huespedes.idHuesped = id;
+            //huespedes.nombres = nombre;
+            //huespedes.apellidos = apellido;
+            //huespedes.direccion = direccion;
+            //huespedes.telefono = telefono;
+            //huespedes.correo = correo;
+            //huespedes.idEstado_FK = IdEstadoFk1;
 
-            frmManejoHuespedesActualizar frm = new frmManejoHuespedesActualizar(huespedes);
+            frmManejoHuespedes frm = new frmManejoHuespedes(/*huespedes*/);
+            frm.idHuespedTextBox.Text = id.ToString();
+            frm.nombresTextBox.Text = nombre;
+            frm.apellidosTextBox.Text = apellido;
+            frm.direccionTextBox.Text = direccion;
+            frm.telefonoTextBox.Text = telefono;
+            frm.correoTextBox.Text = correo;
+            frm.idEstado_FKTextBox.Text = IdEstadoFk1.ToString();
+            frm.btnGuardar.Text = "Actualizar";
+            frm.accion = true;
             frm.ShowDialog();
 
             huespedesBindingSource.DataSource = null;
