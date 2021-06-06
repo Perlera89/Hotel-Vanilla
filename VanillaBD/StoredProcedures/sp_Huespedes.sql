@@ -1,3 +1,4 @@
+use VanillaBD
 ---------------------------------------------------------------------------------------
 --Mostrar Huesped
 go
@@ -16,12 +17,13 @@ Create procedure sp_insertarHuesped
 @apellidos varchar(50),
 @direccion varchar(255),
 @telefono varchar(20),
+@Correo varchar(100),
 @idEstado_Fk int
 
 as 
 begin
 set nocount on
-insert into Huespedes values(@nombres,@apellidos,@direccion,@telefono,@idEstado_Fk)
+insert into Huespedes values(@nombres,@apellidos,@direccion,@telefono,@Correo,@idEstado_Fk)
 end
 go
 ----------------------------------------------------------------------------------------
