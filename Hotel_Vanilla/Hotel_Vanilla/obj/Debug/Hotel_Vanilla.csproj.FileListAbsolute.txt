@@ -171,88 +171,48 @@ C:\Users\kembe\OneDrive\Documentos\GitHub\Hotel_Vainilla\Hotel_Vanilla\Hotel_Van
 C:\Users\kembe\OneDrive\Documentos\GitHub\Hotel_Vainilla\Hotel_Vanilla\Hotel_Vanilla\obj\Debug\Hotel_Vanilla.csproj.CopyComplete
 C:\Users\kembe\OneDrive\Documentos\GitHub\Hotel_Vainilla\Hotel_Vanilla\Hotel_Vanilla\obj\Debug\Hotel Vanilla.exe
 C:\Users\kembe\OneDrive\Documentos\GitHub\Hotel_Vainilla\Hotel_Vanilla\Hotel_Vanilla\obj\Debug\Hotel Vanilla.pdb
-C:\Users\Manuel Perlera\Documents\GitHub\Hotel_Vainilla\Hotel_Vanilla\Hotel_Vanilla\bin\Debug\Dapper.dll
-C:\Users\Manuel Perlera\Documents\GitHub\Hotel_Vainilla\Hotel_Vanilla\Hotel_Vanilla\bin\Debug\Dapper.xml
-C:\Users\Manuel Perlera\Documents\GitHub\Hotel_Vainilla\Hotel_Vanilla\Hotel_Vanilla\bin\Debug\DevExpress.Data.Desktop.v21.1.dll
-C:\Users\Manuel Perlera\Documents\GitHub\Hotel_Vainilla\Hotel_Vanilla\Hotel_Vanilla\bin\Debug\DevExpress.Data.v21.1.dll
-C:\Users\Manuel Perlera\Documents\GitHub\Hotel_Vainilla\Hotel_Vanilla\Hotel_Vanilla\bin\Debug\DevExpress.Printing.v21.1.Core.dll
-C:\Users\Manuel Perlera\Documents\GitHub\Hotel_Vainilla\Hotel_Vanilla\Hotel_Vanilla\bin\Debug\DevExpress.Utils.v21.1.dll
-C:\Users\Manuel Perlera\Documents\GitHub\Hotel_Vainilla\Hotel_Vanilla\Hotel_Vanilla\bin\Debug\DevExpress.XtraEditors.v21.1.dll
-C:\Users\Manuel Perlera\Documents\GitHub\Hotel_Vainilla\Hotel_Vanilla\Hotel_Vanilla\bin\Debug\DevExpress.XtraGrid.v21.1.dll
-C:\Users\Manuel Perlera\Documents\GitHub\Hotel_Vainilla\Hotel_Vanilla\Hotel_Vanilla\bin\Debug\DevExpress.XtraLayout.v21.1.dll
-C:\Users\Manuel Perlera\Documents\GitHub\Hotel_Vainilla\Hotel_Vanilla\Hotel_Vanilla\bin\Debug\DevExpress.XtraPrinting.v21.1.dll
-C:\Users\Manuel Perlera\Documents\GitHub\Hotel_Vainilla\Hotel_Vanilla\Hotel_Vanilla\bin\Debug\DevExpress.Pdf.v21.1.Core.dll
-C:\Users\Manuel Perlera\Documents\GitHub\Hotel_Vainilla\Hotel_Vanilla\Hotel_Vanilla\bin\Debug\DevExpress.Pdf.v21.1.Drawing.dll
-C:\Users\Manuel Perlera\Documents\GitHub\Hotel_Vainilla\Hotel_Vanilla\Hotel_Vanilla\bin\Debug\DevExpress.Sparkline.v21.1.Core.dll
-C:\Users\Manuel Perlera\Documents\GitHub\Hotel_Vainilla\Hotel_Vanilla\Hotel_Vanilla\bin\Debug\DevExpress.XtraBars.v21.1.dll
-C:\Users\Manuel Perlera\Documents\GitHub\Hotel_Vainilla\Hotel_Vanilla\Hotel_Vanilla\bin\Debug\DevExpress.RichEdit.v21.1.Core.dll
-C:\Users\Manuel Perlera\Documents\GitHub\Hotel_Vainilla\Hotel_Vanilla\Hotel_Vanilla\bin\Debug\DevExpress.XtraTreeList.v21.1.dll
-C:\Users\Manuel Perlera\Documents\GitHub\Hotel_Vainilla\Hotel_Vanilla\Hotel_Vanilla\bin\Debug\DevExpress.Office.v21.1.Core.dll
-C:\Users\Manuel Perlera\Documents\GitHub\Hotel_Vainilla\Hotel_Vanilla\Hotel_Vanilla\bin\Debug\DevExpress.Data.Desktop.v21.1.xml
-C:\Users\Manuel Perlera\Documents\GitHub\Hotel_Vainilla\Hotel_Vanilla\Hotel_Vanilla\bin\Debug\DevExpress.Data.v21.1.xml
-C:\Users\Manuel Perlera\Documents\GitHub\Hotel_Vainilla\Hotel_Vanilla\Hotel_Vanilla\bin\Debug\DevExpress.Printing.v21.1.Core.xml
-C:\Users\Manuel Perlera\Documents\GitHub\Hotel_Vainilla\Hotel_Vanilla\Hotel_Vanilla\bin\Debug\DevExpress.Utils.v21.1.xml
-C:\Users\Manuel Perlera\Documents\GitHub\Hotel_Vainilla\Hotel_Vanilla\Hotel_Vanilla\bin\Debug\DevExpress.XtraEditors.v21.1.xml
-C:\Users\Manuel Perlera\Documents\GitHub\Hotel_Vainilla\Hotel_Vanilla\Hotel_Vanilla\bin\Debug\DevExpress.XtraGrid.v21.1.xml
-C:\Users\Manuel Perlera\Documents\GitHub\Hotel_Vainilla\Hotel_Vanilla\Hotel_Vanilla\bin\Debug\DevExpress.XtraLayout.v21.1.xml
-C:\Users\Manuel Perlera\Documents\GitHub\Hotel_Vainilla\Hotel_Vanilla\Hotel_Vanilla\bin\Debug\DevExpress.XtraPrinting.v21.1.xml
-C:\Users\Manuel Perlera\Documents\GitHub\Hotel_Vainilla\Hotel_Vanilla\Hotel_Vanilla\bin\Debug\DevExpress.Pdf.v21.1.Core.xml
-C:\Users\Manuel Perlera\Documents\GitHub\Hotel_Vainilla\Hotel_Vanilla\Hotel_Vanilla\bin\Debug\DevExpress.Pdf.v21.1.Drawing.xml
-C:\Users\Manuel Perlera\Documents\GitHub\Hotel_Vainilla\Hotel_Vanilla\Hotel_Vanilla\bin\Debug\DevExpress.Sparkline.v21.1.Core.xml
-C:\Users\Manuel Perlera\Documents\GitHub\Hotel_Vainilla\Hotel_Vanilla\Hotel_Vanilla\bin\Debug\DevExpress.XtraBars.v21.1.xml
-C:\Users\Manuel Perlera\Documents\GitHub\Hotel_Vainilla\Hotel_Vanilla\Hotel_Vanilla\bin\Debug\DevExpress.RichEdit.v21.1.Core.xml
-C:\Users\Manuel Perlera\Documents\GitHub\Hotel_Vainilla\Hotel_Vanilla\Hotel_Vanilla\bin\Debug\DevExpress.XtraTreeList.v21.1.xml
-C:\Users\Manuel Perlera\Documents\GitHub\Hotel_Vainilla\Hotel_Vanilla\Hotel_Vanilla\bin\Debug\DevExpress.Office.v21.1.Core.xml
-C:\Users\Manuel Perlera\Documents\GitHub\Hotel_Vainilla\Hotel_Vanilla\Hotel_Vanilla\bin\Debug\de\DevExpress.Data.v21.1.resources.dll
-C:\Users\Manuel Perlera\Documents\GitHub\Hotel_Vainilla\Hotel_Vanilla\Hotel_Vanilla\bin\Debug\es\DevExpress.Data.v21.1.resources.dll
-C:\Users\Manuel Perlera\Documents\GitHub\Hotel_Vainilla\Hotel_Vanilla\Hotel_Vanilla\bin\Debug\ja\DevExpress.Data.v21.1.resources.dll
-C:\Users\Manuel Perlera\Documents\GitHub\Hotel_Vainilla\Hotel_Vanilla\Hotel_Vanilla\bin\Debug\ru\DevExpress.Data.v21.1.resources.dll
-C:\Users\Manuel Perlera\Documents\GitHub\Hotel_Vainilla\Hotel_Vanilla\Hotel_Vanilla\bin\Debug\de\DevExpress.Printing.v21.1.Core.resources.dll
-C:\Users\Manuel Perlera\Documents\GitHub\Hotel_Vainilla\Hotel_Vanilla\Hotel_Vanilla\bin\Debug\es\DevExpress.Printing.v21.1.Core.resources.dll
-C:\Users\Manuel Perlera\Documents\GitHub\Hotel_Vainilla\Hotel_Vanilla\Hotel_Vanilla\bin\Debug\ja\DevExpress.Printing.v21.1.Core.resources.dll
-C:\Users\Manuel Perlera\Documents\GitHub\Hotel_Vainilla\Hotel_Vanilla\Hotel_Vanilla\bin\Debug\ru\DevExpress.Printing.v21.1.Core.resources.dll
-C:\Users\Manuel Perlera\Documents\GitHub\Hotel_Vainilla\Hotel_Vanilla\Hotel_Vanilla\bin\Debug\de\DevExpress.Utils.v21.1.resources.dll
-C:\Users\Manuel Perlera\Documents\GitHub\Hotel_Vainilla\Hotel_Vanilla\Hotel_Vanilla\bin\Debug\es\DevExpress.Utils.v21.1.resources.dll
-C:\Users\Manuel Perlera\Documents\GitHub\Hotel_Vainilla\Hotel_Vanilla\Hotel_Vanilla\bin\Debug\ja\DevExpress.Utils.v21.1.resources.dll
-C:\Users\Manuel Perlera\Documents\GitHub\Hotel_Vainilla\Hotel_Vanilla\Hotel_Vanilla\bin\Debug\ru\DevExpress.Utils.v21.1.resources.dll
-C:\Users\Manuel Perlera\Documents\GitHub\Hotel_Vainilla\Hotel_Vanilla\Hotel_Vanilla\bin\Debug\de\DevExpress.XtraEditors.v21.1.resources.dll
-C:\Users\Manuel Perlera\Documents\GitHub\Hotel_Vainilla\Hotel_Vanilla\Hotel_Vanilla\bin\Debug\es\DevExpress.XtraEditors.v21.1.resources.dll
-C:\Users\Manuel Perlera\Documents\GitHub\Hotel_Vainilla\Hotel_Vanilla\Hotel_Vanilla\bin\Debug\ja\DevExpress.XtraEditors.v21.1.resources.dll
-C:\Users\Manuel Perlera\Documents\GitHub\Hotel_Vainilla\Hotel_Vanilla\Hotel_Vanilla\bin\Debug\ru\DevExpress.XtraEditors.v21.1.resources.dll
-C:\Users\Manuel Perlera\Documents\GitHub\Hotel_Vainilla\Hotel_Vanilla\Hotel_Vanilla\bin\Debug\de\DevExpress.XtraGrid.v21.1.resources.dll
-C:\Users\Manuel Perlera\Documents\GitHub\Hotel_Vainilla\Hotel_Vanilla\Hotel_Vanilla\bin\Debug\es\DevExpress.XtraGrid.v21.1.resources.dll
-C:\Users\Manuel Perlera\Documents\GitHub\Hotel_Vainilla\Hotel_Vanilla\Hotel_Vanilla\bin\Debug\ja\DevExpress.XtraGrid.v21.1.resources.dll
-C:\Users\Manuel Perlera\Documents\GitHub\Hotel_Vainilla\Hotel_Vanilla\Hotel_Vanilla\bin\Debug\ru\DevExpress.XtraGrid.v21.1.resources.dll
-C:\Users\Manuel Perlera\Documents\GitHub\Hotel_Vainilla\Hotel_Vanilla\Hotel_Vanilla\bin\Debug\de\DevExpress.XtraLayout.v21.1.resources.dll
-C:\Users\Manuel Perlera\Documents\GitHub\Hotel_Vainilla\Hotel_Vanilla\Hotel_Vanilla\bin\Debug\es\DevExpress.XtraLayout.v21.1.resources.dll
-C:\Users\Manuel Perlera\Documents\GitHub\Hotel_Vainilla\Hotel_Vanilla\Hotel_Vanilla\bin\Debug\ja\DevExpress.XtraLayout.v21.1.resources.dll
-C:\Users\Manuel Perlera\Documents\GitHub\Hotel_Vainilla\Hotel_Vanilla\Hotel_Vanilla\bin\Debug\ru\DevExpress.XtraLayout.v21.1.resources.dll
-C:\Users\Manuel Perlera\Documents\GitHub\Hotel_Vainilla\Hotel_Vanilla\Hotel_Vanilla\bin\Debug\de\DevExpress.XtraPrinting.v21.1.resources.dll
-C:\Users\Manuel Perlera\Documents\GitHub\Hotel_Vainilla\Hotel_Vanilla\Hotel_Vanilla\bin\Debug\es\DevExpress.XtraPrinting.v21.1.resources.dll
-C:\Users\Manuel Perlera\Documents\GitHub\Hotel_Vainilla\Hotel_Vanilla\Hotel_Vanilla\bin\Debug\ja\DevExpress.XtraPrinting.v21.1.resources.dll
-C:\Users\Manuel Perlera\Documents\GitHub\Hotel_Vainilla\Hotel_Vanilla\Hotel_Vanilla\bin\Debug\ru\DevExpress.XtraPrinting.v21.1.resources.dll
-C:\Users\Manuel Perlera\Documents\GitHub\Hotel_Vainilla\Hotel_Vanilla\Hotel_Vanilla\bin\Debug\de\DevExpress.Pdf.v21.1.Core.resources.dll
-C:\Users\Manuel Perlera\Documents\GitHub\Hotel_Vainilla\Hotel_Vanilla\Hotel_Vanilla\bin\Debug\es\DevExpress.Pdf.v21.1.Core.resources.dll
-C:\Users\Manuel Perlera\Documents\GitHub\Hotel_Vainilla\Hotel_Vanilla\Hotel_Vanilla\bin\Debug\ja\DevExpress.Pdf.v21.1.Core.resources.dll
-C:\Users\Manuel Perlera\Documents\GitHub\Hotel_Vainilla\Hotel_Vanilla\Hotel_Vanilla\bin\Debug\ru\DevExpress.Pdf.v21.1.Core.resources.dll
-C:\Users\Manuel Perlera\Documents\GitHub\Hotel_Vainilla\Hotel_Vanilla\Hotel_Vanilla\bin\Debug\de\DevExpress.Sparkline.v21.1.Core.resources.dll
-C:\Users\Manuel Perlera\Documents\GitHub\Hotel_Vainilla\Hotel_Vanilla\Hotel_Vanilla\bin\Debug\es\DevExpress.Sparkline.v21.1.Core.resources.dll
-C:\Users\Manuel Perlera\Documents\GitHub\Hotel_Vainilla\Hotel_Vanilla\Hotel_Vanilla\bin\Debug\ja\DevExpress.Sparkline.v21.1.Core.resources.dll
-C:\Users\Manuel Perlera\Documents\GitHub\Hotel_Vainilla\Hotel_Vanilla\Hotel_Vanilla\bin\Debug\ru\DevExpress.Sparkline.v21.1.Core.resources.dll
-C:\Users\Manuel Perlera\Documents\GitHub\Hotel_Vainilla\Hotel_Vanilla\Hotel_Vanilla\bin\Debug\de\DevExpress.XtraBars.v21.1.resources.dll
-C:\Users\Manuel Perlera\Documents\GitHub\Hotel_Vainilla\Hotel_Vanilla\Hotel_Vanilla\bin\Debug\es\DevExpress.XtraBars.v21.1.resources.dll
-C:\Users\Manuel Perlera\Documents\GitHub\Hotel_Vainilla\Hotel_Vanilla\Hotel_Vanilla\bin\Debug\ja\DevExpress.XtraBars.v21.1.resources.dll
-C:\Users\Manuel Perlera\Documents\GitHub\Hotel_Vainilla\Hotel_Vanilla\Hotel_Vanilla\bin\Debug\ru\DevExpress.XtraBars.v21.1.resources.dll
-C:\Users\Manuel Perlera\Documents\GitHub\Hotel_Vainilla\Hotel_Vanilla\Hotel_Vanilla\bin\Debug\de\DevExpress.RichEdit.v21.1.Core.resources.dll
-C:\Users\Manuel Perlera\Documents\GitHub\Hotel_Vainilla\Hotel_Vanilla\Hotel_Vanilla\bin\Debug\es\DevExpress.RichEdit.v21.1.Core.resources.dll
-C:\Users\Manuel Perlera\Documents\GitHub\Hotel_Vainilla\Hotel_Vanilla\Hotel_Vanilla\bin\Debug\ja\DevExpress.RichEdit.v21.1.Core.resources.dll
-C:\Users\Manuel Perlera\Documents\GitHub\Hotel_Vainilla\Hotel_Vanilla\Hotel_Vanilla\bin\Debug\ru\DevExpress.RichEdit.v21.1.Core.resources.dll
-C:\Users\Manuel Perlera\Documents\GitHub\Hotel_Vainilla\Hotel_Vanilla\Hotel_Vanilla\bin\Debug\de\DevExpress.XtraTreeList.v21.1.resources.dll
-C:\Users\Manuel Perlera\Documents\GitHub\Hotel_Vainilla\Hotel_Vanilla\Hotel_Vanilla\bin\Debug\es\DevExpress.XtraTreeList.v21.1.resources.dll
-C:\Users\Manuel Perlera\Documents\GitHub\Hotel_Vainilla\Hotel_Vanilla\Hotel_Vanilla\bin\Debug\ja\DevExpress.XtraTreeList.v21.1.resources.dll
-C:\Users\Manuel Perlera\Documents\GitHub\Hotel_Vainilla\Hotel_Vanilla\Hotel_Vanilla\bin\Debug\ru\DevExpress.XtraTreeList.v21.1.resources.dll
-C:\Users\Manuel Perlera\Documents\GitHub\Hotel_Vainilla\Hotel_Vanilla\Hotel_Vanilla\bin\Debug\de\DevExpress.Office.v21.1.Core.resources.dll
-C:\Users\Manuel Perlera\Documents\GitHub\Hotel_Vainilla\Hotel_Vanilla\Hotel_Vanilla\bin\Debug\es\DevExpress.Office.v21.1.Core.resources.dll
-C:\Users\Manuel Perlera\Documents\GitHub\Hotel_Vainilla\Hotel_Vanilla\Hotel_Vanilla\bin\Debug\ja\DevExpress.Office.v21.1.Core.resources.dll
-C:\Users\Manuel Perlera\Documents\GitHub\Hotel_Vainilla\Hotel_Vanilla\Hotel_Vanilla\bin\Debug\ru\DevExpress.Office.v21.1.Core.resources.dll
-C:\Users\Manuel Perlera\Documents\GitHub\Hotel_Vainilla\Hotel_Vanilla\Hotel_Vanilla\obj\Debug\Hotel Vanilla.exe.licenses
+C:\Users\Jose\Desktop\Hotel_Vainilla\Hotel_Vanilla\Hotel_Vanilla\bin\Debug\Hotel Vanilla.exe.config
+C:\Users\Jose\Desktop\Hotel_Vainilla\Hotel_Vanilla\Hotel_Vanilla\bin\Debug\Hotel Vanilla.exe.manifest
+C:\Users\Jose\Desktop\Hotel_Vainilla\Hotel_Vanilla\Hotel_Vanilla\bin\Debug\Hotel Vanilla.application
+C:\Users\Jose\Desktop\Hotel_Vainilla\Hotel_Vanilla\Hotel_Vanilla\bin\Debug\Hotel Vanilla.exe
+C:\Users\Jose\Desktop\Hotel_Vainilla\Hotel_Vanilla\Hotel_Vanilla\bin\Debug\Hotel Vanilla.pdb
+C:\Users\Jose\Desktop\Hotel_Vainilla\Hotel_Vanilla\Hotel_Vanilla\bin\Debug\Dapper.dll
+C:\Users\Jose\Desktop\Hotel_Vainilla\Hotel_Vanilla\Hotel_Vanilla\bin\Debug\EntityFramework.dll
+C:\Users\Jose\Desktop\Hotel_Vainilla\Hotel_Vanilla\Hotel_Vanilla\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\Jose\Desktop\Hotel_Vainilla\Hotel_Vanilla\Hotel_Vanilla\bin\Debug\Guna.UI2.dll
+C:\Users\Jose\Desktop\Hotel_Vainilla\Hotel_Vanilla\Hotel_Vanilla\bin\Debug\Xamarin.Forms.Core.dll
+C:\Users\Jose\Desktop\Hotel_Vainilla\Hotel_Vanilla\Hotel_Vanilla\bin\Debug\Xamarin.Forms.Platform.dll
+C:\Users\Jose\Desktop\Hotel_Vainilla\Hotel_Vanilla\Hotel_Vanilla\bin\Debug\Xamarin.Forms.Xaml.dll
+C:\Users\Jose\Desktop\Hotel_Vainilla\Hotel_Vanilla\Hotel_Vanilla\bin\Debug\Zeroit.Framework.ListView.dll
+C:\Users\Jose\Desktop\Hotel_Vainilla\Hotel_Vanilla\Hotel_Vanilla\bin\Debug\Dapper.xml
+C:\Users\Jose\Desktop\Hotel_Vainilla\Hotel_Vanilla\Hotel_Vanilla\bin\Debug\EntityFramework.xml
+C:\Users\Jose\Desktop\Hotel_Vainilla\Hotel_Vanilla\Hotel_Vanilla\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\Jose\Desktop\Hotel_Vainilla\Hotel_Vanilla\Hotel_Vanilla\bin\Debug\Xamarin.Forms.Core.xml
+C:\Users\Jose\Desktop\Hotel_Vainilla\Hotel_Vanilla\Hotel_Vanilla\bin\Debug\Xamarin.Forms.Xaml.xml
+C:\Users\Jose\Desktop\Hotel_Vainilla\Hotel_Vanilla\Hotel_Vanilla\obj\Debug\Hotel_Vanilla.csproj.AssemblyReference.cache
+C:\Users\Jose\Desktop\Hotel_Vainilla\Hotel_Vanilla\Hotel_Vanilla\obj\Debug\Hotel_Vanilla.Vista.frmAjustes.resources
+C:\Users\Jose\Desktop\Hotel_Vainilla\Hotel_Vanilla\Hotel_Vanilla\obj\Debug\Hotel_Vanilla.Vista.frmHuespedes.resources
+C:\Users\Jose\Desktop\Hotel_Vainilla\Hotel_Vanilla\Hotel_Vanilla\obj\Debug\Hotel_Vanilla.Vista.frmDefault.resources
+C:\Users\Jose\Desktop\Hotel_Vainilla\Hotel_Vanilla\Hotel_Vanilla\obj\Debug\Hotel_Vanilla.Vista.frmHabitaciones.resources
+C:\Users\Jose\Desktop\Hotel_Vainilla\Hotel_Vanilla\Hotel_Vanilla\obj\Debug\Hotel_Vanilla.Vista.frmInicio.resources
+C:\Users\Jose\Desktop\Hotel_Vainilla\Hotel_Vanilla\Hotel_Vanilla\obj\Debug\Hotel_Vanilla.Form1.resources
+C:\Users\Jose\Desktop\Hotel_Vainilla\Hotel_Vanilla\Hotel_Vanilla\obj\Debug\Hotel_Vanilla.Properties.Resources.resources
+C:\Users\Jose\Desktop\Hotel_Vainilla\Hotel_Vanilla\Hotel_Vanilla\obj\Debug\Hotel_Vanilla.Vista.frmManejoHabitaciones.resources
+C:\Users\Jose\Desktop\Hotel_Vainilla\Hotel_Vanilla\Hotel_Vanilla\obj\Debug\Hotel_Vanilla.Vista.frmManejoReservas.resources
+C:\Users\Jose\Desktop\Hotel_Vainilla\Hotel_Vanilla\Hotel_Vanilla\obj\Debug\Hotel_Vanilla.Vista.frmManejoUsuarios.resources
+C:\Users\Jose\Desktop\Hotel_Vainilla\Hotel_Vanilla\Hotel_Vanilla\obj\Debug\Hotel_Vanilla.Vista.frmMensajeAdvertencia.resources
+C:\Users\Jose\Desktop\Hotel_Vainilla\Hotel_Vanilla\Hotel_Vanilla\obj\Debug\Hotel_Vanilla.Vista.frmMensajeAviso.resources
+C:\Users\Jose\Desktop\Hotel_Vainilla\Hotel_Vanilla\Hotel_Vanilla\obj\Debug\Hotel_Vanilla.Vista.frmMensajeExito.resources
+C:\Users\Jose\Desktop\Hotel_Vainilla\Hotel_Vanilla\Hotel_Vanilla\obj\Debug\Hotel_Vanilla.Vista.frmReservaciones.resources
+C:\Users\Jose\Desktop\Hotel_Vainilla\Hotel_Vanilla\Hotel_Vanilla\obj\Debug\Hotel_Vanilla.Vista.frmRegister.resources
+C:\Users\Jose\Desktop\Hotel_Vainilla\Hotel_Vanilla\Hotel_Vanilla\obj\Debug\Hotel_Vanilla.Vista.frmSplash.resources
+C:\Users\Jose\Desktop\Hotel_Vainilla\Hotel_Vanilla\Hotel_Vanilla\obj\Debug\Hotel_Vanilla.Vista.frmSucesos.resources
+C:\Users\Jose\Desktop\Hotel_Vainilla\Hotel_Vanilla\Hotel_Vanilla\obj\Debug\Hotel_Vanilla.Vista.frmUsuarios.resources
+C:\Users\Jose\Desktop\Hotel_Vainilla\Hotel_Vanilla\Hotel_Vanilla\obj\Debug\Hotel_Vanilla.Vista.frmManejoHuespedes.resources
+C:\Users\Jose\Desktop\Hotel_Vainilla\Hotel_Vanilla\Hotel_Vanilla\obj\Debug\Hotel_Vanilla.csproj.GenerateResource.cache
+C:\Users\Jose\Desktop\Hotel_Vainilla\Hotel_Vanilla\Hotel_Vanilla\obj\Debug\Hotel_Vanilla.csproj.CoreCompileInputs.cache
+C:\Users\Jose\Desktop\Hotel_Vainilla\Hotel_Vanilla\Hotel_Vanilla\obj\Debug\Hotel Vanilla.exe.manifest
+C:\Users\Jose\Desktop\Hotel_Vainilla\Hotel_Vanilla\Hotel_Vanilla\obj\Debug\Hotel Vanilla.application
+C:\Users\Jose\Desktop\Hotel_Vainilla\Hotel_Vanilla\Hotel_Vanilla\obj\Debug\Hotel_Vanilla.csproj.CopyComplete
+C:\Users\Jose\Desktop\Hotel_Vainilla\Hotel_Vanilla\Hotel_Vanilla\obj\Debug\Hotel Vanilla.exe
+C:\Users\Jose\Desktop\Hotel_Vainilla\Hotel_Vanilla\Hotel_Vanilla\obj\Debug\Hotel Vanilla.pdb
