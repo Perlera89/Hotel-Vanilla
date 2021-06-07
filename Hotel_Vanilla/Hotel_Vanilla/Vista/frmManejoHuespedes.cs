@@ -19,12 +19,13 @@ namespace Hotel_Vanilla.Vista
         {
             InitializeComponent();
             //this.huesped = huesped;
+            nombresTextBox.Focus();
         }
 
         Huespedes huesped = new Huespedes();
         void cargarControles()
         {
-            idHuespedTextBox.Text = huesped.idHuesped.ToString();
+            idHuesped.Text = huesped.idHuesped.ToString();
             nombresTextBox.Text = huesped.nombres;
             apellidosTextBox.Text = huesped.apellidos;
             direccionTextBox.Text = huesped.direccion;
@@ -40,7 +41,7 @@ namespace Hotel_Vanilla.Vista
         {
             if (btnGuardar.Text.Equals("Actualizar"))
             {
-                huesped.idHuesped = Convert.ToInt32(idHuespedTextBox.Text);
+                huesped.idHuesped = Convert.ToInt32(idHuesped.Text);
                 huesped.nombres = nombresTextBox.Text;
                 huesped.apellidos = apellidosTextBox.Text;
                 huesped.direccion = direccionTextBox.Text;
@@ -53,6 +54,7 @@ namespace Hotel_Vanilla.Vista
                 this.Close();
 
             }
+
             else if (btnGuardar.Text.Equals("Guardar"))
             {
                 CHuespedes cHuespedes = new CHuespedes();
@@ -83,6 +85,66 @@ namespace Hotel_Vanilla.Vista
         {
             huesped = null;
             this.Close();
+        }
+
+        private void nombresTextBox_Enter(object sender, EventArgs e)
+        {
+
+        }
+
+        private void nombresTextBox_Leave(object sender, EventArgs e)
+        {
+
+        }
+
+        private void apellidosTextBox_Enter(object sender, EventArgs e)
+        {
+
+        }
+
+        private void apellidosTextBox_Leave(object sender, EventArgs e)
+        {
+
+        }
+
+        private void direccionTextBox_Enter(object sender, EventArgs e)
+        {
+
+        }
+
+        private void direccionTextBox_Leave(object sender, EventArgs e)
+        {
+
+        }
+
+        private void telefonoTextBox_Enter(object sender, EventArgs e)
+        {
+
+        }
+
+        private void telefonoTextBox_Leave(object sender, EventArgs e)
+        {
+
+        }
+
+        private void correoTextBox_Enter(object sender, EventArgs e)
+        {
+
+        }
+
+        private void correoTextBox_Leave(object sender, EventArgs e)
+        {
+
+        }
+
+        private void idEstado_FKTextBox_Enter(object sender, EventArgs e)
+        {
+
+        }
+
+        private void idEstado_FKTextBox_Leave(object sender, EventArgs e)
+        {
+
         }
     }
 }

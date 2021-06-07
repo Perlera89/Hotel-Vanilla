@@ -52,6 +52,9 @@ namespace Hotel_Vanilla.Vista
         {
             Huespedes huespedes = new Huespedes();
             frmManejoHuespedes frm = new frmManejoHuespedes(/*huespedes*/);
+            frm.cajaId.Visible = false;
+            frm.lblId.Visible = false;
+            frm.idHuesped.Visible = false;
             frm.ShowDialog();
 
             //huespedesBindingSource.DataSource = null;
@@ -69,19 +72,19 @@ namespace Hotel_Vanilla.Vista
             String IdEstadoFk = huespedesGuna2DataGridView.CurrentRow.Cells[6].Value.ToString();
 
             int id = 0;
-            int IdEstadoFk1 = 0;
+            int idEstado = 0;
 
             id = Convert.ToInt32(Id);
-            IdEstadoFk1 = Convert.ToInt32(IdEstadoFk);
+            idEstado = Convert.ToInt32(IdEstadoFk);
 
             frmManejoHuespedes frm = new frmManejoHuespedes(/*huespedes*/);
-            frm.idHuespedTextBox.Text = id.ToString();
+            frm.idHuesped.Text = id.ToString();
             frm.nombresTextBox.Text = nombre;
             frm.apellidosTextBox.Text = apellido;
             frm.direccionTextBox.Text = direccion;
             frm.telefonoTextBox.Text = telefono;
             frm.correoTextBox.Text = correo;
-            frm.idEstado_FKTextBox.Text = IdEstadoFk1.ToString();
+            frm.idEstado_FKTextBox.Text = idEstado.ToString();
             frm.btnGuardar.Text = "Actualizar";
             frm.accion = true;
             frm.ShowDialog();
