@@ -7,14 +7,14 @@
     <framework targetVersion="4.7.2" profile="Full" supportedRuntime="4.0.30319" />
   </compatibleFrameworks>
   <dependency>
-    <dependentAssembly dependencyType="install" codebase="Hotel Vanilla.exe.manifest" size="10626">
+    <dependentAssembly dependencyType="install" codebase="Hotel Vanilla.exe.manifest" size="58966">
       <assemblyIdentity name="Hotel Vanilla.exe" version="1.0.0.3" publicKeyToken="0000000000000000" language="neutral" processorArchitecture="msil" type="win32" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>8XiJLUom1zcuTi0YiVRIZ5EpR3wwZ54955ov5io02Xo=</dsig:DigestValue>
+        <dsig:DigestValue>Pt7AP7eXdmioWsZ1U+z18lEsAqPIs0ooYh1dBYBFAhA=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>

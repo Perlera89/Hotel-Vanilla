@@ -14,7 +14,6 @@ namespace Hotel_Vanilla.MODELO
         IDbConnection cn = Conexion.conectar();
         public List<Huespedes> ConsultarHuespedes()
         {
-            // Select * from Huespedes
             List<Huespedes> Huespedes = new List<Huespedes>();
             string consulta = "sp_Mostrarhuesped";
             cn.Open();

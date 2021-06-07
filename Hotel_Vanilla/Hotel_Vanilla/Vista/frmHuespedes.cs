@@ -35,7 +35,20 @@ namespace Hotel_Vanilla.Vista
 
         }
 
-        private void btnAgregar_Click(object sender, EventArgs e)
+        CHuespedes cHuespedes = new CHuespedes();
+        private void frmHuespedes_Load(object sender, EventArgs e)
+        {
+            huespedesBindingSource.DataSource = cHuespedes.ConsultarHuespedes();
+
+            //for (var i = 0; i < dtgHuespedes.Columns.Count; i++)
+            //{
+            //    dtgHuespedes.Columns[i].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
+            //}
+
+            huespedesGuna2DataGridView.ColumnHeadersDefaultCellStyle.BackColor = Color.RoyalBlue;
+        }
+
+        private void btnAgregar_Click_1(object sender, EventArgs e)
         {
             Huespedes huespedes = new Huespedes();
             frmManejoHuespedes frm = new frmManejoHuespedes(/*huespedes*/);
@@ -45,30 +58,21 @@ namespace Hotel_Vanilla.Vista
             huespedesBindingSource.DataSource = cHuespedes.ConsultarHuespedes();
         }
 
-        private void btnActualizar_Click(object sender, EventArgs e)
+        private void btnActualizar_Click_1(object sender, EventArgs e)
         {
-            String Id = huespedesDataGridView.CurrentRow.Cells[0].Value.ToString();
-            String nombre = huespedesDataGridView.CurrentRow.Cells[1].Value.ToString();
-            String apellido = huespedesDataGridView.CurrentRow.Cells[2].Value.ToString();
-            String direccion = huespedesDataGridView.CurrentRow.Cells[3].Value.ToString();
-            String telefono = huespedesDataGridView.CurrentRow.Cells[4].Value.ToString();
-            String correo = huespedesDataGridView.CurrentRow.Cells[5].Value.ToString();
-            String IdEstadoFk = huespedesDataGridView.CurrentRow.Cells[6].Value.ToString();
+            String Id = huespedesGuna2DataGridView.CurrentRow.Cells[0].Value.ToString();
+            String nombre = huespedesGuna2DataGridView.CurrentRow.Cells[1].Value.ToString();
+            String apellido = huespedesGuna2DataGridView.CurrentRow.Cells[2].Value.ToString();
+            String direccion = huespedesGuna2DataGridView.CurrentRow.Cells[3].Value.ToString();
+            String telefono = huespedesGuna2DataGridView.CurrentRow.Cells[4].Value.ToString();
+            String correo = huespedesGuna2DataGridView.CurrentRow.Cells[5].Value.ToString();
+            String IdEstadoFk = huespedesGuna2DataGridView.CurrentRow.Cells[6].Value.ToString();
 
             int id = 0;
             int IdEstadoFk1 = 0;
 
             id = Convert.ToInt32(Id);
             IdEstadoFk1 = Convert.ToInt32(IdEstadoFk);
-
-            //Huespedes huespedes = new Huespedes();
-            //huespedes.idHuesped = id;
-            //huespedes.nombres = nombre;
-            //huespedes.apellidos = apellido;
-            //huespedes.direccion = direccion;
-            //huespedes.telefono = telefono;
-            //huespedes.correo = correo;
-            //huespedes.idEstado_FK = IdEstadoFk1;
 
             frmManejoHuespedes frm = new frmManejoHuespedes(/*huespedes*/);
             frm.idHuespedTextBox.Text = id.ToString();
@@ -86,15 +90,9 @@ namespace Hotel_Vanilla.Vista
             huespedesBindingSource.DataSource = cHuespedes.ConsultarHuespedes();
         }
 
-        CHuespedes cHuespedes = new CHuespedes();
-        private void frmHuespedes_Load(object sender, EventArgs e)
+        private void btnEliminar_Click_1(object sender, EventArgs e)
         {
-            huespedesBindingSource.DataSource = cHuespedes.ConsultarHuespedes();
-        }
-
-        private void btnEliminar_Click(object sender, EventArgs e)
-        {
-            String idS = huespedesDataGridView.CurrentRow.Cells[0].Value.ToString();
+            String idS = huespedesGuna2DataGridView.CurrentRow.Cells[0].Value.ToString();
             int id = 0;
 
             id = Convert.ToInt32(idS);

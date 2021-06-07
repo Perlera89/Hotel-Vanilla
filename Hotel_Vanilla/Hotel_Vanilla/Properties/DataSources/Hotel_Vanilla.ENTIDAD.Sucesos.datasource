@@ -7,4 +7,15 @@
 -->
 <GenericObjectDataSource DisplayName="Sucesos" Version="1.0" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
    <TypeInfo>Hotel_Vanilla.ENTIDAD.Sucesos, Hotel Vanilla, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</TypeInfo>
+   <TypeUISetting>
+      <PropertyUISettings>
+         <PropertyUISetting Name="descripcion">
+            <ControlSettings>
+               <ControlSetting ArtifactName="Microsoft:System.Windows.Forms:Form">
+                  <BindableControlInfo Name="BunifuCustomTextbox" Type="WindowsFormsControlLibrary1.BunifuCustomTextbox" AssemblyName="Bunifu_UI_v1.5.3, Version=1.5.3.0, Culture=neutral, PublicKeyToken=null" AssemblyCodeBase="file:///C:/Users/Manuel Perlera/Downloads/Bunifu_UI_v1.5.3.dll" Frameworks=".NETFramework,Version=v4.0;.NETFramework,Version=v4.5;.NETFramework,Version=v4.5.1;.NETFramework,Version=v4.5.2;.NETFramework,Version=v4.6;.NETFramework,Version=v4.6.1;.NETFramework,Version=v4.7.2;.NETFramework,Version=v4.8" />
+               </ControlSetting>
+            </ControlSettings>
+         </PropertyUISetting>
+      </PropertyUISettings>
+   </TypeUISetting>
 </GenericObjectDataSource>
