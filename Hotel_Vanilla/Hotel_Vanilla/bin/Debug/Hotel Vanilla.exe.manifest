@@ -103,14 +103,14 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Hotel Vanilla.exe" size="406040">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Hotel Vanilla.exe" size="438296">
       <assemblyIdentity name="Hotel Vanilla" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>q4cWSLhsRx6eAjYyfhfT1bhS7LlOgXoe2nwiwo0IrBw=</dsig:DigestValue>
+        <dsig:DigestValue>U8vie5fbt6Bk1Zpi3o4Ix/LOq+2H0r+GqG0chNGcXeE=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>

@@ -17,36 +17,6 @@ namespace Hotel_Vanilla.Vista
             InitializeComponent();
         }
 
-        private void txtEmail_Enter(object sender, EventArgs e)
-        {
-
-        }
-
-        private void txtEmail_Leave(object sender, EventArgs e)
-        {
-
-        }
-
-        private void txtPass_Enter(object sender, EventArgs e)
-        {
-
-        }
-
-        private void txtPass_Leave(object sender, EventArgs e)
-        {
-
-        }
-
-        private void txtUsuario_Enter(object sender, EventArgs e)
-        {
-
-        }
-
-        private void txtUsuario_Leave(object sender, EventArgs e)
-        {
-
-        }
-
         private void btnCerrar_Click(object sender, EventArgs e)
         {
             DialogResult resultado = new DialogResult();
@@ -89,23 +59,20 @@ namespace Hotel_Vanilla.Vista
 
         private void chkClave_OnChange(object sender, EventArgs e)
         {
-            //if (chkClave.Checked == true && txtPass.Text != "Password")
-            //    txtPass.isPassword = false;
-            //else
-            //    txtPass.isPassword = true;
-        }
-
-        private void txtPass_KeyUp(object sender, KeyEventArgs e)
-        {
-            if (e.KeyCode == Keys.Enter)
-            {
-                Hide();
-            }
+            if (chkClave.Checked == true)
+                claveTextBox.UseSystemPasswordChar = false;
+            else
+                claveTextBox.UseSystemPasswordChar = true;
         }
 
         private void btnRegister_Click(object sender, EventArgs e)
         {
             Hide();
+        }
+
+        private void correoTextBox_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

@@ -35,36 +35,7 @@ namespace Hotel_Vanilla
 
         public void SplashStart()
         {
-            //try
-            //{
-                Application.Run(new frmSplash());
-            //}
-
-            //catch (Exception ex)
-            //{
-            //    Form1 login = new Form1();
-            //    login.Show();
-            //}
-        }
-
-        private void txtEmail_Enter(object sender, EventArgs e)
-        {
-
-        }
-
-        private void txtEmail_Leave(object sender, EventArgs e)
-        {
-
-        }
-
-        private void txtPass_Enter(object sender, EventArgs e)
-        {
-
-        }
-
-        private void txtPass_Leave(object sender, EventArgs e)
-        {
-
+              Application.Run(new frmSplash());
         }
 
         private void btnCerrar_Click(object sender, EventArgs e)
@@ -109,10 +80,10 @@ namespace Hotel_Vanilla
 
         private void chkClave_OnChange(object sender, EventArgs e)
         {
-            //if (chkClave.Checked == true && txtPass.Text != "Password")
-            //    txtPass.isPassword = false;
-            //else
-            //    txtPass.isPassword = true;
+            if (chkClave.Checked == true)
+                claveTextBox.UseSystemPasswordChar = false;
+            else
+                claveTextBox.UseSystemPasswordChar = true;
         }
 
         private void btnLogin_Click(object sender, EventArgs e)
@@ -125,7 +96,7 @@ namespace Hotel_Vanilla
             //this.Hide();
         }
 
-        private void txtPass_KeyDown(object sender, KeyEventArgs e)
+        private void claveTextBox_KeyDown(object sender, KeyEventArgs e)
         {
             if (e.KeyCode == Keys.Enter)
             {

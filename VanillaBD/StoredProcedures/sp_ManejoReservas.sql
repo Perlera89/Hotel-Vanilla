@@ -3,15 +3,15 @@
 --======================================================================================
 
 -- Procedimiento para mostrar ManejoReservas
-create PROC sp_MostrarManejoReservas
+Alter PROC sp_MostrarManejoReservas
 AS
 BEGIN
 	SET NOCOUNT ON;
 	--Consulta con Inner join
 	SELECT a.idReserva AS 'Id', b.nombres AS 'Nombres', b.apellidos AS 'Apellidos', c.numeroHabitacion AS 'Habitacion',
-	a.fechaReserva AS 'Fecha reserva', a.fechaCheckIn AS 'Check in', a.fechaCheckOut AS 'Check out',
+	a.fechaReserva 'Fecha reserva', a.fechaCheckIn AS 'Check in', a.fechaCheckOut AS 'Check out',
 	a.numeroDias AS 'Dias', d.numeroOcupantes AS 'Ocupantes', a.pagoAdelantado AS 'Pago adelantado',
-	d.tipo AS 'Tipo de pago', a.descuento AS 'Descuento', a.total AS 'Total'
+	d.tipo AS 'Tipo de habitación', a.descuento AS 'Descuento', a.total AS 'Total'
 	FROM ManejoReservas AS a
 
 	INNER JOIN Huespedes AS b ON a.idHuesped_FK = b.idHuesped

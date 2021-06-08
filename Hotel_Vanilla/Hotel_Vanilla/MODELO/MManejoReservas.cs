@@ -14,13 +14,13 @@ namespace Hotel_Vanilla.MODELO
         IDbConnection conexion = Conexion.conectar();
 
         //MOSTRAR
-        public List<ManejoReservas> ConsultarReservas()
+        public List<spMostrarManejoReservas> ConsultarReservas()
         {
             // Select * from Reservas
-            List<ManejoReservas> reservas = new List<ManejoReservas>();
+            List<spMostrarManejoReservas> reservas = new List<spMostrarManejoReservas>();
             string consulta = "sp_MostrarManejoReservas";
             conexion.Open();
-            reservas = conexion.Query<ManejoReservas>(consulta, commandType: CommandType.StoredProcedure).ToList();
+            reservas = conexion.Query<spMostrarManejoReservas>(consulta, commandType: CommandType.StoredProcedure).ToList();
             conexion.Close();
             return reservas;
         }
@@ -30,9 +30,9 @@ namespace Hotel_Vanilla.MODELO
         {
             string consulta = "sp_InsertarManejoReservas";
             DynamicParameters parametros = new DynamicParameters();
-            parametros.Add("@reserva", Reservas.fechaReserva, DbType.DateTime);
-            parametros.Add("@checkIn", Reservas.fechaCheckIn, DbType.DateTime);
-            parametros.Add("@checkOut", Reservas.fechaCheckOut, DbType.DateTime);
+            parametros.Add("@reserva", Reservas.fechaReserva, DbType.Date);
+            parametros.Add("@checkIn", Reservas.fechaCheckIn, DbType.Date);
+            parametros.Add("@checkOut", Reservas.fechaCheckOut, DbType.Date);
             parametros.Add("@dias", Reservas.numeroDias, DbType.Int32);
             parametros.Add("@adelantado", Reservas.pagoAdelantado, DbType.Decimal);
             parametros.Add("@descuento", Reservas.descuento, DbType.Decimal);
@@ -62,6 +62,13 @@ namespace Hotel_Vanilla.MODELO
             string consulta = "sp_ActualizarManejoReservas";
             DynamicParameters parametros = new DynamicParameters();
             parametros.Add("@id", Reservas.idReserva, DbType.Int32);
+            parametros.Add("@reserva", Reservas.fechaReserva, DbType.Date);
+            parametros.Add("@checkIn", Reservas.fechaCheckIn, DbType.Date);
+            parametros.Add("@checkOut", Reservas.fechaCheckOut, DbType.Date);
+            parametros.Add("@dias", Reservas.numeroDias, DbType.Int32);
+            parametros.Add("@adelantado", Reservas.pagoAdelantado, DbType.Decimal);
+            parametros.Add("@descuento", Reservas.descuento, DbType.Decimal);
+            parametros.Add("@total", Reservas.total, DbType.Decimal);
             parametros.Add("@idHabitacion", Reservas.idHabitacion_FK, DbType.Int32);
             parametros.Add("@idHuesped", Reservas.idHuesped_FK, DbType.Int32);
             conexion.Open();

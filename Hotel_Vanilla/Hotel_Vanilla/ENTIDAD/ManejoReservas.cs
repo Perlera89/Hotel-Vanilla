@@ -20,4 +20,6 @@ namespace Hotel_Vanilla.ENTIDAD
         public int? idHuesped_FK { get; set; }
 
     }
+
+    
 }

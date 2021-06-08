@@ -1,4 +1,6 @@
-﻿using System;
+﻿using Hotel_Vanilla.CONTROLADOR;
+using Hotel_Vanilla.ENTIDAD;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,7 +14,8 @@ namespace Hotel_Vanilla.Vista
 {
     public partial class frmSucesos : Form
     {
-        List<Suceso> sucesos = new List<Suceso>();
+        Sucesos sucesos = new Sucesos();
+        CSucesos cSucesos = new CSucesos();
         public frmSucesos()
         {
             InitializeComponent();
@@ -20,23 +23,25 @@ namespace Hotel_Vanilla.Vista
 
         private void frmSucesos_Load(object sender, EventArgs e)
         {
-            //sucesos.Add(new Suceso("1", "Se inserto el registro con Id: 15 del consumidor: Gomez con numero de documento: 8173981-813-1 de la comunidad Agua Caliente", "2021-05-24"));
-            //sucesos.Add(new Suceso("1", "Se inserto el registro con Id: 15 del consumidor: Gomez con numero de documento: 8173981-813-1 de la comunidad Agua Caliente", "2021-05-24"));
-            //sucesos.Add(new Suceso("1", "Se inserto el registro con Id: 15 del consumidor: Gomez con numero de documento: 8173981-813-1 de la comunidad Agua Caliente", "2021-05-24"));
-            //sucesos.Add(new Suceso("1", "Se inserto el registro con Id: 15 del consumidor: Gomez con numero de documento: 8173981-813-1 de la comunidad Agua Caliente", "2021-05-24"));
-            //sucesos.Add(new Suceso("1", "Se inserto el registro con Id: 15 del consumidor: Gomez con numero de documento: 8173981-813-1 de la comunidad Agua Caliente", "2021-05-24"));
-            //sucesos.Add(new Suceso("1", "Se inserto el registro con Id: 15 del consumidor: Gomez con numero de documento: 8173981-813-1 de la comunidad Agua Caliente", "2021-05-24"));
+            sucesosBindingSource.DataSource = cSucesos.ConsultarUltimosSucesos();
 
-            //foreach (Suceso suceso in sucesos)
-            //{
-            //    ListViewItem item = new ListViewItem(suceso.Id);
+            for (var i = 0; i < dtgSucesos.Columns.Count; i++)
+            {
+                dtgSucesos.Columns[i].AutoSizeMode = DataGridViewAutoSizeColumnMode.DisplayedCells;
+            }
 
-            //    item.SubItems.Add(suceso.Fecha);
-            //    item.SubItems.Add(suceso.Descripcion);
-            //    listSuceso.Items.Add(item);
-            //}
+            dtgSucesos.ColumnHeadersDefaultCellStyle.BackColor = Color.RoyalBlue;
         }
 
+        private void btnUltimos_Click(object sender, EventArgs e)
+        {
+            sucesosBindingSource.DataSource = cSucesos.ConsultarUltimosSucesos();
+        }
+
+        private void btnTodos_Click(object sender, EventArgs e)
+        {
+            sucesosBindingSource.DataSource = cSucesos.ConsultarSucesos();
+        }
     }
 
     public class Suceso

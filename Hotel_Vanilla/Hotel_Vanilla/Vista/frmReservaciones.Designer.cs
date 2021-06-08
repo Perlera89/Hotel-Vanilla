@@ -30,6 +30,17 @@ namespace Hotel_Vanilla.Vista
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle11 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
             this.bunifuCustomLabel1 = new Bunifu.Framework.UI.BunifuCustomLabel();
             this.txtBuscar = new Bunifu.Framework.UI.BunifuMetroTextbox();
             this.btnAgregar = new Bunifu.Framework.UI.BunifuFlatButton();
@@ -37,8 +48,11 @@ namespace Hotel_Vanilla.Vista
             this.btnActualizar = new Bunifu.Framework.UI.BunifuFlatButton();
             this.btnEliminar = new Bunifu.Framework.UI.BunifuFlatButton();
             this.tbproductoBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.manejoReservasBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.manejoReservasDataGridView = new System.Windows.Forms.DataGridView();
+            this.vanillaBDDataSet1 = new Hotel_Vanilla.VanillaBDDataSet1();
+            this.sp_MostrarManejoReservasBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
+            this.sp_MostrarManejoReservasTableAdapter = new Hotel_Vanilla.VanillaBDDataSet1TableAdapters.sp_MostrarManejoReservasTableAdapter();
+            this.tableAdapterManager = new Hotel_Vanilla.VanillaBDDataSet1TableAdapters.TableAdapterManager();
+            this.dtgReservas = new Guna.UI2.WinForms.Guna2DataGridView();
             this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -49,10 +63,16 @@ namespace Hotel_Vanilla.Vista
             this.dataGridViewTextBoxColumn8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn9 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn10 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn11 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn12 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn13 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.manejoReservasBindingSource = new System.Windows.Forms.BindingSource(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.btnBuscar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tbproductoBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.vanillaBDDataSet1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.sp_MostrarManejoReservasBindingSource1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dtgReservas)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.manejoReservasBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.manejoReservasDataGridView)).BeginInit();
             this.SuspendLayout();
             // 
             // bunifuCustomLabel1
@@ -61,10 +81,9 @@ namespace Hotel_Vanilla.Vista
             this.bunifuCustomLabel1.AutoSize = true;
             this.bunifuCustomLabel1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bunifuCustomLabel1.ForeColor = System.Drawing.Color.RoyalBlue;
-            this.bunifuCustomLabel1.Location = new System.Drawing.Point(32, 37);
-            this.bunifuCustomLabel1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.bunifuCustomLabel1.Location = new System.Drawing.Point(21, 24);
             this.bunifuCustomLabel1.Name = "bunifuCustomLabel1";
-            this.bunifuCustomLabel1.Size = new System.Drawing.Size(382, 33);
+            this.bunifuCustomLabel1.Size = new System.Drawing.Size(255, 24);
             this.bunifuCustomLabel1.TabIndex = 9;
             this.bunifuCustomLabel1.Text = "Gestion de Reservaciones";
             // 
@@ -79,10 +98,10 @@ namespace Hotel_Vanilla.Vista
             this.txtBuscar.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtBuscar.ForeColor = System.Drawing.Color.RoyalBlue;
             this.txtBuscar.isPassword = false;
-            this.txtBuscar.Location = new System.Drawing.Point(1154, 18);
-            this.txtBuscar.Margin = new System.Windows.Forms.Padding(6, 8, 6, 8);
+            this.txtBuscar.Location = new System.Drawing.Point(778, 24);
+            this.txtBuscar.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.txtBuscar.Name = "txtBuscar";
-            this.txtBuscar.Size = new System.Drawing.Size(234, 58);
+            this.txtBuscar.Size = new System.Drawing.Size(156, 38);
             this.txtBuscar.TabIndex = 37;
             this.txtBuscar.Text = "Buscar";
             this.txtBuscar.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
@@ -110,14 +129,14 @@ namespace Hotel_Vanilla.Vista
             this.btnAgregar.IconVisible = true;
             this.btnAgregar.IconZoom = 90D;
             this.btnAgregar.IsTab = false;
-            this.btnAgregar.Location = new System.Drawing.Point(38, 693);
-            this.btnAgregar.Margin = new System.Windows.Forms.Padding(6, 8, 6, 8);
+            this.btnAgregar.Location = new System.Drawing.Point(25, 531);
+            this.btnAgregar.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btnAgregar.Name = "btnAgregar";
             this.btnAgregar.Normalcolor = System.Drawing.SystemColors.Control;
             this.btnAgregar.OnHovercolor = System.Drawing.Color.RoyalBlue;
             this.btnAgregar.OnHoverTextColor = System.Drawing.SystemColors.Control;
             this.btnAgregar.selected = false;
-            this.btnAgregar.Size = new System.Drawing.Size(252, 77);
+            this.btnAgregar.Size = new System.Drawing.Size(236, 51);
             this.btnAgregar.TabIndex = 39;
             this.btnAgregar.Text = "Agregar";
             this.btnAgregar.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -131,10 +150,9 @@ namespace Hotel_Vanilla.Vista
             this.btnBuscar.BackColor = System.Drawing.Color.Transparent;
             this.btnBuscar.Image = global::Hotel_Vanilla.Properties.Resources.buscarReservacion;
             this.btnBuscar.ImageActive = null;
-            this.btnBuscar.Location = new System.Drawing.Point(1056, 18);
-            this.btnBuscar.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.btnBuscar.Location = new System.Drawing.Point(713, 24);
             this.btnBuscar.Name = "btnBuscar";
-            this.btnBuscar.Size = new System.Drawing.Size(69, 58);
+            this.btnBuscar.Size = new System.Drawing.Size(46, 38);
             this.btnBuscar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.btnBuscar.TabIndex = 38;
             this.btnBuscar.TabStop = false;
@@ -163,14 +181,14 @@ namespace Hotel_Vanilla.Vista
             this.btnActualizar.IconVisible = true;
             this.btnActualizar.IconZoom = 90D;
             this.btnActualizar.IsTab = false;
-            this.btnActualizar.Location = new System.Drawing.Point(315, 693);
-            this.btnActualizar.Margin = new System.Windows.Forms.Padding(6, 8, 6, 8);
+            this.btnActualizar.Location = new System.Drawing.Point(268, 531);
+            this.btnActualizar.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btnActualizar.Name = "btnActualizar";
             this.btnActualizar.Normalcolor = System.Drawing.SystemColors.Control;
             this.btnActualizar.OnHovercolor = System.Drawing.Color.RoyalBlue;
             this.btnActualizar.OnHoverTextColor = System.Drawing.SystemColors.Control;
             this.btnActualizar.selected = false;
-            this.btnActualizar.Size = new System.Drawing.Size(252, 77);
+            this.btnActualizar.Size = new System.Drawing.Size(224, 51);
             this.btnActualizar.TabIndex = 11;
             this.btnActualizar.Text = "Actualizar";
             this.btnActualizar.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -201,34 +219,67 @@ namespace Hotel_Vanilla.Vista
             this.btnEliminar.IconVisible = true;
             this.btnEliminar.IconZoom = 90D;
             this.btnEliminar.IsTab = false;
-            this.btnEliminar.Location = new System.Drawing.Point(1136, 693);
-            this.btnEliminar.Margin = new System.Windows.Forms.Padding(6, 8, 6, 8);
+            this.btnEliminar.Location = new System.Drawing.Point(720, 531);
+            this.btnEliminar.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btnEliminar.Name = "btnEliminar";
             this.btnEliminar.Normalcolor = System.Drawing.SystemColors.Control;
             this.btnEliminar.OnHovercolor = System.Drawing.Color.RoyalBlue;
             this.btnEliminar.OnHoverTextColor = System.Drawing.SystemColors.Control;
             this.btnEliminar.selected = false;
-            this.btnEliminar.Size = new System.Drawing.Size(252, 77);
+            this.btnEliminar.Size = new System.Drawing.Size(210, 51);
             this.btnEliminar.TabIndex = 10;
             this.btnEliminar.Text = "Eliminar";
             this.btnEliminar.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.btnEliminar.Textcolor = System.Drawing.Color.RoyalBlue;
             this.btnEliminar.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnEliminar.Click += new System.EventHandler(this.btnEliminar_Click);
             // 
             // tbproductoBindingSource
             // 
             this.tbproductoBindingSource.DataMember = "tb_producto";
             // 
-            // manejoReservasBindingSource
+            // vanillaBDDataSet1
             // 
-            this.manejoReservasBindingSource.DataSource = typeof(Hotel_Vanilla.ENTIDAD.ManejoReservas);
+            this.vanillaBDDataSet1.DataSetName = "VanillaBDDataSet1";
+            this.vanillaBDDataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
-            // manejoReservasDataGridView
+            // sp_MostrarManejoReservasBindingSource1
             // 
-            this.manejoReservasDataGridView.AutoGenerateColumns = false;
-            this.manejoReservasDataGridView.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.manejoReservasDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.manejoReservasDataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.sp_MostrarManejoReservasBindingSource1.DataMember = "sp_MostrarManejoReservas";
+            this.sp_MostrarManejoReservasBindingSource1.DataSource = this.vanillaBDDataSet1;
+            // 
+            // sp_MostrarManejoReservasTableAdapter
+            // 
+            this.sp_MostrarManejoReservasTableAdapter.ClearBeforeFill = true;
+            // 
+            // tableAdapterManager
+            // 
+            this.tableAdapterManager.BackupDataSetBeforeUpdate = false;
+            this.tableAdapterManager.Connection = null;
+            this.tableAdapterManager.UpdateOrder = Hotel_Vanilla.VanillaBDDataSet1TableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
+            // 
+            // dtgReservas
+            // 
+            this.dtgReservas.AllowUserToAddRows = false;
+            this.dtgReservas.AllowUserToDeleteRows = false;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.White;
+            this.dtgReservas.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            this.dtgReservas.AutoGenerateColumns = false;
+            this.dtgReservas.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dtgReservas.BackgroundColor = System.Drawing.Color.White;
+            this.dtgReservas.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.dtgReservas.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
+            this.dtgReservas.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI", 10.5F);
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dtgReservas.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            this.dtgReservas.ColumnHeadersHeight = 40;
+            this.dtgReservas.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.dataGridViewTextBoxColumn1,
             this.dataGridViewTextBoxColumn2,
             this.dataGridViewTextBoxColumn3,
@@ -238,91 +289,190 @@ namespace Hotel_Vanilla.Vista
             this.dataGridViewTextBoxColumn7,
             this.dataGridViewTextBoxColumn8,
             this.dataGridViewTextBoxColumn9,
-            this.dataGridViewTextBoxColumn10});
-            this.manejoReservasDataGridView.DataSource = this.manejoReservasBindingSource;
-            this.manejoReservasDataGridView.Location = new System.Drawing.Point(78, 137);
-            this.manejoReservasDataGridView.Name = "manejoReservasDataGridView";
-            this.manejoReservasDataGridView.RowHeadersWidth = 62;
-            this.manejoReservasDataGridView.RowTemplate.Height = 28;
-            this.manejoReservasDataGridView.Size = new System.Drawing.Size(1300, 519);
-            this.manejoReservasDataGridView.TabIndex = 39;
+            this.dataGridViewTextBoxColumn10,
+            this.dataGridViewTextBoxColumn11,
+            this.dataGridViewTextBoxColumn12,
+            this.dataGridViewTextBoxColumn13});
+            this.dtgReservas.DataSource = this.sp_MostrarManejoReservasBindingSource1;
+            dataGridViewCellStyle11.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle11.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle11.Font = new System.Drawing.Font("Segoe UI", 10.5F);
+            dataGridViewCellStyle11.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            dataGridViewCellStyle11.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle11.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            dataGridViewCellStyle11.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dtgReservas.DefaultCellStyle = dataGridViewCellStyle11;
+            this.dtgReservas.EnableHeadersVisualStyles = false;
+            this.dtgReservas.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
+            this.dtgReservas.Location = new System.Drawing.Point(25, 74);
+            this.dtgReservas.Name = "dtgReservas";
+            this.dtgReservas.ReadOnly = true;
+            this.dtgReservas.RowHeadersVisible = false;
+            this.dtgReservas.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dtgReservas.Size = new System.Drawing.Size(905, 432);
+            this.dtgReservas.TabIndex = 39;
+            this.dtgReservas.Theme = Guna.UI2.WinForms.Enums.DataGridViewPresetThemes.Default;
+            this.dtgReservas.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White;
+            this.dtgReservas.ThemeStyle.AlternatingRowsStyle.Font = null;
+            this.dtgReservas.ThemeStyle.AlternatingRowsStyle.ForeColor = System.Drawing.Color.Empty;
+            this.dtgReservas.ThemeStyle.AlternatingRowsStyle.SelectionBackColor = System.Drawing.Color.Empty;
+            this.dtgReservas.ThemeStyle.AlternatingRowsStyle.SelectionForeColor = System.Drawing.Color.Empty;
+            this.dtgReservas.ThemeStyle.BackColor = System.Drawing.Color.White;
+            this.dtgReservas.ThemeStyle.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
+            this.dtgReservas.ThemeStyle.HeaderStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
+            this.dtgReservas.ThemeStyle.HeaderStyle.BorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            this.dtgReservas.ThemeStyle.HeaderStyle.Font = new System.Drawing.Font("Segoe UI", 10.5F);
+            this.dtgReservas.ThemeStyle.HeaderStyle.ForeColor = System.Drawing.Color.White;
+            this.dtgReservas.ThemeStyle.HeaderStyle.HeaightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
+            this.dtgReservas.ThemeStyle.HeaderStyle.Height = 40;
+            this.dtgReservas.ThemeStyle.ReadOnly = true;
+            this.dtgReservas.ThemeStyle.RowsStyle.BackColor = System.Drawing.Color.White;
+            this.dtgReservas.ThemeStyle.RowsStyle.BorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
+            this.dtgReservas.ThemeStyle.RowsStyle.Font = new System.Drawing.Font("Segoe UI", 10.5F);
+            this.dtgReservas.ThemeStyle.RowsStyle.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            this.dtgReservas.ThemeStyle.RowsStyle.Height = 22;
+            this.dtgReservas.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
+            this.dtgReservas.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
             // 
             // dataGridViewTextBoxColumn1
             // 
-            this.dataGridViewTextBoxColumn1.DataPropertyName = "idReserva";
-            this.dataGridViewTextBoxColumn1.HeaderText = "idReserva";
-            this.dataGridViewTextBoxColumn1.MinimumWidth = 8;
+            this.dataGridViewTextBoxColumn1.DataPropertyName = "Id";
+            this.dataGridViewTextBoxColumn1.HeaderText = "Id";
             this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
+            this.dataGridViewTextBoxColumn1.ReadOnly = true;
+            this.dataGridViewTextBoxColumn1.Visible = false;
             // 
             // dataGridViewTextBoxColumn2
             // 
-            this.dataGridViewTextBoxColumn2.DataPropertyName = "fechaReserva";
-            this.dataGridViewTextBoxColumn2.HeaderText = "fechaReserva";
-            this.dataGridViewTextBoxColumn2.MinimumWidth = 8;
+            this.dataGridViewTextBoxColumn2.DataPropertyName = "Nombres";
+            this.dataGridViewTextBoxColumn2.FillWeight = 98.01569F;
+            this.dataGridViewTextBoxColumn2.HeaderText = "Nombres";
             this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
+            this.dataGridViewTextBoxColumn2.ReadOnly = true;
             // 
             // dataGridViewTextBoxColumn3
             // 
-            this.dataGridViewTextBoxColumn3.DataPropertyName = "fechaCheckIn";
-            this.dataGridViewTextBoxColumn3.HeaderText = "fechaCheckIn";
-            this.dataGridViewTextBoxColumn3.MinimumWidth = 8;
+            this.dataGridViewTextBoxColumn3.DataPropertyName = "Apellidos";
+            this.dataGridViewTextBoxColumn3.FillWeight = 98.01569F;
+            this.dataGridViewTextBoxColumn3.HeaderText = "Apellidos";
             this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
+            this.dataGridViewTextBoxColumn3.ReadOnly = true;
             // 
             // dataGridViewTextBoxColumn4
             // 
-            this.dataGridViewTextBoxColumn4.DataPropertyName = "fechaCheckOut";
-            this.dataGridViewTextBoxColumn4.HeaderText = "fechaCheckOut";
-            this.dataGridViewTextBoxColumn4.MinimumWidth = 8;
+            this.dataGridViewTextBoxColumn4.DataPropertyName = "Habitacion";
+            this.dataGridViewTextBoxColumn4.FillWeight = 98.01569F;
+            this.dataGridViewTextBoxColumn4.HeaderText = "Habitacion";
             this.dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
+            this.dataGridViewTextBoxColumn4.ReadOnly = true;
             // 
             // dataGridViewTextBoxColumn5
             // 
-            this.dataGridViewTextBoxColumn5.DataPropertyName = "numeroDias";
-            this.dataGridViewTextBoxColumn5.HeaderText = "numeroDias";
-            this.dataGridViewTextBoxColumn5.MinimumWidth = 8;
+            this.dataGridViewTextBoxColumn5.DataPropertyName = "Fecha reserva";
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.Format = "dd-MM-yyyy";
+            dataGridViewCellStyle3.NullValue = null;
+            this.dataGridViewTextBoxColumn5.DefaultCellStyle = dataGridViewCellStyle3;
+            this.dataGridViewTextBoxColumn5.FillWeight = 98.01569F;
+            this.dataGridViewTextBoxColumn5.HeaderText = "Reserva";
             this.dataGridViewTextBoxColumn5.Name = "dataGridViewTextBoxColumn5";
+            this.dataGridViewTextBoxColumn5.ReadOnly = true;
             // 
             // dataGridViewTextBoxColumn6
             // 
-            this.dataGridViewTextBoxColumn6.DataPropertyName = "pagoAdelantado";
-            this.dataGridViewTextBoxColumn6.HeaderText = "pagoAdelantado";
-            this.dataGridViewTextBoxColumn6.MinimumWidth = 8;
+            this.dataGridViewTextBoxColumn6.DataPropertyName = "Check in";
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle4.Format = "dd-MM-yyyy";
+            dataGridViewCellStyle4.NullValue = null;
+            this.dataGridViewTextBoxColumn6.DefaultCellStyle = dataGridViewCellStyle4;
+            this.dataGridViewTextBoxColumn6.FillWeight = 98.01569F;
+            this.dataGridViewTextBoxColumn6.HeaderText = "Check in";
             this.dataGridViewTextBoxColumn6.Name = "dataGridViewTextBoxColumn6";
+            this.dataGridViewTextBoxColumn6.ReadOnly = true;
             // 
             // dataGridViewTextBoxColumn7
             // 
-            this.dataGridViewTextBoxColumn7.DataPropertyName = "descuento";
-            this.dataGridViewTextBoxColumn7.HeaderText = "descuento";
-            this.dataGridViewTextBoxColumn7.MinimumWidth = 8;
+            this.dataGridViewTextBoxColumn7.DataPropertyName = "Check out";
+            dataGridViewCellStyle5.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle5.Format = "dd-MM-yyyy";
+            dataGridViewCellStyle5.NullValue = null;
+            this.dataGridViewTextBoxColumn7.DefaultCellStyle = dataGridViewCellStyle5;
+            this.dataGridViewTextBoxColumn7.FillWeight = 98.01569F;
+            this.dataGridViewTextBoxColumn7.HeaderText = "Check out";
             this.dataGridViewTextBoxColumn7.Name = "dataGridViewTextBoxColumn7";
+            this.dataGridViewTextBoxColumn7.ReadOnly = true;
             // 
             // dataGridViewTextBoxColumn8
             // 
-            this.dataGridViewTextBoxColumn8.DataPropertyName = "total";
-            this.dataGridViewTextBoxColumn8.HeaderText = "total";
-            this.dataGridViewTextBoxColumn8.MinimumWidth = 8;
+            this.dataGridViewTextBoxColumn8.DataPropertyName = "Dias";
+            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.dataGridViewTextBoxColumn8.DefaultCellStyle = dataGridViewCellStyle6;
+            this.dataGridViewTextBoxColumn8.FillWeight = 45F;
+            this.dataGridViewTextBoxColumn8.HeaderText = "Dias";
             this.dataGridViewTextBoxColumn8.Name = "dataGridViewTextBoxColumn8";
+            this.dataGridViewTextBoxColumn8.ReadOnly = true;
             // 
             // dataGridViewTextBoxColumn9
             // 
-            this.dataGridViewTextBoxColumn9.DataPropertyName = "idHabitacion_FK";
-            this.dataGridViewTextBoxColumn9.HeaderText = "idHabitacion_FK";
-            this.dataGridViewTextBoxColumn9.MinimumWidth = 8;
+            this.dataGridViewTextBoxColumn9.DataPropertyName = "Ocupantes";
+            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.dataGridViewTextBoxColumn9.DefaultCellStyle = dataGridViewCellStyle7;
+            this.dataGridViewTextBoxColumn9.FillWeight = 95F;
+            this.dataGridViewTextBoxColumn9.HeaderText = "Ocupantes";
             this.dataGridViewTextBoxColumn9.Name = "dataGridViewTextBoxColumn9";
+            this.dataGridViewTextBoxColumn9.ReadOnly = true;
             // 
             // dataGridViewTextBoxColumn10
             // 
-            this.dataGridViewTextBoxColumn10.DataPropertyName = "idHuesped_FK";
-            this.dataGridViewTextBoxColumn10.HeaderText = "idHuesped_FK";
-            this.dataGridViewTextBoxColumn10.MinimumWidth = 8;
+            this.dataGridViewTextBoxColumn10.DataPropertyName = "Pago adelantado";
+            dataGridViewCellStyle8.Format = "C2";
+            dataGridViewCellStyle8.NullValue = null;
+            this.dataGridViewTextBoxColumn10.DefaultCellStyle = dataGridViewCellStyle8;
+            this.dataGridViewTextBoxColumn10.FillWeight = 98.01569F;
+            this.dataGridViewTextBoxColumn10.HeaderText = "Adelantado";
             this.dataGridViewTextBoxColumn10.Name = "dataGridViewTextBoxColumn10";
+            this.dataGridViewTextBoxColumn10.ReadOnly = true;
+            // 
+            // dataGridViewTextBoxColumn11
+            // 
+            this.dataGridViewTextBoxColumn11.DataPropertyName = "Tipo de habitación";
+            this.dataGridViewTextBoxColumn11.FillWeight = 98.01569F;
+            this.dataGridViewTextBoxColumn11.HeaderText = "Tipo";
+            this.dataGridViewTextBoxColumn11.Name = "dataGridViewTextBoxColumn11";
+            this.dataGridViewTextBoxColumn11.ReadOnly = true;
+            // 
+            // dataGridViewTextBoxColumn12
+            // 
+            this.dataGridViewTextBoxColumn12.DataPropertyName = "Descuento";
+            dataGridViewCellStyle9.Format = "C2";
+            dataGridViewCellStyle9.NullValue = null;
+            this.dataGridViewTextBoxColumn12.DefaultCellStyle = dataGridViewCellStyle9;
+            this.dataGridViewTextBoxColumn12.FillWeight = 98.01569F;
+            this.dataGridViewTextBoxColumn12.HeaderText = "Descuento";
+            this.dataGridViewTextBoxColumn12.Name = "dataGridViewTextBoxColumn12";
+            this.dataGridViewTextBoxColumn12.ReadOnly = true;
+            // 
+            // dataGridViewTextBoxColumn13
+            // 
+            this.dataGridViewTextBoxColumn13.DataPropertyName = "Total";
+            dataGridViewCellStyle10.Format = "C2";
+            dataGridViewCellStyle10.NullValue = null;
+            this.dataGridViewTextBoxColumn13.DefaultCellStyle = dataGridViewCellStyle10;
+            this.dataGridViewTextBoxColumn13.FillWeight = 98.01569F;
+            this.dataGridViewTextBoxColumn13.HeaderText = "Total";
+            this.dataGridViewTextBoxColumn13.Name = "dataGridViewTextBoxColumn13";
+            this.dataGridViewTextBoxColumn13.ReadOnly = true;
+            // 
+            // manejoReservasBindingSource
+            // 
+            this.manejoReservasBindingSource.DataSource = typeof(Hotel_Vanilla.ENTIDAD.ManejoReservas);
             // 
             // frmReservaciones
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1426, 811);
-            this.Controls.Add(this.manejoReservasDataGridView);
+            this.ClientSize = new System.Drawing.Size(966, 596);
+            this.Controls.Add(this.dtgReservas);
             this.Controls.Add(this.btnAgregar);
             this.Controls.Add(this.btnBuscar);
             this.Controls.Add(this.txtBuscar);
@@ -330,13 +480,15 @@ namespace Hotel_Vanilla.Vista
             this.Controls.Add(this.btnEliminar);
             this.Controls.Add(this.bunifuCustomLabel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Name = "frmReservaciones";
             this.Text = "frmProductos";
+            this.Load += new System.EventHandler(this.frmReservaciones_Load);
             ((System.ComponentModel.ISupportInitialize)(this.btnBuscar)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.tbproductoBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.vanillaBDDataSet1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.sp_MostrarManejoReservasBindingSource1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dtgReservas)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.manejoReservasBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.manejoReservasDataGridView)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -351,7 +503,11 @@ namespace Hotel_Vanilla.Vista
         private Bunifu.Framework.UI.BunifuMetroTextbox txtBuscar;
         private Bunifu.Framework.UI.BunifuFlatButton btnAgregar;
         private System.Windows.Forms.BindingSource manejoReservasBindingSource;
-        private System.Windows.Forms.DataGridView manejoReservasDataGridView;
+        private VanillaBDDataSet1 vanillaBDDataSet1;
+        private System.Windows.Forms.BindingSource sp_MostrarManejoReservasBindingSource1;
+        private VanillaBDDataSet1TableAdapters.sp_MostrarManejoReservasTableAdapter sp_MostrarManejoReservasTableAdapter;
+        private VanillaBDDataSet1TableAdapters.TableAdapterManager tableAdapterManager;
+        private Guna.UI2.WinForms.Guna2DataGridView dtgReservas;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn3;
@@ -362,5 +518,8 @@ namespace Hotel_Vanilla.Vista
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn8;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn9;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn10;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn11;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn12;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn13;
     }
 }
