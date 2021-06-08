@@ -15,7 +15,7 @@ namespace Hotel_Vanilla.Vista
     public partial class frmSucesos : Form
     {
         Sucesos sucesos = new Sucesos();
-        CSucesos cSucesos = new CSucesos();
+       // CSucesos cSucesos = new CSucesos();
         public frmSucesos()
         {
             InitializeComponent();
@@ -23,24 +23,24 @@ namespace Hotel_Vanilla.Vista
 
         private void frmSucesos_Load(object sender, EventArgs e)
         {
-            sucesosBindingSource.DataSource = cSucesos.ConsultarUltimosSucesos();
+            //sucesosBindingSource.DataSource = cSucesos.ConsultarUltimosSucesos();
 
-            for (var i = 0; i < dtgSucesos.Columns.Count; i++)
-            {
-                dtgSucesos.Columns[i].AutoSizeMode = DataGridViewAutoSizeColumnMode.DisplayedCells;
-            }
+            //for (var i = 0; i < dtgSucesos.Columns.Count; i++)
+            //{
+            //    dtgSucesos.Columns[i].AutoSizeMode = DataGridViewAutoSizeColumnMode.DisplayedCells;
+            //}
 
-            dtgSucesos.ColumnHeadersDefaultCellStyle.BackColor = Color.RoyalBlue;
+            //dtgSucesos.ColumnHeadersDefaultCellStyle.BackColor = Color.RoyalBlue;
         }
 
         private void btnUltimos_Click(object sender, EventArgs e)
         {
-            sucesosBindingSource.DataSource = cSucesos.ConsultarUltimosSucesos();
+            //sucesosBindingSource.DataSource = cSucesos.ConsultarUltimosSucesos();
         }
 
         private void btnTodos_Click(object sender, EventArgs e)
         {
-            sucesosBindingSource.DataSource = cSucesos.ConsultarSucesos();
+            //sucesosBindingSource.DataSource = cSucesos.ConsultarSucesos();
         }
     }
 
