@@ -215,3 +215,4 @@ C:\Users\Jose\Desktop\Hotel_Vainilla\Hotel_Vanilla\Hotel_Vanilla\obj\Debug\Hotel
 C:\Users\Jose\Desktop\Hotel_Vainilla\Hotel_Vanilla\Hotel_Vanilla\obj\Debug\Hotel_Vanilla.csproj.CopyComplete
 C:\Users\Jose\Desktop\Hotel_Vainilla\Hotel_Vanilla\Hotel_Vanilla\obj\Debug\Hotel Vanilla.exe
 C:\Users\Jose\Desktop\Hotel_Vainilla\Hotel_Vanilla\Hotel_Vanilla\obj\Debug\Hotel Vanilla.pdb
+C:\Users\Jose\Desktop\Hotel_Vainilla\Hotel_Vanilla\Hotel_Vanilla\obj\Debug\Hotel_Vanilla.csproj.AssemblyReference.cache

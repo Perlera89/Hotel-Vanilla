@@ -53,8 +53,16 @@ namespace Hotel_Vanilla.Vista
 
         private void btnEliminar_Click(object sender, EventArgs e)
         {
-            habitaciones.EliminarHabitacion(Convert.ToInt32(dtgHabitaciones.CurrentRow.Cells[0].Value.ToString()));
-            Cargar();
+            if (dtgHabitaciones.SelectedRows.Count > 0)
+            {
+                habitaciones.EliminarHabitacion(Convert.ToInt32(dtgHabitaciones.CurrentRow.Cells[0].Value.ToString()));
+                Cargar();
+            }
+            else
+            {
+                MessageBox.Show("Elija un registro para ejecutar la acción");
+            }
+
         }
 
         private void btnActualizar_Click(object sender, EventArgs e)
@@ -74,6 +82,11 @@ namespace Hotel_Vanilla.Vista
         private void frmHabitaciones_Load(object sender, EventArgs e)
         {
             Cargar();
+        }
+
+        private void btnBuscar_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

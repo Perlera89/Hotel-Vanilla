@@ -29,14 +29,16 @@ namespace Hotel_Vanilla.Vista
 
         private void btnGuardar_Click(object sender, EventArgs e)
         {
-            if (btnGuardar.Text=="Agregar")
+            BorrarValidacion();
+            if (ValidarCampos() && btnGuardar.Text=="Agregar")
             {
                 CspMostrarHabitaciones Chabitacion = new CspMostrarHabitaciones();
                 sp_MostrarHabitaciones habitacion =(sp_MostrarHabitaciones) spMostrarHabitacionesBindingSource.Current;
                 Chabitacion.AgregarHabitacion(habitacion, Convert.ToInt32(cbTipoHabitacion.SelectedValue.ToString()));
                 Limpiar();
+                numeroHabitacionTextBox.Focus();
             }
-            else if (btnGuardar.Text=="Actualizar")
+            else if (ValidarCampos() && btnGuardar.Text=="Actualizar")
             {
                 CspMostrarHabitaciones Chabitacion = new CspMostrarHabitaciones();
                 //Habitaciones habitacion = (Habitaciones)habitacionesBindingSource.Current;
@@ -51,6 +53,7 @@ namespace Hotel_Vanilla.Vista
         public Boolean accion = false;
         private void frmManejoHabitaciones_Load(object sender, EventArgs e)
         {
+            numeroHabitacionTextBox.Focus();
             cargarCBTipoHabitacion();
             //cbTipoHabitacion.Text = "Hola";
             cbTipoHabitacion.Text=tipoHabitacion;
@@ -62,7 +65,7 @@ namespace Hotel_Vanilla.Vista
             {
                 spMostrarHabitacionesBindingSource.EndEdit();
             }
-
+            
         }
 
         public void Limpiar()
@@ -90,6 +93,118 @@ namespace Hotel_Vanilla.Vista
                 cbTipoHabitacion.SelectedIndex = -1;
             }
 
+        }
+
+        private void tarifaTextBox_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (e.KeyChar>=48&&e.KeyChar<=57 || e.KeyChar==46 ||e.KeyChar==08)
+            {
+                e.Handled = false;
+                return;
+            }
+            else
+            {             
+                e.Handled = true;
+                return;
+            }
+        }
+
+        private void tarifaTextBox_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode==Keys.Delete)
+            {
+                e.Handled = false;
+                return;
+            }
+        }
+
+        private Boolean ValidarCampos()
+        {
+            Boolean permitir = true;
+            if (numeroHabitacionTextBox.Text.Equals(""))
+            {
+                errorProvider.SetError(numeroHabitacionTextBox, "Este campo es obligatorio");
+                permitir = false;
+            }
+            if (tarifaTextBox.Text.Equals("0")||tarifaTextBox.Text.Equals(""))
+            {
+                errorProvider.SetError(tarifaTextBox, "Este campo es obligatorio");
+                permitir = false;
+            }
+            if (cbTipoHabitacion.Text.Equals(""))
+            {
+                errorProvider.SetError(cbTipoHabitacion, "Este campo es obligatorio");
+                permitir = false;
+            }
+
+            return permitir;
+        }
+
+        private void BorrarValidacion()
+        {
+            errorProvider.SetError(numeroHabitacionTextBox, "");
+            errorProvider.SetError(tarifaTextBox, "");
+            errorProvider.SetError(cbTipoHabitacion, "");
+        }
+        private int punto = 0;
+        private void tarifaTextBox_TextChanged(object sender, EventArgs e)
+        {
+            //Se evalua cada elemento de la cadena en la caja de texto
+            for (int i = 0; i <tarifaTextBox.Text.Length; i++)
+            {
+                //si uno de esos elementos es un punto la variable punto aumenta en uno
+                if (tarifaTextBox.Text[i].ToString().Equals("."))
+                {
+                    punto += 1;
+                    //si la variable punto es 2,se devuelve una cadena con un elemento menos, el ultimo punto se borra
+                    if (punto == 2)
+                    {
+                        tarifaTextBox.Text = tarifaTextBox.Text.Substring(0, tarifaTextBox.Text.Length - 1).ToString();
+                        //para que la barra para escribir se coloque al final del ultimos elemto ingresado
+                        //para que se pueda seguir escribiendo normal
+                        tarifaTextBox.SelectionStart = tarifaTextBox.TextLength;
+                        //la variable se reestablece a 0
+                        punto = 0;
+                    }
+
+                }
+
+            }
+            AlertarValorMaximo();
+
+        }
+
+        private void AlertarValorMaximo()
+        {
+            //se verifica que el campo no este vacio
+            if (!tarifaTextBox.Text.Equals(""))
+            {
+                //se convierte la cadena a numeros
+                Double valor = Convert.ToDouble(tarifaTextBox.Text);
+                if (valor > 214748.3648)
+                {
+                    //si la cadena es mayor al valor maximo de smallmoney coloca un error, da un mensaje y borra la cantidad
+                    errorProvider.SetError(tarifaTextBox, "El valor máximo permitido es: 214,748.3648");
+                    tarifaTextBox.Text = "";
+                }
+            }
+        }
+
+        private void btnGuardar_Enter(object sender, EventArgs e)
+        {
+        }
+
+        private void cbTipoHabitacion_KeyPress(object sender, KeyPressEventArgs e)
+        {
+
+        }
+
+        private void cbTipoHabitacion_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode==Keys.Enter)
+            {
+                btnGuardar_Click(sender, e);
+            }
         }
     }
 }

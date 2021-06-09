@@ -49,15 +49,17 @@ namespace Hotel_Vanilla.Vista
             this.lblId = new System.Windows.Forms.Label();
             this.lblidHabitacion = new System.Windows.Forms.Label();
             this.cbTipoHabitacion = new Guna.UI2.WinForms.Guna2ComboBox();
+            this.guna2AnimateWindow1 = new Guna.UI2.WinForms.Guna2AnimateWindow(this.components);
+            this.errorProvider = new System.Windows.Forms.ErrorProvider(this.components);
             this.tipoHabitacionesBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.spMostrarHabitacionesBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.habitacionesBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.guna2AnimateWindow1 = new Guna.UI2.WinForms.Guna2AnimateWindow(this.components);
             numeroHabitacionLabel = new System.Windows.Forms.Label();
             tarifaLabel = new System.Windows.Forms.Label();
             tipodehabitacionLabel = new System.Windows.Forms.Label();
             this.panelSuperior.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btnDefault)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tipoHabitacionesBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.spMostrarHabitacionesBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.habitacionesBindingSource)).BeginInit();
@@ -216,14 +218,14 @@ namespace Hotel_Vanilla.Vista
             this.btnCancelar.IconVisible = true;
             this.btnCancelar.IconZoom = 90D;
             this.btnCancelar.IsTab = false;
-            this.btnCancelar.Location = new System.Drawing.Point(511, 350);
+            this.btnCancelar.Location = new System.Drawing.Point(556, 350);
             this.btnCancelar.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btnCancelar.Name = "btnCancelar";
             this.btnCancelar.Normalcolor = System.Drawing.SystemColors.Control;
             this.btnCancelar.OnHovercolor = System.Drawing.Color.Red;
             this.btnCancelar.OnHoverTextColor = System.Drawing.SystemColors.Control;
             this.btnCancelar.selected = false;
-            this.btnCancelar.Size = new System.Drawing.Size(243, 51);
+            this.btnCancelar.Size = new System.Drawing.Size(198, 51);
             this.btnCancelar.TabIndex = 46;
             this.btnCancelar.Text = "Cancelar";
             this.btnCancelar.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -255,20 +257,21 @@ namespace Hotel_Vanilla.Vista
             this.btnGuardar.IconVisible = true;
             this.btnGuardar.IconZoom = 90D;
             this.btnGuardar.IsTab = false;
-            this.btnGuardar.Location = new System.Drawing.Point(511, 285);
+            this.btnGuardar.Location = new System.Drawing.Point(556, 285);
             this.btnGuardar.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btnGuardar.Name = "btnGuardar";
             this.btnGuardar.Normalcolor = System.Drawing.SystemColors.Control;
             this.btnGuardar.OnHovercolor = System.Drawing.Color.RoyalBlue;
             this.btnGuardar.OnHoverTextColor = System.Drawing.SystemColors.Control;
             this.btnGuardar.selected = false;
-            this.btnGuardar.Size = new System.Drawing.Size(247, 51);
+            this.btnGuardar.Size = new System.Drawing.Size(202, 51);
             this.btnGuardar.TabIndex = 45;
             this.btnGuardar.Text = "Guardar";
             this.btnGuardar.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.btnGuardar.Textcolor = System.Drawing.Color.RoyalBlue;
             this.btnGuardar.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnGuardar.Click += new System.EventHandler(this.btnGuardar_Click);
+            this.btnGuardar.Enter += new System.EventHandler(this.btnGuardar_Enter);
             // 
             // bunifuElipse1
             // 
@@ -301,6 +304,9 @@ namespace Hotel_Vanilla.Vista
             this.tarifaTextBox.Name = "tarifaTextBox";
             this.tarifaTextBox.Size = new System.Drawing.Size(263, 27);
             this.tarifaTextBox.TabIndex = 64;
+            this.tarifaTextBox.TextChanged += new System.EventHandler(this.tarifaTextBox_TextChanged);
+            this.tarifaTextBox.KeyDown += new System.Windows.Forms.KeyEventHandler(this.tarifaTextBox_KeyDown);
+            this.tarifaTextBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.tarifaTextBox_KeyPress);
             // 
             // lblId
             // 
@@ -339,11 +345,17 @@ namespace Hotel_Vanilla.Vista
             this.cbTipoHabitacion.HoverState.Parent = this.cbTipoHabitacion;
             this.cbTipoHabitacion.ItemHeight = 30;
             this.cbTipoHabitacion.ItemsAppearance.Parent = this.cbTipoHabitacion;
-            this.cbTipoHabitacion.Location = new System.Drawing.Point(234, 360);
+            this.cbTipoHabitacion.Location = new System.Drawing.Point(234, 365);
             this.cbTipoHabitacion.Name = "cbTipoHabitacion";
             this.cbTipoHabitacion.ShadowDecoration.Parent = this.cbTipoHabitacion;
             this.cbTipoHabitacion.Size = new System.Drawing.Size(263, 36);
             this.cbTipoHabitacion.TabIndex = 66;
+            this.cbTipoHabitacion.KeyDown += new System.Windows.Forms.KeyEventHandler(this.cbTipoHabitacion_KeyDown);
+            this.cbTipoHabitacion.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.cbTipoHabitacion_KeyPress);
+            // 
+            // errorProvider
+            // 
+            this.errorProvider.ContainerControl = this;
             // 
             // tipoHabitacionesBindingSource
             // 
@@ -385,6 +397,7 @@ namespace Hotel_Vanilla.Vista
             this.panelSuperior.ResumeLayout(false);
             this.panelSuperior.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btnDefault)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.tipoHabitacionesBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.spMostrarHabitacionesBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.habitacionesBindingSource)).EndInit();
@@ -413,5 +426,6 @@ namespace Hotel_Vanilla.Vista
         private System.Windows.Forms.BindingSource tipoHabitacionesBindingSource;
         public Guna.UI2.WinForms.Guna2ComboBox cbTipoHabitacion;
         private Guna.UI2.WinForms.Guna2AnimateWindow guna2AnimateWindow1;
+        private System.Windows.Forms.ErrorProvider errorProvider;
     }
 }
