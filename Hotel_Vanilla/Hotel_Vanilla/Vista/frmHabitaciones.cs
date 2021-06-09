@@ -63,7 +63,7 @@ namespace Hotel_Vanilla.Vista
             habitacion.lblidHabitacion.Text = dtgHabitaciones.CurrentRow.Cells[0].Value.ToString();
             habitacion.numeroHabitacionTextBox.Text = dtgHabitaciones.CurrentRow.Cells[1].Value.ToString();
             habitacion.tarifaTextBox.Text = dtgHabitaciones.CurrentRow.Cells[2].Value.ToString();
-            habitacion.idTipoHabitacion_FKTextBox.Text = dtgHabitaciones.CurrentRow.Cells[3].Value.ToString();
+            habitacion.tipoHabitacion = dtgHabitaciones.CurrentRow.Cells[3].Value.ToString();
             habitacion.btnGuardar.Text = "Actualizar";
             habitacion.accion = true;
             habitacion.ShowDialog();

@@ -11,7 +11,7 @@ namespace Hotel_Vanilla.ENTIDAD
         public int idHabitacion { get; set; }
         public string numeroHabitacion { get; set; }
         public decimal tarifa { get; set; }
-        public int? idTipoHabitacion_FK { get; set; }
+        public string tipo { get; set; }
     }
 
 }

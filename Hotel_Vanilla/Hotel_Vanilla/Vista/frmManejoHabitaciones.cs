@@ -17,7 +17,10 @@ namespace Hotel_Vanilla.Vista
         public frmManejoHabitaciones()
         {
             InitializeComponent();
+            
+
         }
+
 
         private void btnCerrar_Click(object sender, EventArgs e)
         {
@@ -30,7 +33,7 @@ namespace Hotel_Vanilla.Vista
             {
                 CspMostrarHabitaciones Chabitacion = new CspMostrarHabitaciones();
                 sp_MostrarHabitaciones habitacion =(sp_MostrarHabitaciones) spMostrarHabitacionesBindingSource.Current;
-                Chabitacion.AgregarHabitacion(habitacion, Convert.ToInt32(idTipoHabitacion_FKTextBox.Text));
+                Chabitacion.AgregarHabitacion(habitacion, Convert.ToInt32(cbTipoHabitacion.SelectedValue.ToString()));
                 Limpiar();
             }
             else if (btnGuardar.Text=="Actualizar")
@@ -40,14 +43,17 @@ namespace Hotel_Vanilla.Vista
                 Chabitacion.ActualizarHabitacion(Convert.ToInt32(lblidHabitacion.Text),
                                                 numeroHabitacionTextBox.Text,
                                                 Convert.ToDecimal(tarifaTextBox.Text),
-                                                Convert.ToInt32(idTipoHabitacion_FKTextBox.Text));
+                                                Convert.ToInt32(cbTipoHabitacion.SelectedValue.ToString()));
                 this.Close();
             }
         }
-
+        public String tipoHabitacion;
         public Boolean accion = false;
         private void frmManejoHabitaciones_Load(object sender, EventArgs e)
         {
+            cargarCBTipoHabitacion();
+            //cbTipoHabitacion.Text = "Hola";
+            cbTipoHabitacion.Text=tipoHabitacion;
             if (accion==false)
             {
                 spMostrarHabitacionesBindingSource.AddNew();
@@ -56,18 +62,34 @@ namespace Hotel_Vanilla.Vista
             {
                 spMostrarHabitacionesBindingSource.EndEdit();
             }
+
         }
 
         public void Limpiar()
         {
             numeroHabitacionTextBox.Clear();
             tarifaTextBox.Clear();
-            idTipoHabitacion_FKTextBox.Clear();
+            cbTipoHabitacion.SelectedIndex=-1;
         }
 
         private void btnCancelar_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void cargarCBTipoHabitacion()
+        {
+            CTipoHabitaciones cTipoHabitaciones = new CTipoHabitaciones();
+            
+            cbTipoHabitacion.DataSource = cTipoHabitaciones.CargarCBTipoHabitacion();
+            cbTipoHabitacion.DisplayMember = "Tipodehabitacion";
+            cbTipoHabitacion.ValueMember = "idTipoHabitacion";
+
+            if (cbTipoHabitacion.Items.Count > 0)
+            {
+                cbTipoHabitacion.SelectedIndex = -1;
+            }
+
         }
     }
 }

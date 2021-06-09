@@ -9,8 +9,7 @@ namespace Hotel_Vanilla.ENTIDAD
     public class TipoHabitaciones
     {
         public int idTipoHabitacion { get; set; }
-        public string tipo { get; set; }
-        public int numeroOcupantes { get; set; }
+        public string Tipodehabitacion { get; set; }
 
     }
 }
