@@ -10,7 +10,7 @@ using System.Windows.Forms;
 
 namespace Hotel_Vanilla.MODELO
 {
-    class MspMostrarHabitaciones
+    class MHabitaciones
     {
         IDbConnection conexion = Conexion.conectar();
         public List<sp_MostrarHabitaciones> ConsultarHabitacion()

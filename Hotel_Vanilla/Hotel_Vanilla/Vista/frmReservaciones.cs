@@ -70,14 +70,12 @@ namespace Hotel_Vanilla.Vista
 
         private void frmReservaciones_Load(object sender, EventArgs e)
         {
-            // TODO: esta línea de código carga datos en la tabla 'vanillaBDDataSet1.sp_MostrarManejoReservas' Puede moverla o quitarla según sea necesario.
             this.sp_MostrarManejoReservasTableAdapter.Fill(this.vanillaBDDataSet1.sp_MostrarManejoReservas);
             for (var i = 0; i < dtgReservas.Columns.Count; i++)
             {
                 dtgReservas.Columns[i].AutoSizeMode = DataGridViewAutoSizeColumnMode.DisplayedCells;
             }
             dtgReservas.ColumnHeadersDefaultCellStyle.BackColor = Color.RoyalBlue;
-            
         }
 
         private void btnEliminar_Click(object sender, EventArgs e)
@@ -95,7 +93,7 @@ namespace Hotel_Vanilla.Vista
             }
             else
             {
-                MessageBox.Show("Seleccione un registro para ejecutar la acción");
+                frmMensajeAviso.Avisar("Seleccione un registro para ejecutar la acción");
             }
 
         }

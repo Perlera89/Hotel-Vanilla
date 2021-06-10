@@ -10,7 +10,7 @@ namespace Hotel_Vanilla.CONTROLADOR
 {
     class CspMostrarHabitaciones
     {
-        MspMostrarHabitaciones Mhabitacion = new MspMostrarHabitaciones();
+        MHabitaciones Mhabitacion = new MHabitaciones();
         public List<sp_MostrarHabitaciones> ConsultarHuespedes()
         {
             return Mhabitacion.ConsultarHabitacion(); //Llama al modelo
