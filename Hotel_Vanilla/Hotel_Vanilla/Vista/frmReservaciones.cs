@@ -14,17 +14,12 @@ namespace Hotel_Vanilla.Vista
 {
     public partial class frmReservaciones : Form
     {
-        frmManejoReservas reserva = new frmManejoReservas();
+        
         public frmReservaciones()
         {
             InitializeComponent();
-            Clean();
-        }
 
-        private void Clean()
-        {
         }
-
 
         //mostrar
         private void CargarReservas()
@@ -36,6 +31,7 @@ namespace Hotel_Vanilla.Vista
 
         private void btnAgregar_Click(object sender, EventArgs e)
         {
+            frmManejoReservas reserva = new frmManejoReservas();
             reserva.ShowDialog();
 
             CargarReservas();
@@ -43,25 +39,33 @@ namespace Hotel_Vanilla.Vista
 
         private void btnActualizar_Click(object sender, EventArgs e)
         {
-            frmManejoReservas reserva = new frmManejoReservas();
-            reserva.idReservaTextBox1.Text = dtgReservas.CurrentRow.Cells[0].Value.ToString();
-            reserva.fechaReservaDateTimePicker.Text = dtgReservas.CurrentRow.Cells[4].Value.ToString();
-            reserva.fechaCheckInDateTimePicker.Text = dtgReservas.CurrentRow.Cells[5].Value.ToString();
-            reserva.fechaCheckOutDateTimePicker.Text = dtgReservas.CurrentRow.Cells[6].Value.ToString();
-            reserva.numeroDiasTextBox.Text = dtgReservas.CurrentRow.Cells[7].Value.ToString();
-            reserva.pagoAdelantadoTextBox.Text = dtgReservas.CurrentRow.Cells[9].Value.ToString();
-            reserva.descuentoTextBox.Text = dtgReservas.CurrentRow.Cells[11].Value.ToString();
-            reserva.totalTextBox.Text = dtgReservas.CurrentRow.Cells[12].Value.ToString();
-            reserva.habitacion = dtgReservas.CurrentRow.Cells[3].Value.ToString();
-            reserva.huesped = dtgReservas.CurrentRow.Cells[1].Value.ToString();
+            //se verifica que haya seleccionado un registro
+            if (dtgReservas.SelectedRows.Count > 0)
+            {
+                frmManejoReservas reserva = new frmManejoReservas();
+                reserva.txtIdReserva.Text = dtgReservas.CurrentRow.Cells[0].Value.ToString();
+                reserva.txtFechaReserva.Text = dtgReservas.CurrentRow.Cells[4].Value.ToString();
+                reserva.txtFechaCheckIn.Text = dtgReservas.CurrentRow.Cells[5].Value.ToString();
+                reserva.txtFechaCheckOut.Text = dtgReservas.CurrentRow.Cells[6].Value.ToString();
+                reserva.txtDiasAlojamiento.Text = dtgReservas.CurrentRow.Cells[7].Value.ToString();
+                reserva.txtPagoAdelantado.Text = dtgReservas.CurrentRow.Cells[9].Value.ToString();
+                reserva.txtDescuento.Text = dtgReservas.CurrentRow.Cells[11].Value.ToString();
+                reserva.txtTotal.Text = dtgReservas.CurrentRow.Cells[12].Value.ToString();
+                reserva.habitacion = dtgReservas.CurrentRow.Cells[3].Value.ToString();
+                reserva.huesped = dtgReservas.CurrentRow.Cells[1].Value.ToString();
 
-            reserva.btnGuardar.Text = "Actualizar";
-            reserva.fechaCheckOutDateTimePicker.Visible =true;
-            reserva.lblCheckOut.Visible = true;
-            reserva.accion = true;
-            reserva.ShowDialog();
+                reserva.btnGuardar.Text = "Actualizar";
+                reserva.txtFechaCheckOut.Visible = true;
+                reserva.lblCheckOut.Visible = true;
+                reserva.accion = true;
+                reserva.ShowDialog();
 
-            CargarReservas();
+                CargarReservas();
+            }
+            else
+            {
+                MessageBox.Show("Seleccione un registro para ejecutar la acción");
+            }
         }
 
         private void frmReservaciones_Load(object sender, EventArgs e)
@@ -78,13 +82,22 @@ namespace Hotel_Vanilla.Vista
 
         private void btnEliminar_Click(object sender, EventArgs e)
         {
-            CManejoReservas cReserva = new CManejoReservas();
-            ManejoReservas Dreservas = new ManejoReservas();
-            //tomando los datos actuales de bindin y asignandolo al objeto de ManejoReservas
-            Dreservas.idReserva = Convert.ToInt32(dtgReservas.CurrentRow.Cells[0].Value.ToString());
-            //mandando el objeto reservas como parametro al metodo de agrregar reserva
-            cReserva.EliminarReserva(Dreservas);
-            CargarReservas();
+            //se verifica que haya seleccionado un registro
+            if (dtgReservas.SelectedRows.Count>0)
+            {
+                CManejoReservas cReserva = new CManejoReservas();
+                ManejoReservas Dreservas = new ManejoReservas();
+                //tomando los datos actuales de bindin y asignandolo al objeto de ManejoReservas
+                Dreservas.idReserva = Convert.ToInt32(dtgReservas.CurrentRow.Cells[0].Value.ToString());
+                //mandando el objeto reservas como parametro al metodo de agrregar reserva
+                cReserva.EliminarReserva(Dreservas);
+                CargarReservas();
+            }
+            else
+            {
+                MessageBox.Show("Seleccione un registro para ejecutar la acción");
+            }
+
         }
     }
 }

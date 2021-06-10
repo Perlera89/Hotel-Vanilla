@@ -218,14 +218,14 @@ namespace Hotel_Vanilla.Vista
             this.btnCancelar.IconVisible = true;
             this.btnCancelar.IconZoom = 90D;
             this.btnCancelar.IsTab = false;
-            this.btnCancelar.Location = new System.Drawing.Point(556, 350);
+            this.btnCancelar.Location = new System.Drawing.Point(554, 350);
             this.btnCancelar.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btnCancelar.Name = "btnCancelar";
             this.btnCancelar.Normalcolor = System.Drawing.SystemColors.Control;
             this.btnCancelar.OnHovercolor = System.Drawing.Color.Red;
             this.btnCancelar.OnHoverTextColor = System.Drawing.SystemColors.Control;
             this.btnCancelar.selected = false;
-            this.btnCancelar.Size = new System.Drawing.Size(198, 51);
+            this.btnCancelar.Size = new System.Drawing.Size(200, 51);
             this.btnCancelar.TabIndex = 46;
             this.btnCancelar.Text = "Cancelar";
             this.btnCancelar.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -257,14 +257,14 @@ namespace Hotel_Vanilla.Vista
             this.btnGuardar.IconVisible = true;
             this.btnGuardar.IconZoom = 90D;
             this.btnGuardar.IsTab = false;
-            this.btnGuardar.Location = new System.Drawing.Point(556, 285);
+            this.btnGuardar.Location = new System.Drawing.Point(554, 285);
             this.btnGuardar.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btnGuardar.Name = "btnGuardar";
             this.btnGuardar.Normalcolor = System.Drawing.SystemColors.Control;
             this.btnGuardar.OnHovercolor = System.Drawing.Color.RoyalBlue;
             this.btnGuardar.OnHoverTextColor = System.Drawing.SystemColors.Control;
             this.btnGuardar.selected = false;
-            this.btnGuardar.Size = new System.Drawing.Size(202, 51);
+            this.btnGuardar.Size = new System.Drawing.Size(204, 51);
             this.btnGuardar.TabIndex = 45;
             this.btnGuardar.Text = "Guardar";
             this.btnGuardar.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -333,14 +333,15 @@ namespace Hotel_Vanilla.Vista
             // cbTipoHabitacion
             // 
             this.cbTipoHabitacion.BackColor = System.Drawing.Color.Transparent;
+            this.cbTipoHabitacion.BorderRadius = 14;
             this.cbTipoHabitacion.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.tipoHabitacionesBindingSource, "Tipodehabitacion", true));
             this.cbTipoHabitacion.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
             this.cbTipoHabitacion.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbTipoHabitacion.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.cbTipoHabitacion.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.cbTipoHabitacion.FocusedState.Parent = this.cbTipoHabitacion;
-            this.cbTipoHabitacion.Font = new System.Drawing.Font("Segoe UI", 10F);
-            this.cbTipoHabitacion.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
+            this.cbTipoHabitacion.Font = new System.Drawing.Font("Century Gothic", 12F);
+            this.cbTipoHabitacion.ForeColor = System.Drawing.Color.RoyalBlue;
             this.cbTipoHabitacion.FormattingEnabled = true;
             this.cbTipoHabitacion.HoverState.Parent = this.cbTipoHabitacion;
             this.cbTipoHabitacion.ItemHeight = 30;

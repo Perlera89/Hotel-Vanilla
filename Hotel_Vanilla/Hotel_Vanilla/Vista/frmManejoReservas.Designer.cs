@@ -33,7 +33,6 @@ namespace Hotel_Vanilla.Vista
             System.Windows.Forms.Label descuentoLabel;
             System.Windows.Forms.Label fechaCheckInLabel;
             System.Windows.Forms.Label fechaReservaLabel;
-            System.Windows.Forms.Label idReservaLabel1;
             System.Windows.Forms.Label numeroDiasLabel;
             System.Windows.Forms.Label pagoAdelantadoLabel;
             System.Windows.Forms.Label totalLabel;
@@ -50,25 +49,24 @@ namespace Hotel_Vanilla.Vista
             this.guna2DragControl1 = new Guna.UI2.WinForms.Guna2DragControl(this.components);
             this.btnCancelar = new Bunifu.Framework.UI.BunifuFlatButton();
             this.btnGuardar = new Bunifu.Framework.UI.BunifuFlatButton();
-            this.guna2TextBox1 = new Guna.UI2.WinForms.Guna2TextBox();
+            this.txtIdReserva = new Guna.UI2.WinForms.Guna2TextBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.descuentoTextBox = new System.Windows.Forms.TextBox();
-            this.fechaCheckInDateTimePicker = new System.Windows.Forms.DateTimePicker();
-            this.fechaCheckOutDateTimePicker = new System.Windows.Forms.DateTimePicker();
-            this.fechaReservaDateTimePicker = new System.Windows.Forms.DateTimePicker();
-            this.idReservaTextBox1 = new System.Windows.Forms.TextBox();
-            this.numeroDiasTextBox = new System.Windows.Forms.TextBox();
-            this.pagoAdelantadoTextBox = new System.Windows.Forms.TextBox();
-            this.totalTextBox = new System.Windows.Forms.TextBox();
             this.cbHabitacion = new Guna.UI2.WinForms.Guna2ComboBox();
+            this.cbIdHuesped = new Guna.UI2.WinForms.Guna2ComboBox();
+            this.txtDiasAlojamiento = new Guna.UI2.WinForms.Guna2NumericUpDown();
+            this.txtPagoAdelantado = new Guna.UI2.WinForms.Guna2TextBox();
+            this.txtDescuento = new Guna.UI2.WinForms.Guna2TextBox();
+            this.txtTotal = new Guna.UI2.WinForms.Guna2TextBox();
+            this.txtFechaReserva = new Guna.UI2.WinForms.Guna2DateTimePicker();
+            this.errorProvider = new System.Windows.Forms.ErrorProvider(this.components);
+            this.txtFechaCheckOut = new Guna.UI2.WinForms.Guna2DateTimePicker();
+            this.txtFechaCheckIn = new Guna.UI2.WinForms.Guna2DateTimePicker();
             this.manejoReservasBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.sp_MostrarManejoReservasBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.huespedesBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.idHuesped_FKComboBox = new Guna.UI2.WinForms.Guna2ComboBox();
+            this.sp_MostrarManejoReservasBindingSource = new System.Windows.Forms.BindingSource(this.components);
             descuentoLabel = new System.Windows.Forms.Label();
             fechaCheckInLabel = new System.Windows.Forms.Label();
             fechaReservaLabel = new System.Windows.Forms.Label();
-            idReservaLabel1 = new System.Windows.Forms.Label();
             numeroDiasLabel = new System.Windows.Forms.Label();
             pagoAdelantadoLabel = new System.Windows.Forms.Label();
             totalLabel = new System.Windows.Forms.Label();
@@ -76,102 +74,123 @@ namespace Hotel_Vanilla.Vista
             idHuespedLabel = new System.Windows.Forms.Label();
             this.panelSuperior.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btnDefault)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtDiasAlojamiento)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.manejoReservasBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.sp_MostrarManejoReservasBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.huespedesBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.sp_MostrarManejoReservasBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // descuentoLabel
             // 
             descuentoLabel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             descuentoLabel.AutoSize = true;
-            descuentoLabel.Location = new System.Drawing.Point(63, 312);
+            descuentoLabel.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold);
+            descuentoLabel.ForeColor = System.Drawing.Color.RoyalBlue;
+            descuentoLabel.Location = new System.Drawing.Point(102, 341);
             descuentoLabel.Name = "descuentoLabel";
-            descuentoLabel.Size = new System.Drawing.Size(60, 13);
+            descuentoLabel.Size = new System.Drawing.Size(94, 19);
             descuentoLabel.TabIndex = 45;
-            descuentoLabel.Text = "descuento:";
+            descuentoLabel.Text = "Descuento:";
             descuentoLabel.Click += new System.EventHandler(this.descuentoLabel_Click);
             // 
             // fechaCheckInLabel
             // 
             fechaCheckInLabel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             fechaCheckInLabel.AutoSize = true;
-            fechaCheckInLabel.Location = new System.Drawing.Point(63, 167);
+            fechaCheckInLabel.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold);
+            fechaCheckInLabel.ForeColor = System.Drawing.Color.RoyalBlue;
+            fechaCheckInLabel.Location = new System.Drawing.Point(100, 132);
             fechaCheckInLabel.Name = "fechaCheckInLabel";
-            fechaCheckInLabel.Size = new System.Drawing.Size(83, 13);
+            fechaCheckInLabel.Size = new System.Drawing.Size(160, 19);
             fechaCheckInLabel.TabIndex = 47;
-            fechaCheckInLabel.Text = "fecha Check In:";
+            fechaCheckInLabel.Text = "Fecha de Check In:";
+            fechaCheckInLabel.Click += new System.EventHandler(this.fechaCheckInLabel_Click);
             // 
             // fechaReservaLabel
             // 
             fechaReservaLabel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             fechaReservaLabel.AutoSize = true;
-            fechaReservaLabel.Location = new System.Drawing.Point(63, 141);
+            fechaReservaLabel.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold);
+            fechaReservaLabel.ForeColor = System.Drawing.Color.RoyalBlue;
+            fechaReservaLabel.Location = new System.Drawing.Point(100, 90);
             fechaReservaLabel.Name = "fechaReservaLabel";
-            fechaReservaLabel.Size = new System.Drawing.Size(80, 13);
+            fechaReservaLabel.Size = new System.Drawing.Size(151, 19);
             fechaReservaLabel.TabIndex = 51;
-            fechaReservaLabel.Text = "fecha Reserva:";
-            // 
-            // idReservaLabel1
-            // 
-            idReservaLabel1.AutoSize = true;
-            idReservaLabel1.Location = new System.Drawing.Point(414, 97);
-            idReservaLabel1.Name = "idReservaLabel1";
-            idReservaLabel1.Size = new System.Drawing.Size(61, 13);
-            idReservaLabel1.TabIndex = 57;
-            idReservaLabel1.Text = "id Reserva:";
+            fechaReservaLabel.Text = "Fecha de Reserva:";
             // 
             // numeroDiasLabel
             // 
             numeroDiasLabel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             numeroDiasLabel.AutoSize = true;
-            numeroDiasLabel.Location = new System.Drawing.Point(63, 218);
+            numeroDiasLabel.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold);
+            numeroDiasLabel.ForeColor = System.Drawing.Color.RoyalBlue;
+            numeroDiasLabel.Location = new System.Drawing.Point(100, 215);
             numeroDiasLabel.Name = "numeroDiasLabel";
-            numeroDiasLabel.Size = new System.Drawing.Size(69, 13);
+            numeroDiasLabel.Size = new System.Drawing.Size(168, 19);
             numeroDiasLabel.TabIndex = 59;
-            numeroDiasLabel.Text = "numero Dias:";
+            numeroDiasLabel.Text = "Días de alojamiento:";
             // 
             // pagoAdelantadoLabel
             // 
             pagoAdelantadoLabel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             pagoAdelantadoLabel.AutoSize = true;
-            pagoAdelantadoLabel.Location = new System.Drawing.Point(63, 286);
+            pagoAdelantadoLabel.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold);
+            pagoAdelantadoLabel.ForeColor = System.Drawing.Color.RoyalBlue;
+            pagoAdelantadoLabel.Location = new System.Drawing.Point(100, 299);
             pagoAdelantadoLabel.Name = "pagoAdelantadoLabel";
-            pagoAdelantadoLabel.Size = new System.Drawing.Size(91, 13);
+            pagoAdelantadoLabel.Size = new System.Drawing.Size(151, 19);
             pagoAdelantadoLabel.TabIndex = 61;
-            pagoAdelantadoLabel.Text = "pago Adelantado:";
+            pagoAdelantadoLabel.Text = "Pago adelantado:";
             // 
             // totalLabel
             // 
             totalLabel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             totalLabel.AutoSize = true;
-            totalLabel.Location = new System.Drawing.Point(63, 338);
+            totalLabel.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold);
+            totalLabel.ForeColor = System.Drawing.Color.RoyalBlue;
+            totalLabel.Location = new System.Drawing.Point(102, 383);
             totalLabel.Name = "totalLabel";
-            totalLabel.Size = new System.Drawing.Size(30, 13);
+            totalLabel.Size = new System.Drawing.Size(49, 19);
             totalLabel.TabIndex = 63;
-            totalLabel.Text = "total:";
+            totalLabel.Text = "Total:";
             totalLabel.Click += new System.EventHandler(this.totalLabel_Click);
             // 
             // habitacionLabel
             // 
             habitacionLabel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             habitacionLabel.AutoSize = true;
-            habitacionLabel.Location = new System.Drawing.Point(93, 244);
+            habitacionLabel.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold);
+            habitacionLabel.ForeColor = System.Drawing.Color.RoyalBlue;
+            habitacionLabel.Location = new System.Drawing.Point(102, 258);
             habitacionLabel.Name = "habitacionLabel";
-            habitacionLabel.Size = new System.Drawing.Size(61, 13);
+            habitacionLabel.Size = new System.Drawing.Size(99, 19);
             habitacionLabel.TabIndex = 65;
-            habitacionLabel.Text = "Habitacion:";
+            habitacionLabel.Text = "Habitación:";
             habitacionLabel.Click += new System.EventHandler(this.habitacionLabel_Click);
+            // 
+            // idHuespedLabel
+            // 
+            idHuespedLabel.AutoSize = true;
+            idHuespedLabel.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold);
+            idHuespedLabel.ForeColor = System.Drawing.Color.RoyalBlue;
+            idHuespedLabel.Location = new System.Drawing.Point(102, 425);
+            idHuespedLabel.Name = "idHuespedLabel";
+            idHuespedLabel.Size = new System.Drawing.Size(82, 19);
+            idHuespedLabel.TabIndex = 66;
+            idHuespedLabel.Text = "Huesped:";
             // 
             // lblCheckOut
             // 
             this.lblCheckOut.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.lblCheckOut.AutoSize = true;
-            this.lblCheckOut.Location = new System.Drawing.Point(63, 193);
+            this.lblCheckOut.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold);
+            this.lblCheckOut.ForeColor = System.Drawing.Color.RoyalBlue;
+            this.lblCheckOut.Location = new System.Drawing.Point(102, 174);
             this.lblCheckOut.Name = "lblCheckOut";
-            this.lblCheckOut.Size = new System.Drawing.Size(91, 13);
+            this.lblCheckOut.Size = new System.Drawing.Size(173, 19);
             this.lblCheckOut.TabIndex = 49;
-            this.lblCheckOut.Text = "fecha Check Out:";
+            this.lblCheckOut.Text = "Fecha de Check Out:";
             // 
             // panelSuperior
             // 
@@ -270,14 +289,14 @@ namespace Hotel_Vanilla.Vista
             this.btnCancelar.IconVisible = true;
             this.btnCancelar.IconZoom = 90D;
             this.btnCancelar.IsTab = false;
-            this.btnCancelar.Location = new System.Drawing.Point(497, 346);
+            this.btnCancelar.Location = new System.Drawing.Point(595, 408);
             this.btnCancelar.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btnCancelar.Name = "btnCancelar";
             this.btnCancelar.Normalcolor = System.Drawing.SystemColors.Control;
             this.btnCancelar.OnHovercolor = System.Drawing.Color.Red;
             this.btnCancelar.OnHoverTextColor = System.Drawing.SystemColors.Control;
             this.btnCancelar.selected = false;
-            this.btnCancelar.Size = new System.Drawing.Size(243, 51);
+            this.btnCancelar.Size = new System.Drawing.Size(193, 51);
             this.btnCancelar.TabIndex = 10;
             this.btnCancelar.Text = "Cancelar";
             this.btnCancelar.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -308,14 +327,14 @@ namespace Hotel_Vanilla.Vista
             this.btnGuardar.IconVisible = true;
             this.btnGuardar.IconZoom = 90D;
             this.btnGuardar.IsTab = false;
-            this.btnGuardar.Location = new System.Drawing.Point(497, 279);
+            this.btnGuardar.Location = new System.Drawing.Point(599, 341);
             this.btnGuardar.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btnGuardar.Name = "btnGuardar";
             this.btnGuardar.Normalcolor = System.Drawing.SystemColors.Control;
             this.btnGuardar.OnHovercolor = System.Drawing.Color.RoyalBlue;
             this.btnGuardar.OnHoverTextColor = System.Drawing.SystemColors.Control;
             this.btnGuardar.selected = false;
-            this.btnGuardar.Size = new System.Drawing.Size(243, 51);
+            this.btnGuardar.Size = new System.Drawing.Size(187, 51);
             this.btnGuardar.TabIndex = 9;
             this.btnGuardar.Text = "Guardar";
             this.btnGuardar.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -323,37 +342,36 @@ namespace Hotel_Vanilla.Vista
             this.btnGuardar.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnGuardar.Click += new System.EventHandler(this.btnGuardar_Click);
             // 
-            // guna2TextBox1
+            // txtIdReserva
             // 
-            this.guna2TextBox1.Animated = true;
-            this.guna2TextBox1.BackColor = System.Drawing.Color.RoyalBlue;
-            this.guna2TextBox1.BorderColor = System.Drawing.Color.RoyalBlue;
-            this.guna2TextBox1.BorderStyle = System.Drawing.Drawing2D.DashStyle.Dash;
-            this.guna2TextBox1.BorderThickness = 2;
-            this.guna2TextBox1.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.guna2TextBox1.DefaultText = "1";
-            this.guna2TextBox1.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.guna2TextBox1.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.guna2TextBox1.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.guna2TextBox1.DisabledState.Parent = this.guna2TextBox1;
-            this.guna2TextBox1.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.guna2TextBox1.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.guna2TextBox1.FocusedState.Parent = this.guna2TextBox1;
-            this.guna2TextBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold);
-            this.guna2TextBox1.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.guna2TextBox1.HoverState.Parent = this.guna2TextBox1;
-            this.guna2TextBox1.Location = new System.Drawing.Point(639, 67);
-            this.guna2TextBox1.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
-            this.guna2TextBox1.Name = "guna2TextBox1";
-            this.guna2TextBox1.PasswordChar = '\0';
-            this.guna2TextBox1.PlaceholderText = "";
-            this.guna2TextBox1.ReadOnly = true;
-            this.guna2TextBox1.SelectedText = "";
-            this.guna2TextBox1.SelectionStart = 1;
-            this.guna2TextBox1.ShadowDecoration.Parent = this.guna2TextBox1;
-            this.guna2TextBox1.Size = new System.Drawing.Size(101, 67);
-            this.guna2TextBox1.TabIndex = 30;
-            this.guna2TextBox1.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.txtIdReserva.Animated = true;
+            this.txtIdReserva.BackColor = System.Drawing.Color.RoyalBlue;
+            this.txtIdReserva.BorderColor = System.Drawing.Color.RoyalBlue;
+            this.txtIdReserva.BorderStyle = System.Drawing.Drawing2D.DashStyle.Dash;
+            this.txtIdReserva.BorderThickness = 2;
+            this.txtIdReserva.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtIdReserva.DefaultText = "1";
+            this.txtIdReserva.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.txtIdReserva.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.txtIdReserva.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtIdReserva.DisabledState.Parent = this.txtIdReserva;
+            this.txtIdReserva.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtIdReserva.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtIdReserva.FocusedState.Parent = this.txtIdReserva;
+            this.txtIdReserva.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold);
+            this.txtIdReserva.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtIdReserva.HoverState.Parent = this.txtIdReserva;
+            this.txtIdReserva.Location = new System.Drawing.Point(639, 67);
+            this.txtIdReserva.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.txtIdReserva.Name = "txtIdReserva";
+            this.txtIdReserva.PasswordChar = '\0';
+            this.txtIdReserva.PlaceholderText = "";
+            this.txtIdReserva.ReadOnly = true;
+            this.txtIdReserva.SelectedText = "";
+            this.txtIdReserva.ShadowDecoration.Parent = this.txtIdReserva;
+            this.txtIdReserva.Size = new System.Drawing.Size(101, 67);
+            this.txtIdReserva.TabIndex = 30;
+            this.txtIdReserva.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
             // label1
             // 
@@ -366,162 +384,258 @@ namespace Hotel_Vanilla.Vista
             this.label1.TabIndex = 31;
             this.label1.Text = "Id: ";
             // 
-            // descuentoTextBox
-            // 
-            this.descuentoTextBox.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.descuentoTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.manejoReservasBindingSource, "descuento", true));
-            this.descuentoTextBox.Location = new System.Drawing.Point(160, 309);
-            this.descuentoTextBox.Name = "descuentoTextBox";
-            this.descuentoTextBox.Size = new System.Drawing.Size(277, 20);
-            this.descuentoTextBox.TabIndex = 46;
-            this.descuentoTextBox.Leave += new System.EventHandler(this.descuentoTextBox_Leave);
-            // 
-            // fechaCheckInDateTimePicker
-            // 
-            this.fechaCheckInDateTimePicker.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.fechaCheckInDateTimePicker.CustomFormat = "dd/MM/yyyy";
-            this.fechaCheckInDateTimePicker.DataBindings.Add(new System.Windows.Forms.Binding("Value", this.manejoReservasBindingSource, "fechaCheckIn", true));
-            this.fechaCheckInDateTimePicker.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.fechaCheckInDateTimePicker.Location = new System.Drawing.Point(160, 163);
-            this.fechaCheckInDateTimePicker.MinDate = new System.DateTime(2021, 1, 1, 0, 0, 0, 0);
-            this.fechaCheckInDateTimePicker.Name = "fechaCheckInDateTimePicker";
-            this.fechaCheckInDateTimePicker.Size = new System.Drawing.Size(277, 20);
-            this.fechaCheckInDateTimePicker.TabIndex = 48;
-            this.fechaCheckInDateTimePicker.Value = new System.DateTime(2021, 6, 7, 1, 57, 54, 0);
-            this.fechaCheckInDateTimePicker.ValueChanged += new System.EventHandler(this.fechaCheckInDateTimePicker_ValueChanged);
-            // 
-            // fechaCheckOutDateTimePicker
-            // 
-            this.fechaCheckOutDateTimePicker.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.fechaCheckOutDateTimePicker.CustomFormat = "dd/MM/yyyy";
-            this.fechaCheckOutDateTimePicker.DataBindings.Add(new System.Windows.Forms.Binding("Value", this.manejoReservasBindingSource, "fechaCheckOut", true));
-            this.fechaCheckOutDateTimePicker.Enabled = false;
-            this.fechaCheckOutDateTimePicker.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.fechaCheckOutDateTimePicker.Location = new System.Drawing.Point(160, 189);
-            this.fechaCheckOutDateTimePicker.MinDate = new System.DateTime(2021, 1, 1, 0, 0, 0, 0);
-            this.fechaCheckOutDateTimePicker.Name = "fechaCheckOutDateTimePicker";
-            this.fechaCheckOutDateTimePicker.Size = new System.Drawing.Size(277, 20);
-            this.fechaCheckOutDateTimePicker.TabIndex = 50;
-            this.fechaCheckOutDateTimePicker.Value = new System.DateTime(2021, 6, 7, 1, 57, 46, 0);
-            this.fechaCheckOutDateTimePicker.ValueChanged += new System.EventHandler(this.fechaCheckOutDateTimePicker_ValueChanged);
-            // 
-            // fechaReservaDateTimePicker
-            // 
-            this.fechaReservaDateTimePicker.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.fechaReservaDateTimePicker.CustomFormat = "dd/MM/yyyy";
-            this.fechaReservaDateTimePicker.DataBindings.Add(new System.Windows.Forms.Binding("Value", this.manejoReservasBindingSource, "fechaReserva", true));
-            this.fechaReservaDateTimePicker.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.fechaReservaDateTimePicker.Location = new System.Drawing.Point(160, 137);
-            this.fechaReservaDateTimePicker.MinDate = new System.DateTime(2021, 1, 1, 0, 0, 0, 0);
-            this.fechaReservaDateTimePicker.Name = "fechaReservaDateTimePicker";
-            this.fechaReservaDateTimePicker.Size = new System.Drawing.Size(277, 20);
-            this.fechaReservaDateTimePicker.TabIndex = 52;
-            this.fechaReservaDateTimePicker.Value = new System.DateTime(2021, 6, 7, 2, 12, 59, 0);
-            this.fechaReservaDateTimePicker.ValueChanged += new System.EventHandler(this.fechaReservaDateTimePicker_ValueChanged);
-            // 
-            // idReservaTextBox1
-            // 
-            this.idReservaTextBox1.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.manejoReservasBindingSource, "idReserva", true));
-            this.idReservaTextBox1.Location = new System.Drawing.Point(511, 94);
-            this.idReservaTextBox1.Name = "idReservaTextBox1";
-            this.idReservaTextBox1.Size = new System.Drawing.Size(109, 20);
-            this.idReservaTextBox1.TabIndex = 58;
-            // 
-            // numeroDiasTextBox
-            // 
-            this.numeroDiasTextBox.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.numeroDiasTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.manejoReservasBindingSource, "numeroDias", true));
-            this.numeroDiasTextBox.Location = new System.Drawing.Point(160, 215);
-            this.numeroDiasTextBox.Name = "numeroDiasTextBox";
-            this.numeroDiasTextBox.Size = new System.Drawing.Size(277, 20);
-            this.numeroDiasTextBox.TabIndex = 60;
-            this.numeroDiasTextBox.TextChanged += new System.EventHandler(this.numeroDiasTextBox_TextChanged);
-            this.numeroDiasTextBox.Leave += new System.EventHandler(this.numeroDiasTextBox_Leave);
-            // 
-            // pagoAdelantadoTextBox
-            // 
-            this.pagoAdelantadoTextBox.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.pagoAdelantadoTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.manejoReservasBindingSource, "pagoAdelantado", true));
-            this.pagoAdelantadoTextBox.Location = new System.Drawing.Point(160, 283);
-            this.pagoAdelantadoTextBox.Name = "pagoAdelantadoTextBox";
-            this.pagoAdelantadoTextBox.Size = new System.Drawing.Size(277, 20);
-            this.pagoAdelantadoTextBox.TabIndex = 62;
-            this.pagoAdelantadoTextBox.TextChanged += new System.EventHandler(this.pagoAdelantadoTextBox_TextChanged);
-            // 
-            // totalTextBox
-            // 
-            this.totalTextBox.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.totalTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.manejoReservasBindingSource, "total", true));
-            this.totalTextBox.Location = new System.Drawing.Point(160, 335);
-            this.totalTextBox.Name = "totalTextBox";
-            this.totalTextBox.ReadOnly = true;
-            this.totalTextBox.Size = new System.Drawing.Size(277, 20);
-            this.totalTextBox.TabIndex = 64;
-            // 
             // cbHabitacion
             // 
             this.cbHabitacion.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.cbHabitacion.BackColor = System.Drawing.Color.Transparent;
-            this.cbHabitacion.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.sp_MostrarManejoReservasBindingSource, "Habitacion", true));
+            this.cbHabitacion.BorderRadius = 14;
             this.cbHabitacion.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
             this.cbHabitacion.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbHabitacion.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.cbHabitacion.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.cbHabitacion.FocusedState.Parent = this.cbHabitacion;
-            this.cbHabitacion.Font = new System.Drawing.Font("Segoe UI", 10F);
-            this.cbHabitacion.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
+            this.cbHabitacion.Font = new System.Drawing.Font("Century Gothic", 12F);
+            this.cbHabitacion.ForeColor = System.Drawing.Color.RoyalBlue;
             this.cbHabitacion.FormattingEnabled = true;
             this.cbHabitacion.HoverState.Parent = this.cbHabitacion;
             this.cbHabitacion.ItemHeight = 30;
             this.cbHabitacion.ItemsAppearance.Parent = this.cbHabitacion;
-            this.cbHabitacion.Location = new System.Drawing.Point(160, 241);
+            this.cbHabitacion.Location = new System.Drawing.Point(281, 241);
             this.cbHabitacion.Name = "cbHabitacion";
             this.cbHabitacion.ShadowDecoration.Parent = this.cbHabitacion;
             this.cbHabitacion.Size = new System.Drawing.Size(277, 36);
             this.cbHabitacion.TabIndex = 66;
             this.cbHabitacion.SelectedIndexChanged += new System.EventHandler(this.habitacionGuna2ComboBox_SelectedIndexChanged);
             // 
+            // cbIdHuesped
+            // 
+            this.cbIdHuesped.BackColor = System.Drawing.Color.Transparent;
+            this.cbIdHuesped.BorderRadius = 14;
+            this.cbIdHuesped.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.huespedesBindingSource, "idHuesped", true));
+            this.cbIdHuesped.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.cbIdHuesped.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbIdHuesped.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.cbIdHuesped.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.cbIdHuesped.FocusedState.Parent = this.cbIdHuesped;
+            this.cbIdHuesped.Font = new System.Drawing.Font("Century Gothic", 12F);
+            this.cbIdHuesped.ForeColor = System.Drawing.Color.RoyalBlue;
+            this.cbIdHuesped.FormattingEnabled = true;
+            this.cbIdHuesped.HoverState.Parent = this.cbIdHuesped;
+            this.cbIdHuesped.ItemHeight = 30;
+            this.cbIdHuesped.ItemsAppearance.Parent = this.cbIdHuesped;
+            this.cbIdHuesped.Location = new System.Drawing.Point(281, 408);
+            this.cbIdHuesped.Name = "cbIdHuesped";
+            this.cbIdHuesped.ShadowDecoration.Parent = this.cbIdHuesped;
+            this.cbIdHuesped.Size = new System.Drawing.Size(277, 36);
+            this.cbIdHuesped.TabIndex = 67;
+            this.cbIdHuesped.KeyDown += new System.Windows.Forms.KeyEventHandler(this.cbIdHuesped_KeyDown);
+            // 
+            // txtDiasAlojamiento
+            // 
+            this.txtDiasAlojamiento.BackColor = System.Drawing.Color.Transparent;
+            this.txtDiasAlojamiento.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtDiasAlojamiento.DataBindings.Add(new System.Windows.Forms.Binding("Value", this.manejoReservasBindingSource, "numeroDias", true));
+            this.txtDiasAlojamiento.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.txtDiasAlojamiento.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.txtDiasAlojamiento.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtDiasAlojamiento.DisabledState.Parent = this.txtDiasAlojamiento;
+            this.txtDiasAlojamiento.DisabledState.UpDownButtonFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(177)))), ((int)(((byte)(177)))), ((int)(((byte)(177)))));
+            this.txtDiasAlojamiento.DisabledState.UpDownButtonForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(203)))), ((int)(((byte)(203)))), ((int)(((byte)(203)))));
+            this.txtDiasAlojamiento.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtDiasAlojamiento.FocusedState.Parent = this.txtDiasAlojamiento;
+            this.txtDiasAlojamiento.Font = new System.Drawing.Font("Century Gothic", 12F);
+            this.txtDiasAlojamiento.ForeColor = System.Drawing.Color.RoyalBlue;
+            this.txtDiasAlojamiento.Location = new System.Drawing.Point(281, 200);
+            this.txtDiasAlojamiento.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtDiasAlojamiento.Minimum = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+            this.txtDiasAlojamiento.Name = "txtDiasAlojamiento";
+            this.txtDiasAlojamiento.ShadowDecoration.Parent = this.txtDiasAlojamiento;
+            this.txtDiasAlojamiento.Size = new System.Drawing.Size(277, 34);
+            this.txtDiasAlojamiento.TabIndex = 68;
+            this.txtDiasAlojamiento.Value = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+            this.txtDiasAlojamiento.Leave += new System.EventHandler(this.numeroDiasTextBox_Leave);
+            // 
+            // txtPagoAdelantado
+            // 
+            this.txtPagoAdelantado.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtPagoAdelantado.DataBindings.Add(new System.Windows.Forms.Binding("Tag", this.manejoReservasBindingSource, "pagoAdelantado", true));
+            this.txtPagoAdelantado.DefaultText = "";
+            this.txtPagoAdelantado.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.txtPagoAdelantado.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.txtPagoAdelantado.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtPagoAdelantado.DisabledState.Parent = this.txtPagoAdelantado;
+            this.txtPagoAdelantado.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtPagoAdelantado.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtPagoAdelantado.FocusedState.Parent = this.txtPagoAdelantado;
+            this.txtPagoAdelantado.Font = new System.Drawing.Font("Century Gothic", 12F);
+            this.txtPagoAdelantado.ForeColor = System.Drawing.Color.RoyalBlue;
+            this.txtPagoAdelantado.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtPagoAdelantado.HoverState.Parent = this.txtPagoAdelantado;
+            this.txtPagoAdelantado.Location = new System.Drawing.Point(281, 282);
+            this.txtPagoAdelantado.MaxLength = 12;
+            this.txtPagoAdelantado.Name = "txtPagoAdelantado";
+            this.txtPagoAdelantado.PasswordChar = '\0';
+            this.txtPagoAdelantado.PlaceholderText = "0.0000";
+            this.txtPagoAdelantado.SelectedText = "";
+            this.txtPagoAdelantado.ShadowDecoration.Parent = this.txtPagoAdelantado;
+            this.txtPagoAdelantado.Size = new System.Drawing.Size(277, 36);
+            this.txtPagoAdelantado.TabIndex = 69;
+            this.txtPagoAdelantado.TextChanged += new System.EventHandler(this.txtPagoAdelantado_TextChanged);
+            this.txtPagoAdelantado.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtPagoAdelantado_KeyPress);
+            // 
+            // txtDescuento
+            // 
+            this.txtDescuento.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtDescuento.DataBindings.Add(new System.Windows.Forms.Binding("Tag", this.manejoReservasBindingSource, "descuento", true));
+            this.txtDescuento.DefaultText = "";
+            this.txtDescuento.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.txtDescuento.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.txtDescuento.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtDescuento.DisabledState.Parent = this.txtDescuento;
+            this.txtDescuento.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtDescuento.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtDescuento.FocusedState.Parent = this.txtDescuento;
+            this.txtDescuento.Font = new System.Drawing.Font("Century Gothic", 12F);
+            this.txtDescuento.ForeColor = System.Drawing.Color.RoyalBlue;
+            this.txtDescuento.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtDescuento.HoverState.Parent = this.txtDescuento;
+            this.txtDescuento.Location = new System.Drawing.Point(281, 324);
+            this.txtDescuento.Name = "txtDescuento";
+            this.txtDescuento.PasswordChar = '\0';
+            this.txtDescuento.PlaceholderText = "0.0000";
+            this.txtDescuento.SelectedText = "";
+            this.txtDescuento.ShadowDecoration.Parent = this.txtDescuento;
+            this.txtDescuento.Size = new System.Drawing.Size(277, 36);
+            this.txtDescuento.TabIndex = 70;
+            this.txtDescuento.TextChanged += new System.EventHandler(this.txtDescuento_TextChanged);
+            this.txtDescuento.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtDescuento_KeyPress);
+            this.txtDescuento.Leave += new System.EventHandler(this.descuentoTextBox_Leave);
+            // 
+            // txtTotal
+            // 
+            this.txtTotal.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtTotal.DataBindings.Add(new System.Windows.Forms.Binding("Tag", this.manejoReservasBindingSource, "total", true));
+            this.txtTotal.DefaultText = "";
+            this.txtTotal.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.txtTotal.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.txtTotal.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtTotal.DisabledState.Parent = this.txtTotal;
+            this.txtTotal.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtTotal.Enabled = false;
+            this.txtTotal.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtTotal.FocusedState.Parent = this.txtTotal;
+            this.txtTotal.Font = new System.Drawing.Font("Century Gothic", 12F);
+            this.txtTotal.ForeColor = System.Drawing.Color.RoyalBlue;
+            this.txtTotal.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtTotal.HoverState.Parent = this.txtTotal;
+            this.txtTotal.Location = new System.Drawing.Point(281, 366);
+            this.txtTotal.Name = "txtTotal";
+            this.txtTotal.PasswordChar = '\0';
+            this.txtTotal.PlaceholderText = "0.0000";
+            this.txtTotal.SelectedText = "";
+            this.txtTotal.ShadowDecoration.Parent = this.txtTotal;
+            this.txtTotal.Size = new System.Drawing.Size(277, 36);
+            this.txtTotal.TabIndex = 71;
+            // 
+            // txtFechaReserva
+            // 
+            this.txtFechaReserva.Animated = true;
+            this.txtFechaReserva.BorderColor = System.Drawing.Color.Gainsboro;
+            this.txtFechaReserva.BorderRadius = 14;
+            this.txtFechaReserva.BorderThickness = 1;
+            this.txtFechaReserva.CheckedState.Parent = this.txtFechaReserva;
+            this.txtFechaReserva.CustomFormat = "dd/MM/yyyy";
+            this.txtFechaReserva.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.manejoReservasBindingSource, "fechaReserva", true));
+            this.txtFechaReserva.DataBindings.Add(new System.Windows.Forms.Binding("Value", this.manejoReservasBindingSource, "fechaReserva", true));
+            this.txtFechaReserva.FillColor = System.Drawing.Color.WhiteSmoke;
+            this.txtFechaReserva.Font = new System.Drawing.Font("Century Gothic", 12F);
+            this.txtFechaReserva.ForeColor = System.Drawing.Color.RoyalBlue;
+            this.txtFechaReserva.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.txtFechaReserva.HoverState.Parent = this.txtFechaReserva;
+            this.txtFechaReserva.Location = new System.Drawing.Point(281, 73);
+            this.txtFechaReserva.MaxDate = new System.DateTime(9998, 12, 31, 0, 0, 0, 0);
+            this.txtFechaReserva.MinDate = new System.DateTime(2021, 1, 1, 0, 0, 0, 0);
+            this.txtFechaReserva.Name = "txtFechaReserva";
+            this.txtFechaReserva.ShadowDecoration.Parent = this.txtFechaReserva;
+            this.txtFechaReserva.ShowCheckBox = true;
+            this.txtFechaReserva.Size = new System.Drawing.Size(277, 36);
+            this.txtFechaReserva.TabIndex = 72;
+            this.txtFechaReserva.Value = new System.DateTime(2021, 6, 9, 18, 38, 15, 485);
+            // 
+            // errorProvider
+            // 
+            this.errorProvider.ContainerControl = this;
+            // 
+            // txtFechaCheckOut
+            // 
+            this.txtFechaCheckOut.Animated = true;
+            this.txtFechaCheckOut.BorderColor = System.Drawing.Color.Gainsboro;
+            this.txtFechaCheckOut.BorderRadius = 14;
+            this.txtFechaCheckOut.BorderThickness = 1;
+            this.txtFechaCheckOut.CheckedState.Parent = this.txtFechaCheckOut;
+            this.txtFechaCheckOut.CustomFormat = "dd/MM/yyyy";
+            this.txtFechaCheckOut.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.manejoReservasBindingSource, "fechaCheckOut", true));
+            this.txtFechaCheckOut.DataBindings.Add(new System.Windows.Forms.Binding("Value", this.manejoReservasBindingSource, "fechaCheckOut", true));
+            this.txtFechaCheckOut.Enabled = false;
+            this.txtFechaCheckOut.FillColor = System.Drawing.Color.WhiteSmoke;
+            this.txtFechaCheckOut.Font = new System.Drawing.Font("Century Gothic", 12F);
+            this.txtFechaCheckOut.ForeColor = System.Drawing.Color.RoyalBlue;
+            this.txtFechaCheckOut.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.txtFechaCheckOut.HoverState.Parent = this.txtFechaCheckOut;
+            this.txtFechaCheckOut.Location = new System.Drawing.Point(281, 157);
+            this.txtFechaCheckOut.MaxDate = new System.DateTime(9998, 12, 31, 0, 0, 0, 0);
+            this.txtFechaCheckOut.MinDate = new System.DateTime(2021, 1, 1, 0, 0, 0, 0);
+            this.txtFechaCheckOut.Name = "txtFechaCheckOut";
+            this.txtFechaCheckOut.ShadowDecoration.Parent = this.txtFechaCheckOut;
+            this.txtFechaCheckOut.ShowCheckBox = true;
+            this.txtFechaCheckOut.Size = new System.Drawing.Size(277, 36);
+            this.txtFechaCheckOut.TabIndex = 73;
+            this.txtFechaCheckOut.Value = new System.DateTime(2021, 6, 9, 18, 38, 15, 485);
+            // 
+            // txtFechaCheckIn
+            // 
+            this.txtFechaCheckIn.Animated = true;
+            this.txtFechaCheckIn.BorderColor = System.Drawing.Color.Gainsboro;
+            this.txtFechaCheckIn.BorderRadius = 14;
+            this.txtFechaCheckIn.BorderThickness = 1;
+            this.txtFechaCheckIn.CheckedState.Parent = this.txtFechaCheckIn;
+            this.txtFechaCheckIn.CustomFormat = "dd/MM/yyyy";
+            this.txtFechaCheckIn.DataBindings.Add(new System.Windows.Forms.Binding("Value", this.manejoReservasBindingSource, "fechaCheckIn", true));
+            this.txtFechaCheckIn.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.manejoReservasBindingSource, "fechaCheckIn", true));
+            this.txtFechaCheckIn.FillColor = System.Drawing.Color.WhiteSmoke;
+            this.txtFechaCheckIn.Font = new System.Drawing.Font("Century Gothic", 12F);
+            this.txtFechaCheckIn.ForeColor = System.Drawing.Color.RoyalBlue;
+            this.txtFechaCheckIn.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.txtFechaCheckIn.HoverState.Parent = this.txtFechaCheckIn;
+            this.txtFechaCheckIn.Location = new System.Drawing.Point(281, 115);
+            this.txtFechaCheckIn.MaxDate = new System.DateTime(9998, 12, 31, 0, 0, 0, 0);
+            this.txtFechaCheckIn.MinDate = new System.DateTime(2021, 1, 1, 0, 0, 0, 0);
+            this.txtFechaCheckIn.Name = "txtFechaCheckIn";
+            this.txtFechaCheckIn.ShadowDecoration.Parent = this.txtFechaCheckIn;
+            this.txtFechaCheckIn.ShowCheckBox = true;
+            this.txtFechaCheckIn.Size = new System.Drawing.Size(277, 36);
+            this.txtFechaCheckIn.TabIndex = 74;
+            this.txtFechaCheckIn.Value = new System.DateTime(2021, 6, 9, 18, 38, 15, 485);
+            // 
             // manejoReservasBindingSource
             // 
             this.manejoReservasBindingSource.DataSource = typeof(Hotel_Vanilla.ENTIDAD.ManejoReservas);
-            // 
-            // sp_MostrarManejoReservasBindingSource
-            // 
-            this.sp_MostrarManejoReservasBindingSource.DataSource = typeof(Hotel_Vanilla.ENTIDAD.spMostrarManejoReservas);
             // 
             // huespedesBindingSource
             // 
             this.huespedesBindingSource.DataSource = typeof(Hotel_Vanilla.ENTIDAD.Huespedes);
             // 
-            // idHuespedLabel
+            // sp_MostrarManejoReservasBindingSource
             // 
-            idHuespedLabel.AutoSize = true;
-            idHuespedLabel.Location = new System.Drawing.Point(90, 364);
-            idHuespedLabel.Name = "idHuespedLabel";
-            idHuespedLabel.Size = new System.Drawing.Size(64, 13);
-            idHuespedLabel.TabIndex = 66;
-            idHuespedLabel.Text = "id Huesped:";
-            // 
-            // idHuesped_FKComboBox
-            // 
-            this.idHuesped_FKComboBox.BackColor = System.Drawing.Color.Transparent;
-            this.idHuesped_FKComboBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.huespedesBindingSource, "idHuesped", true));
-            this.idHuesped_FKComboBox.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
-            this.idHuesped_FKComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.idHuesped_FKComboBox.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.idHuesped_FKComboBox.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.idHuesped_FKComboBox.FocusedState.Parent = this.idHuesped_FKComboBox;
-            this.idHuesped_FKComboBox.Font = new System.Drawing.Font("Segoe UI", 10F);
-            this.idHuesped_FKComboBox.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
-            this.idHuesped_FKComboBox.FormattingEnabled = true;
-            this.idHuesped_FKComboBox.HoverState.Parent = this.idHuesped_FKComboBox;
-            this.idHuesped_FKComboBox.ItemHeight = 30;
-            this.idHuesped_FKComboBox.ItemsAppearance.Parent = this.idHuesped_FKComboBox;
-            this.idHuesped_FKComboBox.Location = new System.Drawing.Point(160, 361);
-            this.idHuesped_FKComboBox.Name = "idHuesped_FKComboBox";
-            this.idHuesped_FKComboBox.ShadowDecoration.Parent = this.idHuesped_FKComboBox;
-            this.idHuesped_FKComboBox.Size = new System.Drawing.Size(277, 36);
-            this.idHuesped_FKComboBox.TabIndex = 67;
+            this.sp_MostrarManejoReservasBindingSource.DataSource = typeof(Hotel_Vanilla.ENTIDAD.spMostrarManejoReservas);
             // 
             // frmManejoReservas
             // 
@@ -529,28 +643,26 @@ namespace Hotel_Vanilla.Vista
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(800, 559);
+            this.Controls.Add(this.txtFechaCheckIn);
+            this.Controls.Add(this.txtFechaCheckOut);
+            this.Controls.Add(this.txtFechaReserva);
+            this.Controls.Add(this.txtTotal);
+            this.Controls.Add(this.txtDescuento);
+            this.Controls.Add(this.txtPagoAdelantado);
+            this.Controls.Add(this.txtDiasAlojamiento);
             this.Controls.Add(idHuespedLabel);
-            this.Controls.Add(this.idHuesped_FKComboBox);
+            this.Controls.Add(this.cbIdHuesped);
             this.Controls.Add(habitacionLabel);
             this.Controls.Add(this.cbHabitacion);
             this.Controls.Add(descuentoLabel);
-            this.Controls.Add(this.descuentoTextBox);
             this.Controls.Add(fechaCheckInLabel);
-            this.Controls.Add(this.fechaCheckInDateTimePicker);
             this.Controls.Add(this.lblCheckOut);
-            this.Controls.Add(this.fechaCheckOutDateTimePicker);
             this.Controls.Add(fechaReservaLabel);
-            this.Controls.Add(this.fechaReservaDateTimePicker);
-            this.Controls.Add(idReservaLabel1);
-            this.Controls.Add(this.idReservaTextBox1);
             this.Controls.Add(numeroDiasLabel);
-            this.Controls.Add(this.numeroDiasTextBox);
             this.Controls.Add(pagoAdelantadoLabel);
-            this.Controls.Add(this.pagoAdelantadoTextBox);
             this.Controls.Add(totalLabel);
-            this.Controls.Add(this.totalTextBox);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.guna2TextBox1);
+            this.Controls.Add(this.txtIdReserva);
             this.Controls.Add(this.btnCancelar);
             this.Controls.Add(this.panelInferior);
             this.Controls.Add(this.panelSuperior);
@@ -564,9 +676,11 @@ namespace Hotel_Vanilla.Vista
             this.panelSuperior.ResumeLayout(false);
             this.panelSuperior.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btnDefault)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtDiasAlojamiento)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.manejoReservasBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.sp_MostrarManejoReservasBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.huespedesBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.sp_MostrarManejoReservasBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -581,22 +695,22 @@ namespace Hotel_Vanilla.Vista
         private Bunifu.Framework.UI.BunifuImageButton btnDefault;
         private Bunifu.Framework.UI.BunifuCustomLabel bunifuCustomLabel1;
         private Guna.UI2.WinForms.Guna2DragControl guna2DragControl1;
-        private Guna.UI2.WinForms.Guna2TextBox guna2TextBox1;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.BindingSource manejoReservasBindingSource;
         private System.Windows.Forms.BindingSource sp_MostrarManejoReservasBindingSource;
         public Bunifu.Framework.UI.BunifuFlatButton btnGuardar;
-        public System.Windows.Forms.TextBox descuentoTextBox;
-        public System.Windows.Forms.DateTimePicker fechaCheckInDateTimePicker;
-        public System.Windows.Forms.DateTimePicker fechaCheckOutDateTimePicker;
-        public System.Windows.Forms.DateTimePicker fechaReservaDateTimePicker;
-        public System.Windows.Forms.TextBox numeroDiasTextBox;
-        public System.Windows.Forms.TextBox pagoAdelantadoTextBox;
-        public System.Windows.Forms.TextBox totalTextBox;
-        public Guna.UI2.WinForms.Guna2ComboBox cbHabitacion;
-        public System.Windows.Forms.TextBox idReservaTextBox1;
         public System.Windows.Forms.Label lblCheckOut;
-        public Guna.UI2.WinForms.Guna2ComboBox idHuesped_FKComboBox;
+        public Guna.UI2.WinForms.Guna2ComboBox cbIdHuesped;
         private System.Windows.Forms.BindingSource huespedesBindingSource;
+        public Guna.UI2.WinForms.Guna2TextBox txtIdReserva;
+        public Guna.UI2.WinForms.Guna2NumericUpDown txtDiasAlojamiento;
+        public Guna.UI2.WinForms.Guna2TextBox txtPagoAdelantado;
+        public Guna.UI2.WinForms.Guna2TextBox txtTotal;
+        public Guna.UI2.WinForms.Guna2TextBox txtDescuento;
+        public Guna.UI2.WinForms.Guna2DateTimePicker txtFechaReserva;
+        private System.Windows.Forms.ErrorProvider errorProvider;
+        public Guna.UI2.WinForms.Guna2DateTimePicker txtFechaCheckIn;
+        public Guna.UI2.WinForms.Guna2DateTimePicker txtFechaCheckOut;
+        public Guna.UI2.WinForms.Guna2ComboBox cbHabitacion;
     }
 }

@@ -6,6 +6,7 @@ using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 
 namespace Hotel_Vanilla.MODELO
 {
@@ -48,12 +49,24 @@ namespace Hotel_Vanilla.MODELO
         //ELIMINAR
         public void EliminarReserva(ManejoReservas Reservas)
         {
-            string consulta = "sp_EliminarManejoReservas";
-            DynamicParameters parametros = new DynamicParameters();
-            parametros.Add("@id", Reservas.idReserva, DbType.Int32);
-            conexion.Open();
-            conexion.Execute(consulta, parametros, commandType: CommandType.StoredProcedure);
-            conexion.Close();
+            try
+            {
+                string consulta = "sp_EliminarManejoReservas";
+                DynamicParameters parametros = new DynamicParameters();
+                parametros.Add("@id", Reservas.idReserva, DbType.Int32);
+                conexion.Open();
+                conexion.Execute(consulta, parametros, commandType: CommandType.StoredProcedure);
+                conexion.Close();
+            }
+            catch (System.Data.SqlClient.SqlException)
+            {
+                MessageBox.Show("¡NO SE HA PODIDO ELIMINAR ESTE REGISTRO!\n\n" +
+                                "Nota: El id del registro esta siendo referenciado en uno o más\n" +
+                                "registros dentro del sistema, si desea eliminarlo debe modificar\n" +
+                                " y/o eliminar manualmente cada registro que haga referencia a este.");
+                conexion.Close();
+            }
+
         }
 
         //ACTUALIZAR

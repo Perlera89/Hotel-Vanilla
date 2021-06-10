@@ -18,7 +18,7 @@ namespace Hotel_Vanilla
 
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new frmHabitaciones());
+            Application.Run(new frmReservaciones());
         }
     }
 }
