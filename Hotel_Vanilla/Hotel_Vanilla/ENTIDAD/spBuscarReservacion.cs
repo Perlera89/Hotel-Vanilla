@@ -9,7 +9,7 @@ namespace Hotel_Vanilla.ENTIDAD
 {
     class spBuscarReservacion
     {
-        //public int Id { get; set; }
+        public int Id { get; set; }
         public string Nombres { get; set; }
         public string Apellidos { get; set; }
         public string Habitacion { get; set; }

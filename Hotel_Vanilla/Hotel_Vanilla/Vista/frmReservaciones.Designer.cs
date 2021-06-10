@@ -67,14 +67,12 @@ namespace Hotel_Vanilla.Vista
             this.dataGridViewTextBoxColumn11 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn12 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn13 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.manejoReservasBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.btnRecargar = new Bunifu.Framework.UI.BunifuImageButton();
             ((System.ComponentModel.ISupportInitialize)(this.btnBuscar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tbproductoBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.vanillaBDDataSet1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.sp_MostrarManejoReservasBindingSource1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dtgReservas)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.manejoReservasBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnRecargar)).BeginInit();
             this.SuspendLayout();
             // 
@@ -101,13 +99,16 @@ namespace Hotel_Vanilla.Vista
             this.txtBuscar.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtBuscar.ForeColor = System.Drawing.Color.RoyalBlue;
             this.txtBuscar.isPassword = false;
-            this.txtBuscar.Location = new System.Drawing.Point(778, 24);
+            this.txtBuscar.Location = new System.Drawing.Point(763, 24);
             this.txtBuscar.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.txtBuscar.Name = "txtBuscar";
             this.txtBuscar.Size = new System.Drawing.Size(163, 38);
             this.txtBuscar.TabIndex = 37;
             this.txtBuscar.Text = "Buscar";
             this.txtBuscar.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.txtBuscar.Enter += new System.EventHandler(this.txtBuscar_Enter);
+            this.txtBuscar.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtBuscar_KeyDown);
+            this.txtBuscar.Leave += new System.EventHandler(this.txtBuscar_Leave);
             // 
             // btnAgregar
             // 
@@ -132,14 +133,14 @@ namespace Hotel_Vanilla.Vista
             this.btnAgregar.IconVisible = true;
             this.btnAgregar.IconZoom = 90D;
             this.btnAgregar.IsTab = false;
-            this.btnAgregar.Location = new System.Drawing.Point(25, 531);
+            this.btnAgregar.Location = new System.Drawing.Point(25, 460);
             this.btnAgregar.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btnAgregar.Name = "btnAgregar";
             this.btnAgregar.Normalcolor = System.Drawing.SystemColors.Control;
             this.btnAgregar.OnHovercolor = System.Drawing.Color.RoyalBlue;
             this.btnAgregar.OnHoverTextColor = System.Drawing.SystemColors.Control;
             this.btnAgregar.selected = false;
-            this.btnAgregar.Size = new System.Drawing.Size(175, 50);
+            this.btnAgregar.Size = new System.Drawing.Size(183, 51);
             this.btnAgregar.TabIndex = 39;
             this.btnAgregar.Text = "Agregar";
             this.btnAgregar.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -153,7 +154,7 @@ namespace Hotel_Vanilla.Vista
             this.btnBuscar.BackColor = System.Drawing.Color.Transparent;
             this.btnBuscar.Image = global::Hotel_Vanilla.Properties.Resources.buscarReservacion;
             this.btnBuscar.ImageActive = null;
-            this.btnBuscar.Location = new System.Drawing.Point(725, 24);
+            this.btnBuscar.Location = new System.Drawing.Point(710, 24);
             this.btnBuscar.Name = "btnBuscar";
             this.btnBuscar.Size = new System.Drawing.Size(46, 38);
             this.btnBuscar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -185,14 +186,14 @@ namespace Hotel_Vanilla.Vista
             this.btnActualizar.IconVisible = true;
             this.btnActualizar.IconZoom = 90D;
             this.btnActualizar.IsTab = false;
-            this.btnActualizar.Location = new System.Drawing.Point(194, 531);
+            this.btnActualizar.Location = new System.Drawing.Point(214, 460);
             this.btnActualizar.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btnActualizar.Name = "btnActualizar";
             this.btnActualizar.Normalcolor = System.Drawing.SystemColors.Control;
             this.btnActualizar.OnHovercolor = System.Drawing.Color.RoyalBlue;
             this.btnActualizar.OnHoverTextColor = System.Drawing.SystemColors.Control;
             this.btnActualizar.selected = false;
-            this.btnActualizar.Size = new System.Drawing.Size(175, 50);
+            this.btnActualizar.Size = new System.Drawing.Size(181, 51);
             this.btnActualizar.TabIndex = 11;
             this.btnActualizar.Text = "Actualizar";
             this.btnActualizar.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -223,14 +224,14 @@ namespace Hotel_Vanilla.Vista
             this.btnEliminar.IconVisible = true;
             this.btnEliminar.IconZoom = 90D;
             this.btnEliminar.IsTab = false;
-            this.btnEliminar.Location = new System.Drawing.Point(766, 531);
+            this.btnEliminar.Location = new System.Drawing.Point(747, 460);
             this.btnEliminar.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btnEliminar.Name = "btnEliminar";
             this.btnEliminar.Normalcolor = System.Drawing.SystemColors.Control;
             this.btnEliminar.OnHovercolor = System.Drawing.Color.RoyalBlue;
             this.btnEliminar.OnHoverTextColor = System.Drawing.SystemColors.Control;
             this.btnEliminar.selected = false;
-            this.btnEliminar.Size = new System.Drawing.Size(175, 50);
+            this.btnEliminar.Size = new System.Drawing.Size(179, 51);
             this.btnEliminar.TabIndex = 10;
             this.btnEliminar.Text = "Eliminar";
             this.btnEliminar.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -314,7 +315,7 @@ namespace Hotel_Vanilla.Vista
             this.dtgReservas.ReadOnly = true;
             this.dtgReservas.RowHeadersVisible = false;
             this.dtgReservas.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dtgReservas.Size = new System.Drawing.Size(916, 432);
+            this.dtgReservas.Size = new System.Drawing.Size(901, 380);
             this.dtgReservas.TabIndex = 39;
             this.dtgReservas.Theme = Guna.UI2.WinForms.Enums.DataGridViewPresetThemes.Default;
             this.dtgReservas.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White;
@@ -468,29 +469,26 @@ namespace Hotel_Vanilla.Vista
             this.dataGridViewTextBoxColumn13.Name = "dataGridViewTextBoxColumn13";
             this.dataGridViewTextBoxColumn13.ReadOnly = true;
             // 
-            // manejoReservasBindingSource
-            // 
-            this.manejoReservasBindingSource.DataSource = typeof(Hotel_Vanilla.ENTIDAD.ManejoReservas);
-            // 
             // btnRecargar
             // 
             this.btnRecargar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnRecargar.BackColor = System.Drawing.Color.Transparent;
             this.btnRecargar.Image = ((System.Drawing.Image)(resources.GetObject("btnRecargar.Image")));
             this.btnRecargar.ImageActive = null;
-            this.btnRecargar.Location = new System.Drawing.Point(673, 24);
+            this.btnRecargar.Location = new System.Drawing.Point(658, 24);
             this.btnRecargar.Name = "btnRecargar";
             this.btnRecargar.Size = new System.Drawing.Size(46, 38);
             this.btnRecargar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.btnRecargar.TabIndex = 62;
             this.btnRecargar.TabStop = false;
             this.btnRecargar.Zoom = 10;
+            this.btnRecargar.Click += new System.EventHandler(this.btnRecargar_Click);
             // 
             // frmReservaciones
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(966, 596);
+            this.ClientSize = new System.Drawing.Size(951, 527);
             this.Controls.Add(this.btnRecargar);
             this.Controls.Add(this.dtgReservas);
             this.Controls.Add(this.btnAgregar);
@@ -508,7 +506,6 @@ namespace Hotel_Vanilla.Vista
             ((System.ComponentModel.ISupportInitialize)(this.vanillaBDDataSet1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.sp_MostrarManejoReservasBindingSource1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dtgReservas)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.manejoReservasBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnRecargar)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -523,7 +520,6 @@ namespace Hotel_Vanilla.Vista
         private Bunifu.Framework.UI.BunifuImageButton btnBuscar;
         private Bunifu.Framework.UI.BunifuMetroTextbox txtBuscar;
         private Bunifu.Framework.UI.BunifuFlatButton btnAgregar;
-        private System.Windows.Forms.BindingSource manejoReservasBindingSource;
         private VanillaBDDataSet1 vanillaBDDataSet1;
         private System.Windows.Forms.BindingSource sp_MostrarManejoReservasBindingSource1;
         private VanillaBDDataSet1TableAdapters.sp_MostrarManejoReservasTableAdapter sp_MostrarManejoReservasTableAdapter;

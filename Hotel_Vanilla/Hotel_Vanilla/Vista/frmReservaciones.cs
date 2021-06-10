@@ -25,8 +25,10 @@ namespace Hotel_Vanilla.Vista
         //Accion de mostrar
         private void CargarReservas()
         {
-            this.sp_MostrarManejoReservasTableAdapter.ClearBeforeFill = true;
-            this.sp_MostrarManejoReservasTableAdapter.Fill(this.vanillaBDDataSet1.sp_MostrarManejoReservas);
+            dtgReservas.DataSource = null;
+            dtgReservas.DataSource = cReservas.ConsultarReservas();
+            //this.sp_MostrarManejoReservasTableAdapter.ClearBeforeFill = true;
+            //this.sp_MostrarManejoReservasTableAdapter.Fill(this.vanillaBDDataSet1.sp_MostrarManejoReservas);
         }
 
         private void btnAgregar_Click(object sender, EventArgs e)
@@ -72,6 +74,7 @@ namespace Hotel_Vanilla.Vista
 
         private void frmReservaciones_Load(object sender, EventArgs e)
         {
+            CargarReservas();
             this.sp_MostrarManejoReservasTableAdapter.Fill(this.vanillaBDDataSet1.sp_MostrarManejoReservas);
             for (var i = 0; i < dtgReservas.Columns.Count; i++)
             {
@@ -108,7 +111,36 @@ namespace Hotel_Vanilla.Vista
 
         private void btnBuscar_Click(object sender, EventArgs e)
         {
-            sp_MostrarManejoReservasBindingSource1.DataSource = cReservas.BuscarReservaciones(txtBuscar.Text);
+            dtgReservas.DataSource = cReservas.BuscarReservaciones(txtBuscar.Text);
+        }
+
+        private void btnRecargar_Click(object sender, EventArgs e)
+        {
+            CargarReservas();
+        }
+
+        private void txtBuscar_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                dtgReservas.DataSource = cReservas.BuscarReservaciones(txtBuscar.Text);
+            }
+        }
+
+        private void txtBuscar_Enter(object sender, EventArgs e)
+        {
+            if (txtBuscar.Text == "Buscar")
+            {
+                txtBuscar.Text = "";
+            }
+        }
+
+        private void txtBuscar_Leave(object sender, EventArgs e)
+        {
+            if (txtBuscar.Text == "")
+            {
+                txtBuscar.Text = "Buscar";
+            }
         }
     }
 }
