@@ -42,5 +42,39 @@ namespace Hotel_Vanilla.Vista
         {
             sucesosBindingSource.DataSource = cSucesos.ConsultarSucesos();
         }
+
+        private void btnBuscar_Click(object sender, EventArgs e)
+        {
+            sucesosBindingSource.DataSource = cSucesos.BuscarSucesos(txtBuscar.Text);
+        }
+
+        private void btnRecargar_Click(object sender, EventArgs e)
+        {
+            sucesosBindingSource.DataSource = cSucesos.ConsultarUltimosSucesos();
+        }
+
+        private void txtBuscar_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                sucesosBindingSource.DataSource = cSucesos.BuscarSucesos(txtBuscar.Text);
+            }
+        }
+
+        private void txtBuscar_Enter(object sender, EventArgs e)
+        {
+            if (txtBuscar.Text == "Buscar")
+            {
+                txtBuscar.Text = "";
+            }
+        }
+
+        private void txtBuscar_Leave(object sender, EventArgs e)
+        {
+            if (txtBuscar.Text == "")
+            {
+                txtBuscar.Text = "Buscar";
+            }
+        }
     }
 }

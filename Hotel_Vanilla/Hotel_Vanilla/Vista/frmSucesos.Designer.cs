@@ -30,25 +30,30 @@ namespace Hotel_Vanilla.Vista
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle11 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle12 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmSucesos));
             this.bunifuCustomLabel1 = new Bunifu.Framework.UI.BunifuCustomLabel();
             this.guna2NotificationPaint1 = new Guna.UI2.WinForms.Guna2NotificationPaint(this.components);
             this.panelLista = new Guna.UI2.WinForms.Guna2Panel();
             this.dtgSucesos = new Guna.UI2.WinForms.Guna2DataGridView();
-            this.guna2Elipse1 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
-            this.btnUltimos = new Bunifu.Framework.UI.BunifuFlatButton();
-            this.btnTodos = new Bunifu.Framework.UI.BunifuFlatButton();
             this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.sucesosBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.guna2Elipse1 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
+            this.btnUltimos = new Bunifu.Framework.UI.BunifuFlatButton();
+            this.btnTodos = new Bunifu.Framework.UI.BunifuFlatButton();
+            this.btnRecargar = new Bunifu.Framework.UI.BunifuImageButton();
+            this.txtBuscar = new Bunifu.Framework.UI.BunifuMetroTextbox();
+            this.btnBuscar = new Bunifu.Framework.UI.BunifuImageButton();
             this.panelLista.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dtgSucesos)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.sucesosBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnRecargar)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnBuscar)).BeginInit();
             this.SuspendLayout();
             // 
             // bunifuCustomLabel1
@@ -69,10 +74,10 @@ namespace Hotel_Vanilla.Vista
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.panelLista.Controls.Add(this.dtgSucesos);
-            this.panelLista.Location = new System.Drawing.Point(29, 70);
+            this.panelLista.Location = new System.Drawing.Point(29, 73);
             this.panelLista.Name = "panelLista";
             this.panelLista.ShadowDecoration.Parent = this.panelLista;
-            this.panelLista.Size = new System.Drawing.Size(898, 406);
+            this.panelLista.Size = new System.Drawing.Size(898, 403);
             this.panelLista.TabIndex = 13;
             // 
             // dtgSucesos
@@ -80,8 +85,8 @@ namespace Hotel_Vanilla.Vista
             this.dtgSucesos.AllowUserToAddRows = false;
             this.dtgSucesos.AllowUserToDeleteRows = false;
             this.dtgSucesos.AllowUserToResizeRows = false;
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.White;
-            this.dtgSucesos.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle10.BackColor = System.Drawing.Color.White;
+            this.dtgSucesos.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle10;
             this.dtgSucesos.AutoGenerateColumns = false;
             this.dtgSucesos.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
             this.dtgSucesos.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
@@ -89,14 +94,14 @@ namespace Hotel_Vanilla.Vista
             this.dtgSucesos.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dtgSucesos.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
             this.dtgSucesos.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.CornflowerBlue;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dtgSucesos.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle11.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle11.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle11.Font = new System.Drawing.Font("Segoe UI", 10.5F);
+            dataGridViewCellStyle11.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle11.SelectionBackColor = System.Drawing.Color.CornflowerBlue;
+            dataGridViewCellStyle11.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle11.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dtgSucesos.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle11;
             this.dtgSucesos.ColumnHeadersHeight = 40;
             this.dtgSucesos.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.dataGridViewTextBoxColumn1,
@@ -104,14 +109,14 @@ namespace Hotel_Vanilla.Vista
             this.dataGridViewTextBoxColumn3,
             this.dataGridViewTextBoxColumn4});
             this.dtgSucesos.DataSource = this.sucesosBindingSource;
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Segoe UI", 10.5F);
-            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dtgSucesos.DefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle12.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle12.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle12.Font = new System.Drawing.Font("Segoe UI", 10.5F);
+            dataGridViewCellStyle12.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            dataGridViewCellStyle12.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle12.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            dataGridViewCellStyle12.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dtgSucesos.DefaultCellStyle = dataGridViewCellStyle12;
             this.dtgSucesos.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dtgSucesos.EnableHeadersVisualStyles = false;
             this.dtgSucesos.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
@@ -121,7 +126,7 @@ namespace Hotel_Vanilla.Vista
             this.dtgSucesos.ReadOnly = true;
             this.dtgSucesos.RowHeadersVisible = false;
             this.dtgSucesos.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dtgSucesos.Size = new System.Drawing.Size(898, 406);
+            this.dtgSucesos.Size = new System.Drawing.Size(898, 403);
             this.dtgSucesos.TabIndex = 0;
             this.dtgSucesos.Theme = Guna.UI2.WinForms.Enums.DataGridViewPresetThemes.Default;
             this.dtgSucesos.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White;
@@ -145,6 +150,46 @@ namespace Hotel_Vanilla.Vista
             this.dtgSucesos.ThemeStyle.RowsStyle.Height = 22;
             this.dtgSucesos.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
             this.dtgSucesos.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            // 
+            // dataGridViewTextBoxColumn1
+            // 
+            this.dataGridViewTextBoxColumn1.DataPropertyName = "idSuceso";
+            this.dataGridViewTextBoxColumn1.FillWeight = 0.7992221F;
+            this.dataGridViewTextBoxColumn1.HeaderText = "Id";
+            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
+            this.dataGridViewTextBoxColumn1.ReadOnly = true;
+            this.dataGridViewTextBoxColumn1.Width = 44;
+            // 
+            // dataGridViewTextBoxColumn2
+            // 
+            this.dataGridViewTextBoxColumn2.DataPropertyName = "fechaSuceso";
+            this.dataGridViewTextBoxColumn2.FillWeight = 31.66314F;
+            this.dataGridViewTextBoxColumn2.HeaderText = "Fecha";
+            this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
+            this.dataGridViewTextBoxColumn2.ReadOnly = true;
+            this.dataGridViewTextBoxColumn2.Width = 67;
+            // 
+            // dataGridViewTextBoxColumn3
+            // 
+            this.dataGridViewTextBoxColumn3.DataPropertyName = "tipoSuceso";
+            this.dataGridViewTextBoxColumn3.FillWeight = 62.71526F;
+            this.dataGridViewTextBoxColumn3.HeaderText = "Tipo";
+            this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
+            this.dataGridViewTextBoxColumn3.ReadOnly = true;
+            this.dataGridViewTextBoxColumn3.Width = 58;
+            // 
+            // dataGridViewTextBoxColumn4
+            // 
+            this.dataGridViewTextBoxColumn4.DataPropertyName = "descripcion";
+            this.dataGridViewTextBoxColumn4.FillWeight = 1154.822F;
+            this.dataGridViewTextBoxColumn4.HeaderText = "Descripcion";
+            this.dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
+            this.dataGridViewTextBoxColumn4.ReadOnly = true;
+            this.dataGridViewTextBoxColumn4.Width = 102;
+            // 
+            // sucesosBindingSource
+            // 
+            this.sucesosBindingSource.DataSource = typeof(Hotel_Vanilla.ENTIDAD.Sucesos);
             // 
             // guna2Elipse1
             // 
@@ -225,45 +270,57 @@ namespace Hotel_Vanilla.Vista
             this.btnTodos.TextFont = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnTodos.Click += new System.EventHandler(this.btnTodos_Click);
             // 
-            // dataGridViewTextBoxColumn1
+            // btnRecargar
             // 
-            this.dataGridViewTextBoxColumn1.DataPropertyName = "idSuceso";
-            this.dataGridViewTextBoxColumn1.FillWeight = 0.7992221F;
-            this.dataGridViewTextBoxColumn1.HeaderText = "Id";
-            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
-            this.dataGridViewTextBoxColumn1.ReadOnly = true;
-            this.dataGridViewTextBoxColumn1.Width = 47;
+            this.btnRecargar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnRecargar.BackColor = System.Drawing.Color.Transparent;
+            this.btnRecargar.Image = ((System.Drawing.Image)(resources.GetObject("btnRecargar.Image")));
+            this.btnRecargar.ImageActive = null;
+            this.btnRecargar.Location = new System.Drawing.Point(666, 27);
+            this.btnRecargar.Name = "btnRecargar";
+            this.btnRecargar.Size = new System.Drawing.Size(46, 38);
+            this.btnRecargar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.btnRecargar.TabIndex = 64;
+            this.btnRecargar.TabStop = false;
+            this.btnRecargar.Zoom = 10;
+            this.btnRecargar.Click += new System.EventHandler(this.btnRecargar_Click);
             // 
-            // dataGridViewTextBoxColumn2
+            // txtBuscar
             // 
-            this.dataGridViewTextBoxColumn2.DataPropertyName = "fechaSuceso";
-            this.dataGridViewTextBoxColumn2.FillWeight = 31.66314F;
-            this.dataGridViewTextBoxColumn2.HeaderText = "Fecha";
-            this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
-            this.dataGridViewTextBoxColumn2.ReadOnly = true;
-            this.dataGridViewTextBoxColumn2.Width = 81;
+            this.txtBuscar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtBuscar.BorderColorFocused = System.Drawing.Color.Blue;
+            this.txtBuscar.BorderColorIdle = System.Drawing.Color.RoyalBlue;
+            this.txtBuscar.BorderColorMouseHover = System.Drawing.Color.Blue;
+            this.txtBuscar.BorderThickness = 2;
+            this.txtBuscar.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtBuscar.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtBuscar.ForeColor = System.Drawing.Color.RoyalBlue;
+            this.txtBuscar.isPassword = false;
+            this.txtBuscar.Location = new System.Drawing.Point(771, 27);
+            this.txtBuscar.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.txtBuscar.Name = "txtBuscar";
+            this.txtBuscar.Size = new System.Drawing.Size(156, 38);
+            this.txtBuscar.TabIndex = 63;
+            this.txtBuscar.Text = "Buscar";
+            this.txtBuscar.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.txtBuscar.Enter += new System.EventHandler(this.txtBuscar_Enter);
+            this.txtBuscar.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtBuscar_KeyDown);
+            this.txtBuscar.Leave += new System.EventHandler(this.txtBuscar_Leave);
             // 
-            // dataGridViewTextBoxColumn3
+            // btnBuscar
             // 
-            this.dataGridViewTextBoxColumn3.DataPropertyName = "tipoSuceso";
-            this.dataGridViewTextBoxColumn3.FillWeight = 62.71526F;
-            this.dataGridViewTextBoxColumn3.HeaderText = "Tipo";
-            this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
-            this.dataGridViewTextBoxColumn3.ReadOnly = true;
-            this.dataGridViewTextBoxColumn3.Width = 64;
-            // 
-            // dataGridViewTextBoxColumn4
-            // 
-            this.dataGridViewTextBoxColumn4.DataPropertyName = "descripcion";
-            this.dataGridViewTextBoxColumn4.FillWeight = 1154.822F;
-            this.dataGridViewTextBoxColumn4.HeaderText = "Descripcion";
-            this.dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
-            this.dataGridViewTextBoxColumn4.ReadOnly = true;
-            this.dataGridViewTextBoxColumn4.Width = 123;
-            // 
-            // sucesosBindingSource
-            // 
-            this.sucesosBindingSource.DataSource = typeof(Hotel_Vanilla.ENTIDAD.Sucesos);
+            this.btnBuscar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnBuscar.BackColor = System.Drawing.Color.Transparent;
+            this.btnBuscar.Image = global::Hotel_Vanilla.Properties.Resources.buscarHabitacion;
+            this.btnBuscar.ImageActive = null;
+            this.btnBuscar.Location = new System.Drawing.Point(718, 27);
+            this.btnBuscar.Name = "btnBuscar";
+            this.btnBuscar.Size = new System.Drawing.Size(46, 38);
+            this.btnBuscar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.btnBuscar.TabIndex = 62;
+            this.btnBuscar.TabStop = false;
+            this.btnBuscar.Zoom = 10;
+            this.btnBuscar.Click += new System.EventHandler(this.btnBuscar_Click);
             // 
             // frmSucesos
             // 
@@ -271,6 +328,9 @@ namespace Hotel_Vanilla.Vista
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Control;
             this.ClientSize = new System.Drawing.Size(951, 536);
+            this.Controls.Add(this.btnRecargar);
+            this.Controls.Add(this.txtBuscar);
+            this.Controls.Add(this.btnBuscar);
             this.Controls.Add(this.btnTodos);
             this.Controls.Add(this.btnUltimos);
             this.Controls.Add(this.panelLista);
@@ -282,6 +342,8 @@ namespace Hotel_Vanilla.Vista
             this.panelLista.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dtgSucesos)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.sucesosBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnRecargar)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnBuscar)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -301,5 +363,8 @@ namespace Hotel_Vanilla.Vista
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn3;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn4;
+        private Bunifu.Framework.UI.BunifuImageButton btnRecargar;
+        private Bunifu.Framework.UI.BunifuMetroTextbox txtBuscar;
+        private Bunifu.Framework.UI.BunifuImageButton btnBuscar;
     }
 }

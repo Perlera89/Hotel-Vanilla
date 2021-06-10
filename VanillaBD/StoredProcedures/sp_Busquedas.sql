@@ -55,3 +55,17 @@ BEGIN
 	or  d.tipo LIKE '%' + @buscador + '%'
 END
 GO
+
+
+-- Procedimiento para buscar Sucesos
+Create PROC sp_BuscarSucesos
+@buscador varchar(50)
+AS
+
+BEGIN
+	SET NOCOUNT ON;
+	SELECT idSuceso, fechaSuceso, tipoSuceso, descripcion
+	FROM Suceso 
+	WHERE fechaSuceso LIKE '%' + @buscador + '%' 
+	or tipoSuceso LIKE '%' + @buscador + '%'
+END

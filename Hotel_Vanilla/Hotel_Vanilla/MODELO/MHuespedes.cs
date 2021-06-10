@@ -67,7 +67,7 @@ namespace Hotel_Vanilla.MODELO
             cn.Close();
         }
 
-        //Modelo para la busqueda
+        //Modelo para la busqueda de huespedes
         public List<spBuscarHuesped> BuscarHuespedes(string buscador)
         {
             List<spBuscarHuesped> Huespedes = new List<spBuscarHuesped>();

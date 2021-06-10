@@ -21,5 +21,10 @@ namespace Hotel_Vanilla.CONTROLADOR
         {
             return sucesos.ConsultarUltimosSucesos();
         }
+
+        public List<spBuscarSuceso> BuscarSucesos(string buscador)
+        {
+            return sucesos.BuscarSucesos(buscador);
+        }
     }
 }

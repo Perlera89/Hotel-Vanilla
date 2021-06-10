@@ -32,5 +32,18 @@ namespace Hotel_Vanilla.MODELO
             cn.Close();
             return Sucesos;
         }
+
+        //Modelo para la busqueda de sucesos
+        public List<spBuscarSuceso> BuscarSucesos(string buscador)
+        {
+            List<spBuscarSuceso> Sucesos = new List<spBuscarSuceso>();
+            string consulta = "sp_BuscarSucesos";
+            DynamicParameters parametro = new DynamicParameters();
+            parametro.Add("@buscador", buscador);
+            cn.Open();
+            Sucesos = cn.Query<spBuscarSuceso>(consulta, parametro, commandType: CommandType.StoredProcedure).ToList();
+            cn.Close();
+            return Sucesos;
+        }
     }
 }

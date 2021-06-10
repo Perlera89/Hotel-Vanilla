@@ -135,6 +135,7 @@
     <Compile Include="ENTIDAD\spBuscarHabitacion.cs" />
     <Compile Include="ENTIDAD\spBuscarHuesped.cs" />
     <Compile Include="ENTIDAD\spBuscarReservacion.cs" />
+    <Compile Include="ENTIDAD\spBuscarSuceso.cs" />
     <Compile Include="ENTIDAD\spMostrarHuesped.cs" />
     <Compile Include="ENTIDAD\spMostrarManejoReservas.cs" />
     <Compile Include="ENTIDAD\sp_MostrarHabitaciones.cs" />
