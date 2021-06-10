@@ -22,7 +22,7 @@ namespace Hotel_Vanilla.Vista
         CHuespedes cHuespedes = new CHuespedes();
         Huespedes huespedes = new Huespedes();
 
-        private void Cargar()
+        private void CargarHuespedes()
         {
             CHuespedes cHuespedesMostrar = new CHuespedes();
             spMostrarHuespedBindingSource.DataSource = null;
@@ -31,7 +31,7 @@ namespace Hotel_Vanilla.Vista
 
         private void frmHuespedes_Load(object sender, EventArgs e)
         {
-            Cargar();
+            CargarHuespedes();
             dtgHuespedes.ColumnHeadersDefaultCellStyle.BackColor = Color.RoyalBlue;
         }
 
@@ -43,7 +43,7 @@ namespace Hotel_Vanilla.Vista
             frm.lblId.Visible = false;
             frm.idHuesped.Visible = false;
             frm.ShowDialog();
-            Cargar();
+            CargarHuespedes();
         }
 
         //Accion de actualizar
@@ -60,7 +60,7 @@ namespace Hotel_Vanilla.Vista
             manejoHuesped.btnGuardar.Text = "Actualizar";
             manejoHuesped.accion = true;
             manejoHuesped.ShowDialog();
-            Cargar();
+            CargarHuespedes();
         }
 
         //Accion de eliminar
@@ -70,16 +70,18 @@ namespace Hotel_Vanilla.Vista
             frmMensajeAdvertencia advertencia = new frmMensajeAdvertencia("¿Estas seguro de eliminar el registro?");
             resultado = advertencia.ShowDialog();
 
-            if (resultado == DialogResult.OK && dtgHuespedes.SelectedRows.Count > 0)
-            {
-                int huesped = Convert.ToInt32(dtgHuespedes.CurrentRow.Cells[0].Value.ToString());
-                 cHuespedes.EliminarHuesped(huesped);
-            }
-
-            else
+            if(dtgHuespedes.SelectedRows.Count <= 0)
             {
                 frmMensajeAviso.Avisar("Elija un registro para ejecutar la acción");
             }
+
+            else if (resultado == DialogResult.OK && dtgHuespedes.SelectedRows.Count > 0)
+            {
+                int huesped = Convert.ToInt32(dtgHuespedes.CurrentRow.Cells[0].Value.ToString());
+                 cHuespedes.EliminarHuesped(huesped);
+                CargarHuespedes();
+            }
+
         }
 
         private void txtBuscar_Enter(object sender, EventArgs e)
@@ -105,7 +107,7 @@ namespace Hotel_Vanilla.Vista
 
         private void btnRecargar_Click(object sender, EventArgs e)
         {
-            spMostrarHuespedBindingSource.DataSource = cHuespedes.ConsultarHuespedes();
+            CargarHuespedes();
             txtBuscar.Text = "Buscar";
             btnActualizar.Focus();
         }

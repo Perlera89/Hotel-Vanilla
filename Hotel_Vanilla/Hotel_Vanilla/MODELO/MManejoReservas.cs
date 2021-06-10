@@ -1,5 +1,6 @@
 ﻿using Dapper;
 using Hotel_Vanilla.ENTIDAD;
+using Hotel_Vanilla.Vista;
 using System;
 using System.Collections.Generic;
 using System.Data;
@@ -14,19 +15,18 @@ namespace Hotel_Vanilla.MODELO
     {
         IDbConnection conexion = Conexion.conectar();
 
-        //MOSTRAR
+        //Modelo para mostrar las reservas con el procedimiento
         public List<spMostrarManejoReservas> ConsultarReservas()
         {
-            // Select * from Reservas
-            List<spMostrarManejoReservas> reservas = new List<spMostrarManejoReservas>();
+            List<spMostrarManejoReservas> Reservaciones = new List<spMostrarManejoReservas>();
             string consulta = "sp_MostrarManejoReservas";
             conexion.Open();
-            reservas = conexion.Query<spMostrarManejoReservas>(consulta, commandType: CommandType.StoredProcedure).ToList();
+            Reservaciones = conexion.Query<spMostrarManejoReservas>(consulta, commandType: CommandType.StoredProcedure).ToList();
             conexion.Close();
-            return reservas;
+            return Reservaciones;
         }
 
-        //GUARDAR
+        //Modelo para insertar las reservas con el procedimiento
         public void AgregarReserva(ManejoReservas Reservas)
         {
             string consulta = "sp_InsertarManejoReservas";
@@ -40,13 +40,12 @@ namespace Hotel_Vanilla.MODELO
             parametros.Add("@total", Reservas.total, DbType.Decimal);
             parametros.Add("@idHabitacion", Reservas.idHabitacion_FK, DbType.Int32);
             parametros.Add("@idHuesped", Reservas.idHuesped_FK, DbType.Int32);
-            //abrimos la conexion, ejecutamos la consulta y cerramos la conexion
             conexion.Open();
             conexion.Execute(consulta, parametros, commandType: CommandType.StoredProcedure);
             conexion.Close();
         }
 
-        //ELIMINAR
+        //Modelo para eliminar las reservas con el procedimiento
         public void EliminarReserva(ManejoReservas Reservas)
         {
             try
@@ -60,16 +59,15 @@ namespace Hotel_Vanilla.MODELO
             }
             catch (System.Data.SqlClient.SqlException)
             {
-                MessageBox.Show("¡NO SE HA PODIDO ELIMINAR ESTE REGISTRO!\n\n" +
-                                "Nota: El id del registro esta siendo referenciado en uno o más\n" +
+                frmMensajeAviso.Avisar("El id del registro esta siendo referenciado en uno o más\n" +
                                 "registros dentro del sistema, si desea eliminarlo debe modificar\n" +
                                 " y/o eliminar manualmente cada registro que haga referencia a este.");
+
                 conexion.Close();
             }
-
         }
 
-        //ACTUALIZAR
+        //Modelo para actualizar las reservas con el procedimiento
         public void ActualizarReserva(ManejoReservas Reservas)
         {
             string consulta = "sp_ActualizarManejoReservas";
@@ -87,6 +85,19 @@ namespace Hotel_Vanilla.MODELO
             conexion.Open();
             conexion.Execute(consulta, parametros, commandType: CommandType.StoredProcedure);
             conexion.Close();
+        }
+
+        //Modelo para la busqueda de habitaciones
+        public List<spBuscarReservacion> BuscarReservaciones(string buscador)
+        {
+            List<spBuscarReservacion> Reservacion = new List<spBuscarReservacion>();
+            string consulta = "sp_BuscarHabitacion";
+            DynamicParameters parametro = new DynamicParameters();
+            parametro.Add("@buscador", buscador);
+            conexion.Open();
+            Reservacion = conexion.Query<spBuscarReservacion>(consulta, parametro, commandType: CommandType.StoredProcedure).ToList();
+            conexion.Close();
+            return Reservacion;
         }
     }
 }

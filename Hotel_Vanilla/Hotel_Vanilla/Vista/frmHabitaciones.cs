@@ -20,7 +20,7 @@ namespace Hotel_Vanilla.Vista
             InitializeComponent();
         }
 
-        private void Cargar()
+        private void CargarHabitaciones()
         {
             CHabitaciones cspMostrar = new CHabitaciones();
             spMostrarHabitacionesBindingSource.DataSource = null;
@@ -35,7 +35,7 @@ namespace Hotel_Vanilla.Vista
             manejoHabitacion.btnGuardar.Text = "Agregar";
             manejoHabitacion.ShowDialog();
 
-            Cargar();
+            CargarHabitaciones();
         }
 
 
@@ -51,7 +51,7 @@ namespace Hotel_Vanilla.Vista
             manejoHabitacion.accion = true;
             manejoHabitacion.ShowDialog();
 
-            Cargar();
+            CargarHabitaciones();
         }
 
         //Accion de eliminar
@@ -61,30 +61,58 @@ namespace Hotel_Vanilla.Vista
             frmMensajeAdvertencia advertencia = new frmMensajeAdvertencia("¿Estas seguro de eliminar el registro?");
             resultado = advertencia.ShowDialog();
 
-            if (resultado == DialogResult.OK)
+            if (dtgHabitaciones.SelectedRows.Count <= 0)
             {
-                
-                if (dtgHabitaciones.SelectedRows.Count > 0)
-                {
-                    habitaciones.EliminarHabitacion(Convert.ToInt32(dtgHabitaciones.CurrentRow.Cells[0].Value.ToString()));
-                    Cargar();
-                }
+                frmMensajeAviso.Avisar("Elija un registro para ejecutar la acción");
+            }
 
-                else
-                {
-                    frmMensajeAviso.Avisar("Elija un registro para ejecutar la acción");
-                }
+            else if (resultado == DialogResult.OK && dtgHabitaciones.SelectedRows.Count > 0)
+            {
+                habitaciones.EliminarHabitacion(Convert.ToInt32(dtgHabitaciones.CurrentRow.Cells[0].Value.ToString()));
+                CargarHabitaciones();
             }
         }
 
         private void frmHabitaciones_Load(object sender, EventArgs e)
         {
-            Cargar();
+            CargarHabitaciones();
         }
 
         private void btnBuscar_Click(object sender, EventArgs e)
         {
+            spMostrarHabitacionesBindingSource.DataSource = habitaciones.BuscarHabitaciones(txtBuscar.Text);
+        }
 
+        private void btnRecargar_Click(object sender, EventArgs e)
+        {
+            CargarHabitaciones();
+            txtBuscar.Text = "Buscar";
+            btnActualizar.Focus();
+
+        }
+
+        private void txtBuscar_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                spMostrarHabitacionesBindingSource.DataSource = habitaciones.BuscarHabitaciones(txtBuscar.Text);
+            }
+        }
+
+        private void txtBuscar_Enter(object sender, EventArgs e)
+        {
+            if (txtBuscar.Text == "Buscar")
+            {
+                txtBuscar.Text = "";
+            }
+        }
+
+        private void txtBuscar_Leave(object sender, EventArgs e)
+        {
+            if (txtBuscar.Text == "")
+            {
+                txtBuscar.Text = "Buscar";
+            }
         }
     }
 }

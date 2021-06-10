@@ -5,14 +5,14 @@ go
 create procedure sp_Mostrarhuesped
 as 
 begin
-SET NOCOUNT ON;
-Select * from Huespedes
-	
+	SET NOCOUNT ON;
+	Select a.idHuesped, a.nombres, a.apellidos, a.direccion, a.telefono, a.correo, b.nombreEstado from Huespedes a
+	inner join Estados b on a.idEstado_FK = b.idEstado
 end
 GO
 ---------------------------------------------------------------------------------------
 --Insertar Huesped
-Create procedure sp_insertarHuesped
+Create procedure sp_InsertarHuesped
 @nombres varchar(50),
 @apellidos varchar(50),
 @direccion varchar(255),
@@ -29,7 +29,7 @@ go
 ----------------------------------------------------------------------------------------
 --Eliminar Huesped
 
-create procedure sp_eliminarhuesped
+create procedure sp_Eliminarhuesped
 @id int
 as 
 begin
@@ -39,7 +39,7 @@ end
 go
 ---------------------------------------------------------------------------------------
 --Procediminto de Actualizar Huesped
-create procedure sp_actualizarHuesped
+create procedure sp_ActualizarHuesped
 @idHuesped int,
 @nombres varchar(50),
 @apellidos varchar(50),

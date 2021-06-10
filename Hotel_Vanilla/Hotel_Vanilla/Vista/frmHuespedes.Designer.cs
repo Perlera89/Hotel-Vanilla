@@ -39,10 +39,6 @@ namespace Hotel_Vanilla.Vista
             this.txtBuscar = new Bunifu.Framework.UI.BunifuMetroTextbox();
             this.panel1 = new System.Windows.Forms.Panel();
             this.dtgHuespedes = new Guna.UI2.WinForms.Guna2DataGridView();
-            this.btnAgregar = new Bunifu.Framework.UI.BunifuFlatButton();
-            this.btnActualizar = new Bunifu.Framework.UI.BunifuFlatButton();
-            this.btnEliminar = new Bunifu.Framework.UI.BunifuFlatButton();
-            this.btnRecargar = new Bunifu.Framework.UI.BunifuImageButton();
             this.dataGridViewTextBoxColumn8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn9 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn10 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -51,13 +47,17 @@ namespace Hotel_Vanilla.Vista
             this.dataGridViewTextBoxColumn13 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn14 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.spMostrarHuespedBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.btnAgregar = new Bunifu.Framework.UI.BunifuFlatButton();
+            this.btnActualizar = new Bunifu.Framework.UI.BunifuFlatButton();
+            this.btnEliminar = new Bunifu.Framework.UI.BunifuFlatButton();
             this.huespedesBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.btnRecargar = new Bunifu.Framework.UI.BunifuImageButton();
             ((System.ComponentModel.ISupportInitialize)(this.btnBuscar)).BeginInit();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dtgHuespedes)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.btnRecargar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.spMostrarHuespedBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.huespedesBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnRecargar)).BeginInit();
             this.SuspendLayout();
             // 
             // bunifuCustomLabel1
@@ -78,7 +78,7 @@ namespace Hotel_Vanilla.Vista
             this.btnBuscar.BackColor = System.Drawing.Color.Transparent;
             this.btnBuscar.Image = global::Hotel_Vanilla.Properties.Resources.buscarHuesped;
             this.btnBuscar.ImageActive = null;
-            this.btnBuscar.Location = new System.Drawing.Point(730, 22);
+            this.btnBuscar.Location = new System.Drawing.Point(710, 22);
             this.btnBuscar.Name = "btnBuscar";
             this.btnBuscar.Size = new System.Drawing.Size(46, 38);
             this.btnBuscar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -98,7 +98,7 @@ namespace Hotel_Vanilla.Vista
             this.txtBuscar.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtBuscar.ForeColor = System.Drawing.Color.RoyalBlue;
             this.txtBuscar.isPassword = false;
-            this.txtBuscar.Location = new System.Drawing.Point(783, 22);
+            this.txtBuscar.Location = new System.Drawing.Point(763, 22);
             this.txtBuscar.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.txtBuscar.Name = "txtBuscar";
             this.txtBuscar.Size = new System.Drawing.Size(156, 38);
@@ -117,7 +117,7 @@ namespace Hotel_Vanilla.Vista
             this.panel1.Controls.Add(this.dtgHuespedes);
             this.panel1.Location = new System.Drawing.Point(25, 68);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(914, 374);
+            this.panel1.Size = new System.Drawing.Size(896, 374);
             this.panel1.TabIndex = 55;
             // 
             // dtgHuespedes
@@ -167,7 +167,7 @@ namespace Hotel_Vanilla.Vista
             this.dtgHuespedes.ReadOnly = true;
             this.dtgHuespedes.RowHeadersVisible = false;
             this.dtgHuespedes.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dtgHuespedes.Size = new System.Drawing.Size(914, 374);
+            this.dtgHuespedes.Size = new System.Drawing.Size(896, 374);
             this.dtgHuespedes.TabIndex = 1;
             this.dtgHuespedes.Theme = Guna.UI2.WinForms.Enums.DataGridViewPresetThemes.Default;
             this.dtgHuespedes.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White;
@@ -191,6 +191,59 @@ namespace Hotel_Vanilla.Vista
             this.dtgHuespedes.ThemeStyle.RowsStyle.Height = 22;
             this.dtgHuespedes.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
             this.dtgHuespedes.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            // 
+            // dataGridViewTextBoxColumn8
+            // 
+            this.dataGridViewTextBoxColumn8.DataPropertyName = "idHuesped";
+            this.dataGridViewTextBoxColumn8.HeaderText = "Id";
+            this.dataGridViewTextBoxColumn8.Name = "dataGridViewTextBoxColumn8";
+            this.dataGridViewTextBoxColumn8.ReadOnly = true;
+            // 
+            // dataGridViewTextBoxColumn9
+            // 
+            this.dataGridViewTextBoxColumn9.DataPropertyName = "nombres";
+            this.dataGridViewTextBoxColumn9.HeaderText = "Nombres";
+            this.dataGridViewTextBoxColumn9.Name = "dataGridViewTextBoxColumn9";
+            this.dataGridViewTextBoxColumn9.ReadOnly = true;
+            // 
+            // dataGridViewTextBoxColumn10
+            // 
+            this.dataGridViewTextBoxColumn10.DataPropertyName = "apellidos";
+            this.dataGridViewTextBoxColumn10.HeaderText = "Apellidos";
+            this.dataGridViewTextBoxColumn10.Name = "dataGridViewTextBoxColumn10";
+            this.dataGridViewTextBoxColumn10.ReadOnly = true;
+            // 
+            // dataGridViewTextBoxColumn11
+            // 
+            this.dataGridViewTextBoxColumn11.DataPropertyName = "direccion";
+            this.dataGridViewTextBoxColumn11.HeaderText = "Direccion";
+            this.dataGridViewTextBoxColumn11.Name = "dataGridViewTextBoxColumn11";
+            this.dataGridViewTextBoxColumn11.ReadOnly = true;
+            // 
+            // dataGridViewTextBoxColumn12
+            // 
+            this.dataGridViewTextBoxColumn12.DataPropertyName = "telefono";
+            this.dataGridViewTextBoxColumn12.HeaderText = "Telefono";
+            this.dataGridViewTextBoxColumn12.Name = "dataGridViewTextBoxColumn12";
+            this.dataGridViewTextBoxColumn12.ReadOnly = true;
+            // 
+            // dataGridViewTextBoxColumn13
+            // 
+            this.dataGridViewTextBoxColumn13.DataPropertyName = "correo";
+            this.dataGridViewTextBoxColumn13.HeaderText = "Correo";
+            this.dataGridViewTextBoxColumn13.Name = "dataGridViewTextBoxColumn13";
+            this.dataGridViewTextBoxColumn13.ReadOnly = true;
+            // 
+            // dataGridViewTextBoxColumn14
+            // 
+            this.dataGridViewTextBoxColumn14.DataPropertyName = "nombreEstado";
+            this.dataGridViewTextBoxColumn14.HeaderText = "Estado";
+            this.dataGridViewTextBoxColumn14.Name = "dataGridViewTextBoxColumn14";
+            this.dataGridViewTextBoxColumn14.ReadOnly = true;
+            // 
+            // spMostrarHuespedBindingSource
+            // 
+            this.spMostrarHuespedBindingSource.DataSource = typeof(Hotel_Vanilla.ENTIDAD.spMostrarHuesped);
             // 
             // btnAgregar
             // 
@@ -289,7 +342,7 @@ namespace Hotel_Vanilla.Vista
             this.btnEliminar.IconVisible = true;
             this.btnEliminar.IconZoom = 90D;
             this.btnEliminar.IsTab = false;
-            this.btnEliminar.Location = new System.Drawing.Point(766, 447);
+            this.btnEliminar.Location = new System.Drawing.Point(746, 447);
             this.btnEliminar.Name = "btnEliminar";
             this.btnEliminar.Normalcolor = System.Drawing.SystemColors.Control;
             this.btnEliminar.OnHovercolor = System.Drawing.Color.RoyalBlue;
@@ -303,13 +356,17 @@ namespace Hotel_Vanilla.Vista
             this.btnEliminar.TextFont = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnEliminar.Click += new System.EventHandler(this.btnEliminar_Click_1);
             // 
+            // huespedesBindingSource
+            // 
+            this.huespedesBindingSource.DataSource = typeof(Hotel_Vanilla.ENTIDAD.Huespedes);
+            // 
             // btnRecargar
             // 
             this.btnRecargar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnRecargar.BackColor = System.Drawing.Color.Transparent;
             this.btnRecargar.Image = ((System.Drawing.Image)(resources.GetObject("btnRecargar.Image")));
             this.btnRecargar.ImageActive = null;
-            this.btnRecargar.Location = new System.Drawing.Point(678, 22);
+            this.btnRecargar.Location = new System.Drawing.Point(658, 22);
             this.btnRecargar.Name = "btnRecargar";
             this.btnRecargar.Size = new System.Drawing.Size(46, 38);
             this.btnRecargar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -318,68 +375,11 @@ namespace Hotel_Vanilla.Vista
             this.btnRecargar.Zoom = 10;
             this.btnRecargar.Click += new System.EventHandler(this.btnRecargar_Click);
             // 
-            // dataGridViewTextBoxColumn8
-            // 
-            this.dataGridViewTextBoxColumn8.DataPropertyName = "idHuesped";
-            this.dataGridViewTextBoxColumn8.HeaderText = "Id";
-            this.dataGridViewTextBoxColumn8.Name = "dataGridViewTextBoxColumn8";
-            this.dataGridViewTextBoxColumn8.ReadOnly = true;
-            // 
-            // dataGridViewTextBoxColumn9
-            // 
-            this.dataGridViewTextBoxColumn9.DataPropertyName = "nombres";
-            this.dataGridViewTextBoxColumn9.HeaderText = "Nombres";
-            this.dataGridViewTextBoxColumn9.Name = "dataGridViewTextBoxColumn9";
-            this.dataGridViewTextBoxColumn9.ReadOnly = true;
-            // 
-            // dataGridViewTextBoxColumn10
-            // 
-            this.dataGridViewTextBoxColumn10.DataPropertyName = "apellidos";
-            this.dataGridViewTextBoxColumn10.HeaderText = "Apellidos";
-            this.dataGridViewTextBoxColumn10.Name = "dataGridViewTextBoxColumn10";
-            this.dataGridViewTextBoxColumn10.ReadOnly = true;
-            // 
-            // dataGridViewTextBoxColumn11
-            // 
-            this.dataGridViewTextBoxColumn11.DataPropertyName = "direccion";
-            this.dataGridViewTextBoxColumn11.HeaderText = "Direccion";
-            this.dataGridViewTextBoxColumn11.Name = "dataGridViewTextBoxColumn11";
-            this.dataGridViewTextBoxColumn11.ReadOnly = true;
-            // 
-            // dataGridViewTextBoxColumn12
-            // 
-            this.dataGridViewTextBoxColumn12.DataPropertyName = "telefono";
-            this.dataGridViewTextBoxColumn12.HeaderText = "Telefono";
-            this.dataGridViewTextBoxColumn12.Name = "dataGridViewTextBoxColumn12";
-            this.dataGridViewTextBoxColumn12.ReadOnly = true;
-            // 
-            // dataGridViewTextBoxColumn13
-            // 
-            this.dataGridViewTextBoxColumn13.DataPropertyName = "correo";
-            this.dataGridViewTextBoxColumn13.HeaderText = "Correo";
-            this.dataGridViewTextBoxColumn13.Name = "dataGridViewTextBoxColumn13";
-            this.dataGridViewTextBoxColumn13.ReadOnly = true;
-            // 
-            // dataGridViewTextBoxColumn14
-            // 
-            this.dataGridViewTextBoxColumn14.DataPropertyName = "nombreEstado";
-            this.dataGridViewTextBoxColumn14.HeaderText = "Estado";
-            this.dataGridViewTextBoxColumn14.Name = "dataGridViewTextBoxColumn14";
-            this.dataGridViewTextBoxColumn14.ReadOnly = true;
-            // 
-            // spMostrarHuespedBindingSource
-            // 
-            this.spMostrarHuespedBindingSource.DataSource = typeof(Hotel_Vanilla.ENTIDAD.spMostrarHuesped);
-            // 
-            // huespedesBindingSource
-            // 
-            this.huespedesBindingSource.DataSource = typeof(Hotel_Vanilla.ENTIDAD.Huespedes);
-            // 
             // frmHuespedes
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(971, 527);
+            this.ClientSize = new System.Drawing.Size(951, 527);
             this.Controls.Add(this.btnRecargar);
             this.Controls.Add(this.btnEliminar);
             this.Controls.Add(this.btnActualizar);
@@ -395,9 +395,9 @@ namespace Hotel_Vanilla.Vista
             ((System.ComponentModel.ISupportInitialize)(this.btnBuscar)).EndInit();
             this.panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dtgHuespedes)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.btnRecargar)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.spMostrarHuespedBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.huespedesBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnRecargar)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 

@@ -12,25 +12,26 @@ namespace Hotel_Vanilla.CONTROLADOR
     {
         MManejoReservas mReservas = new MManejoReservas();
 
-        //MOSTRAR
         public List<spMostrarManejoReservas> ConsultarReservas()
         {
-            return mReservas.ConsultarReservas(); //Llama al modelo
+            return mReservas.ConsultarReservas();
         }
 
-        //GUARDAR
+        public List<spBuscarReservacion> BuscarReservaciones(string buscador)
+        {
+            return mReservas.BuscarReservaciones(buscador);
+        }
+
         public void AgregarReserva(ManejoReservas Reservas)
         {
             mReservas.AgregarReserva(Reservas);
         }
 
-        //ELIMINAR
         public void EliminarReserva(ManejoReservas Reservas)
         {
             mReservas.EliminarReserva(Reservas);
         }
 
-        //MODIFICAR
         public void ActualizarReserva(ManejoReservas Reservas)
         {
             mReservas.ActualizarReserva(Reservas);

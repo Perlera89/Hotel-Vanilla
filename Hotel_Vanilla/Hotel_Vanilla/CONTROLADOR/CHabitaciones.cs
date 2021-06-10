@@ -16,6 +16,11 @@ namespace Hotel_Vanilla.CONTROLADOR
             return Mhabitacion.ConsultarHabitacion();
         }
 
+        public List<spBuscarHabitacion> BuscarHabitaciones(string buscador)
+        {
+            return Mhabitacion.BuscarHabitaciones(buscador);
+        }
+
         public void AgregarHabitacion(sp_MostrarHabitaciones habitaciones, int id)
         {
             Mhabitacion.AgregarHabitacion(habitaciones, id);

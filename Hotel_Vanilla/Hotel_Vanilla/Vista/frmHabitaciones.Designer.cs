@@ -30,10 +30,11 @@ namespace Hotel_Vanilla.Vista
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle13 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle14 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle16 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle15 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmHabitaciones));
             this.bunifuCustomLabel1 = new Bunifu.Framework.UI.BunifuCustomLabel();
             this.btnAgregar = new Bunifu.Framework.UI.BunifuFlatButton();
             this.btnBuscar = new Bunifu.Framework.UI.BunifuImageButton();
@@ -41,18 +42,20 @@ namespace Hotel_Vanilla.Vista
             this.btnEliminar = new Bunifu.Framework.UI.BunifuFlatButton();
             this.panel1 = new System.Windows.Forms.Panel();
             this.dtgHabitaciones = new Guna.UI2.WinForms.Guna2DataGridView();
+            this.spMostrarHabitacionesBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.txtBuscar = new Bunifu.Framework.UI.BunifuMetroTextbox();
+            this.habitacionesBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tipo = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.spMostrarHabitacionesBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.txtBuscar = new Bunifu.Framework.UI.BunifuMetroTextbox();
-            this.habitacionesBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.btnRecargar = new Bunifu.Framework.UI.BunifuImageButton();
             ((System.ComponentModel.ISupportInitialize)(this.btnBuscar)).BeginInit();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dtgHabitaciones)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.spMostrarHabitacionesBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.habitacionesBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnRecargar)).BeginInit();
             this.SuspendLayout();
             // 
             // bunifuCustomLabel1
@@ -97,7 +100,7 @@ namespace Hotel_Vanilla.Vista
             this.btnAgregar.OnHovercolor = System.Drawing.Color.RoyalBlue;
             this.btnAgregar.OnHoverTextColor = System.Drawing.SystemColors.Control;
             this.btnAgregar.selected = false;
-            this.btnAgregar.Size = new System.Drawing.Size(159, 51);
+            this.btnAgregar.Size = new System.Drawing.Size(175, 50);
             this.btnAgregar.TabIndex = 46;
             this.btnAgregar.Text = "Agregar";
             this.btnAgregar.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -111,7 +114,7 @@ namespace Hotel_Vanilla.Vista
             this.btnBuscar.BackColor = System.Drawing.Color.Transparent;
             this.btnBuscar.Image = global::Hotel_Vanilla.Properties.Resources.buscarHabitacion;
             this.btnBuscar.ImageActive = null;
-            this.btnBuscar.Location = new System.Drawing.Point(715, 14);
+            this.btnBuscar.Location = new System.Drawing.Point(715, 24);
             this.btnBuscar.Name = "btnBuscar";
             this.btnBuscar.Size = new System.Drawing.Size(46, 38);
             this.btnBuscar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -143,14 +146,14 @@ namespace Hotel_Vanilla.Vista
             this.btnActualizar.IconVisible = true;
             this.btnActualizar.IconZoom = 90D;
             this.btnActualizar.IsTab = false;
-            this.btnActualizar.Location = new System.Drawing.Point(191, 449);
+            this.btnActualizar.Location = new System.Drawing.Point(208, 449);
             this.btnActualizar.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btnActualizar.Name = "btnActualizar";
             this.btnActualizar.Normalcolor = System.Drawing.SystemColors.Control;
             this.btnActualizar.OnHovercolor = System.Drawing.Color.RoyalBlue;
             this.btnActualizar.OnHoverTextColor = System.Drawing.SystemColors.Control;
             this.btnActualizar.selected = false;
-            this.btnActualizar.Size = new System.Drawing.Size(157, 51);
+            this.btnActualizar.Size = new System.Drawing.Size(175, 50);
             this.btnActualizar.TabIndex = 43;
             this.btnActualizar.Text = "Actualizar";
             this.btnActualizar.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -181,14 +184,14 @@ namespace Hotel_Vanilla.Vista
             this.btnEliminar.IconVisible = true;
             this.btnEliminar.IconZoom = 90D;
             this.btnEliminar.IsTab = false;
-            this.btnEliminar.Location = new System.Drawing.Point(769, 449);
+            this.btnEliminar.Location = new System.Drawing.Point(749, 449);
             this.btnEliminar.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btnEliminar.Name = "btnEliminar";
             this.btnEliminar.Normalcolor = System.Drawing.SystemColors.Control;
             this.btnEliminar.OnHovercolor = System.Drawing.Color.RoyalBlue;
             this.btnEliminar.OnHoverTextColor = System.Drawing.SystemColors.Control;
             this.btnEliminar.selected = false;
-            this.btnEliminar.Size = new System.Drawing.Size(155, 51);
+            this.btnEliminar.Size = new System.Drawing.Size(175, 50);
             this.btnEliminar.TabIndex = 42;
             this.btnEliminar.Text = "Eliminar";
             this.btnEliminar.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -209,8 +212,8 @@ namespace Hotel_Vanilla.Vista
             this.dtgHabitaciones.AllowUserToAddRows = false;
             this.dtgHabitaciones.AllowUserToDeleteRows = false;
             this.dtgHabitaciones.AllowUserToResizeRows = false;
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.White;
-            this.dtgHabitaciones.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle13.BackColor = System.Drawing.Color.White;
+            this.dtgHabitaciones.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle13;
             this.dtgHabitaciones.AutoGenerateColumns = false;
             this.dtgHabitaciones.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dtgHabitaciones.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
@@ -218,14 +221,14 @@ namespace Hotel_Vanilla.Vista
             this.dtgHabitaciones.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dtgHabitaciones.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
             this.dtgHabitaciones.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI", 10.5F);
-            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dtgHabitaciones.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle14.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle14.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle14.Font = new System.Drawing.Font("Segoe UI", 10.5F);
+            dataGridViewCellStyle14.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle14.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle14.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle14.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dtgHabitaciones.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle14;
             this.dtgHabitaciones.ColumnHeadersHeight = 40;
             this.dtgHabitaciones.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.dataGridViewTextBoxColumn1,
@@ -233,14 +236,14 @@ namespace Hotel_Vanilla.Vista
             this.dataGridViewTextBoxColumn3,
             this.tipo});
             this.dtgHabitaciones.DataSource = this.spMostrarHabitacionesBindingSource;
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle4.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle4.Font = new System.Drawing.Font("Segoe UI", 10.5F);
-            dataGridViewCellStyle4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dtgHabitaciones.DefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle16.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle16.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle16.Font = new System.Drawing.Font("Segoe UI", 10.5F);
+            dataGridViewCellStyle16.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            dataGridViewCellStyle16.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle16.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            dataGridViewCellStyle16.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dtgHabitaciones.DefaultCellStyle = dataGridViewCellStyle16;
             this.dtgHabitaciones.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dtgHabitaciones.EnableHeadersVisualStyles = false;
             this.dtgHabitaciones.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
@@ -275,37 +278,6 @@ namespace Hotel_Vanilla.Vista
             this.dtgHabitaciones.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
             this.dtgHabitaciones.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
             // 
-            // dataGridViewTextBoxColumn1
-            // 
-            this.dataGridViewTextBoxColumn1.DataPropertyName = "idHabitacion";
-            this.dataGridViewTextBoxColumn1.HeaderText = "Código";
-            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
-            this.dataGridViewTextBoxColumn1.ReadOnly = true;
-            // 
-            // dataGridViewTextBoxColumn2
-            // 
-            this.dataGridViewTextBoxColumn2.DataPropertyName = "numeroHabitacion";
-            this.dataGridViewTextBoxColumn2.HeaderText = "Codigo habitacion";
-            this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
-            this.dataGridViewTextBoxColumn2.ReadOnly = true;
-            // 
-            // dataGridViewTextBoxColumn3
-            // 
-            this.dataGridViewTextBoxColumn3.DataPropertyName = "tarifa";
-            dataGridViewCellStyle3.Format = "C2";
-            dataGridViewCellStyle3.NullValue = "$0.0000";
-            this.dataGridViewTextBoxColumn3.DefaultCellStyle = dataGridViewCellStyle3;
-            this.dataGridViewTextBoxColumn3.HeaderText = "Tarifa";
-            this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
-            this.dataGridViewTextBoxColumn3.ReadOnly = true;
-            // 
-            // tipo
-            // 
-            this.tipo.DataPropertyName = "tipo";
-            this.tipo.HeaderText = "Tipo de Habitación";
-            this.tipo.Name = "tipo";
-            this.tipo.ReadOnly = true;
-            // 
             // spMostrarHabitacionesBindingSource
             // 
             this.spMostrarHabitacionesBindingSource.DataSource = typeof(Hotel_Vanilla.ENTIDAD.sp_MostrarHabitaciones);
@@ -321,23 +293,73 @@ namespace Hotel_Vanilla.Vista
             this.txtBuscar.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtBuscar.ForeColor = System.Drawing.Color.RoyalBlue;
             this.txtBuscar.isPassword = false;
-            this.txtBuscar.Location = new System.Drawing.Point(768, 14);
+            this.txtBuscar.Location = new System.Drawing.Point(768, 24);
             this.txtBuscar.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.txtBuscar.Name = "txtBuscar";
             this.txtBuscar.Size = new System.Drawing.Size(156, 38);
             this.txtBuscar.TabIndex = 55;
             this.txtBuscar.Text = "Buscar";
             this.txtBuscar.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.txtBuscar.Enter += new System.EventHandler(this.txtBuscar_Enter);
+            this.txtBuscar.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtBuscar_KeyDown);
+            this.txtBuscar.Leave += new System.EventHandler(this.txtBuscar_Leave);
             // 
             // habitacionesBindingSource
             // 
             this.habitacionesBindingSource.DataSource = typeof(Hotel_Vanilla.ENTIDAD.Habitaciones);
+            // 
+            // dataGridViewTextBoxColumn1
+            // 
+            this.dataGridViewTextBoxColumn1.DataPropertyName = "idHabitacion";
+            this.dataGridViewTextBoxColumn1.HeaderText = "Id";
+            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
+            this.dataGridViewTextBoxColumn1.ReadOnly = true;
+            // 
+            // dataGridViewTextBoxColumn2
+            // 
+            this.dataGridViewTextBoxColumn2.DataPropertyName = "numeroHabitacion";
+            this.dataGridViewTextBoxColumn2.HeaderText = "Codigo habitacion";
+            this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
+            this.dataGridViewTextBoxColumn2.ReadOnly = true;
+            // 
+            // dataGridViewTextBoxColumn3
+            // 
+            this.dataGridViewTextBoxColumn3.DataPropertyName = "tarifa";
+            dataGridViewCellStyle15.Format = "C2";
+            dataGridViewCellStyle15.NullValue = "$0.0000";
+            this.dataGridViewTextBoxColumn3.DefaultCellStyle = dataGridViewCellStyle15;
+            this.dataGridViewTextBoxColumn3.HeaderText = "Tarifa";
+            this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
+            this.dataGridViewTextBoxColumn3.ReadOnly = true;
+            // 
+            // tipo
+            // 
+            this.tipo.DataPropertyName = "tipo";
+            this.tipo.HeaderText = "Tipo de Habitación";
+            this.tipo.Name = "tipo";
+            this.tipo.ReadOnly = true;
+            // 
+            // btnRecargar
+            // 
+            this.btnRecargar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnRecargar.BackColor = System.Drawing.Color.Transparent;
+            this.btnRecargar.Image = ((System.Drawing.Image)(resources.GetObject("btnRecargar.Image")));
+            this.btnRecargar.ImageActive = null;
+            this.btnRecargar.Location = new System.Drawing.Point(663, 24);
+            this.btnRecargar.Name = "btnRecargar";
+            this.btnRecargar.Size = new System.Drawing.Size(46, 38);
+            this.btnRecargar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.btnRecargar.TabIndex = 61;
+            this.btnRecargar.TabStop = false;
+            this.btnRecargar.Zoom = 10;
+            this.btnRecargar.Click += new System.EventHandler(this.btnRecargar_Click);
             // 
             // frmHabitaciones
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(951, 527);
+            this.Controls.Add(this.btnRecargar);
             this.Controls.Add(this.txtBuscar);
             this.Controls.Add(this.btnAgregar);
             this.Controls.Add(this.btnBuscar);
@@ -354,6 +376,7 @@ namespace Hotel_Vanilla.Vista
             ((System.ComponentModel.ISupportInitialize)(this.dtgHabitaciones)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.spMostrarHabitacionesBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.habitacionesBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnRecargar)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -375,5 +398,6 @@ namespace Hotel_Vanilla.Vista
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn3;
         private System.Windows.Forms.DataGridViewTextBoxColumn tipo;
+        private Bunifu.Framework.UI.BunifuImageButton btnRecargar;
     }
 }

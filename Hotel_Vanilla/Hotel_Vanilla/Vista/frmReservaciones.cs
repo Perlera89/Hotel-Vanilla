@@ -14,18 +14,18 @@ namespace Hotel_Vanilla.Vista
 {
     public partial class frmReservaciones : Form
     {
-        
+
+        CManejoReservas cReservas = new CManejoReservas();
+
         public frmReservaciones()
         {
             InitializeComponent();
-
         }
 
-        //mostrar
+        //Accion de mostrar
         private void CargarReservas()
         {
             this.sp_MostrarManejoReservasTableAdapter.ClearBeforeFill = true;
-            // TODO: esta línea de código carga datos en la tabla 'vanillaBDDataSet1.sp_MostrarManejoReservas' Puede moverla o quitarla según sea necesario.
             this.sp_MostrarManejoReservasTableAdapter.Fill(this.vanillaBDDataSet1.sp_MostrarManejoReservas);
         }
 
@@ -37,6 +37,7 @@ namespace Hotel_Vanilla.Vista
             CargarReservas();
         }
 
+        //Accion de actualizar
         private void btnActualizar_Click(object sender, EventArgs e)
         {
             //se verifica que haya seleccionado un registro
@@ -62,9 +63,10 @@ namespace Hotel_Vanilla.Vista
 
                 CargarReservas();
             }
+
             else
             {
-                MessageBox.Show("Seleccione un registro para ejecutar la acción");
+                frmMensajeAviso.Avisar("Seleccione un registro para ejecutar la acción");
             }
         }
 
@@ -75,13 +77,24 @@ namespace Hotel_Vanilla.Vista
             {
                 dtgReservas.Columns[i].AutoSizeMode = DataGridViewAutoSizeColumnMode.DisplayedCells;
             }
+
             dtgReservas.ColumnHeadersDefaultCellStyle.BackColor = Color.RoyalBlue;
         }
 
+        //Accion de eliminar
         private void btnEliminar_Click(object sender, EventArgs e)
         {
+            DialogResult resultado = new DialogResult();
+            frmMensajeAdvertencia advertencia = new frmMensajeAdvertencia("¿Estas seguro de eliminar el registro?");
+            resultado = advertencia.ShowDialog();
+
             //se verifica que haya seleccionado un registro
-            if (dtgReservas.SelectedRows.Count>0)
+            if(dtgReservas.SelectedRows.Count <= 0)
+            {
+                frmMensajeAviso.Avisar("Seleccione un registro para ejecutar la acción");
+            }
+
+            else if (resultado == DialogResult.OK && dtgReservas.SelectedRows.Count > 0)
             {
                 CManejoReservas cReserva = new CManejoReservas();
                 ManejoReservas Dreservas = new ManejoReservas();
@@ -91,11 +104,11 @@ namespace Hotel_Vanilla.Vista
                 cReserva.EliminarReserva(Dreservas);
                 CargarReservas();
             }
-            else
-            {
-                frmMensajeAviso.Avisar("Seleccione un registro para ejecutar la acción");
-            }
+        }
 
+        private void btnBuscar_Click(object sender, EventArgs e)
+        {
+            sp_MostrarManejoReservasBindingSource1.DataSource = cReservas.BuscarReservaciones(txtBuscar.Text);
         }
     }
 }

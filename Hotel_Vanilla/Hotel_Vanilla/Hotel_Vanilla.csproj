@@ -132,6 +132,7 @@
     <Compile Include="ENTIDAD\Habitaciones.cs" />
     <Compile Include="ENTIDAD\Huespedes.cs" />
     <Compile Include="ENTIDAD\ManejoReservas.cs" />
+    <Compile Include="ENTIDAD\spBuscarHabitacion.cs" />
     <Compile Include="ENTIDAD\spBuscarHuesped.cs" />
     <Compile Include="ENTIDAD\spMostrarHuesped.cs" />
     <Compile Include="ENTIDAD\spMostrarManejoReservas.cs" />

@@ -25,7 +25,7 @@ namespace Hotel_Vanilla.MODELO
             return habitaciones;
         }
 
-        //Agregar habitacion con el procedimiento
+        //Modelo Agregar habitacion con el procedimiento
         public void AgregarHabitacion(sp_MostrarHabitaciones habitacion, int id)
         {
             string consulta = "sp_InsertarHabitacion";
@@ -38,7 +38,7 @@ namespace Hotel_Vanilla.MODELO
             conexion.Close();
         }
 
-        //Actualizar habitacion con el procedimiento
+        //Modelo para Actualizar habitacion con el procedimiento
         public void ActualizarHabitacion(int codigo, String numeroHabitacion, Decimal tarifa, int id)
         {
             string consulta = "sp_ActualizarHabitacion";
@@ -52,7 +52,7 @@ namespace Hotel_Vanilla.MODELO
             conexion.Close();
         }
 
-        //Eliminar habitacion con el procedimiento
+        //Modelo para Eliminar habitacion con el procedimiento
         public void EliminarHabitacion(int id)
         {
             try
@@ -72,6 +72,19 @@ namespace Hotel_Vanilla.MODELO
                 conexion.Close();
             }
 
+        }
+
+        //Modelo para la busqueda de habitaciones
+        public List<spBuscarHabitacion> BuscarHabitaciones(string buscador)
+        {
+            List<spBuscarHabitacion> Habitaciones = new List<spBuscarHabitacion>();
+            string consulta = "sp_BuscarHabitacion";
+            DynamicParameters parametro = new DynamicParameters();
+            parametro.Add("@buscador", buscador);
+            conexion.Open();
+            Habitaciones = conexion.Query<spBuscarHabitacion>(consulta, parametro, commandType: CommandType.StoredProcedure).ToList();
+            conexion.Close();
+            return Habitaciones;
         }
     }
 }
