@@ -13,70 +13,68 @@ namespace Hotel_Vanilla.Vista
 {
     public partial class frmHabitaciones : Form
     {
-        CspMostrarHabitaciones habitaciones = new CspMostrarHabitaciones();
+        CHabitaciones habitaciones = new CHabitaciones();
+
         public frmHabitaciones()
         {
             InitializeComponent();
-            Clean();
         }
 
-        private void Clean()
-        {
-
-        }
         private void Cargar()
         {
-            CspMostrarHabitaciones cspMostrar = new CspMostrarHabitaciones();
+            CHabitaciones cspMostrar = new CHabitaciones();
             spMostrarHabitacionesBindingSource.DataSource = null;
-            spMostrarHabitacionesBindingSource.DataSource = cspMostrar.ConsultarHuespedes();
-        }
-
-        private void Buscar()
-        {
-
+            spMostrarHabitacionesBindingSource.DataSource = cspMostrar.ConsultarHabitacion();
         }
 
 
-        private void btnActualizar_Click_1(object sender, EventArgs e)
-        {
-
-        }
-
+        //Accion de ingresar
         private void btnAgregar_Click(object sender, EventArgs e)
         {
-            frmManejoHabitaciones habitacion = new frmManejoHabitaciones();
-            habitacion.btnGuardar.Text = "Agregar";
-            habitacion.ShowDialog();
+            frmManejoHabitaciones manejoHabitacion = new frmManejoHabitaciones();
+            manejoHabitacion.btnGuardar.Text = "Agregar";
+            manejoHabitacion.ShowDialog();
 
             Cargar();
         }
 
-        private void btnEliminar_Click(object sender, EventArgs e)
-        {
-            if (dtgHabitaciones.SelectedRows.Count > 0)
-            {
-                habitaciones.EliminarHabitacion(Convert.ToInt32(dtgHabitaciones.CurrentRow.Cells[0].Value.ToString()));
-                Cargar();
-            }
-            else
-            {
-                MessageBox.Show("Elija un registro para ejecutar la acción");
-            }
 
-        }
-
+        //Accion de actualizar
         private void btnActualizar_Click(object sender, EventArgs e)
         {
-            frmManejoHabitaciones habitacion = new frmManejoHabitaciones();
-            habitacion.lblidHabitacion.Text = dtgHabitaciones.CurrentRow.Cells[0].Value.ToString();
-            habitacion.numeroHabitacionTextBox.Text = dtgHabitaciones.CurrentRow.Cells[1].Value.ToString();
-            habitacion.tarifaTextBox.Text = dtgHabitaciones.CurrentRow.Cells[2].Value.ToString();
-            habitacion.tipoHabitacion = dtgHabitaciones.CurrentRow.Cells[3].Value.ToString();
-            habitacion.btnGuardar.Text = "Actualizar";
-            habitacion.accion = true;
-            habitacion.ShowDialog();
+            frmManejoHabitaciones manejoHabitacion = new frmManejoHabitaciones();
+            manejoHabitacion.lblidHabitacion.Text = dtgHabitaciones.CurrentRow.Cells[0].Value.ToString();
+            manejoHabitacion.numeroHabitacionTextBox.Text = dtgHabitaciones.CurrentRow.Cells[1].Value.ToString();
+            manejoHabitacion.tarifaTextBox.Text = dtgHabitaciones.CurrentRow.Cells[2].Value.ToString();
+            manejoHabitacion.tipoHabitacion = dtgHabitaciones.CurrentRow.Cells[3].Value.ToString();
+            manejoHabitacion.btnGuardar.Text = "Actualizar";
+            manejoHabitacion.accion = true;
+            manejoHabitacion.ShowDialog();
 
             Cargar();
+        }
+
+        //Accion de eliminar
+        private void btnEliminar_Click(object sender, EventArgs e)
+        {
+            DialogResult resultado = new DialogResult();
+            frmMensajeAdvertencia advertencia = new frmMensajeAdvertencia("¿Estas seguro de eliminar el registro?");
+            resultado = advertencia.ShowDialog();
+
+            if (resultado == DialogResult.OK)
+            {
+                
+                if (dtgHabitaciones.SelectedRows.Count > 0)
+                {
+                    habitaciones.EliminarHabitacion(Convert.ToInt32(dtgHabitaciones.CurrentRow.Cells[0].Value.ToString()));
+                    Cargar();
+                }
+
+                else
+                {
+                    frmMensajeAviso.Avisar("Elija un registro para ejecutar la acción");
+                }
+            }
         }
 
         private void frmHabitaciones_Load(object sender, EventArgs e)

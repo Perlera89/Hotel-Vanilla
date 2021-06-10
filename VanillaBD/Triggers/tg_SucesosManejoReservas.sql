@@ -34,7 +34,7 @@ BEGIN
 	inner join Habitaciones c on i.idHabitacion_FK = c.idHabitacion
 	inner join TipoHabitaciones d on c.idTipoHabitacion_FK = d.idTipoHabitacion
 
-	INSERT INTO Suceso VALUES(GETDATE(), 'Manejo Reservas', 'Se ha Insertado el registro con Id: ' + cast(@id as varchar)+ 
+	INSERT INTO Sucesos VALUES(GETDATE(), 'Manejo Reservas', 'Se ha Insertado el registro con Id: ' + cast(@id as varchar)+ 
 	', Nombre completo: ' +(@nombres+' '+@apellidos)+ 
 	', Estado: ' +@estado+
 	', Reserva: ' +cast(@reserva as varchar)+
@@ -81,7 +81,7 @@ BEGIN
 	inner join Habitaciones c on i.idHabitacion_FK = c.idHabitacion
 	inner join TipoHabitaciones d on c.idTipoHabitacion_FK = d.idTipoHabitacion
 
-	INSERT INTO Suceso VALUES(GETDATE(), 'Manejo Reservas', 'Se ha Actualizado el registro con Id: ' + cast(@id as varchar)+ 
+	INSERT INTO Sucesos VALUES(GETDATE(), 'Manejo Reservas', 'Se ha Actualizado el registro con Id: ' + cast(@id as varchar)+ 
 	', Nombre completo: ' +(@nombres+' '+@apellidos)+ 
 	', Estado: ' +@estado+
 	', Reserva: ' +cast(@reserva as varchar)+
@@ -128,7 +128,7 @@ BEGIN
 	inner join Habitaciones c on i.idHabitacion_FK = c.idHabitacion
 	inner join TipoHabitaciones d on c.idTipoHabitacion_FK = d.idTipoHabitacion
 
-	INSERT INTO Suceso VALUES(GETDATE(), 'Manejo Reservas', 'Se ha Eliminado el registro con Id: ' + cast(@id as varchar)+ 
+	INSERT INTO Sucesos VALUES(GETDATE(), 'Manejo Reservas', 'Se ha Eliminado el registro con Id: ' + cast(@id as varchar)+ 
 	', Nombre completo: ' +(@nombres+' '+@apellidos)+ 
 	', Estado: ' +@estado+
 	', Reserva: ' +cast(@reserva as varchar)+

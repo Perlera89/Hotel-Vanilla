@@ -125,13 +125,14 @@
     <Compile Include="Conexion.cs" />
     <Compile Include="CONTROLADOR\CHuespedes.cs" />
     <Compile Include="CONTROLADOR\CManejoReservas.cs" />
-    <Compile Include="CONTROLADOR\CspMostrarHabitaciones.cs" />
+    <Compile Include="CONTROLADOR\CHabitaciones.cs" />
     <Compile Include="CONTROLADOR\CSucesos.cs" />
     <Compile Include="CONTROLADOR\CTipoHabitaciones.cs" />
     <Compile Include="ENTIDAD\Estados.cs" />
     <Compile Include="ENTIDAD\Habitaciones.cs" />
     <Compile Include="ENTIDAD\Huespedes.cs" />
     <Compile Include="ENTIDAD\ManejoReservas.cs" />
+    <Compile Include="ENTIDAD\spBuscarHuesped.cs" />
     <Compile Include="ENTIDAD\spMostrarHuesped.cs" />
     <Compile Include="ENTIDAD\spMostrarManejoReservas.cs" />
     <Compile Include="ENTIDAD\sp_MostrarHabitaciones.cs" />
@@ -333,6 +334,7 @@
     <None Include="Properties\DataSources\Hotel_Vanilla.ENTIDAD.Habitaciones.datasource" />
     <None Include="Properties\DataSources\Hotel_Vanilla.ENTIDAD.Huespedes.datasource" />
     <None Include="Properties\DataSources\Hotel_Vanilla.ENTIDAD.ManejoReservas.datasource" />
+    <None Include="Properties\DataSources\Hotel_Vanilla.ENTIDAD.spMostrarHuesped.datasource" />
     <None Include="Properties\DataSources\Hotel_Vanilla.ENTIDAD.sp_MostrarHabitaciones.datasource" />
     <None Include="Properties\DataSources\Hotel_Vanilla.ENTIDAD.Sucesos.datasource" />
     <None Include="Properties\DataSources\Hotel_Vanilla.ENTIDAD.TipoHabitaciones.datasource" />

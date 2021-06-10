@@ -11,17 +11,19 @@ namespace Hotel_Vanilla.MODELO
 {
     class MHuespedes
     {
+        //Modelo para consultar huespedes con el procedimiento
         IDbConnection cn = Conexion.conectar();
-        public List<Huespedes> ConsultarHuespedes()
+        public List<spMostrarHuesped> ConsultarHuespedes()
         {
-            List<Huespedes> Huespedes = new List<Huespedes>();
+            List<spMostrarHuesped> Huespedes = new List<spMostrarHuesped>();
             string consulta = "sp_Mostrarhuesped";
             cn.Open();
-            Huespedes = cn.Query<Huespedes>(consulta, commandType: CommandType.StoredProcedure).ToList();
+            Huespedes = cn.Query<spMostrarHuesped>(consulta, commandType: CommandType.StoredProcedure).ToList();
             cn.Close();
             return Huespedes;
         }
 
+        //Modelo para agregar huespedes con el procedimiento
         public void AgregarHuesped(Huespedes Huespedes)
         {
             string consulta = "sp_insertarHuesped";
@@ -32,20 +34,23 @@ namespace Hotel_Vanilla.MODELO
             parametros.Add("@telefono", Huespedes.telefono, DbType.String);
             parametros.Add("@correo", Huespedes.correo, DbType.String);
             parametros.Add("@idEstado_Fk", Huespedes.idEstado_FK, DbType.Int32);
-            //abrimos la conexion, ejecutamos la consulta y cerramos la conexion
             cn.Open();
             cn.Execute(consulta, parametros, commandType: CommandType.StoredProcedure);
             cn.Close();
         }
-        public void EliminarHuesped(Huespedes huesped)
+
+        //Modelo para eliminar huespedes con el procedimiento
+        public void EliminarHuesped(int idHuesped)
         {
             string consulta = "sp_eliminarhuesped";
             DynamicParameters parametros = new DynamicParameters();
-            parametros.Add("@id", huesped.idHuesped, DbType.Int32);
+            parametros.Add("@id", idHuesped, DbType.Int32);
             cn.Open();
             cn.Execute(consulta, parametros, commandType: CommandType.StoredProcedure);
             cn.Close();
         }
+
+        //Modelo para actualizar huespedes con el procedimiento
         public void ActualizarHuesped(Huespedes huesped)
         {
             string consulta = "sp_actualizarHuesped";
@@ -60,6 +65,19 @@ namespace Hotel_Vanilla.MODELO
             cn.Open();
             cn.Execute(consulta, parametros, commandType: CommandType.StoredProcedure);
             cn.Close();
+        }
+
+        //Modelo para la busqueda
+        public List<spBuscarHuesped> BuscarHuespedes(string buscador)
+        {
+            List<spBuscarHuesped> Huespedes = new List<spBuscarHuesped>();
+            string consulta = "sp_BuscarHuesped";
+            DynamicParameters parametro = new DynamicParameters();
+            parametro.Add("@buscador", buscador);
+            cn.Open();
+            Huespedes = cn.Query<spBuscarHuesped>(consulta, parametro, commandType: CommandType.StoredProcedure).ToList();
+            cn.Close();
+            return Huespedes;
         }
     }
 }

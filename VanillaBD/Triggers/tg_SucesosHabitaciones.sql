@@ -22,7 +22,7 @@ BEGIN
 	inner join TipoHabitaciones a
 	on i.idTipoHabitacion_FK = a.idTipoHabitacion
 
-	INSERT INTO Suceso VALUES(GETDATE(), 'Habitaciones', 'Se ha Insertado el registro con Id: ' + cast(@id as varchar)+ 
+	INSERT INTO Sucesos VALUES(GETDATE(), 'Habitaciones', 'Se ha Insertado el registro con Id: ' + cast(@id as varchar)+ 
 	', Numero habitacion: ' +@habitacion+ 
 	', Tarifa: ' +cast(@tarifa as varchar)+
 	', Tipo habitacion: ' +@tipo+
@@ -50,7 +50,7 @@ BEGIN
 	inner join TipoHabitaciones a
 	on i.idTipoHabitacion_FK = a.idTipoHabitacion
 
-	INSERT INTO Suceso VALUES(GETDATE(), 'Habitaciones', 'Se ha Actualizado el registro con Id: ' + cast(@id as varchar)+ 
+	INSERT INTO Sucesos VALUES(GETDATE(), 'Habitaciones', 'Se ha Actualizado el registro con Id: ' + cast(@id as varchar)+ 
 	', Numero habitacion: ' +@habitacion+ 
 	', Tarifa: ' +cast(@tarifa as varchar)+
 	', Tipo habitacion: ' +@tipo+
@@ -78,7 +78,7 @@ BEGIN
 	inner join TipoHabitaciones a
 	on i.idTipoHabitacion_FK = a.idTipoHabitacion
 
-	INSERT INTO Suceso VALUES(GETDATE(), 'Habitaciones', 'Se ha Eliminado el registro con Id: ' + cast(@id as varchar)+ 
+	INSERT INTO Sucesos VALUES(GETDATE(), 'Habitaciones', 'Se ha Eliminado el registro con Id: ' + cast(@id as varchar)+ 
 	', Numero habitacion: ' +@habitacion+ 
 	', Tarifa: ' +cast(@tarifa as varchar)+
 	', Tipo habitacion: ' +@tipo+

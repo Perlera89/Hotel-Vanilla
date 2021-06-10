@@ -24,7 +24,7 @@ BEGIN
 	inner join Estados a
 	on i.idEstado_FK = a.idEstado
 
-	INSERT INTO Suceso VALUES(GETDATE(), 'Huespedes', 'Se ha Insertado el registro con Id: ' + cast(@id as varchar)+ 
+	INSERT INTO Sucesos VALUES(GETDATE(), 'Huespedes', 'Se ha Insertado el registro con Id: ' + cast(@id as varchar)+ 
 	', Nombres: ' +@nombres+ 
 	', Apellidos: ' +@apellidos+
 	', Direccion: ' +@direccion+
@@ -56,7 +56,7 @@ BEGIN
 	inner join Estados a
 	on i.idEstado_FK = a.idEstado
 
-	INSERT INTO Suceso VALUES(GETDATE(), 'Huespedes', 'Se ha Actualizado el registro con Id: ' + cast(@id as varchar)+ 
+	INSERT INTO Sucesos VALUES(GETDATE(), 'Huespedes', 'Se ha Actualizado el registro con Id: ' + cast(@id as varchar)+ 
 	', Nombres: ' +@nombres+ 
 	', Apellidos: ' +@apellidos+
 	', Direccion: ' +@direccion+
@@ -88,7 +88,7 @@ BEGIN
 	inner join Estados a
 	on i.idEstado_FK = a.idEstado
 
-	INSERT INTO Suceso VALUES(GETDATE(), 'Huespedes', 'Se ha Eliminado el registro con Id: ' + cast(@id as varchar)+ 
+	INSERT INTO Sucesos VALUES(GETDATE(), 'Huespedes', 'Se ha Eliminado el registro con Id: ' + cast(@id as varchar)+ 
 	', Nombres: ' +@nombres+ 
 	', Apellidos: ' +@apellidos+
 	', Direccion: ' +@direccion+

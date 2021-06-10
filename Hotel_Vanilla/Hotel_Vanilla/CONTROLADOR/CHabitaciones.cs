@@ -8,12 +8,12 @@ using Hotel_Vanilla.MODELO;
 
 namespace Hotel_Vanilla.CONTROLADOR
 {
-    class CspMostrarHabitaciones
+    class CHabitaciones
     {
         MHabitaciones Mhabitacion = new MHabitaciones();
-        public List<sp_MostrarHabitaciones> ConsultarHuespedes()
+        public List<sp_MostrarHabitaciones> ConsultarHabitacion()
         {
-            return Mhabitacion.ConsultarHabitacion(); //Llama al modelo
+            return Mhabitacion.ConsultarHabitacion();
         }
 
         public void AgregarHabitacion(sp_MostrarHabitaciones habitaciones, int id)

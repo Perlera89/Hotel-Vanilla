@@ -19,7 +19,7 @@ BEGIN
 
 	FROM inserted i
 
-	INSERT INTO Suceso VALUES(GETDATE(), 'Usuarios', 'Se ha Insertado el registro con Id: ' + cast(@id as varchar)+ 
+	INSERT INTO Sucesos VALUES(GETDATE(), 'Usuarios', 'Se ha Insertado el registro con Id: ' + cast(@id as varchar)+ 
 	', Nombre: ' +@nombre+ 
 	', Correo: ' +@correo+
 	' y Clave: ' +@clave);
@@ -43,7 +43,7 @@ BEGIN
 
 	FROM inserted i
 
-	INSERT INTO Suceso VALUES(GETDATE(), 'Usuarios', 'Se ha Actualizado el registro con Id: ' + cast(@id as varchar)+ 
+	INSERT INTO Sucesos VALUES(GETDATE(), 'Usuarios', 'Se ha Actualizado el registro con Id: ' + cast(@id as varchar)+ 
 	', Nombre: ' +@nombre+ 
 	', Correo: ' +@correo+
 	' y Clave: ' +@clave);
@@ -67,7 +67,7 @@ BEGIN
 
 	FROM deleted i
 
-	INSERT INTO Suceso VALUES(GETDATE(), 'Usuarios', 'Se ha Eliminado el registro con Id: ' + cast(@id as varchar)+ 
+	INSERT INTO Sucesos VALUES(GETDATE(), 'Usuarios', 'Se ha Eliminado el registro con Id: ' + cast(@id as varchar)+ 
 	', Nombre: ' +@nombre+ 
 	', Correo: ' +@correo+
 	' y Clave: ' +@clave);

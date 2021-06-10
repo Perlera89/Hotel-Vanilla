@@ -262,6 +262,7 @@ namespace Hotel_Vanilla.Vista
             // 
             this.dtgReservas.AllowUserToAddRows = false;
             this.dtgReservas.AllowUserToDeleteRows = false;
+            this.dtgReservas.AllowUserToResizeRows = false;
             dataGridViewCellStyle1.BackColor = System.Drawing.Color.White;
             this.dtgReservas.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
             this.dtgReservas.AutoGenerateColumns = false;

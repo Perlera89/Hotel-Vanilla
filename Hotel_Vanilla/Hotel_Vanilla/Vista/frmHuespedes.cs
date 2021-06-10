@@ -14,101 +14,108 @@ namespace Hotel_Vanilla.Vista
 {
     public partial class frmHuespedes : Form
     {
-        CHuespedes cHuespede = new CHuespedes();
         public frmHuespedes()
         {
             InitializeComponent();
-
-        }
-
-        private void Clean()
-        {
-
-        }
-        void Cargar()
-        {
-
-        }
-
-        private void Buscar()
-        {
-
         }
 
         CHuespedes cHuespedes = new CHuespedes();
-        private void frmHuespedes_Load(object sender, EventArgs e)
+        Huespedes huespedes = new Huespedes();
+
+        private void Cargar()
         {
-            huespedesBindingSource.DataSource = cHuespedes.ConsultarHuespedes();
-
-            //for (var i = 0; i < dtgHuespedes.Columns.Count; i++)
-            //{
-            //    dtgHuespedes.Columns[i].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
-            //}
-
-            huespedesGuna2DataGridView.ColumnHeadersDefaultCellStyle.BackColor = Color.RoyalBlue;
+            CHuespedes cHuespedesMostrar = new CHuespedes();
+            spMostrarHuespedBindingSource.DataSource = null;
+            spMostrarHuespedBindingSource.DataSource = cHuespedesMostrar.ConsultarHuespedes();
         }
 
+        private void frmHuespedes_Load(object sender, EventArgs e)
+        {
+            Cargar();
+            dtgHuespedes.ColumnHeadersDefaultCellStyle.BackColor = Color.RoyalBlue;
+        }
+
+        //Accion de agregar
         private void btnAgregar_Click_1(object sender, EventArgs e)
         {
-            Huespedes huespedes = new Huespedes();
-            frmManejoHuespedes frm = new frmManejoHuespedes(/*huespedes*/);
+            frmManejoHuespedes frm = new frmManejoHuespedes();
             frm.cajaId.Visible = false;
             frm.lblId.Visible = false;
             frm.idHuesped.Visible = false;
             frm.ShowDialog();
-
-            //huespedesBindingSource.DataSource = null;
-            huespedesBindingSource.DataSource = cHuespedes.ConsultarHuespedes();
+            Cargar();
         }
 
+        //Accion de actualizar
         private void btnActualizar_Click_1(object sender, EventArgs e)
         {
-            String Id = huespedesGuna2DataGridView.CurrentRow.Cells[0].Value.ToString();
-            String nombre = huespedesGuna2DataGridView.CurrentRow.Cells[1].Value.ToString();
-            String apellido = huespedesGuna2DataGridView.CurrentRow.Cells[2].Value.ToString();
-            String direccion = huespedesGuna2DataGridView.CurrentRow.Cells[3].Value.ToString();
-            String telefono = huespedesGuna2DataGridView.CurrentRow.Cells[4].Value.ToString();
-            String correo = huespedesGuna2DataGridView.CurrentRow.Cells[5].Value.ToString();
-            String IdEstadoFk = huespedesGuna2DataGridView.CurrentRow.Cells[6].Value.ToString();
-
-            int id = 0;
-            int idEstado = 0;
-
-            id = Convert.ToInt32(Id);
-            idEstado = Convert.ToInt32(IdEstadoFk);
-
-            frmManejoHuespedes frm = new frmManejoHuespedes(/*huespedes*/);
-            frm.idHuesped.Text = id.ToString();
-            frm.nombresTextBox.Text = nombre;
-            frm.apellidosTextBox.Text = apellido;
-            frm.direccionTextBox.Text = direccion;
-            frm.telefonoTextBox.Text = telefono;
-            frm.correoTextBox.Text = correo;
-            frm.idEstado_FKTextBox.Text = idEstado.ToString();
-            frm.btnGuardar.Text = "Actualizar";
-            frm.accion = true;
-            frm.ShowDialog();
-
-            huespedesBindingSource.DataSource = null;
-            huespedesBindingSource.DataSource = cHuespedes.ConsultarHuespedes();
+            frmManejoHuespedes manejoHuesped = new frmManejoHuespedes();
+            manejoHuesped.idHuesped.Text = dtgHuespedes.CurrentRow.Cells[0].Value.ToString();
+            manejoHuesped.nombresTextBox.Text = dtgHuespedes.CurrentRow.Cells[1].Value.ToString();
+            manejoHuesped.apellidosTextBox.Text = dtgHuespedes.CurrentRow.Cells[2].Value.ToString();
+            manejoHuesped.direccionTextBox.Text = dtgHuespedes.CurrentRow.Cells[3].Value.ToString();
+            manejoHuesped.telefonoTextBox.Text = dtgHuespedes.CurrentRow.Cells[4].Value.ToString();
+            manejoHuesped.correoTextBox.Text = dtgHuespedes.CurrentRow.Cells[5].Value.ToString();
+            manejoHuesped.idEstado_FKTextBox.Text = dtgHuespedes.CurrentRow.Cells[6].Value.ToString();
+            manejoHuesped.btnGuardar.Text = "Actualizar";
+            manejoHuesped.accion = true;
+            manejoHuesped.ShowDialog();
+            Cargar();
         }
 
+        //Accion de eliminar
         private void btnEliminar_Click_1(object sender, EventArgs e)
         {
-            String idS = huespedesGuna2DataGridView.CurrentRow.Cells[0].Value.ToString();
-            int id = 0;
+            DialogResult resultado = new DialogResult();
+            frmMensajeAdvertencia advertencia = new frmMensajeAdvertencia("¿Estas seguro de eliminar el registro?");
+            resultado = advertencia.ShowDialog();
 
-            id = Convert.ToInt32(idS);
+            if (resultado == DialogResult.OK && dtgHuespedes.SelectedRows.Count > 0)
+            {
+                int huesped = Convert.ToInt32(dtgHuespedes.CurrentRow.Cells[0].Value.ToString());
+                 cHuespedes.EliminarHuesped(huesped);
+            }
 
-            CHuespedes ch = new CHuespedes();
-            Huespedes huespedes = new Huespedes();
+            else
+            {
+                frmMensajeAviso.Avisar("Elija un registro para ejecutar la acción");
+            }
+        }
 
-            huespedes.idHuesped = id;
+        private void txtBuscar_Enter(object sender, EventArgs e)
+        {
+            if (txtBuscar.Text == "Buscar")
+            {
+                txtBuscar.Text = "";
+            }
+        }
 
-            ch.EliminarHuesped(huespedes);
+        private void txtBuscar_Leave(object sender, EventArgs e)
+        {
+            if (txtBuscar.Text == "")
+            {
+                txtBuscar.Text = "Buscar";
+            }
+        }
 
-            huespedesBindingSource.DataSource = null;
-            huespedesBindingSource.DataSource = cHuespedes.ConsultarHuespedes();
+        private void btnBuscar_Click(object sender, EventArgs e)
+        {
+            spMostrarHuespedBindingSource.DataSource = cHuespedes.BuscarHuespedes(txtBuscar.Text);
+        }
+
+        private void btnRecargar_Click(object sender, EventArgs e)
+        {
+            spMostrarHuespedBindingSource.DataSource = cHuespedes.ConsultarHuespedes();
+            txtBuscar.Text = "Buscar";
+            btnActualizar.Focus();
+        }
+
+        private void txtBuscar_KeyDown(object sender, KeyEventArgs e)
+        {
+            if(e.KeyCode == Keys.Enter)
+            {
+                spMostrarHuespedBindingSource.DataSource = cHuespedes.BuscarHuespedes(txtBuscar.Text);
+            }
         }
     }
 }

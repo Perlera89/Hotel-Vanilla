@@ -32,7 +32,7 @@ namespace Hotel_Vanilla.Vista
             BorrarValidacion();
             if (ValidarCampos() && btnGuardar.Text=="Agregar")
             {
-                CspMostrarHabitaciones Chabitacion = new CspMostrarHabitaciones();
+                CHabitaciones Chabitacion = new CHabitaciones();
                 sp_MostrarHabitaciones habitacion =(sp_MostrarHabitaciones) spMostrarHabitacionesBindingSource.Current;
                 Chabitacion.AgregarHabitacion(habitacion, Convert.ToInt32(cbTipoHabitacion.SelectedValue.ToString()));
                 Limpiar();
@@ -40,7 +40,7 @@ namespace Hotel_Vanilla.Vista
             }
             else if (ValidarCampos() && btnGuardar.Text=="Actualizar")
             {
-                CspMostrarHabitaciones Chabitacion = new CspMostrarHabitaciones();
+                CHabitaciones Chabitacion = new CHabitaciones();
                 //Habitaciones habitacion = (Habitaciones)habitacionesBindingSource.Current;
                 Chabitacion.ActualizarHabitacion(Convert.ToInt32(lblidHabitacion.Text),
                                                 numeroHabitacionTextBox.Text,
