@@ -69,24 +69,28 @@ namespace Hotel_Vanilla.Vista
 
         private void btnRegister_Click(object sender, EventArgs e)
         {
-            try
-            {
-                Usuarios usu = new Usuarios();
-                CUsuarios cUsu = new CUsuarios();
+            try {
+                if (nombreTextBox.Text.Equals("") || correoTextBox.Text.Equals("") || claveTextBox.Text.Equals(""))
+                {
+                    MessageBox.Show("Debe llenar todos los campos.");
+                }
+                else { 
+                    Usuarios usu = new Usuarios();
+                    CUsuarios cUsu = new CUsuarios();
 
-                usuariosBindingSource.EndEdit();
-                usu = (Usuarios)usuariosBindingSource.Current;
+                    usuariosBindingSource.EndEdit();
+                    usu = (Usuarios)usuariosBindingSource.Current;
 
-                cUsu.AgregarUsuario(usu);
-                MessageBox.Show("Usuario registrado");
+                    cUsu.AgregarUsuario(usu);
+                    MessageBox.Show("Usuario registrado");
 
-                this.Close();
+                    this.Close();
+                
+                }
             }
-            catch(Exception ex) {
-                MessageBox.Show("Error al guardar los datos");
+            catch (Exception ex) {
+                MessageBox.Show("Ya existe un usuario con ese nombre.");
             }
-            
-
         }
 
         private void correoTextBox_TextChanged(object sender, EventArgs e)

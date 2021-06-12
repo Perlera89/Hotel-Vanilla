@@ -94,29 +94,37 @@ namespace Hotel_Vanilla
 
         private void btnLogin_Click(object sender, EventArgs e)
         {
-            Usuarios usu;
-            CUsuarios cUsuarios = new CUsuarios();
-            usuariosBindingSource.EndEdit();
-
-            usu = (Usuarios)usuariosBindingSource.Current;
-
-            usuariosBindingSource.DataSource = cUsuarios.CompararDatos(usu);
-            usu = (Usuarios)usuariosBindingSource.Current;
-
-            if (usu != null)
+            if (correoTextBox.Text.Equals("") || claveTextBox.Text.Equals(""))
             {
-                frmInicio frm = new frmInicio();
-                MessageBox.Show("Bienvenida/o");
+                MessageBox.Show("Debe llenar todos los campos.");
 
-                frm.lblUsuario.Text = usu.nombre;
-                this.Hide();
-                frm.ShowDialog();
             }
-            else
-            {
-                MessageBox.Show("Error");
-                usuariosBindingSource.AddNew();
+            else {
+                Usuarios usu;
+                CUsuarios cUsuarios = new CUsuarios();
+                usuariosBindingSource.EndEdit();
+
+                usu = (Usuarios)usuariosBindingSource.Current;
+
+                usuariosBindingSource.DataSource = cUsuarios.CompararDatos(usu);
+                usu = (Usuarios)usuariosBindingSource.Current;
+
+                if (usu != null)
+                {
+                    frmInicio frm = new frmInicio();
+                    MessageBox.Show("Bienvenida/o");
+
+                    frm.lblUsuario.Text = usu.nombre;
+                    this.Hide();
+                    frm.ShowDialog();
+                }
+                else
+                {
+                    MessageBox.Show("Correo o contraseña erronea/o");
+                    usuariosBindingSource.AddNew();
+                }
             }
+            
         }
 
         private void claveTextBox_KeyDown(object sender, KeyEventArgs e)

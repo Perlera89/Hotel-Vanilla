@@ -75,40 +75,16 @@ EXEC sp_ActualizarUsuario 4, 'master1234', 'masterito@gmail.com', 'creeper_18';
 
 -------------------------------------------------------------------------------------------------
 --Procedimiento para comprobar datos de usuario
-
-CREATE PROC sp_ComprobarDatos
-@correo varchar(255),
-@clave varchar(50)
+drop proc sp_comprobarDatos
+CREATE PROC sp_comprobarDatos
+@correo varchar(30),
+@clave varchar(20)
 
 AS
 BEGIN
 	SET NOCOUNT ON;
-	exec dbo.fn_ComprobarDatos @correo, @clave
+	select * from Usuarios where correo = @correo and clave = @clave
 END
 go
-
--------------------------------------------------------------------
---Función para comprobar los datos del usuario
-drop Function fn_ComprobarDatos
-Create Function fn_ComprobarDatos(
-	@correo varchar(255), @clave varchar(50)
-)
-returns varchar(50)
-as
-begin
-
-declare @nombre varchar(50)
-
-Select @nombre = (select nombre from Usuarios where correo = @correo and clave = @clave)
-
-return @nombre
-end
-go
-
-declare @prueba varchar(50)
-dbo.fn_ComprobarDatos('gris231@gmail.com', '123')
-select prueba = dbo.fn_ComprobarDatos('gris231@gmail.com', '123')
-
-exec sp_ComprobarDatos 'gris231@gmail.com', '123' 
-
 select * from Usuarios
+-------------------------------------------------------------------

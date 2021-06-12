@@ -6,6 +6,7 @@ using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 
 namespace Hotel_Vanilla.MODELO
 {
@@ -15,7 +16,7 @@ namespace Hotel_Vanilla.MODELO
 
         public List<Usuarios> ConsultarUsuario()
         {
-            
+
             string consulta = "sp_MostrarUsuarios";
             cn.Open();
             List<Usuarios> usuarios = cn.Query<Usuarios>(consulta, commandType: CommandType.StoredProcedure).ToList();
@@ -24,22 +25,22 @@ namespace Hotel_Vanilla.MODELO
         }
         public void AgregarUsuario(Usuarios usu)
         {
-            //consulta
             string consulta = "insert into Usuarios values(@nombre, @correo, @clave)";
-            //parametros
+         
             DynamicParameters parametros = new DynamicParameters();
             parametros.Add("@nombre", usu.nombre, DbType.String);
             parametros.Add("@correo", usu.correo, DbType.String);
             parametros.Add("@clave", usu.clave, DbType.String);
-            //abrimos la conexion, ejecutamos la consulta y cerramos la conexion
+         
             cn.Open();
             cn.Execute(consulta, parametros, commandType: CommandType.Text);
             cn.Close();
         }
+    
         public List<Usuarios> CompararDatos(Usuarios usu)
         {
             string consulta = "sp_ComprobarDatos";
-            //parametros
+            
             DynamicParameters parametros = new DynamicParameters();
             parametros.Add("@correo", usu.correo, DbType.String);
             parametros.Add("@clave", usu.clave, DbType.String);
@@ -50,26 +51,5 @@ namespace Hotel_Vanilla.MODELO
 
             return usuList;
         }
-
-
-
-
-    //    public Boolean CompararDatos(Usuarios usu)
-    //    {
-
-    //        Boolean comprobacion = false;
-    //        List<Usuarios> lista = ConsultarUsuario();
-
-    //        foreach (var i in lista)
-    //        {
-    //            if (usu.correo.Equals(i.correo) && usu.clave.Equals(i.clave))
-    //            {
-    //                comprobacion = true;
-
-    //            }
-    //        }
-    //        return comprobacion;
-
-    //    }
     }
 }

@@ -52,7 +52,7 @@ Create table ManejoReservas(
 Create table Usuarios(
 	idUsuario int primary key identity not null,
 	nombre varchar(20) unique,
-	correo varchar(30) unique,
+	correo varchar(30),
 	clave varchar(20),
 );
 
