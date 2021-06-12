@@ -128,6 +128,7 @@
     <Compile Include="CONTROLADOR\CHabitaciones.cs" />
     <Compile Include="CONTROLADOR\CSucesos.cs" />
     <Compile Include="CONTROLADOR\CTipoHabitaciones.cs" />
+    <Compile Include="CONTROLADOR\CUsuarios.cs" />
     <Compile Include="ENTIDAD\Estados.cs" />
     <Compile Include="ENTIDAD\Habitaciones.cs" />
     <Compile Include="ENTIDAD\Huespedes.cs" />
@@ -147,6 +148,7 @@
     <Compile Include="MODELO\MHabitaciones.cs" />
     <Compile Include="MODELO\MSucesos.cs" />
     <Compile Include="MODELO\MTipoHabitacion.cs" />
+    <Compile Include="MODELO\MUsuarios.cs" />
     <Compile Include="VanillaBDDataSet.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>

@@ -1,4 +1,6 @@
-﻿using Hotel_Vanilla.Vista;
+﻿using Hotel_Vanilla.CONTROLADOR;
+using Hotel_Vanilla.ENTIDAD;
+using Hotel_Vanilla.Vista;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -32,7 +34,7 @@ namespace Hotel_Vanilla
             //Finalizamos el hilo
             t.Abort();
         }
-
+        
         public void SplashStart()
         {
               Application.Run(new frmSplash());
@@ -85,15 +87,36 @@ namespace Hotel_Vanilla
             else
                 claveTextBox.UseSystemPasswordChar = true;
         }
+        private void Form1_Load(object sender, EventArgs e)
+        {
+            usuariosBindingSource.AddNew();
+        }
 
         private void btnLogin_Click(object sender, EventArgs e)
         {
-            //frmMensajeExito.Confirmar("Inicio de sesion valido");
-            //frmInicio principal = new frmInicio();
+            Usuarios usu;
+            CUsuarios cUsuarios = new CUsuarios();
+            usuariosBindingSource.EndEdit();
 
-            //principal.Show();
-            //principal.lblUsuario.Text = txtEmail.Text;
-            //this.Hide();
+            usu = (Usuarios)usuariosBindingSource.Current;
+
+            usuariosBindingSource.DataSource = cUsuarios.CompararDatos(usu);
+            usu = (Usuarios)usuariosBindingSource.Current;
+
+            if (usu != null)
+            {
+                frmInicio frm = new frmInicio();
+                MessageBox.Show("Bienvenida/o");
+
+                frm.lblUsuario.Text = usu.nombre;
+                this.Hide();
+                frm.ShowDialog();
+            }
+            else
+            {
+                MessageBox.Show("Error");
+                usuariosBindingSource.AddNew();
+            }
         }
 
         private void claveTextBox_KeyDown(object sender, KeyEventArgs e)
@@ -103,6 +126,11 @@ namespace Hotel_Vanilla
                 inicio.Show();
             }
         }
-    }
-    
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+            frmRegister frm = new frmRegister();
+            frm.ShowDialog();
+        }  
+    } 
 }

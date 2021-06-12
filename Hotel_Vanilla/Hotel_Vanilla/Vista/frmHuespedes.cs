@@ -78,10 +78,9 @@ namespace Hotel_Vanilla.Vista
             else if (resultado == DialogResult.OK && dtgHuespedes.SelectedRows.Count > 0)
             {
                 int huesped = Convert.ToInt32(dtgHuespedes.CurrentRow.Cells[0].Value.ToString());
-                 cHuespedes.EliminarHuesped(huesped);
+                cHuespedes.EliminarHuesped(huesped);
                 CargarHuespedes();
             }
-
         }
 
         private void txtBuscar_Enter(object sender, EventArgs e)

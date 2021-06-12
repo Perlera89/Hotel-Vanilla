@@ -1,4 +1,6 @@
-﻿using System;
+﻿using Hotel_Vanilla.CONTROLADOR;
+using Hotel_Vanilla.ENTIDAD;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -16,7 +18,7 @@ namespace Hotel_Vanilla.Vista
         {
             InitializeComponent();
         }
-
+        public Usuarios usuarios = new Usuarios();
         private void btnCerrar_Click(object sender, EventArgs e)
         {
             DialogResult resultado = new DialogResult();
@@ -67,12 +69,39 @@ namespace Hotel_Vanilla.Vista
 
         private void btnRegister_Click(object sender, EventArgs e)
         {
-            Hide();
+            try
+            {
+                Usuarios usu = new Usuarios();
+                CUsuarios cUsu = new CUsuarios();
+
+                usuariosBindingSource.EndEdit();
+                usu = (Usuarios)usuariosBindingSource.Current;
+
+                cUsu.AgregarUsuario(usu);
+                MessageBox.Show("Usuario registrado");
+
+                this.Close();
+            }
+            catch(Exception ex) {
+                MessageBox.Show("Error al guardar los datos");
+            }
+            
+
         }
 
         private void correoTextBox_TextChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void frmRegister_Load(object sender, EventArgs e)
+        {
+            usuariosBindingSource.AddNew();
         }
     }
 }
