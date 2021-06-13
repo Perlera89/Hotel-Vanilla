@@ -14,13 +14,18 @@ namespace Hotel_Vanilla.Vista
 {
     public partial class frmManejoHabitaciones : Form
     {
+        CSucesos cSucesos = new CSucesos();
+        frmInicio inicio = new frmInicio();
+
+        public String tipoHabitacion;
+        public Boolean accion = false;
+        public string Titulo { get; set; }
+        public string Mensaje { get; set; }
+
         public frmManejoHabitaciones()
         {
             InitializeComponent();
-            
-
         }
-
 
         private void btnCerrar_Click(object sender, EventArgs e)
         {
@@ -30,11 +35,24 @@ namespace Hotel_Vanilla.Vista
         private void btnGuardar_Click(object sender, EventArgs e)
         {
             BorrarValidacion();
-            if (ValidarCampos() && btnGuardar.Text=="Agregar")
+            if (ValidarCampos() && btnGuardar.Text=="Guardar")
             {
                 CHabitaciones Chabitacion = new CHabitaciones();
                 sp_MostrarHabitaciones habitacion =(sp_MostrarHabitaciones) spMostrarHabitacionesBindingSource.Current;
                 Chabitacion.AgregarHabitacion(habitacion, Convert.ToInt32(cbTipoHabitacion.SelectedValue.ToString()));
+
+                frmMensajeExito.Confirmar("Se ha Ingresado correctamente");
+
+                var sucesos = cSucesos.UltimoSuceso();
+                foreach (var suceso in sucesos)
+                {
+                    Titulo = suceso.tipoSuceso;
+                    Mensaje = suceso.descripcion;
+                }
+
+                inicio.MostrarNotificacion(Titulo, Mensaje, ToolTipIcon.Info);
+
+                this.Close();
                 Limpiar();
                 numeroHabitacionTextBox.Focus();
             }
@@ -46,17 +64,28 @@ namespace Hotel_Vanilla.Vista
                                                 numeroHabitacionTextBox.Text,
                                                 Convert.ToDecimal(tarifaTextBox.Text),
                                                 Convert.ToInt32(cbTipoHabitacion.SelectedValue.ToString()));
+
+                frmMensajeExito.Confirmar("Se ha Actualizado correctamente");
+
+                var sucesos = cSucesos.UltimoSuceso();
+                foreach (var suceso in sucesos)
+                {
+                    Titulo = suceso.tipoSuceso;
+                    Mensaje = suceso.descripcion;
+                }
+
+                inicio.MostrarNotificacion(Titulo, Mensaje, ToolTipIcon.Warning);
                 this.Close();
             }
         }
-        public String tipoHabitacion;
-        public Boolean accion = false;
+        
         private void frmManejoHabitaciones_Load(object sender, EventArgs e)
         {
             numeroHabitacionTextBox.Focus();
             cargarCBTipoHabitacion();
             //cbTipoHabitacion.Text = "Hola";
             cbTipoHabitacion.Text=tipoHabitacion;
+
             if (accion==false)
             {
                 spMostrarHabitacionesBindingSource.AddNew();
@@ -64,8 +93,7 @@ namespace Hotel_Vanilla.Vista
             else
             {
                 spMostrarHabitacionesBindingSource.EndEdit();
-            }
-            
+            } 
         }
 
         public void Limpiar()
@@ -92,7 +120,6 @@ namespace Hotel_Vanilla.Vista
             {
                 cbTipoHabitacion.SelectedIndex = -1;
             }
-
         }
 
         private void tarifaTextBox_KeyPress(object sender, KeyPressEventArgs e)
@@ -102,6 +129,7 @@ namespace Hotel_Vanilla.Vista
                 e.Handled = false;
                 return;
             }
+
             else
             {             
                 e.Handled = true;
@@ -147,6 +175,7 @@ namespace Hotel_Vanilla.Vista
             errorProvider.SetError(cbTipoHabitacion, "");
         }
         private int punto = 0;
+
         private void tarifaTextBox_TextChanged(object sender, EventArgs e)
         {
             //Se evalua cada elemento de la cadena en la caja de texto
@@ -166,12 +195,10 @@ namespace Hotel_Vanilla.Vista
                         //la variable se reestablece a 0
                         punto = 0;
                     }
-
                 }
-
             }
-            AlertarValorMaximo();
 
+            AlertarValorMaximo();
         }
 
         private void AlertarValorMaximo()

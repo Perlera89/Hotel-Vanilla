@@ -14,6 +14,11 @@ namespace Hotel_Vanilla.Vista
     public partial class frmHabitaciones : Form
     {
         CHabitaciones habitaciones = new CHabitaciones();
+        CSucesos cSucesos = new CSucesos();
+        frmInicio inicio = new frmInicio();
+
+        public string Titulo { get; set; }
+        public string Mensaje { get; set; }
 
         public frmHabitaciones()
         {
@@ -69,6 +74,17 @@ namespace Hotel_Vanilla.Vista
             else if (resultado == DialogResult.OK && dtgHabitaciones.SelectedRows.Count > 0)
             {
                 habitaciones.EliminarHabitacion(Convert.ToInt32(dtgHabitaciones.CurrentRow.Cells[0].Value.ToString()));
+
+                frmMensajeExito.Confirmar("Se ha Eliminado correctamente");
+
+                var sucesos = cSucesos.UltimoSuceso();
+                foreach (var suceso in sucesos)
+                {
+                    Titulo = suceso.tipoSuceso;
+                    Mensaje = suceso.descripcion;
+                }
+                inicio.MostrarNotificacion(Titulo, Mensaje, ToolTipIcon.Error);
+
                 CargarHabitaciones();
             }
         }

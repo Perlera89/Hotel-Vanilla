@@ -18,26 +18,37 @@ namespace Hotel_Vanilla.Vista
         CSucesos cSucesos = new CSucesos();
         public string Titulo { get; set; }
         public string Mensaje { get; set; }
+        public Boolean accion = false;
 
         Huespedes huesped = new Huespedes();
 
-        public frmManejoHuespedes(/*Huespedes huesped*/)
+        public frmManejoHuespedes()
         {
             InitializeComponent();
-            //this.huesped = huesped;
-            nombresTextBox.Focus();
+            txtNombres.Focus();
         }
 
-        void cargarControles()
+        public void cargarControles()
         {
             idHuesped.Text = huesped.idHuesped.ToString();
-            nombresTextBox.Text = huesped.nombres;
-            apellidosTextBox.Text = huesped.apellidos;
-            direccionTextBox.Text = huesped.direccion;
-            telefonoTextBox.Text = huesped.telefono;
-            correoTextBox.Text = huesped.correo;
-            txtIdEstado.Text = huesped.idEstado_FK.ToString();
+            txtNombres.Text = huesped.nombres;
+            txtApellidos.Text = huesped.apellidos;
+            txtDireccion.Text = huesped.direccion;
+            txtTelefono.Text = huesped.telefono;
+            txtCorreo.Text = huesped.correo;
+            txtEstado.Text = huesped.idEstado_FK.ToString();
         }
+
+        public void Limpiar()
+        {
+            txtNombres.Clear();
+            txtApellidos.Clear();
+            txtDireccion.Clear();
+            txtTelefono.Clear();
+            txtCorreo.Clear();
+            txtEstado.Clear();
+        }
+
         private void btnCerrar_Click(object sender, EventArgs e)
         {
             Close();
@@ -47,16 +58,18 @@ namespace Hotel_Vanilla.Vista
             if (btnGuardar.Text.Equals("Actualizar"))
             {
                 huesped.idHuesped = Convert.ToInt32(idHuesped.Text);
-                huesped.nombres = nombresTextBox.Text;
-                huesped.apellidos = apellidosTextBox.Text;
-                huesped.direccion = direccionTextBox.Text;
-                huesped.telefono = telefonoTextBox.Text;
-                huesped.correo = correoTextBox.Text;
-                huesped.idEstado_FK = Convert.ToInt32(txtIdEstado.Text);
+                huesped.nombres = txtNombres.Text;
+                huesped.apellidos = txtApellidos.Text;
+                huesped.direccion = txtDireccion.Text;
+                huesped.telefono = txtTelefono.Text;
+                huesped.correo = txtCorreo.Text;
+                huesped.idEstado_FK = Convert.ToInt32(txtEstado.Text);
 
                 CHuespedes ch = new CHuespedes();
                 ch.ModificarHuesped(huesped);
-                this.Close();
+
+                Limpiar();
+                txtNombres.Focus();
 
                 frmMensajeExito.Confirmar("Se ha Actualizado correctamente");
 
@@ -78,7 +91,9 @@ namespace Hotel_Vanilla.Vista
                 huespedes = (Huespedes)huespedesBindingSource.Current;
 
                 cHuespedes.AgregarHuesped(huespedes);
-                this.Close();
+
+                Limpiar();
+                txtNombres.Focus();
 
                 frmMensajeExito.Confirmar("Se ha Ingresado correctamente");
 
@@ -92,7 +107,6 @@ namespace Hotel_Vanilla.Vista
                 inicio.MostrarNotificacion(Titulo, Mensaje, ToolTipIcon.Info);
             }
         }
-        public Boolean accion = false;
 
         private void frmManejoHuespedes_Load(object sender, EventArgs e)
         {
@@ -100,17 +114,48 @@ namespace Hotel_Vanilla.Vista
             {
                 huespedesBindingSource.AddNew();
             }
+
             else
             {
                 huespedesBindingSource.EndEdit();
             }
-            //cargarControles();
         }
 
         private void btnCancelar_Click(object sender, EventArgs e)
         {
             huesped = null;
             this.Close();
+        }
+
+        private void txtTelefono_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            SoloNumeros(e);
+        }
+
+        private void SoloNumeros(KeyPressEventArgs k)
+        {
+            if (char.IsDigit(k.KeyChar))
+            {
+                k.Handled = false;
+            }
+
+            else if (char.IsSeparator(k.KeyChar))
+            {
+                k.Handled = false;
+            }
+
+            else if (char.IsControl(k.KeyChar))
+            {
+                k.Handled = false;
+            }
+
+            else if (k.KeyChar.ToString().Equals("-"))
+            {
+                k.Handled = false;
+            }
+
+            else
+                k.Handled = true;
         }
     }
 }

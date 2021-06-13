@@ -57,12 +57,12 @@ namespace Hotel_Vanilla.Vista
         {
             frmManejoHuespedes manejoHuesped = new frmManejoHuespedes();
             manejoHuesped.idHuesped.Text = dtgHuespedes.CurrentRow.Cells[0].Value.ToString();
-            manejoHuesped.nombresTextBox.Text = dtgHuespedes.CurrentRow.Cells[1].Value.ToString();
-            manejoHuesped.apellidosTextBox.Text = dtgHuespedes.CurrentRow.Cells[2].Value.ToString();
-            manejoHuesped.direccionTextBox.Text = dtgHuespedes.CurrentRow.Cells[3].Value.ToString();
-            manejoHuesped.telefonoTextBox.Text = dtgHuespedes.CurrentRow.Cells[4].Value.ToString();
-            manejoHuesped.correoTextBox.Text = dtgHuespedes.CurrentRow.Cells[5].Value.ToString();
-            manejoHuesped.txtIdEstado.Text = dtgHuespedes.CurrentRow.Cells[6].Value.ToString();
+            manejoHuesped.txtNombres.Text = dtgHuespedes.CurrentRow.Cells[1].Value.ToString();
+            manejoHuesped.txtApellidos.Text = dtgHuespedes.CurrentRow.Cells[2].Value.ToString();
+            manejoHuesped.txtDireccion.Text = dtgHuespedes.CurrentRow.Cells[3].Value.ToString();
+            manejoHuesped.txtTelefono.Text = dtgHuespedes.CurrentRow.Cells[4].Value.ToString();
+            manejoHuesped.txtCorreo.Text = dtgHuespedes.CurrentRow.Cells[5].Value.ToString();
+            manejoHuesped.txtEstado.Text = dtgHuespedes.CurrentRow.Cells[6].Value.ToString();
             manejoHuesped.btnGuardar.Text = "Actualizar";
             manejoHuesped.accion = true;
             manejoHuesped.ShowDialog();

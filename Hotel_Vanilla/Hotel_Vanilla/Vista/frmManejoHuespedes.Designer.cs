@@ -39,12 +39,12 @@ namespace Hotel_Vanilla.Vista
             this.bunifuElipse1 = new Bunifu.Framework.UI.BunifuElipse(this.components);
             this.panelInferior = new System.Windows.Forms.Panel();
             this.guna2DragControl1 = new Guna.UI2.WinForms.Guna2DragControl(this.components);
-            this.apellidosTextBox = new System.Windows.Forms.TextBox();
-            this.correoTextBox = new System.Windows.Forms.TextBox();
-            this.direccionTextBox = new System.Windows.Forms.TextBox();
-            this.txtIdEstado = new System.Windows.Forms.TextBox();
-            this.nombresTextBox = new System.Windows.Forms.TextBox();
-            this.telefonoTextBox = new System.Windows.Forms.TextBox();
+            this.txtApellidos = new System.Windows.Forms.TextBox();
+            this.txtCorreo = new System.Windows.Forms.TextBox();
+            this.txtDireccion = new System.Windows.Forms.TextBox();
+            this.txtEstado = new System.Windows.Forms.TextBox();
+            this.txtNombres = new System.Windows.Forms.TextBox();
+            this.txtTelefono = new System.Windows.Forms.TextBox();
             this.btnCancelar = new Bunifu.Framework.UI.BunifuFlatButton();
             this.btnGuardar = new Bunifu.Framework.UI.BunifuFlatButton();
             this.guna2BorderlessForm1 = new Guna.UI2.WinForms.Guna2BorderlessForm(this.components);
@@ -147,71 +147,72 @@ namespace Hotel_Vanilla.Vista
             this.guna2DragControl1.ContainerControl = this;
             this.guna2DragControl1.TargetControl = this.panelSuperior;
             // 
-            // apellidosTextBox
+            // txtApellidos
             // 
-            this.apellidosTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.huespedesBindingSource, "apellidos", true));
-            this.apellidosTextBox.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.apellidosTextBox.ForeColor = System.Drawing.Color.RoyalBlue;
-            this.apellidosTextBox.Location = new System.Drawing.Point(157, 219);
-            this.apellidosTextBox.Margin = new System.Windows.Forms.Padding(2);
-            this.apellidosTextBox.Name = "apellidosTextBox";
-            this.apellidosTextBox.Size = new System.Drawing.Size(360, 27);
-            this.apellidosTextBox.TabIndex = 2;
+            this.txtApellidos.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.huespedesBindingSource, "apellidos", true));
+            this.txtApellidos.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtApellidos.ForeColor = System.Drawing.Color.RoyalBlue;
+            this.txtApellidos.Location = new System.Drawing.Point(157, 219);
+            this.txtApellidos.Margin = new System.Windows.Forms.Padding(2);
+            this.txtApellidos.Name = "txtApellidos";
+            this.txtApellidos.Size = new System.Drawing.Size(360, 27);
+            this.txtApellidos.TabIndex = 2;
             // 
-            // correoTextBox
+            // txtCorreo
             // 
-            this.correoTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.huespedesBindingSource, "correo", true));
-            this.correoTextBox.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.correoTextBox.ForeColor = System.Drawing.Color.RoyalBlue;
-            this.correoTextBox.Location = new System.Drawing.Point(157, 344);
-            this.correoTextBox.Margin = new System.Windows.Forms.Padding(2);
-            this.correoTextBox.Name = "correoTextBox";
-            this.correoTextBox.Size = new System.Drawing.Size(360, 27);
-            this.correoTextBox.TabIndex = 5;
+            this.txtCorreo.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.huespedesBindingSource, "correo", true));
+            this.txtCorreo.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtCorreo.ForeColor = System.Drawing.Color.RoyalBlue;
+            this.txtCorreo.Location = new System.Drawing.Point(157, 344);
+            this.txtCorreo.Margin = new System.Windows.Forms.Padding(2);
+            this.txtCorreo.Name = "txtCorreo";
+            this.txtCorreo.Size = new System.Drawing.Size(360, 27);
+            this.txtCorreo.TabIndex = 5;
             // 
-            // direccionTextBox
+            // txtDireccion
             // 
-            this.direccionTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.huespedesBindingSource, "direccion", true));
-            this.direccionTextBox.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.direccionTextBox.ForeColor = System.Drawing.Color.RoyalBlue;
-            this.direccionTextBox.Location = new System.Drawing.Point(157, 260);
-            this.direccionTextBox.Margin = new System.Windows.Forms.Padding(2);
-            this.direccionTextBox.Name = "direccionTextBox";
-            this.direccionTextBox.Size = new System.Drawing.Size(360, 27);
-            this.direccionTextBox.TabIndex = 3;
+            this.txtDireccion.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.huespedesBindingSource, "direccion", true));
+            this.txtDireccion.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtDireccion.ForeColor = System.Drawing.Color.RoyalBlue;
+            this.txtDireccion.Location = new System.Drawing.Point(157, 260);
+            this.txtDireccion.Margin = new System.Windows.Forms.Padding(2);
+            this.txtDireccion.Name = "txtDireccion";
+            this.txtDireccion.Size = new System.Drawing.Size(360, 27);
+            this.txtDireccion.TabIndex = 3;
             // 
-            // txtIdEstado
+            // txtEstado
             // 
-            this.txtIdEstado.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.huespedesBindingSource, "idEstado_FK", true));
-            this.txtIdEstado.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtIdEstado.ForeColor = System.Drawing.Color.RoyalBlue;
-            this.txtIdEstado.Location = new System.Drawing.Point(157, 385);
-            this.txtIdEstado.Margin = new System.Windows.Forms.Padding(2);
-            this.txtIdEstado.Name = "txtIdEstado";
-            this.txtIdEstado.Size = new System.Drawing.Size(360, 27);
-            this.txtIdEstado.TabIndex = 6;
+            this.txtEstado.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.huespedesBindingSource, "idEstado_FK", true));
+            this.txtEstado.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtEstado.ForeColor = System.Drawing.Color.RoyalBlue;
+            this.txtEstado.Location = new System.Drawing.Point(157, 385);
+            this.txtEstado.Margin = new System.Windows.Forms.Padding(2);
+            this.txtEstado.Name = "txtEstado";
+            this.txtEstado.Size = new System.Drawing.Size(360, 27);
+            this.txtEstado.TabIndex = 6;
             // 
-            // nombresTextBox
+            // txtNombres
             // 
-            this.nombresTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.huespedesBindingSource, "nombres", true));
-            this.nombresTextBox.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.nombresTextBox.ForeColor = System.Drawing.Color.RoyalBlue;
-            this.nombresTextBox.Location = new System.Drawing.Point(157, 181);
-            this.nombresTextBox.Margin = new System.Windows.Forms.Padding(2);
-            this.nombresTextBox.Name = "nombresTextBox";
-            this.nombresTextBox.Size = new System.Drawing.Size(360, 27);
-            this.nombresTextBox.TabIndex = 1;
+            this.txtNombres.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.huespedesBindingSource, "nombres", true));
+            this.txtNombres.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtNombres.ForeColor = System.Drawing.Color.RoyalBlue;
+            this.txtNombres.Location = new System.Drawing.Point(157, 181);
+            this.txtNombres.Margin = new System.Windows.Forms.Padding(2);
+            this.txtNombres.Name = "txtNombres";
+            this.txtNombres.Size = new System.Drawing.Size(360, 27);
+            this.txtNombres.TabIndex = 1;
             // 
-            // telefonoTextBox
+            // txtTelefono
             // 
-            this.telefonoTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.huespedesBindingSource, "telefono", true));
-            this.telefonoTextBox.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.telefonoTextBox.ForeColor = System.Drawing.Color.RoyalBlue;
-            this.telefonoTextBox.Location = new System.Drawing.Point(157, 303);
-            this.telefonoTextBox.Margin = new System.Windows.Forms.Padding(2);
-            this.telefonoTextBox.Name = "telefonoTextBox";
-            this.telefonoTextBox.Size = new System.Drawing.Size(360, 27);
-            this.telefonoTextBox.TabIndex = 4;
+            this.txtTelefono.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.huespedesBindingSource, "telefono", true));
+            this.txtTelefono.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtTelefono.ForeColor = System.Drawing.Color.RoyalBlue;
+            this.txtTelefono.Location = new System.Drawing.Point(157, 303);
+            this.txtTelefono.Margin = new System.Windows.Forms.Padding(2);
+            this.txtTelefono.Name = "txtTelefono";
+            this.txtTelefono.Size = new System.Drawing.Size(360, 27);
+            this.txtTelefono.TabIndex = 4;
+            this.txtTelefono.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtTelefono_KeyPress);
             // 
             // btnCancelar
             // 
@@ -422,12 +423,12 @@ namespace Hotel_Vanilla.Vista
             this.Controls.Add(this.bunifuCustomLabel3);
             this.Controls.Add(this.bunifuCustomLabel2);
             this.Controls.Add(this.idHuesped);
-            this.Controls.Add(this.apellidosTextBox);
-            this.Controls.Add(this.correoTextBox);
-            this.Controls.Add(this.direccionTextBox);
-            this.Controls.Add(this.txtIdEstado);
-            this.Controls.Add(this.nombresTextBox);
-            this.Controls.Add(this.telefonoTextBox);
+            this.Controls.Add(this.txtApellidos);
+            this.Controls.Add(this.txtCorreo);
+            this.Controls.Add(this.txtDireccion);
+            this.Controls.Add(this.txtEstado);
+            this.Controls.Add(this.txtNombres);
+            this.Controls.Add(this.txtTelefono);
             this.Controls.Add(this.panelInferior);
             this.Controls.Add(this.lblId);
             this.Controls.Add(this.btnCancelar);
@@ -460,12 +461,12 @@ namespace Hotel_Vanilla.Vista
         private Guna.UI2.WinForms.Guna2DragControl guna2DragControl1;
         private System.Windows.Forms.BindingSource huespedesBindingSource;
         private Guna.UI2.WinForms.Guna2BorderlessForm guna2BorderlessForm1;
-        public System.Windows.Forms.TextBox apellidosTextBox;
-        public System.Windows.Forms.TextBox correoTextBox;
-        public System.Windows.Forms.TextBox direccionTextBox;
-        public System.Windows.Forms.TextBox txtIdEstado;
-        public System.Windows.Forms.TextBox nombresTextBox;
-        public System.Windows.Forms.TextBox telefonoTextBox;
+        public System.Windows.Forms.TextBox txtApellidos;
+        public System.Windows.Forms.TextBox txtCorreo;
+        public System.Windows.Forms.TextBox txtDireccion;
+        public System.Windows.Forms.TextBox txtEstado;
+        public System.Windows.Forms.TextBox txtNombres;
+        public System.Windows.Forms.TextBox txtTelefono;
         public Bunifu.Framework.UI.BunifuFlatButton btnGuardar;
         public Bunifu.Framework.UI.BunifuCustomLabel idHuesped;
         public System.Windows.Forms.Label lblId;

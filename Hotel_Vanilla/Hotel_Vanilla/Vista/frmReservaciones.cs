@@ -16,6 +16,11 @@ namespace Hotel_Vanilla.Vista
     {
 
         CManejoReservas cReservas = new CManejoReservas();
+        CSucesos cSucesos = new CSucesos();
+        frmInicio inicio = new frmInicio();
+
+        public string Titulo { get; set; }
+        public string Mensaje { get; set; }
 
         public frmReservaciones()
         {
@@ -105,6 +110,16 @@ namespace Hotel_Vanilla.Vista
                 Dreservas.idReserva = Convert.ToInt32(dtgReservas.CurrentRow.Cells[0].Value.ToString());
                 //mandando el objeto reservas como parametro al metodo de agrregar reserva
                 cReserva.EliminarReserva(Dreservas);
+
+                frmMensajeExito.Confirmar("Se ha Eliminado correctamente");
+
+                var sucesos = cSucesos.UltimoSuceso();
+                foreach (var suceso in sucesos)
+                {
+                    Titulo = suceso.tipoSuceso;
+                    Mensaje = suceso.descripcion;
+                }
+                inicio.MostrarNotificacion(Titulo, Mensaje, ToolTipIcon.Error);
                 CargarReservas();
             }
         }

@@ -29,9 +29,6 @@ namespace Hotel_Vanilla.Vista
         private const int botonizquierdo = 17;
         private Rectangle rectanguloGrid;
 
-        public string Titulo { get; set; }
-        public string Mensaje { get; set; }
-
         //Metodo para cambiar tamanio
         protected override void OnSizeChanged(EventArgs e)
         {
@@ -102,14 +99,6 @@ namespace Hotel_Vanilla.Vista
 
         private void frmInicio_Load(object sender, EventArgs e)
         {
-            var sucesos = cSucesos.UltimoSuceso();
-            foreach(var suceso in sucesos)
-            {
-                Titulo = suceso.tipoSuceso;
-                Mensaje = suceso.descripcion;
-            }
-
-            MostrarNotificacion(Titulo, Mensaje, ToolTipIcon.Info);
             AbrirFormulario<frmDefault>();
             lblHuespedes.Text = huespedes.TotalHuespedes().ToString();
             lblHabitaciones.Text = habitaciones.TotalHabitaciones().ToString();

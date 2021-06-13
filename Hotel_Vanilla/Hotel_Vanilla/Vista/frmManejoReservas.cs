@@ -24,10 +24,16 @@ namespace Hotel_Vanilla.Vista
         {
             Close();
         }
+        CSucesos cSucesos = new CSucesos();
+        frmInicio inicio = new frmInicio();
+
         public Boolean accion = false;
         public String habitacion;
         public String huesped;
         internal object fechaCheckOutLabel;
+
+        public string Titulo { get; set; }
+        public string Mensaje { get; set; }
 
         private void RellenarCB()
         {
@@ -96,14 +102,17 @@ namespace Hotel_Vanilla.Vista
                 {
                     reservas.pagoAdelantado = Convert.ToDecimal(0.0000);
                 }
+
                 else
                 {
                     reservas.pagoAdelantado = Convert.ToDecimal(txtPagoAdelantado.Text);
                 }
+
                 if (txtDescuento.Text == "")
                 {
                     reservas.descuento = Convert.ToDecimal(0.0000);
                 }
+
                 else
                 {
                     reservas.descuento = Convert.ToDecimal(txtDescuento.Text);
@@ -115,6 +124,17 @@ namespace Hotel_Vanilla.Vista
                 //mandando el objeto reservas como parametro al metodo de agrregar reserva
                 Creservas.AgregarReserva(reservas);
                 Limpiar();
+
+                frmMensajeExito.Confirmar("Se ha Ingresado correctamente");
+
+                var sucesos = cSucesos.UltimoSuceso();
+                foreach (var suceso in sucesos)
+                {
+                    Titulo = suceso.tipoSuceso;
+                    Mensaje = suceso.descripcion;
+                }
+
+                inicio.MostrarNotificacion(Titulo, Mensaje, ToolTipIcon.Info);
 
 
             }
@@ -130,18 +150,22 @@ namespace Hotel_Vanilla.Vista
                 {
                     reservas.pagoAdelantado = Convert.ToDecimal(0.0000);
                 }
+
                 else
                 {
                     reservas.pagoAdelantado = Convert.ToDecimal(txtPagoAdelantado.Text);
                 }
+
                 if (txtDescuento.Text == "")
                 {
                     reservas.descuento = Convert.ToDecimal(0.0000);
                 }
+
                 else
                 {
                     reservas.descuento = Convert.ToDecimal(txtDescuento.Text);
                 }
+
                 reservas.total = 0;
                 reservas.idHabitacion_FK = Convert.ToInt32(cbHabitacion.SelectedValue.ToString());
                 reservas.idHuesped_FK = Convert.ToInt32(cbIdHuesped.SelectedValue.ToString());
@@ -149,6 +173,17 @@ namespace Hotel_Vanilla.Vista
                 //mandando el objeto reservas como parametro al metodo de agrregar reserva
                 Creservas.ActualizarReserva(reservas);
                 this.Close();
+
+                frmMensajeExito.Confirmar("Se ha Actualizado correctamente");
+
+                var sucesos = cSucesos.UltimoSuceso();
+                foreach (var suceso in sucesos)
+                {
+                    Titulo = suceso.tipoSuceso;
+                    Mensaje = suceso.descripcion;
+                }
+
+                inicio.MostrarNotificacion(Titulo, Mensaje, ToolTipIcon.Warning);
             }
 
 
@@ -236,26 +271,6 @@ namespace Hotel_Vanilla.Vista
             errorProvider.SetError(cbIdHuesped, "Este campo es obligatorio");
         }
 
-        private void habitacionGuna2ComboBox_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void habitacionLabel_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void totalLabel_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void descuentoLabel_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void numeroDiasTextBox_Leave(object sender, EventArgs e)
         {
             CalcularCheckOut();
@@ -271,12 +286,6 @@ namespace Hotel_Vanilla.Vista
             {
 
             }
-
-        }
-
-        private void fechaCheckInLabel_Click(object sender, EventArgs e)
-        {
-
         }
 
         private void txtPagoAdelantado_KeyPress(object sender, KeyPressEventArgs e)
@@ -300,6 +309,7 @@ namespace Hotel_Vanilla.Vista
                 e.Handled = false;
                 return;
             }
+
             else
             {
                 e.Handled = true;
@@ -327,10 +337,9 @@ namespace Hotel_Vanilla.Vista
                         //la variable se reestablece a 0
                         punto = 0;
                     }
-
                 }
-
             }
+
             AlertarValorMaximo();
         }
         private void AlertarValorMaximo()
@@ -369,9 +378,7 @@ namespace Hotel_Vanilla.Vista
                         //la variable se reestablece a 0
                         punto = 0;
                     }
-
                 }
-
             }
         }
 
