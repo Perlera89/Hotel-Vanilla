@@ -259,12 +259,6 @@
     <Compile Include="Vista\frmManejoHuespedes.Designer.cs">
       <DependentUpon>frmManejoHuespedes.cs</DependentUpon>
     </Compile>
-    <Compile Include="Vista\frmManejoUsuarios.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Vista\frmManejoUsuarios.Designer.cs">
-      <DependentUpon>frmManejoUsuarios.cs</DependentUpon>
-    </Compile>
     <EmbeddedResource Include="Vista\frmAjustes.resx">
       <DependentUpon>frmAjustes.cs</DependentUpon>
     </EmbeddedResource>
@@ -298,9 +292,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Vista\frmManejoReservas.resx">
       <DependentUpon>frmManejoReservas.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Vista\frmManejoUsuarios.resx">
-      <DependentUpon>frmManejoUsuarios.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Vista\frmMensajeAdvertencia.resx">
       <DependentUpon>frmMensajeAdvertencia.cs</DependentUpon>

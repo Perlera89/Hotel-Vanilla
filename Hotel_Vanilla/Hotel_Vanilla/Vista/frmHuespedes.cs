@@ -14,13 +14,19 @@ namespace Hotel_Vanilla.Vista
 {
     public partial class frmHuespedes : Form
     {
+        CHuespedes cHuespedes = new CHuespedes();
+        Huespedes huespedes = new Huespedes();
+        CSucesos cSucesos = new CSucesos();
+        frmInicio inicio = new frmInicio();
+
+        public string Titulo { get; set; }
+        public string Mensaje { get; set; }
+
         public frmHuespedes()
         {
             InitializeComponent();
         }
 
-        CHuespedes cHuespedes = new CHuespedes();
-        Huespedes huespedes = new Huespedes();
 
         private void CargarHuespedes()
         {
@@ -56,7 +62,7 @@ namespace Hotel_Vanilla.Vista
             manejoHuesped.direccionTextBox.Text = dtgHuespedes.CurrentRow.Cells[3].Value.ToString();
             manejoHuesped.telefonoTextBox.Text = dtgHuespedes.CurrentRow.Cells[4].Value.ToString();
             manejoHuesped.correoTextBox.Text = dtgHuespedes.CurrentRow.Cells[5].Value.ToString();
-            manejoHuesped.idEstado_FKTextBox.Text = dtgHuespedes.CurrentRow.Cells[6].Value.ToString();
+            manejoHuesped.txtIdEstado.Text = dtgHuespedes.CurrentRow.Cells[6].Value.ToString();
             manejoHuesped.btnGuardar.Text = "Actualizar";
             manejoHuesped.accion = true;
             manejoHuesped.ShowDialog();
@@ -79,6 +85,17 @@ namespace Hotel_Vanilla.Vista
             {
                 int huesped = Convert.ToInt32(dtgHuespedes.CurrentRow.Cells[0].Value.ToString());
                 cHuespedes.EliminarHuesped(huesped);
+
+                frmMensajeExito.Confirmar("Se ha Eliminado correctamente");
+
+                var sucesos = cSucesos.UltimoSuceso();
+                foreach (var suceso in sucesos)
+                {
+                    Titulo = suceso.tipoSuceso;
+                    Mensaje = suceso.descripcion;
+                }
+                inicio.MostrarNotificacion(Titulo, Mensaje, ToolTipIcon.Error);
+
                 CargarHuespedes();
             }
         }

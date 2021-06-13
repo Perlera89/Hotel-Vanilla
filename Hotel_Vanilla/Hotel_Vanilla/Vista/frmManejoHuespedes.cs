@@ -14,6 +14,12 @@ namespace Hotel_Vanilla.Vista
 {
     public partial class frmManejoHuespedes : Form
     {
+        frmInicio inicio = new frmInicio();
+        CSucesos cSucesos = new CSucesos();
+        public string Titulo { get; set; }
+        public string Mensaje { get; set; }
+
+        Huespedes huesped = new Huespedes();
 
         public frmManejoHuespedes(/*Huespedes huesped*/)
         {
@@ -22,7 +28,6 @@ namespace Hotel_Vanilla.Vista
             nombresTextBox.Focus();
         }
 
-        Huespedes huesped = new Huespedes();
         void cargarControles()
         {
             idHuesped.Text = huesped.idHuesped.ToString();
@@ -31,7 +36,7 @@ namespace Hotel_Vanilla.Vista
             direccionTextBox.Text = huesped.direccion;
             telefonoTextBox.Text = huesped.telefono;
             correoTextBox.Text = huesped.correo;
-            idEstado_FKTextBox.Text = huesped.idEstado_FK.ToString();
+            txtIdEstado.Text = huesped.idEstado_FK.ToString();
         }
         private void btnCerrar_Click(object sender, EventArgs e)
         {
@@ -47,12 +52,22 @@ namespace Hotel_Vanilla.Vista
                 huesped.direccion = direccionTextBox.Text;
                 huesped.telefono = telefonoTextBox.Text;
                 huesped.correo = correoTextBox.Text;
-                huesped.idEstado_FK = Convert.ToInt32(idEstado_FKTextBox.Text);
+                huesped.idEstado_FK = Convert.ToInt32(txtIdEstado.Text);
 
                 CHuespedes ch = new CHuespedes();
                 ch.ModificarHuesped(huesped);
                 this.Close();
 
+                frmMensajeExito.Confirmar("Se ha Actualizado correctamente");
+
+                var sucesos = cSucesos.UltimoSuceso();
+                foreach (var suceso in sucesos)
+                {
+                    Titulo = suceso.tipoSuceso;
+                    Mensaje = suceso.descripcion;
+                }
+
+                inicio.MostrarNotificacion(Titulo, Mensaje, ToolTipIcon.Warning);
             }
 
             else if (btnGuardar.Text.Equals("Guardar"))
@@ -64,6 +79,17 @@ namespace Hotel_Vanilla.Vista
 
                 cHuespedes.AgregarHuesped(huespedes);
                 this.Close();
+
+                frmMensajeExito.Confirmar("Se ha Ingresado correctamente");
+
+                var sucesos = cSucesos.UltimoSuceso();
+                foreach (var suceso in sucesos)
+                {
+                    Titulo = suceso.tipoSuceso;
+                    Mensaje = suceso.descripcion;
+                }
+
+                inicio.MostrarNotificacion(Titulo, Mensaje, ToolTipIcon.Info);
             }
         }
         public Boolean accion = false;
@@ -85,66 +111,6 @@ namespace Hotel_Vanilla.Vista
         {
             huesped = null;
             this.Close();
-        }
-
-        private void nombresTextBox_Enter(object sender, EventArgs e)
-        {
-
-        }
-
-        private void nombresTextBox_Leave(object sender, EventArgs e)
-        {
-
-        }
-
-        private void apellidosTextBox_Enter(object sender, EventArgs e)
-        {
-
-        }
-
-        private void apellidosTextBox_Leave(object sender, EventArgs e)
-        {
-
-        }
-
-        private void direccionTextBox_Enter(object sender, EventArgs e)
-        {
-
-        }
-
-        private void direccionTextBox_Leave(object sender, EventArgs e)
-        {
-
-        }
-
-        private void telefonoTextBox_Enter(object sender, EventArgs e)
-        {
-
-        }
-
-        private void telefonoTextBox_Leave(object sender, EventArgs e)
-        {
-
-        }
-
-        private void correoTextBox_Enter(object sender, EventArgs e)
-        {
-
-        }
-
-        private void correoTextBox_Leave(object sender, EventArgs e)
-        {
-
-        }
-
-        private void idEstado_FKTextBox_Enter(object sender, EventArgs e)
-        {
-
-        }
-
-        private void idEstado_FKTextBox_Leave(object sender, EventArgs e)
-        {
-
         }
     }
 }

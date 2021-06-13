@@ -42,7 +42,7 @@ namespace Hotel_Vanilla.Vista
             this.apellidosTextBox = new System.Windows.Forms.TextBox();
             this.correoTextBox = new System.Windows.Forms.TextBox();
             this.direccionTextBox = new System.Windows.Forms.TextBox();
-            this.idEstado_FKTextBox = new System.Windows.Forms.TextBox();
+            this.txtIdEstado = new System.Windows.Forms.TextBox();
             this.nombresTextBox = new System.Windows.Forms.TextBox();
             this.telefonoTextBox = new System.Windows.Forms.TextBox();
             this.btnCancelar = new Bunifu.Framework.UI.BunifuFlatButton();
@@ -50,13 +50,13 @@ namespace Hotel_Vanilla.Vista
             this.guna2BorderlessForm1 = new Guna.UI2.WinForms.Guna2BorderlessForm(this.components);
             this.idHuesped = new Bunifu.Framework.UI.BunifuCustomLabel();
             this.cajaId = new Guna.UI2.WinForms.Guna2TextBox();
-            this.huespedesBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.bunifuCustomLabel2 = new Bunifu.Framework.UI.BunifuCustomLabel();
             this.bunifuCustomLabel6 = new Bunifu.Framework.UI.BunifuCustomLabel();
             this.bunifuCustomLabel5 = new Bunifu.Framework.UI.BunifuCustomLabel();
             this.bunifuCustomLabel4 = new Bunifu.Framework.UI.BunifuCustomLabel();
             this.bunifuCustomLabel3 = new Bunifu.Framework.UI.BunifuCustomLabel();
             this.bunifuCustomLabel7 = new Bunifu.Framework.UI.BunifuCustomLabel();
+            this.huespedesBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.panelSuperior.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btnDefault)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.huespedesBindingSource)).BeginInit();
@@ -180,16 +180,16 @@ namespace Hotel_Vanilla.Vista
             this.direccionTextBox.Size = new System.Drawing.Size(360, 27);
             this.direccionTextBox.TabIndex = 3;
             // 
-            // idEstado_FKTextBox
+            // txtIdEstado
             // 
-            this.idEstado_FKTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.huespedesBindingSource, "idEstado_FK", true));
-            this.idEstado_FKTextBox.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.idEstado_FKTextBox.ForeColor = System.Drawing.Color.RoyalBlue;
-            this.idEstado_FKTextBox.Location = new System.Drawing.Point(157, 385);
-            this.idEstado_FKTextBox.Margin = new System.Windows.Forms.Padding(2);
-            this.idEstado_FKTextBox.Name = "idEstado_FKTextBox";
-            this.idEstado_FKTextBox.Size = new System.Drawing.Size(360, 27);
-            this.idEstado_FKTextBox.TabIndex = 6;
+            this.txtIdEstado.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.huespedesBindingSource, "idEstado_FK", true));
+            this.txtIdEstado.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtIdEstado.ForeColor = System.Drawing.Color.RoyalBlue;
+            this.txtIdEstado.Location = new System.Drawing.Point(157, 385);
+            this.txtIdEstado.Margin = new System.Windows.Forms.Padding(2);
+            this.txtIdEstado.Name = "txtIdEstado";
+            this.txtIdEstado.Size = new System.Drawing.Size(360, 27);
+            this.txtIdEstado.TabIndex = 6;
             // 
             // nombresTextBox
             // 
@@ -244,7 +244,7 @@ namespace Hotel_Vanilla.Vista
             this.btnCancelar.OnHovercolor = System.Drawing.Color.Red;
             this.btnCancelar.OnHoverTextColor = System.Drawing.SystemColors.Control;
             this.btnCancelar.selected = false;
-            this.btnCancelar.Size = new System.Drawing.Size(200, 50);
+            this.btnCancelar.Size = new System.Drawing.Size(200, 51);
             this.btnCancelar.TabIndex = 31;
             this.btnCancelar.Text = "Cancelar";
             this.btnCancelar.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -283,7 +283,7 @@ namespace Hotel_Vanilla.Vista
             this.btnGuardar.OnHovercolor = System.Drawing.Color.RoyalBlue;
             this.btnGuardar.OnHoverTextColor = System.Drawing.SystemColors.Control;
             this.btnGuardar.selected = false;
-            this.btnGuardar.Size = new System.Drawing.Size(200, 50);
+            this.btnGuardar.Size = new System.Drawing.Size(200, 51);
             this.btnGuardar.TabIndex = 30;
             this.btnGuardar.Text = "Guardar";
             this.btnGuardar.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -338,10 +338,6 @@ namespace Hotel_Vanilla.Vista
             this.cajaId.Size = new System.Drawing.Size(101, 67);
             this.cajaId.TabIndex = 62;
             this.cajaId.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            // 
-            // huespedesBindingSource
-            // 
-            this.huespedesBindingSource.DataSource = typeof(Hotel_Vanilla.ENTIDAD.Huespedes);
             // 
             // bunifuCustomLabel2
             // 
@@ -409,6 +405,10 @@ namespace Hotel_Vanilla.Vista
             this.bunifuCustomLabel7.TabIndex = 68;
             this.bunifuCustomLabel7.Text = "Estado:";
             // 
+            // huespedesBindingSource
+            // 
+            this.huespedesBindingSource.DataSource = typeof(Hotel_Vanilla.ENTIDAD.Huespedes);
+            // 
             // frmManejoHuespedes
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -425,7 +425,7 @@ namespace Hotel_Vanilla.Vista
             this.Controls.Add(this.apellidosTextBox);
             this.Controls.Add(this.correoTextBox);
             this.Controls.Add(this.direccionTextBox);
-            this.Controls.Add(this.idEstado_FKTextBox);
+            this.Controls.Add(this.txtIdEstado);
             this.Controls.Add(this.nombresTextBox);
             this.Controls.Add(this.telefonoTextBox);
             this.Controls.Add(this.panelInferior);
@@ -463,7 +463,7 @@ namespace Hotel_Vanilla.Vista
         public System.Windows.Forms.TextBox apellidosTextBox;
         public System.Windows.Forms.TextBox correoTextBox;
         public System.Windows.Forms.TextBox direccionTextBox;
-        public System.Windows.Forms.TextBox idEstado_FKTextBox;
+        public System.Windows.Forms.TextBox txtIdEstado;
         public System.Windows.Forms.TextBox nombresTextBox;
         public System.Windows.Forms.TextBox telefonoTextBox;
         public Bunifu.Framework.UI.BunifuFlatButton btnGuardar;

@@ -65,7 +65,6 @@ C:\Users\Manuel Perlera\Documents\GitHub\Hotel_Vainilla\Hotel_Vanilla\Hotel_Vani
 C:\Users\Manuel Perlera\Documents\GitHub\Hotel_Vainilla\Hotel_Vanilla\Hotel_Vanilla\obj\Debug\Hotel_Vanilla.Properties.Resources.resources
 C:\Users\Manuel Perlera\Documents\GitHub\Hotel_Vainilla\Hotel_Vanilla\Hotel_Vanilla\obj\Debug\Hotel_Vanilla.Vista.frmManejoHabitaciones.resources
 C:\Users\Manuel Perlera\Documents\GitHub\Hotel_Vainilla\Hotel_Vanilla\Hotel_Vanilla\obj\Debug\Hotel_Vanilla.Vista.frmManejoReservas.resources
-C:\Users\Manuel Perlera\Documents\GitHub\Hotel_Vainilla\Hotel_Vanilla\Hotel_Vanilla\obj\Debug\Hotel_Vanilla.Vista.frmManejoUsuarios.resources
 C:\Users\Manuel Perlera\Documents\GitHub\Hotel_Vainilla\Hotel_Vanilla\Hotel_Vanilla\obj\Debug\Hotel_Vanilla.Vista.frmMensajeAdvertencia.resources
 C:\Users\Manuel Perlera\Documents\GitHub\Hotel_Vainilla\Hotel_Vanilla\Hotel_Vanilla\obj\Debug\Hotel_Vanilla.Vista.frmMensajeAviso.resources
 C:\Users\Manuel Perlera\Documents\GitHub\Hotel_Vainilla\Hotel_Vanilla\Hotel_Vanilla\obj\Debug\Hotel_Vanilla.Vista.frmMensajeExito.resources

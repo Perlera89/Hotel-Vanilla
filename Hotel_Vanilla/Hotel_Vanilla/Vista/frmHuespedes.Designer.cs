@@ -30,9 +30,9 @@ namespace Hotel_Vanilla.Vista
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmHuespedes));
             this.bunifuCustomLabel1 = new Bunifu.Framework.UI.BunifuCustomLabel();
             this.btnBuscar = new Bunifu.Framework.UI.BunifuImageButton();
@@ -115,9 +115,9 @@ namespace Hotel_Vanilla.Vista
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.panel1.Controls.Add(this.dtgHuespedes);
-            this.panel1.Location = new System.Drawing.Point(25, 68);
+            this.panel1.Location = new System.Drawing.Point(26, 68);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(894, 374);
+            this.panel1.Size = new System.Drawing.Size(896, 374);
             this.panel1.TabIndex = 55;
             // 
             // dtgHuespedes
@@ -125,22 +125,22 @@ namespace Hotel_Vanilla.Vista
             this.dtgHuespedes.AllowUserToAddRows = false;
             this.dtgHuespedes.AllowUserToDeleteRows = false;
             this.dtgHuespedes.AllowUserToResizeRows = false;
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.White;
-            this.dtgHuespedes.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle7.BackColor = System.Drawing.Color.White;
+            this.dtgHuespedes.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle7;
             this.dtgHuespedes.AutoGenerateColumns = false;
             this.dtgHuespedes.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dtgHuespedes.BackgroundColor = System.Drawing.Color.White;
             this.dtgHuespedes.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dtgHuespedes.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
             this.dtgHuespedes.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI", 10.5F);
-            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dtgHuespedes.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle8.Font = new System.Drawing.Font("Segoe UI", 10.5F);
+            dataGridViewCellStyle8.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle8.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle8.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dtgHuespedes.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle8;
             this.dtgHuespedes.ColumnHeadersHeight = 40;
             this.dtgHuespedes.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.dataGridViewTextBoxColumn8,
@@ -151,14 +151,14 @@ namespace Hotel_Vanilla.Vista
             this.dataGridViewTextBoxColumn13,
             this.dataGridViewTextBoxColumn14});
             this.dtgHuespedes.DataSource = this.spMostrarHuespedBindingSource;
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Segoe UI", 10.5F);
-            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dtgHuespedes.DefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle9.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle9.Font = new System.Drawing.Font("Segoe UI", 10.5F);
+            dataGridViewCellStyle9.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            dataGridViewCellStyle9.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle9.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            dataGridViewCellStyle9.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dtgHuespedes.DefaultCellStyle = dataGridViewCellStyle9;
             this.dtgHuespedes.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dtgHuespedes.EnableHeadersVisualStyles = false;
             this.dtgHuespedes.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
@@ -167,7 +167,7 @@ namespace Hotel_Vanilla.Vista
             this.dtgHuespedes.ReadOnly = true;
             this.dtgHuespedes.RowHeadersVisible = false;
             this.dtgHuespedes.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dtgHuespedes.Size = new System.Drawing.Size(894, 374);
+            this.dtgHuespedes.Size = new System.Drawing.Size(896, 374);
             this.dtgHuespedes.TabIndex = 1;
             this.dtgHuespedes.Theme = Guna.UI2.WinForms.Enums.DataGridViewPresetThemes.Default;
             this.dtgHuespedes.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White;
@@ -268,7 +268,7 @@ namespace Hotel_Vanilla.Vista
             this.btnAgregar.IconVisible = true;
             this.btnAgregar.IconZoom = 90D;
             this.btnAgregar.IsTab = false;
-            this.btnAgregar.Location = new System.Drawing.Point(22, 447);
+            this.btnAgregar.Location = new System.Drawing.Point(26, 448);
             this.btnAgregar.Name = "btnAgregar";
             this.btnAgregar.Normalcolor = System.Drawing.SystemColors.Control;
             this.btnAgregar.OnHovercolor = System.Drawing.Color.RoyalBlue;
@@ -305,7 +305,7 @@ namespace Hotel_Vanilla.Vista
             this.btnActualizar.IconVisible = true;
             this.btnActualizar.IconZoom = 90D;
             this.btnActualizar.IsTab = false;
-            this.btnActualizar.Location = new System.Drawing.Point(203, 447);
+            this.btnActualizar.Location = new System.Drawing.Point(207, 448);
             this.btnActualizar.Name = "btnActualizar";
             this.btnActualizar.Normalcolor = System.Drawing.SystemColors.Control;
             this.btnActualizar.OnHovercolor = System.Drawing.Color.RoyalBlue;
@@ -342,7 +342,7 @@ namespace Hotel_Vanilla.Vista
             this.btnEliminar.IconVisible = true;
             this.btnEliminar.IconZoom = 90D;
             this.btnEliminar.IsTab = false;
-            this.btnEliminar.Location = new System.Drawing.Point(746, 447);
+            this.btnEliminar.Location = new System.Drawing.Point(744, 448);
             this.btnEliminar.Name = "btnEliminar";
             this.btnEliminar.Normalcolor = System.Drawing.SystemColors.Control;
             this.btnEliminar.OnHovercolor = System.Drawing.Color.RoyalBlue;

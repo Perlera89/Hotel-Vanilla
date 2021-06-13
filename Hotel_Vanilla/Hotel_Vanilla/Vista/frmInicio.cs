@@ -18,6 +18,7 @@ namespace Hotel_Vanilla.Vista
     {
         CHuespedes huespedes = new CHuespedes();
         CHabitaciones habitaciones = new CHabitaciones();
+        CSucesos cSucesos = new CSucesos();
         public frmInicio()
         {
             InitializeComponent();
@@ -27,6 +28,9 @@ namespace Hotel_Vanilla.Vista
         private const int areamouse = 132;
         private const int botonizquierdo = 17;
         private Rectangle rectanguloGrid;
+
+        public string Titulo { get; set; }
+        public string Mensaje { get; set; }
 
         //Metodo para cambiar tamanio
         protected override void OnSizeChanged(EventArgs e)
@@ -84,13 +88,13 @@ namespace Hotel_Vanilla.Vista
         int lx, ly;
         int sw, sh;
 
-        public void MostrarNotificacion()
+        public void MostrarNotificacion(string titulo, string mensaje, ToolTipIcon icono)
         {
             notificacion.Icon = new Icon(Path.GetFullPath(@"../../Logo.ico"));
-            notificacion.Text = "Tutoriales y mas";
-            notificacion.BalloonTipTitle = "Notificacion";
-            notificacion.BalloonTipText = "Prueba de notificacion";
-            notificacion.BalloonTipIcon = ToolTipIcon.Warning;
+            notificacion.Text = "Se han realizado cambios en el sistema";
+            notificacion.BalloonTipTitle = titulo;
+            notificacion.BalloonTipText = mensaje;
+            notificacion.BalloonTipIcon = icono;
 
             notificacion.Visible = true;
             notificacion.ShowBalloonTip(300);
@@ -98,7 +102,14 @@ namespace Hotel_Vanilla.Vista
 
         private void frmInicio_Load(object sender, EventArgs e)
         {
-            MostrarNotificacion();
+            var sucesos = cSucesos.UltimoSuceso();
+            foreach(var suceso in sucesos)
+            {
+                Titulo = suceso.tipoSuceso;
+                Mensaje = suceso.descripcion;
+            }
+
+            MostrarNotificacion(Titulo, Mensaje, ToolTipIcon.Info);
             AbrirFormulario<frmDefault>();
             lblHuespedes.Text = huespedes.TotalHuespedes().ToString();
             lblHabitaciones.Text = habitaciones.TotalHabitaciones().ToString();
