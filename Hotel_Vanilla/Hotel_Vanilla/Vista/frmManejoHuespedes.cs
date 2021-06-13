@@ -1,4 +1,5 @@
-﻿using Hotel_Vanilla.CONTROLADOR;
+﻿using Dapper;
+using Hotel_Vanilla.CONTROLADOR;
 using Hotel_Vanilla.ENTIDAD;
 using System;
 using System.Collections.Generic;
@@ -19,6 +20,7 @@ namespace Hotel_Vanilla.Vista
         public string Titulo { get; set; }
         public string Mensaje { get; set; }
         public Boolean accion = false;
+        public string Estado { get; set; }
 
         Huespedes huesped = new Huespedes();
 
@@ -26,6 +28,26 @@ namespace Hotel_Vanilla.Vista
         {
             InitializeComponent();
             txtNombres.Focus();
+        }
+
+        private void RellenarComboBox()
+        {
+            cbEstado.Text = Estado;
+        }
+
+        private void CargarEstados()
+        {
+            IDbConnection conexion = Conexion.conectar();
+            List<Estados> estados = new List<Estados>();
+            string consulta = "select * from Estados";
+            conexion.Open();
+            estados = conexion.Query<Estados>(consulta, commandType: CommandType.Text).ToList();
+            conexion.Close();
+
+            cbEstado.DataSource = estados;
+            cbEstado.DisplayMember = "nombreEstado";
+            cbEstado.ValueMember = "idEstado";
+            //cbIdHuesped.SelectedIndex = 1;
         }
 
         public void cargarControles()
@@ -36,7 +58,7 @@ namespace Hotel_Vanilla.Vista
             txtDireccion.Text = huesped.direccion;
             txtTelefono.Text = huesped.telefono;
             txtCorreo.Text = huesped.correo;
-            txtEstado.Text = huesped.idEstado_FK.ToString();
+            cbEstado.Text = huesped.idEstado_FK.ToString();
         }
 
         public void Limpiar()
@@ -46,7 +68,6 @@ namespace Hotel_Vanilla.Vista
             txtDireccion.Clear();
             txtTelefono.Clear();
             txtCorreo.Clear();
-            txtEstado.Clear();
         }
 
         private void btnCerrar_Click(object sender, EventArgs e)
@@ -63,7 +84,7 @@ namespace Hotel_Vanilla.Vista
                 huesped.direccion = txtDireccion.Text;
                 huesped.telefono = txtTelefono.Text;
                 huesped.correo = txtCorreo.Text;
-                huesped.idEstado_FK = Convert.ToInt32(txtEstado.Text);
+                huesped.idEstado_FK = Convert.ToInt32(cbEstado.SelectedValue.ToString());
 
                 CHuespedes ch = new CHuespedes();
                 ch.ModificarHuesped(huesped);
@@ -110,6 +131,8 @@ namespace Hotel_Vanilla.Vista
 
         private void frmManejoHuespedes_Load(object sender, EventArgs e)
         {
+            CargarEstados();
+            RellenarComboBox();
             if (accion == false)
             {
                 huespedesBindingSource.AddNew();

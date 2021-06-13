@@ -34,6 +34,7 @@ namespace Hotel_Vanilla.Vista
 
         private void btnGuardar_Click(object sender, EventArgs e)
         {
+            Habitaciones habitaciones = new Habitaciones();
             BorrarValidacion();
             if (ValidarCampos() && btnGuardar.Text=="Guardar")
             {
@@ -83,7 +84,6 @@ namespace Hotel_Vanilla.Vista
         {
             numeroHabitacionTextBox.Focus();
             cargarCBTipoHabitacion();
-            //cbTipoHabitacion.Text = "Hola";
             cbTipoHabitacion.Text=tipoHabitacion;
 
             if (accion==false)

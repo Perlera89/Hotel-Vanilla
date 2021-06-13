@@ -42,7 +42,6 @@ namespace Hotel_Vanilla.Vista
             this.txtApellidos = new System.Windows.Forms.TextBox();
             this.txtCorreo = new System.Windows.Forms.TextBox();
             this.txtDireccion = new System.Windows.Forms.TextBox();
-            this.txtEstado = new System.Windows.Forms.TextBox();
             this.txtNombres = new System.Windows.Forms.TextBox();
             this.txtTelefono = new System.Windows.Forms.TextBox();
             this.btnCancelar = new Bunifu.Framework.UI.BunifuFlatButton();
@@ -56,6 +55,7 @@ namespace Hotel_Vanilla.Vista
             this.bunifuCustomLabel4 = new Bunifu.Framework.UI.BunifuCustomLabel();
             this.bunifuCustomLabel3 = new Bunifu.Framework.UI.BunifuCustomLabel();
             this.bunifuCustomLabel7 = new Bunifu.Framework.UI.BunifuCustomLabel();
+            this.cbEstado = new Guna.UI2.WinForms.Guna2ComboBox();
             this.huespedesBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.panelSuperior.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btnDefault)).BeginInit();
@@ -137,7 +137,7 @@ namespace Hotel_Vanilla.Vista
             // 
             this.panelInferior.BackColor = System.Drawing.Color.Gold;
             this.panelInferior.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panelInferior.Location = new System.Drawing.Point(0, 450);
+            this.panelInferior.Location = new System.Drawing.Point(0, 460);
             this.panelInferior.Name = "panelInferior";
             this.panelInferior.Size = new System.Drawing.Size(800, 50);
             this.panelInferior.TabIndex = 45;
@@ -152,10 +152,10 @@ namespace Hotel_Vanilla.Vista
             this.txtApellidos.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.huespedesBindingSource, "apellidos", true));
             this.txtApellidos.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtApellidos.ForeColor = System.Drawing.Color.RoyalBlue;
-            this.txtApellidos.Location = new System.Drawing.Point(157, 219);
+            this.txtApellidos.Location = new System.Drawing.Point(167, 219);
             this.txtApellidos.Margin = new System.Windows.Forms.Padding(2);
             this.txtApellidos.Name = "txtApellidos";
-            this.txtApellidos.Size = new System.Drawing.Size(360, 27);
+            this.txtApellidos.Size = new System.Drawing.Size(353, 27);
             this.txtApellidos.TabIndex = 2;
             // 
             // txtCorreo
@@ -163,10 +163,10 @@ namespace Hotel_Vanilla.Vista
             this.txtCorreo.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.huespedesBindingSource, "correo", true));
             this.txtCorreo.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtCorreo.ForeColor = System.Drawing.Color.RoyalBlue;
-            this.txtCorreo.Location = new System.Drawing.Point(157, 344);
+            this.txtCorreo.Location = new System.Drawing.Point(167, 344);
             this.txtCorreo.Margin = new System.Windows.Forms.Padding(2);
             this.txtCorreo.Name = "txtCorreo";
-            this.txtCorreo.Size = new System.Drawing.Size(360, 27);
+            this.txtCorreo.Size = new System.Drawing.Size(353, 27);
             this.txtCorreo.TabIndex = 5;
             // 
             // txtDireccion
@@ -174,32 +174,21 @@ namespace Hotel_Vanilla.Vista
             this.txtDireccion.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.huespedesBindingSource, "direccion", true));
             this.txtDireccion.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtDireccion.ForeColor = System.Drawing.Color.RoyalBlue;
-            this.txtDireccion.Location = new System.Drawing.Point(157, 260);
+            this.txtDireccion.Location = new System.Drawing.Point(167, 260);
             this.txtDireccion.Margin = new System.Windows.Forms.Padding(2);
             this.txtDireccion.Name = "txtDireccion";
-            this.txtDireccion.Size = new System.Drawing.Size(360, 27);
+            this.txtDireccion.Size = new System.Drawing.Size(353, 27);
             this.txtDireccion.TabIndex = 3;
-            // 
-            // txtEstado
-            // 
-            this.txtEstado.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.huespedesBindingSource, "idEstado_FK", true));
-            this.txtEstado.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtEstado.ForeColor = System.Drawing.Color.RoyalBlue;
-            this.txtEstado.Location = new System.Drawing.Point(157, 385);
-            this.txtEstado.Margin = new System.Windows.Forms.Padding(2);
-            this.txtEstado.Name = "txtEstado";
-            this.txtEstado.Size = new System.Drawing.Size(360, 27);
-            this.txtEstado.TabIndex = 6;
             // 
             // txtNombres
             // 
             this.txtNombres.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.huespedesBindingSource, "nombres", true));
             this.txtNombres.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtNombres.ForeColor = System.Drawing.Color.RoyalBlue;
-            this.txtNombres.Location = new System.Drawing.Point(157, 181);
+            this.txtNombres.Location = new System.Drawing.Point(167, 181);
             this.txtNombres.Margin = new System.Windows.Forms.Padding(2);
             this.txtNombres.Name = "txtNombres";
-            this.txtNombres.Size = new System.Drawing.Size(360, 27);
+            this.txtNombres.Size = new System.Drawing.Size(353, 27);
             this.txtNombres.TabIndex = 1;
             // 
             // txtTelefono
@@ -207,10 +196,10 @@ namespace Hotel_Vanilla.Vista
             this.txtTelefono.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.huespedesBindingSource, "telefono", true));
             this.txtTelefono.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtTelefono.ForeColor = System.Drawing.Color.RoyalBlue;
-            this.txtTelefono.Location = new System.Drawing.Point(157, 303);
+            this.txtTelefono.Location = new System.Drawing.Point(167, 303);
             this.txtTelefono.Margin = new System.Windows.Forms.Padding(2);
             this.txtTelefono.Name = "txtTelefono";
-            this.txtTelefono.Size = new System.Drawing.Size(360, 27);
+            this.txtTelefono.Size = new System.Drawing.Size(353, 27);
             this.txtTelefono.TabIndex = 4;
             this.txtTelefono.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtTelefono_KeyPress);
             // 
@@ -238,14 +227,14 @@ namespace Hotel_Vanilla.Vista
             this.btnCancelar.IconVisible = true;
             this.btnCancelar.IconZoom = 90D;
             this.btnCancelar.IsTab = false;
-            this.btnCancelar.Location = new System.Drawing.Point(554, 362);
+            this.btnCancelar.Location = new System.Drawing.Point(548, 357);
             this.btnCancelar.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btnCancelar.Name = "btnCancelar";
             this.btnCancelar.Normalcolor = System.Drawing.SystemColors.Control;
             this.btnCancelar.OnHovercolor = System.Drawing.Color.Red;
             this.btnCancelar.OnHoverTextColor = System.Drawing.SystemColors.Control;
             this.btnCancelar.selected = false;
-            this.btnCancelar.Size = new System.Drawing.Size(200, 51);
+            this.btnCancelar.Size = new System.Drawing.Size(206, 51);
             this.btnCancelar.TabIndex = 31;
             this.btnCancelar.Text = "Cancelar";
             this.btnCancelar.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -277,14 +266,14 @@ namespace Hotel_Vanilla.Vista
             this.btnGuardar.IconVisible = true;
             this.btnGuardar.IconZoom = 90D;
             this.btnGuardar.IsTab = false;
-            this.btnGuardar.Location = new System.Drawing.Point(554, 294);
+            this.btnGuardar.Location = new System.Drawing.Point(548, 289);
             this.btnGuardar.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btnGuardar.Name = "btnGuardar";
             this.btnGuardar.Normalcolor = System.Drawing.SystemColors.Control;
             this.btnGuardar.OnHovercolor = System.Drawing.Color.RoyalBlue;
             this.btnGuardar.OnHoverTextColor = System.Drawing.SystemColors.Control;
             this.btnGuardar.selected = false;
-            this.btnGuardar.Size = new System.Drawing.Size(200, 51);
+            this.btnGuardar.Size = new System.Drawing.Size(208, 51);
             this.btnGuardar.TabIndex = 30;
             this.btnGuardar.Text = "Guardar";
             this.btnGuardar.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -345,7 +334,7 @@ namespace Hotel_Vanilla.Vista
             this.bunifuCustomLabel2.AutoSize = true;
             this.bunifuCustomLabel2.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bunifuCustomLabel2.ForeColor = System.Drawing.Color.RoyalBlue;
-            this.bunifuCustomLabel2.Location = new System.Drawing.Point(52, 181);
+            this.bunifuCustomLabel2.Location = new System.Drawing.Point(62, 181);
             this.bunifuCustomLabel2.Name = "bunifuCustomLabel2";
             this.bunifuCustomLabel2.Size = new System.Drawing.Size(83, 19);
             this.bunifuCustomLabel2.TabIndex = 63;
@@ -356,7 +345,7 @@ namespace Hotel_Vanilla.Vista
             this.bunifuCustomLabel6.AutoSize = true;
             this.bunifuCustomLabel6.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bunifuCustomLabel6.ForeColor = System.Drawing.Color.RoyalBlue;
-            this.bunifuCustomLabel6.Location = new System.Drawing.Point(52, 348);
+            this.bunifuCustomLabel6.Location = new System.Drawing.Point(62, 348);
             this.bunifuCustomLabel6.Name = "bunifuCustomLabel6";
             this.bunifuCustomLabel6.Size = new System.Drawing.Size(65, 19);
             this.bunifuCustomLabel6.TabIndex = 67;
@@ -367,7 +356,7 @@ namespace Hotel_Vanilla.Vista
             this.bunifuCustomLabel5.AutoSize = true;
             this.bunifuCustomLabel5.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bunifuCustomLabel5.ForeColor = System.Drawing.Color.RoyalBlue;
-            this.bunifuCustomLabel5.Location = new System.Drawing.Point(52, 307);
+            this.bunifuCustomLabel5.Location = new System.Drawing.Point(62, 307);
             this.bunifuCustomLabel5.Name = "bunifuCustomLabel5";
             this.bunifuCustomLabel5.Size = new System.Drawing.Size(78, 19);
             this.bunifuCustomLabel5.TabIndex = 66;
@@ -378,7 +367,7 @@ namespace Hotel_Vanilla.Vista
             this.bunifuCustomLabel4.AutoSize = true;
             this.bunifuCustomLabel4.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bunifuCustomLabel4.ForeColor = System.Drawing.Color.RoyalBlue;
-            this.bunifuCustomLabel4.Location = new System.Drawing.Point(52, 264);
+            this.bunifuCustomLabel4.Location = new System.Drawing.Point(62, 264);
             this.bunifuCustomLabel4.Name = "bunifuCustomLabel4";
             this.bunifuCustomLabel4.Size = new System.Drawing.Size(87, 19);
             this.bunifuCustomLabel4.TabIndex = 65;
@@ -389,7 +378,7 @@ namespace Hotel_Vanilla.Vista
             this.bunifuCustomLabel3.AutoSize = true;
             this.bunifuCustomLabel3.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bunifuCustomLabel3.ForeColor = System.Drawing.Color.RoyalBlue;
-            this.bunifuCustomLabel3.Location = new System.Drawing.Point(52, 223);
+            this.bunifuCustomLabel3.Location = new System.Drawing.Point(62, 223);
             this.bunifuCustomLabel3.Name = "bunifuCustomLabel3";
             this.bunifuCustomLabel3.Size = new System.Drawing.Size(85, 19);
             this.bunifuCustomLabel3.TabIndex = 64;
@@ -400,11 +389,33 @@ namespace Hotel_Vanilla.Vista
             this.bunifuCustomLabel7.AutoSize = true;
             this.bunifuCustomLabel7.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bunifuCustomLabel7.ForeColor = System.Drawing.Color.RoyalBlue;
-            this.bunifuCustomLabel7.Location = new System.Drawing.Point(52, 389);
+            this.bunifuCustomLabel7.Location = new System.Drawing.Point(62, 389);
             this.bunifuCustomLabel7.Name = "bunifuCustomLabel7";
             this.bunifuCustomLabel7.Size = new System.Drawing.Size(63, 19);
             this.bunifuCustomLabel7.TabIndex = 68;
             this.bunifuCustomLabel7.Text = "Estado:";
+            // 
+            // cbEstado
+            // 
+            this.cbEstado.BackColor = System.Drawing.Color.Transparent;
+            this.cbEstado.BorderRadius = 14;
+            this.cbEstado.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.huespedesBindingSource, "idEstado_FK", true));
+            this.cbEstado.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.cbEstado.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbEstado.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.cbEstado.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.cbEstado.FocusedState.Parent = this.cbEstado;
+            this.cbEstado.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbEstado.ForeColor = System.Drawing.Color.RoyalBlue;
+            this.cbEstado.FormattingEnabled = true;
+            this.cbEstado.HoverState.Parent = this.cbEstado;
+            this.cbEstado.ItemHeight = 30;
+            this.cbEstado.ItemsAppearance.Parent = this.cbEstado;
+            this.cbEstado.Location = new System.Drawing.Point(167, 377);
+            this.cbEstado.Name = "cbEstado";
+            this.cbEstado.ShadowDecoration.Parent = this.cbEstado;
+            this.cbEstado.Size = new System.Drawing.Size(353, 36);
+            this.cbEstado.TabIndex = 69;
             // 
             // huespedesBindingSource
             // 
@@ -415,7 +426,8 @@ namespace Hotel_Vanilla.Vista
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(800, 500);
+            this.ClientSize = new System.Drawing.Size(800, 510);
+            this.Controls.Add(this.cbEstado);
             this.Controls.Add(this.bunifuCustomLabel7);
             this.Controls.Add(this.bunifuCustomLabel6);
             this.Controls.Add(this.bunifuCustomLabel5);
@@ -426,7 +438,6 @@ namespace Hotel_Vanilla.Vista
             this.Controls.Add(this.txtApellidos);
             this.Controls.Add(this.txtCorreo);
             this.Controls.Add(this.txtDireccion);
-            this.Controls.Add(this.txtEstado);
             this.Controls.Add(this.txtNombres);
             this.Controls.Add(this.txtTelefono);
             this.Controls.Add(this.panelInferior);
@@ -464,7 +475,6 @@ namespace Hotel_Vanilla.Vista
         public System.Windows.Forms.TextBox txtApellidos;
         public System.Windows.Forms.TextBox txtCorreo;
         public System.Windows.Forms.TextBox txtDireccion;
-        public System.Windows.Forms.TextBox txtEstado;
         public System.Windows.Forms.TextBox txtNombres;
         public System.Windows.Forms.TextBox txtTelefono;
         public Bunifu.Framework.UI.BunifuFlatButton btnGuardar;
@@ -477,5 +487,6 @@ namespace Hotel_Vanilla.Vista
         private Bunifu.Framework.UI.BunifuCustomLabel bunifuCustomLabel4;
         private Bunifu.Framework.UI.BunifuCustomLabel bunifuCustomLabel3;
         private Bunifu.Framework.UI.BunifuCustomLabel bunifuCustomLabel2;
+        public Guna.UI2.WinForms.Guna2ComboBox cbEstado;
     }
 }

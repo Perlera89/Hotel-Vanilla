@@ -62,7 +62,7 @@ namespace Hotel_Vanilla.Vista
             manejoHuesped.txtDireccion.Text = dtgHuespedes.CurrentRow.Cells[3].Value.ToString();
             manejoHuesped.txtTelefono.Text = dtgHuespedes.CurrentRow.Cells[4].Value.ToString();
             manejoHuesped.txtCorreo.Text = dtgHuespedes.CurrentRow.Cells[5].Value.ToString();
-            manejoHuesped.txtEstado.Text = dtgHuespedes.CurrentRow.Cells[6].Value.ToString();
+            manejoHuesped.Estado = dtgHuespedes.CurrentRow.Cells[6].Value.ToString();
             manejoHuesped.btnGuardar.Text = "Actualizar";
             manejoHuesped.accion = true;
             manejoHuesped.ShowDialog();

@@ -70,6 +70,7 @@ namespace Hotel_Vanilla.Vista
             cbIdHuesped.ValueMember = "idHuesped";
             //cbIdHuesped.SelectedIndex = 1;
         }
+
         private void CargarHabitaciones()
         {
             IDbConnection conexion = Conexion.conectar();
@@ -138,6 +139,7 @@ namespace Hotel_Vanilla.Vista
 
 
             }
+
             else if (ValidarCampos() && btnGuardar.Text.Equals("Actualizar"))
             {
                 ManejoReservas reservas = new ManejoReservas();
