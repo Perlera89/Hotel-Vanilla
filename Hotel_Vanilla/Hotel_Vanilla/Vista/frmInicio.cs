@@ -1,18 +1,23 @@
-﻿using System;
+﻿using Hotel_Vanilla.CONTROLADOR;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Runtime.InteropServices;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Windows.Media;
 
 namespace Hotel_Vanilla.Vista
 {
     public partial class frmInicio : Form
     {
+        CHuespedes huespedes = new CHuespedes();
+        CHabitaciones habitaciones = new CHabitaciones();
         public frmInicio()
         {
             InitializeComponent();
@@ -66,22 +71,37 @@ namespace Hotel_Vanilla.Vista
         protected override void OnPaint(PaintEventArgs e)
         {
             //Establecemos color
-            SolidBrush solid = new SolidBrush(Color.Gold);
-            e.Graphics.FillRectangle(solid, rectanguloGrid);
+            SolidBrush solid = new SolidBrush(System.Drawing.Color.Gold);
+            e.Graphics.FillRectangle(solid, rectanguloGrid);    
 
             //enviamos el color a la base
             base.OnPaint(e);
 
-            ControlPaint.DrawSizeGrip(e.Graphics, Color.Gold, rectanguloGrid);
+            ControlPaint.DrawSizeGrip(e.Graphics, System.Drawing.Color.Gold, rectanguloGrid);
         }
 
         //Maximizar y minimizar
         int lx, ly;
         int sw, sh;
 
+        public void MostrarNotificacion()
+        {
+            notificacion.Icon = new Icon(Path.GetFullPath(@"../../Logo.ico"));
+            notificacion.Text = "Tutoriales y mas";
+            notificacion.BalloonTipTitle = "Notificacion";
+            notificacion.BalloonTipText = "Prueba de notificacion";
+            notificacion.BalloonTipIcon = ToolTipIcon.Warning;
+
+            notificacion.Visible = true;
+            notificacion.ShowBalloonTip(300);
+        }
+
         private void frmInicio_Load(object sender, EventArgs e)
         {
+            MostrarNotificacion();
             AbrirFormulario<frmDefault>();
+            lblHuespedes.Text = huespedes.TotalHuespedes().ToString();
+            lblHabitaciones.Text = habitaciones.TotalHabitaciones().ToString();
         }
 
         private void btnCerrar_Click(object sender, EventArgs e)
@@ -137,7 +157,7 @@ namespace Hotel_Vanilla.Vista
 
         private void btnCerrar_MouseEnter(object sender, EventArgs e)
         {
-            btnCerrar.BackColor = Color.Crimson;
+            btnCerrar.BackColor = System.Drawing.Color.Crimson;
         }
 
         private void btnProductos_Click(object sender, EventArgs e)
@@ -153,11 +173,6 @@ namespace Hotel_Vanilla.Vista
         private void btnDocumentos_Click(object sender, EventArgs e)
         {
             AbrirFormulario<frmHabitaciones>();
-        }
-
-        private void btnUsuarios_Click(object sender, EventArgs e)
-        {
-            AbrirFormulario<frmUsuarios>();
         }
 
         private void btnPerfil_Click(object sender, EventArgs e)
@@ -210,8 +225,6 @@ namespace Hotel_Vanilla.Vista
 
         private void btnUsuarios_Click_1(object sender, EventArgs e)
         {
-            AbrirFormulario<frmUsuarios>();
-            this.Text = "Hotel Vanilla - Usuarios";
         }
 
         private void btnAjustes_Click(object sender, EventArgs e)
@@ -220,9 +233,15 @@ namespace Hotel_Vanilla.Vista
             this.Text = "Hotel Vanilla - Ajustes";
         }
 
+        private void notificacion_Click(object sender, EventArgs e)
+        {
+            if (WindowState == FormWindowState.Minimized)
+                this.WindowState = FormWindowState.Normal;
+        }
+
         private void btnCerrar_MouseLeave(object sender, EventArgs e)
         {
-            btnCerrar.BackColor = Color.RoyalBlue;
+            btnCerrar.BackColor = System.Drawing.Color.RoyalBlue;
         }
 
         //Metodo para abrir un nuevo formulario en el contenedor

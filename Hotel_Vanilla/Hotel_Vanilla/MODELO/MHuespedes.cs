@@ -12,14 +12,14 @@ namespace Hotel_Vanilla.MODELO
     class MHuespedes
     {
         //Modelo para consultar huespedes con el procedimiento
-        IDbConnection cn = Conexion.conectar();
+        IDbConnection conexion = Hotel_Vanilla.Conexion.conectar();
         public List<spMostrarHuesped> ConsultarHuespedes()
         {
             List<spMostrarHuesped> Huespedes = new List<spMostrarHuesped>();
             string consulta = "sp_Mostrarhuesped";
-            cn.Open();
-            Huespedes = cn.Query<spMostrarHuesped>(consulta, commandType: CommandType.StoredProcedure).ToList();
-            cn.Close();
+            conexion.Open();
+            Huespedes = conexion.Query<spMostrarHuesped>(consulta, commandType: CommandType.StoredProcedure).ToList();
+            conexion.Close();
             return Huespedes;
         }
 
@@ -34,9 +34,9 @@ namespace Hotel_Vanilla.MODELO
             parametros.Add("@telefono", Huespedes.telefono, DbType.String);
             parametros.Add("@correo", Huespedes.correo, DbType.String);
             parametros.Add("@idEstado_Fk", Huespedes.idEstado_FK, DbType.Int32);
-            cn.Open();
-            cn.Execute(consulta, parametros, commandType: CommandType.StoredProcedure);
-            cn.Close();
+            conexion.Open();
+            conexion.Execute(consulta, parametros, commandType: CommandType.StoredProcedure);
+            conexion.Close();
         }
 
         //Modelo para eliminar huespedes con el procedimiento
@@ -45,9 +45,9 @@ namespace Hotel_Vanilla.MODELO
             string consulta = "sp_eliminarhuesped";
             DynamicParameters parametros = new DynamicParameters();
             parametros.Add("@id", idHuesped, DbType.Int32);
-            cn.Open();
-            cn.Execute(consulta, parametros, commandType: CommandType.StoredProcedure);
-            cn.Close();
+            conexion.Open();
+            conexion.Execute(consulta, parametros, commandType: CommandType.StoredProcedure);
+            conexion.Close();
         }
 
         //Modelo para actualizar huespedes con el procedimiento
@@ -62,9 +62,9 @@ namespace Hotel_Vanilla.MODELO
             parametros.Add("@telefono", huesped.telefono, DbType.String);
             parametros.Add("@correo", huesped.correo, DbType.String);
             parametros.Add("@idEstado_fk", huesped.idEstado_FK, DbType.Int32);
-            cn.Open();
-            cn.Execute(consulta, parametros, commandType: CommandType.StoredProcedure);
-            cn.Close();
+            conexion.Open();
+            conexion.Execute(consulta, parametros, commandType: CommandType.StoredProcedure);
+            conexion.Close();
         }
 
         //Modelo para la busqueda de huespedes
@@ -74,9 +74,20 @@ namespace Hotel_Vanilla.MODELO
             string consulta = "sp_BuscarHuesped";
             DynamicParameters parametro = new DynamicParameters();
             parametro.Add("@buscador", buscador);
-            cn.Open();
-            Huespedes = cn.Query<spBuscarHuesped>(consulta, parametro, commandType: CommandType.StoredProcedure).ToList();
-            cn.Close();
+            conexion.Open();
+            Huespedes = conexion.Query<spBuscarHuesped>(consulta, parametro, commandType: CommandType.StoredProcedure).ToList();
+            conexion.Close();
+            return Huespedes;
+        }
+
+        //Consulta para mostrar el total de Huespedes
+        public int TotalHuespedes()
+        {
+            int Huespedes;
+            string consulta = "sp_TotalHuespedes";
+            conexion.Open();
+            Huespedes = conexion.QuerySingle<int>(consulta, commandType: CommandType.StoredProcedure);
+            conexion.Close();
             return Huespedes;
         }
     }

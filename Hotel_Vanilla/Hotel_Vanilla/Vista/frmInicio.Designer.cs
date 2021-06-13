@@ -37,6 +37,7 @@ namespace Hotel_Vanilla.Vista
             this.panelInferior = new System.Windows.Forms.Panel();
             this.guna2ResizeBox2 = new Guna.UI2.WinForms.Guna2ResizeBox();
             this.panelSideBar = new System.Windows.Forms.Panel();
+            this.label3 = new System.Windows.Forms.Label();
             this.bunifuSeparator2 = new Bunifu.Framework.UI.BunifuSeparator();
             this.bunifuSeparator1 = new Bunifu.Framework.UI.BunifuSeparator();
             this.lblUsuario = new System.Windows.Forms.Label();
@@ -44,6 +45,10 @@ namespace Hotel_Vanilla.Vista
             this.label1 = new System.Windows.Forms.Label();
             this.bunifuElipse1 = new Bunifu.Framework.UI.BunifuElipse(this.components);
             this.bunifuElipse2 = new Bunifu.Framework.UI.BunifuElipse(this.components);
+            this.label4 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
+            this.lblHabitaciones = new System.Windows.Forms.Label();
+            this.lblHuespedes = new System.Windows.Forms.Label();
             this.btnAjustes = new Bunifu.Framework.UI.BunifuImageButton();
             this.btnSucesos = new Bunifu.Framework.UI.BunifuFlatButton();
             this.btnHabitaciones = new Bunifu.Framework.UI.BunifuFlatButton();
@@ -56,7 +61,7 @@ namespace Hotel_Vanilla.Vista
             this.btnAmpliar = new System.Windows.Forms.Button();
             this.btnMinimizar = new System.Windows.Forms.Button();
             this.btnCerrar = new System.Windows.Forms.Button();
-            this.label3 = new System.Windows.Forms.Label();
+            this.notificacion = new System.Windows.Forms.NotifyIcon(this.components);
             this.panelPrincipal.SuspendLayout();
             this.panelSuperior1.SuspendLayout();
             this.panelInferior.SuspendLayout();
@@ -109,6 +114,10 @@ namespace Hotel_Vanilla.Vista
             // panelInferior
             // 
             this.panelInferior.BackColor = System.Drawing.Color.Gold;
+            this.panelInferior.Controls.Add(this.lblHuespedes);
+            this.panelInferior.Controls.Add(this.lblHabitaciones);
+            this.panelInferior.Controls.Add(this.label5);
+            this.panelInferior.Controls.Add(this.label4);
             this.panelInferior.Controls.Add(this.guna2ResizeBox2);
             this.panelInferior.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.panelInferior.Enabled = false;
@@ -148,6 +157,17 @@ namespace Hotel_Vanilla.Vista
             this.panelSideBar.Name = "panelSideBar";
             this.panelSideBar.Size = new System.Drawing.Size(230, 700);
             this.panelSideBar.TabIndex = 1;
+            // 
+            // label3
+            // 
+            this.label3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(100, 641);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(83, 25);
+            this.label3.TabIndex = 12;
+            this.label3.Text = "Ajustes";
             // 
             // bunifuSeparator2
             // 
@@ -214,6 +234,54 @@ namespace Hotel_Vanilla.Vista
             // 
             this.bunifuElipse2.ElipseRadius = 20;
             this.bunifuElipse2.TargetControl = this.panelContenedor;
+            // 
+            // label4
+            // 
+            this.label4.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.ForeColor = System.Drawing.Color.Black;
+            this.label4.Location = new System.Drawing.Point(261, 38);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(155, 19);
+            this.label4.TabIndex = 4;
+            this.label4.Text = "Total Habitaciones:";
+            // 
+            // label5
+            // 
+            this.label5.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.ForeColor = System.Drawing.Color.Black;
+            this.label5.Location = new System.Drawing.Point(505, 38);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(138, 19);
+            this.label5.TabIndex = 5;
+            this.label5.Text = "Total Huespedes:";
+            // 
+            // lblHabitaciones
+            // 
+            this.lblHabitaciones.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.lblHabitaciones.AutoSize = true;
+            this.lblHabitaciones.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblHabitaciones.ForeColor = System.Drawing.Color.Black;
+            this.lblHabitaciones.Location = new System.Drawing.Point(422, 38);
+            this.lblHabitaciones.Name = "lblHabitaciones";
+            this.lblHabitaciones.Size = new System.Drawing.Size(27, 19);
+            this.lblHabitaciones.TabIndex = 6;
+            this.lblHabitaciones.Text = "- -";
+            // 
+            // lblHuespedes
+            // 
+            this.lblHuespedes.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.lblHuespedes.AutoSize = true;
+            this.lblHuespedes.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblHuespedes.ForeColor = System.Drawing.Color.Black;
+            this.lblHuespedes.Location = new System.Drawing.Point(649, 38);
+            this.lblHuespedes.Name = "lblHuespedes";
+            this.lblHuespedes.Size = new System.Drawing.Size(27, 19);
+            this.lblHuespedes.TabIndex = 7;
+            this.lblHuespedes.Text = "- -";
             // 
             // btnAjustes
             // 
@@ -416,7 +484,6 @@ namespace Hotel_Vanilla.Vista
             this.btnUsuarios.TabIndex = 0;
             this.btnUsuarios.TabStop = false;
             this.btnUsuarios.Zoom = 10;
-            this.btnUsuarios.Click += new System.EventHandler(this.btnUsuarios_Click_1);
             // 
             // btnDefault
             // 
@@ -506,16 +573,11 @@ namespace Hotel_Vanilla.Vista
             this.btnCerrar.MouseEnter += new System.EventHandler(this.btnCerrar_MouseEnter);
             this.btnCerrar.MouseLeave += new System.EventHandler(this.btnCerrar_MouseLeave);
             // 
-            // label3
+            // notificacion
             // 
-            this.label3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(100, 641);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(83, 25);
-            this.label3.TabIndex = 12;
-            this.label3.Text = "Ajustes";
+            this.notificacion.Text = "notifyIcon1";
+            this.notificacion.Visible = true;
+            this.notificacion.Click += new System.EventHandler(this.notificacion_Click);
             // 
             // frmInicio
             // 
@@ -534,6 +596,7 @@ namespace Hotel_Vanilla.Vista
             this.panelPrincipal.ResumeLayout(false);
             this.panelSuperior1.ResumeLayout(false);
             this.panelInferior.ResumeLayout(false);
+            this.panelInferior.PerformLayout();
             this.panelSideBar.ResumeLayout(false);
             this.panelSideBar.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btnAjustes)).EndInit();
@@ -571,5 +634,10 @@ namespace Hotel_Vanilla.Vista
         private System.Windows.Forms.Panel panelContenedor;
         private Bunifu.Framework.UI.BunifuImageButton btnAjustes;
         private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label lblHuespedes;
+        private System.Windows.Forms.Label lblHabitaciones;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.NotifyIcon notificacion;
     }
 }

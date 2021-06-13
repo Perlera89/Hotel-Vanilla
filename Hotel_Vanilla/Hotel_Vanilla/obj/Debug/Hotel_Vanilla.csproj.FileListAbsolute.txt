@@ -73,7 +73,6 @@ C:\Users\Manuel Perlera\Documents\GitHub\Hotel_Vainilla\Hotel_Vanilla\Hotel_Vani
 C:\Users\Manuel Perlera\Documents\GitHub\Hotel_Vainilla\Hotel_Vanilla\Hotel_Vanilla\obj\Debug\Hotel_Vanilla.Vista.frmRegister.resources
 C:\Users\Manuel Perlera\Documents\GitHub\Hotel_Vainilla\Hotel_Vanilla\Hotel_Vanilla\obj\Debug\Hotel_Vanilla.Vista.frmSplash.resources
 C:\Users\Manuel Perlera\Documents\GitHub\Hotel_Vainilla\Hotel_Vanilla\Hotel_Vanilla\obj\Debug\Hotel_Vanilla.Vista.frmSucesos.resources
-C:\Users\Manuel Perlera\Documents\GitHub\Hotel_Vainilla\Hotel_Vanilla\Hotel_Vanilla\obj\Debug\Hotel_Vanilla.Vista.frmUsuarios.resources
 C:\Users\Manuel Perlera\Documents\GitHub\Hotel_Vainilla\Hotel_Vanilla\Hotel_Vanilla\obj\Debug\Hotel_Vanilla.Vista.frmManejoHuespedes.resources
 C:\Users\Manuel Perlera\Documents\GitHub\Hotel_Vainilla\Hotel_Vanilla\Hotel_Vanilla\obj\Debug\Hotel_Vanilla.csproj.GenerateResource.cache
 C:\Users\Manuel Perlera\Documents\GitHub\Hotel_Vainilla\Hotel_Vanilla\Hotel_Vanilla\obj\Debug\Hotel_Vanilla.csproj.CoreCompileInputs.cache

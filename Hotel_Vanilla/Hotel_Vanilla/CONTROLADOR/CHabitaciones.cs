@@ -35,5 +35,10 @@ namespace Hotel_Vanilla.CONTROLADOR
         {
             Mhabitacion.EliminarHabitacion(id);
         }
+
+        public int TotalHabitaciones()
+        {
+            return Mhabitacion.TotalHabitaciones();
+        }
     }
 }

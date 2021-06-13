@@ -117,7 +117,7 @@ namespace Hotel_Vanilla.Vista
             this.panel1.Controls.Add(this.dtgHuespedes);
             this.panel1.Location = new System.Drawing.Point(25, 68);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(896, 374);
+            this.panel1.Size = new System.Drawing.Size(894, 374);
             this.panel1.TabIndex = 55;
             // 
             // dtgHuespedes
@@ -167,7 +167,7 @@ namespace Hotel_Vanilla.Vista
             this.dtgHuespedes.ReadOnly = true;
             this.dtgHuespedes.RowHeadersVisible = false;
             this.dtgHuespedes.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dtgHuespedes.Size = new System.Drawing.Size(896, 374);
+            this.dtgHuespedes.Size = new System.Drawing.Size(894, 374);
             this.dtgHuespedes.TabIndex = 1;
             this.dtgHuespedes.Theme = Guna.UI2.WinForms.Enums.DataGridViewPresetThemes.Default;
             this.dtgHuespedes.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White;

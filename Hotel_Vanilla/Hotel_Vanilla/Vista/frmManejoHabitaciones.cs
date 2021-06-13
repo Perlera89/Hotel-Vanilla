@@ -47,6 +47,9 @@ namespace Hotel_Vanilla.Vista
                                                 Convert.ToDecimal(tarifaTextBox.Text),
                                                 Convert.ToInt32(cbTipoHabitacion.SelectedValue.ToString()));
                 this.Close();
+
+                frmInicio inicio = new frmInicio();
+                inicio.MostrarNotificacion();
             }
         }
         public String tipoHabitacion;

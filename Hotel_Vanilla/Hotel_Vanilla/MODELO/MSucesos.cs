@@ -45,5 +45,16 @@ namespace Hotel_Vanilla.MODELO
             cn.Close();
             return Sucesos;
         }
+
+        //Consulta para mostrar el ultimo Suceso
+        public List<Sucesos> UltimoSuceso()
+        {
+            List<Sucesos> Sucesos = new List<Sucesos>();
+            string consulta = "sp_UltimoSuceso";
+            cn.Open();
+            Sucesos = cn.Query<Sucesos>(consulta, commandType: CommandType.StoredProcedure).ToList();
+            cn.Close();
+            return Sucesos;
+        }
     }
 }

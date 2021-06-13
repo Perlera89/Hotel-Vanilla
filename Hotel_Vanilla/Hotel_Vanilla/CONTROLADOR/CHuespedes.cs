@@ -35,5 +35,10 @@ namespace Hotel_Vanilla.CONTROLADOR
         {
             mHuespedes.ActualizarHuesped(huesped);
         }
+
+        public int TotalHuespedes()
+        {
+            return mHuespedes.TotalHuespedes();
+        }
     }
 }

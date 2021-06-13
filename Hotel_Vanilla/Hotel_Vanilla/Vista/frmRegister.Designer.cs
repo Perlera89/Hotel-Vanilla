@@ -65,33 +65,36 @@ namespace Hotel_Vanilla.Vista
             claveLabel.AutoSize = true;
             claveLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             claveLabel.ForeColor = System.Drawing.Color.RoyalBlue;
-            claveLabel.Location = new System.Drawing.Point(282, 329);
+            claveLabel.Location = new System.Drawing.Point(188, 214);
+            claveLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             claveLabel.Name = "claveLabel";
-            claveLabel.Size = new System.Drawing.Size(81, 29);
+            claveLabel.Size = new System.Drawing.Size(58, 20);
             claveLabel.TabIndex = 9;
-            claveLabel.Text = "clave:";
+            claveLabel.Text = "Clave:";
             // 
             // correoLabel
             // 
             correoLabel.AutoSize = true;
             correoLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             correoLabel.ForeColor = System.Drawing.Color.RoyalBlue;
-            correoLabel.Location = new System.Drawing.Point(282, 265);
+            correoLabel.Location = new System.Drawing.Point(188, 172);
+            correoLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             correoLabel.Name = "correoLabel";
-            correoLabel.Size = new System.Drawing.Size(96, 29);
+            correoLabel.Size = new System.Drawing.Size(68, 20);
             correoLabel.TabIndex = 11;
-            correoLabel.Text = "correo:";
+            correoLabel.Text = "Correo:";
             // 
             // nombreLabel
             // 
             nombreLabel.AutoSize = true;
             nombreLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             nombreLabel.ForeColor = System.Drawing.Color.RoyalBlue;
-            nombreLabel.Location = new System.Drawing.Point(282, 202);
+            nombreLabel.Location = new System.Drawing.Point(188, 131);
+            nombreLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             nombreLabel.Name = "nombreLabel";
-            nombreLabel.Size = new System.Drawing.Size(109, 29);
+            nombreLabel.Size = new System.Drawing.Size(76, 20);
             nombreLabel.TabIndex = 15;
-            nombreLabel.Text = "nombre:";
+            nombreLabel.Text = "Nombre:";
             // 
             // panelContenedor
             // 
@@ -108,10 +111,9 @@ namespace Hotel_Vanilla.Vista
             this.panelContenedor.Controls.Add(this.btnLogin);
             this.panelContenedor.Controls.Add(this.label1);
             this.panelContenedor.Controls.Add(this.pictureBox1);
-            this.panelContenedor.Location = new System.Drawing.Point(116, 125);
-            this.panelContenedor.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.panelContenedor.Location = new System.Drawing.Point(77, 81);
             this.panelContenedor.Name = "panelContenedor";
-            this.panelContenedor.Size = new System.Drawing.Size(1119, 620);
+            this.panelContenedor.Size = new System.Drawing.Size(746, 403);
             this.panelContenedor.TabIndex = 2;
             // 
             // claveTextBox
@@ -119,9 +121,10 @@ namespace Hotel_Vanilla.Vista
             this.claveTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.usuariosBindingSource, "clave", true));
             this.claveTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.claveTextBox.ForeColor = System.Drawing.Color.RoyalBlue;
-            this.claveTextBox.Location = new System.Drawing.Point(405, 332);
+            this.claveTextBox.Location = new System.Drawing.Point(270, 216);
+            this.claveTextBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.claveTextBox.Name = "claveTextBox";
-            this.claveTextBox.Size = new System.Drawing.Size(410, 35);
+            this.claveTextBox.Size = new System.Drawing.Size(275, 26);
             this.claveTextBox.TabIndex = 10;
             // 
             // usuariosBindingSource
@@ -133,9 +136,10 @@ namespace Hotel_Vanilla.Vista
             this.correoTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.usuariosBindingSource, "correo", true));
             this.correoTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.correoTextBox.ForeColor = System.Drawing.Color.RoyalBlue;
-            this.correoTextBox.Location = new System.Drawing.Point(405, 268);
+            this.correoTextBox.Location = new System.Drawing.Point(270, 174);
+            this.correoTextBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.correoTextBox.Name = "correoTextBox";
-            this.correoTextBox.Size = new System.Drawing.Size(410, 35);
+            this.correoTextBox.Size = new System.Drawing.Size(275, 26);
             this.correoTextBox.TabIndex = 12;
             this.correoTextBox.TextChanged += new System.EventHandler(this.correoTextBox_TextChanged);
             // 
@@ -144,19 +148,19 @@ namespace Hotel_Vanilla.Vista
             this.nombreTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.usuariosBindingSource, "nombre", true));
             this.nombreTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.nombreTextBox.ForeColor = System.Drawing.Color.RoyalBlue;
-            this.nombreTextBox.Location = new System.Drawing.Point(405, 205);
+            this.nombreTextBox.Location = new System.Drawing.Point(270, 133);
+            this.nombreTextBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.nombreTextBox.Name = "nombreTextBox";
-            this.nombreTextBox.Size = new System.Drawing.Size(410, 35);
+            this.nombreTextBox.Size = new System.Drawing.Size(275, 26);
             this.nombreTextBox.TabIndex = 16;
             // 
             // bunifuCustomLabel1
             // 
             this.bunifuCustomLabel1.AutoSize = true;
             this.bunifuCustomLabel1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bunifuCustomLabel1.Location = new System.Drawing.Point(327, 388);
-            this.bunifuCustomLabel1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.bunifuCustomLabel1.Location = new System.Drawing.Point(218, 252);
             this.bunifuCustomLabel1.Name = "bunifuCustomLabel1";
-            this.bunifuCustomLabel1.Size = new System.Drawing.Size(117, 22);
+            this.bunifuCustomLabel1.Size = new System.Drawing.Size(80, 15);
             this.bunifuCustomLabel1.TabIndex = 4;
             this.bunifuCustomLabel1.Text = "Mostrar clave";
             // 
@@ -167,8 +171,8 @@ namespace Hotel_Vanilla.Vista
             this.chkClave.Checked = true;
             this.chkClave.CheckedOnColor = System.Drawing.Color.RoyalBlue;
             this.chkClave.ForeColor = System.Drawing.Color.White;
-            this.chkClave.Location = new System.Drawing.Point(288, 388);
-            this.chkClave.Margin = new System.Windows.Forms.Padding(6, 8, 6, 8);
+            this.chkClave.Location = new System.Drawing.Point(192, 252);
+            this.chkClave.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.chkClave.Name = "chkClave";
             this.chkClave.Size = new System.Drawing.Size(20, 20);
             this.chkClave.TabIndex = 9;
@@ -192,10 +196,10 @@ namespace Hotel_Vanilla.Vista
             this.btnRegister.IdleFillColor = System.Drawing.Color.White;
             this.btnRegister.IdleForecolor = System.Drawing.Color.RoyalBlue;
             this.btnRegister.IdleLineColor = System.Drawing.Color.RoyalBlue;
-            this.btnRegister.Location = new System.Drawing.Point(423, 422);
-            this.btnRegister.Margin = new System.Windows.Forms.Padding(8, 8, 8, 8);
+            this.btnRegister.Location = new System.Drawing.Point(282, 274);
+            this.btnRegister.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
             this.btnRegister.Name = "btnRegister";
-            this.btnRegister.Size = new System.Drawing.Size(272, 63);
+            this.btnRegister.Size = new System.Drawing.Size(181, 41);
             this.btnRegister.TabIndex = 5;
             this.btnRegister.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.btnRegister.Click += new System.EventHandler(this.btnRegister_Click);
@@ -209,10 +213,9 @@ namespace Hotel_Vanilla.Vista
             this.btnLogin.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnLogin.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.btnLogin.Image = global::Hotel_Vanilla.Properties.Resources.usuario1;
-            this.btnLogin.Location = new System.Drawing.Point(522, 540);
-            this.btnLogin.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.btnLogin.Location = new System.Drawing.Point(346, 351);
             this.btnLogin.Name = "btnLogin";
-            this.btnLogin.Size = new System.Drawing.Size(69, 60);
+            this.btnLogin.Size = new System.Drawing.Size(46, 39);
             this.btnLogin.TabIndex = 5;
             this.btnLogin.UseVisualStyleBackColor = false;
             this.btnLogin.Click += new System.EventHandler(this.btnLogin_Click);
@@ -221,10 +224,9 @@ namespace Hotel_Vanilla.Vista
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(480, 492);
-            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label1.Location = new System.Drawing.Point(323, 320);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(158, 29);
+            this.label1.Size = new System.Drawing.Size(96, 18);
             this.label1.TabIndex = 4;
             this.label1.Text = "Iniciar Sesion";
             this.label1.Click += new System.EventHandler(this.label1_Click);
@@ -232,10 +234,9 @@ namespace Hotel_Vanilla.Vista
             // pictureBox1
             // 
             this.pictureBox1.Image = global::Hotel_Vanilla.Properties.Resources.id_card;
-            this.pictureBox1.Location = new System.Drawing.Point(460, 20);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.pictureBox1.Location = new System.Drawing.Point(307, 13);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(207, 148);
+            this.pictureBox1.Size = new System.Drawing.Size(138, 96);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
@@ -247,9 +248,8 @@ namespace Hotel_Vanilla.Vista
             this.paneSuperior.Controls.Add(this.btnCerrar);
             this.paneSuperior.Dock = System.Windows.Forms.DockStyle.Top;
             this.paneSuperior.Location = new System.Drawing.Point(0, 0);
-            this.paneSuperior.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.paneSuperior.Name = "paneSuperior";
-            this.paneSuperior.Size = new System.Drawing.Size(1356, 234);
+            this.paneSuperior.Size = new System.Drawing.Size(904, 152);
             this.paneSuperior.TabIndex = 3;
             // 
             // btnMinimizar
@@ -262,10 +262,9 @@ namespace Hotel_Vanilla.Vista
             this.btnMinimizar.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.btnMinimizar.Image = global::Hotel_Vanilla.Properties.Resources.menos;
             this.btnMinimizar.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.btnMinimizar.Location = new System.Drawing.Point(1239, 5);
-            this.btnMinimizar.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.btnMinimizar.Location = new System.Drawing.Point(826, 3);
             this.btnMinimizar.Name = "btnMinimizar";
-            this.btnMinimizar.Size = new System.Drawing.Size(54, 51);
+            this.btnMinimizar.Size = new System.Drawing.Size(36, 33);
             this.btnMinimizar.TabIndex = 7;
             this.btnMinimizar.UseVisualStyleBackColor = false;
             this.btnMinimizar.Click += new System.EventHandler(this.btnMinimizar_Click);
@@ -279,10 +278,9 @@ namespace Hotel_Vanilla.Vista
             this.btnCerrar.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCerrar.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.btnCerrar.Image = global::Hotel_Vanilla.Properties.Resources.cerrar__1_;
-            this.btnCerrar.Location = new System.Drawing.Point(1302, 5);
-            this.btnCerrar.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.btnCerrar.Location = new System.Drawing.Point(868, 3);
             this.btnCerrar.Name = "btnCerrar";
-            this.btnCerrar.Size = new System.Drawing.Size(50, 51);
+            this.btnCerrar.Size = new System.Drawing.Size(33, 33);
             this.btnCerrar.TabIndex = 6;
             this.btnCerrar.UseVisualStyleBackColor = false;
             this.btnCerrar.Click += new System.EventHandler(this.btnCerrar_Click);
@@ -305,23 +303,21 @@ namespace Hotel_Vanilla.Vista
             // 
             this.panelInferior.BackColor = System.Drawing.Color.Gold;
             this.panelInferior.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panelInferior.Location = new System.Drawing.Point(0, 748);
-            this.panelInferior.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.panelInferior.Location = new System.Drawing.Point(0, 486);
             this.panelInferior.Name = "panelInferior";
-            this.panelInferior.Size = new System.Drawing.Size(1356, 123);
+            this.panelInferior.Size = new System.Drawing.Size(904, 80);
             this.panelInferior.TabIndex = 4;
             // 
             // frmRegister
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1356, 871);
+            this.ClientSize = new System.Drawing.Size(904, 566);
             this.Controls.Add(this.panelContenedor);
             this.Controls.Add(this.paneSuperior);
             this.Controls.Add(this.panelInferior);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Name = "frmRegister";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Register";

@@ -87,6 +87,7 @@
     </Reference>
     <Reference Include="Microsoft.VisualBasic" />
     <Reference Include="Microsoft.VisualBasic.Compatibility" />
+    <Reference Include="PresentationCore" />
     <Reference Include="stdole, Version=7.0.3300.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
       <EmbedInteropTypes>True</EmbedInteropTypes>
     </Reference>
@@ -146,6 +147,7 @@
     <Compile Include="MODELO\MHuespedes.cs" />
     <Compile Include="MODELO\MManejoReservas.cs" />
     <Compile Include="MODELO\MHabitaciones.cs" />
+    <Compile Include="MODELO\MNotificaciones.cs" />
     <Compile Include="MODELO\MSucesos.cs" />
     <Compile Include="MODELO\MTipoHabitacion.cs" />
     <Compile Include="MODELO\MUsuarios.cs" />
@@ -245,12 +247,6 @@
     <Compile Include="Vista\frmSucesos.Designer.cs">
       <DependentUpon>frmSucesos.cs</DependentUpon>
     </Compile>
-    <Compile Include="Vista\frmUsuarios.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Vista\frmUsuarios.Designer.cs">
-      <DependentUpon>frmUsuarios.cs</DependentUpon>
-    </Compile>
     <Compile Include="Vista\frmManejoHabitaciones.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -326,9 +322,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Vista\frmSucesos.resx">
       <DependentUpon>frmSucesos.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Vista\frmUsuarios.resx">
-      <DependentUpon>frmUsuarios.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Vista\frmManejoHuespedes.resx">
       <DependentUpon>frmManejoHuespedes.cs</DependentUpon>

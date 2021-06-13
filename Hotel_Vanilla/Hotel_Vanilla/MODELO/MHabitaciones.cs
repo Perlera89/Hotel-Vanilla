@@ -86,5 +86,16 @@ namespace Hotel_Vanilla.MODELO
             conexion.Close();
             return Habitaciones;
         }
+
+        //Consulta para mostrar el total de Habitaciones
+        public int TotalHabitaciones()
+        {
+            int habitaciones;
+            string consulta = "sp_TotalHabitaciones";
+            conexion.Open();
+            habitaciones = conexion.QuerySingle<int>(consulta, commandType: CommandType.StoredProcedure);
+            conexion.Close();
+            return habitaciones;
+        }
     }
 }

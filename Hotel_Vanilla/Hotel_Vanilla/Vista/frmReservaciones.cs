@@ -75,7 +75,7 @@ namespace Hotel_Vanilla.Vista
         private void frmReservaciones_Load(object sender, EventArgs e)
         {
             CargarReservas();
-            this.sp_MostrarManejoReservasTableAdapter.Fill(this.vanillaBDDataSet1.sp_MostrarManejoReservas);
+            //this.sp_MostrarManejoReservasTableAdapter.Fill(this.vanillaBDDataSet1.sp_MostrarManejoReservas);
             for (var i = 0; i < dtgReservas.Columns.Count; i++)
             {
                 dtgReservas.Columns[i].AutoSizeMode = DataGridViewAutoSizeColumnMode.DisplayedCells;
