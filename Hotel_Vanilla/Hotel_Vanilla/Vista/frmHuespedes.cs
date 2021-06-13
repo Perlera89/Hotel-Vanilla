@@ -27,7 +27,6 @@ namespace Hotel_Vanilla.Vista
             InitializeComponent();
         }
 
-
         private void CargarHuespedes()
         {
             CHuespedes cHuespedesMostrar = new CHuespedes();
@@ -83,7 +82,8 @@ namespace Hotel_Vanilla.Vista
 
             else if (resultado == DialogResult.OK && dtgHuespedes.SelectedRows.Count > 0)
             {
-                int huesped = Convert.ToInt32(dtgHuespedes.CurrentRow.Cells[0].Value.ToString());
+                Huespedes huesped = new Huespedes();
+                huesped.idHuesped = Convert.ToInt32(dtgHuespedes.CurrentRow.Cells[0].Value.ToString());
                 cHuespedes.EliminarHuesped(huesped);
 
                 frmMensajeExito.Confirmar("Se ha Eliminado correctamente");
@@ -95,6 +95,8 @@ namespace Hotel_Vanilla.Vista
                     Mensaje = suceso.descripcion;
                 }
                 inicio.MostrarNotificacion(Titulo, Mensaje, ToolTipIcon.Error);
+
+                inicio.lblHuespedes.Text = cHuespedes.TotalHuespedes().ToString();
 
                 CargarHuespedes();
             }

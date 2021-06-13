@@ -34,41 +34,41 @@ namespace Hotel_Vanilla.Vista
             this.panelPrincipal = new System.Windows.Forms.Panel();
             this.panelContenedor = new System.Windows.Forms.Panel();
             this.panelSuperior1 = new System.Windows.Forms.Panel();
-            this.panelInferior = new System.Windows.Forms.Panel();
-            this.guna2ResizeBox2 = new Guna.UI2.WinForms.Guna2ResizeBox();
-            this.panelSideBar = new System.Windows.Forms.Panel();
-            this.label3 = new System.Windows.Forms.Label();
-            this.bunifuSeparator2 = new Bunifu.Framework.UI.BunifuSeparator();
-            this.bunifuSeparator1 = new Bunifu.Framework.UI.BunifuSeparator();
-            this.lblUsuario = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
-            this.bunifuElipse1 = new Bunifu.Framework.UI.BunifuElipse(this.components);
-            this.bunifuElipse2 = new Bunifu.Framework.UI.BunifuElipse(this.components);
-            this.label4 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
-            this.lblHabitaciones = new System.Windows.Forms.Label();
-            this.lblHuespedes = new System.Windows.Forms.Label();
-            this.btnAjustes = new Bunifu.Framework.UI.BunifuImageButton();
-            this.btnSucesos = new Bunifu.Framework.UI.BunifuFlatButton();
-            this.btnHabitaciones = new Bunifu.Framework.UI.BunifuFlatButton();
-            this.btnHuespedes = new Bunifu.Framework.UI.BunifuFlatButton();
-            this.btnReservaciones = new Bunifu.Framework.UI.BunifuFlatButton();
-            this.btnPerfil = new Bunifu.Framework.UI.BunifuThinButton2();
-            this.btnUsuarios = new Bunifu.Framework.UI.BunifuImageButton();
             this.btnDefault = new Bunifu.Framework.UI.BunifuImageButton();
             this.btnRestaurar = new System.Windows.Forms.Button();
             this.btnAmpliar = new System.Windows.Forms.Button();
             this.btnMinimizar = new System.Windows.Forms.Button();
             this.btnCerrar = new System.Windows.Forms.Button();
+            this.panelInferior = new System.Windows.Forms.Panel();
+            this.lblHuespedes = new System.Windows.Forms.Label();
+            this.lblHabitaciones = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.guna2ResizeBox2 = new Guna.UI2.WinForms.Guna2ResizeBox();
+            this.panelSideBar = new System.Windows.Forms.Panel();
+            this.label3 = new System.Windows.Forms.Label();
+            this.btnAjustes = new Bunifu.Framework.UI.BunifuImageButton();
+            this.bunifuSeparator2 = new Bunifu.Framework.UI.BunifuSeparator();
+            this.btnSucesos = new Bunifu.Framework.UI.BunifuFlatButton();
+            this.btnHabitaciones = new Bunifu.Framework.UI.BunifuFlatButton();
+            this.btnHuespedes = new Bunifu.Framework.UI.BunifuFlatButton();
+            this.btnReservaciones = new Bunifu.Framework.UI.BunifuFlatButton();
+            this.bunifuSeparator1 = new Bunifu.Framework.UI.BunifuSeparator();
+            this.lblUsuario = new System.Windows.Forms.Label();
+            this.btnPerfil = new Bunifu.Framework.UI.BunifuThinButton2();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
+            this.btnUsuarios = new Bunifu.Framework.UI.BunifuImageButton();
+            this.bunifuElipse1 = new Bunifu.Framework.UI.BunifuElipse(this.components);
+            this.bunifuElipse2 = new Bunifu.Framework.UI.BunifuElipse(this.components);
             this.notificacion = new System.Windows.Forms.NotifyIcon(this.components);
             this.panelPrincipal.SuspendLayout();
             this.panelSuperior1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.btnDefault)).BeginInit();
             this.panelInferior.SuspendLayout();
             this.panelSideBar.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btnAjustes)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnUsuarios)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.btnDefault)).BeginInit();
             this.SuspendLayout();
             // 
             // panelPrincipal
@@ -111,6 +111,94 @@ namespace Hotel_Vanilla.Vista
             this.panelSuperior1.TabIndex = 1;
             this.panelSuperior1.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panelSuperior1_MouseDown);
             // 
+            // btnDefault
+            // 
+            this.btnDefault.BackColor = System.Drawing.Color.Transparent;
+            this.btnDefault.Image = global::Hotel_Vanilla.Properties.Resources.casa;
+            this.btnDefault.ImageActive = null;
+            this.btnDefault.Location = new System.Drawing.Point(247, 17);
+            this.btnDefault.Name = "btnDefault";
+            this.btnDefault.Size = new System.Drawing.Size(50, 50);
+            this.btnDefault.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.btnDefault.TabIndex = 1;
+            this.btnDefault.TabStop = false;
+            this.btnDefault.Zoom = 10;
+            this.btnDefault.Click += new System.EventHandler(this.btnDefault_Click);
+            // 
+            // btnRestaurar
+            // 
+            this.btnRestaurar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnRestaurar.BackColor = System.Drawing.Color.RoyalBlue;
+            this.btnRestaurar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnRestaurar.FlatAppearance.BorderSize = 0;
+            this.btnRestaurar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnRestaurar.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnRestaurar.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.btnRestaurar.Image = global::Hotel_Vanilla.Properties.Resources.dentro;
+            this.btnRestaurar.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.btnRestaurar.Location = new System.Drawing.Point(1122, 1);
+            this.btnRestaurar.Name = "btnRestaurar";
+            this.btnRestaurar.Size = new System.Drawing.Size(36, 41);
+            this.btnRestaurar.TabIndex = 11;
+            this.btnRestaurar.UseVisualStyleBackColor = false;
+            this.btnRestaurar.Visible = false;
+            this.btnRestaurar.Click += new System.EventHandler(this.btnRestaurar_Click);
+            // 
+            // btnAmpliar
+            // 
+            this.btnAmpliar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnAmpliar.BackColor = System.Drawing.Color.RoyalBlue;
+            this.btnAmpliar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnAmpliar.FlatAppearance.BorderSize = 0;
+            this.btnAmpliar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAmpliar.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAmpliar.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.btnAmpliar.Image = global::Hotel_Vanilla.Properties.Resources.fuera;
+            this.btnAmpliar.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.btnAmpliar.Location = new System.Drawing.Point(1122, 3);
+            this.btnAmpliar.Name = "btnAmpliar";
+            this.btnAmpliar.Size = new System.Drawing.Size(36, 41);
+            this.btnAmpliar.TabIndex = 10;
+            this.btnAmpliar.UseVisualStyleBackColor = false;
+            this.btnAmpliar.Click += new System.EventHandler(this.btnAbrir_Click);
+            // 
+            // btnMinimizar
+            // 
+            this.btnMinimizar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnMinimizar.BackColor = System.Drawing.Color.RoyalBlue;
+            this.btnMinimizar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnMinimizar.FlatAppearance.BorderSize = 0;
+            this.btnMinimizar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnMinimizar.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnMinimizar.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.btnMinimizar.Image = global::Hotel_Vanilla.Properties.Resources.menos;
+            this.btnMinimizar.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.btnMinimizar.Location = new System.Drawing.Point(1080, 12);
+            this.btnMinimizar.Name = "btnMinimizar";
+            this.btnMinimizar.Size = new System.Drawing.Size(36, 33);
+            this.btnMinimizar.TabIndex = 9;
+            this.btnMinimizar.UseVisualStyleBackColor = false;
+            this.btnMinimizar.Click += new System.EventHandler(this.btnMinimizar_Click);
+            // 
+            // btnCerrar
+            // 
+            this.btnCerrar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnCerrar.BackColor = System.Drawing.Color.RoyalBlue;
+            this.btnCerrar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnCerrar.FlatAppearance.BorderSize = 0;
+            this.btnCerrar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnCerrar.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCerrar.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.btnCerrar.Image = global::Hotel_Vanilla.Properties.Resources.cerrar__1_;
+            this.btnCerrar.Location = new System.Drawing.Point(1164, 5);
+            this.btnCerrar.Name = "btnCerrar";
+            this.btnCerrar.Size = new System.Drawing.Size(33, 33);
+            this.btnCerrar.TabIndex = 8;
+            this.btnCerrar.UseVisualStyleBackColor = false;
+            this.btnCerrar.Click += new System.EventHandler(this.btnCerrar_Click);
+            this.btnCerrar.MouseEnter += new System.EventHandler(this.btnCerrar_MouseEnter);
+            this.btnCerrar.MouseLeave += new System.EventHandler(this.btnCerrar_MouseLeave);
+            // 
             // panelInferior
             // 
             this.panelInferior.BackColor = System.Drawing.Color.Gold;
@@ -125,6 +213,54 @@ namespace Hotel_Vanilla.Vista
             this.panelInferior.Name = "panelInferior";
             this.panelInferior.Size = new System.Drawing.Size(1200, 80);
             this.panelInferior.TabIndex = 1;
+            // 
+            // lblHuespedes
+            // 
+            this.lblHuespedes.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.lblHuespedes.AutoSize = true;
+            this.lblHuespedes.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblHuespedes.ForeColor = System.Drawing.Color.Black;
+            this.lblHuespedes.Location = new System.Drawing.Point(649, 38);
+            this.lblHuespedes.Name = "lblHuespedes";
+            this.lblHuespedes.Size = new System.Drawing.Size(27, 19);
+            this.lblHuespedes.TabIndex = 7;
+            this.lblHuespedes.Text = "- -";
+            // 
+            // lblHabitaciones
+            // 
+            this.lblHabitaciones.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.lblHabitaciones.AutoSize = true;
+            this.lblHabitaciones.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblHabitaciones.ForeColor = System.Drawing.Color.Black;
+            this.lblHabitaciones.Location = new System.Drawing.Point(422, 38);
+            this.lblHabitaciones.Name = "lblHabitaciones";
+            this.lblHabitaciones.Size = new System.Drawing.Size(27, 19);
+            this.lblHabitaciones.TabIndex = 6;
+            this.lblHabitaciones.Text = "- -";
+            // 
+            // label5
+            // 
+            this.label5.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.ForeColor = System.Drawing.Color.Black;
+            this.label5.Location = new System.Drawing.Point(505, 38);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(138, 19);
+            this.label5.TabIndex = 5;
+            this.label5.Text = "Total Huespedes:";
+            // 
+            // label4
+            // 
+            this.label4.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.ForeColor = System.Drawing.Color.Black;
+            this.label4.Location = new System.Drawing.Point(261, 38);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(155, 19);
+            this.label4.TabIndex = 4;
+            this.label4.Text = "Total Habitaciones:";
             // 
             // guna2ResizeBox2
             // 
@@ -169,120 +305,6 @@ namespace Hotel_Vanilla.Vista
             this.label3.TabIndex = 12;
             this.label3.Text = "Ajustes";
             // 
-            // bunifuSeparator2
-            // 
-            this.bunifuSeparator2.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.bunifuSeparator2.BackColor = System.Drawing.Color.Transparent;
-            this.bunifuSeparator2.LineColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(105)))), ((int)(((byte)(105)))));
-            this.bunifuSeparator2.LineThickness = 1;
-            this.bunifuSeparator2.Location = new System.Drawing.Point(3, 524);
-            this.bunifuSeparator2.Name = "bunifuSeparator2";
-            this.bunifuSeparator2.Size = new System.Drawing.Size(224, 35);
-            this.bunifuSeparator2.TabIndex = 10;
-            this.bunifuSeparator2.Transparency = 255;
-            this.bunifuSeparator2.Vertical = false;
-            // 
-            // bunifuSeparator1
-            // 
-            this.bunifuSeparator1.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.bunifuSeparator1.BackColor = System.Drawing.Color.Transparent;
-            this.bunifuSeparator1.LineColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(105)))), ((int)(((byte)(105)))));
-            this.bunifuSeparator1.LineThickness = 1;
-            this.bunifuSeparator1.Location = new System.Drawing.Point(3, 152);
-            this.bunifuSeparator1.Name = "bunifuSeparator1";
-            this.bunifuSeparator1.Size = new System.Drawing.Size(224, 35);
-            this.bunifuSeparator1.TabIndex = 5;
-            this.bunifuSeparator1.Transparency = 255;
-            this.bunifuSeparator1.Vertical = false;
-            // 
-            // lblUsuario
-            // 
-            this.lblUsuario.AutoSize = true;
-            this.lblUsuario.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblUsuario.Location = new System.Drawing.Point(87, 65);
-            this.lblUsuario.Name = "lblUsuario";
-            this.lblUsuario.Size = new System.Drawing.Size(111, 17);
-            this.lblUsuario.TabIndex = 4;
-            this.lblUsuario.Text = "Nombre usuario";
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(87, 41);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(62, 18);
-            this.label2.TabIndex = 2;
-            this.label2.Text = "Usuario";
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(88, 9);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(54, 23);
-            this.label1.TabIndex = 1;
-            this.label1.Text = "Perfil";
-            // 
-            // bunifuElipse1
-            // 
-            this.bunifuElipse1.ElipseRadius = 15;
-            this.bunifuElipse1.TargetControl = this;
-            // 
-            // bunifuElipse2
-            // 
-            this.bunifuElipse2.ElipseRadius = 20;
-            this.bunifuElipse2.TargetControl = this.panelContenedor;
-            // 
-            // label4
-            // 
-            this.label4.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.ForeColor = System.Drawing.Color.Black;
-            this.label4.Location = new System.Drawing.Point(261, 38);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(155, 19);
-            this.label4.TabIndex = 4;
-            this.label4.Text = "Total Habitaciones:";
-            // 
-            // label5
-            // 
-            this.label5.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.ForeColor = System.Drawing.Color.Black;
-            this.label5.Location = new System.Drawing.Point(505, 38);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(138, 19);
-            this.label5.TabIndex = 5;
-            this.label5.Text = "Total Huespedes:";
-            // 
-            // lblHabitaciones
-            // 
-            this.lblHabitaciones.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.lblHabitaciones.AutoSize = true;
-            this.lblHabitaciones.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblHabitaciones.ForeColor = System.Drawing.Color.Black;
-            this.lblHabitaciones.Location = new System.Drawing.Point(422, 38);
-            this.lblHabitaciones.Name = "lblHabitaciones";
-            this.lblHabitaciones.Size = new System.Drawing.Size(27, 19);
-            this.lblHabitaciones.TabIndex = 6;
-            this.lblHabitaciones.Text = "- -";
-            // 
-            // lblHuespedes
-            // 
-            this.lblHuespedes.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.lblHuespedes.AutoSize = true;
-            this.lblHuespedes.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblHuespedes.ForeColor = System.Drawing.Color.Black;
-            this.lblHuespedes.Location = new System.Drawing.Point(649, 38);
-            this.lblHuespedes.Name = "lblHuespedes";
-            this.lblHuespedes.Size = new System.Drawing.Size(27, 19);
-            this.lblHuespedes.TabIndex = 7;
-            this.lblHuespedes.Text = "- -";
-            // 
             // btnAjustes
             // 
             this.btnAjustes.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
@@ -297,6 +319,19 @@ namespace Hotel_Vanilla.Vista
             this.btnAjustes.TabStop = false;
             this.btnAjustes.Zoom = 10;
             this.btnAjustes.Click += new System.EventHandler(this.btnAjustes_Click);
+            // 
+            // bunifuSeparator2
+            // 
+            this.bunifuSeparator2.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.bunifuSeparator2.BackColor = System.Drawing.Color.Transparent;
+            this.bunifuSeparator2.LineColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(105)))), ((int)(((byte)(105)))));
+            this.bunifuSeparator2.LineThickness = 1;
+            this.bunifuSeparator2.Location = new System.Drawing.Point(3, 524);
+            this.bunifuSeparator2.Name = "bunifuSeparator2";
+            this.bunifuSeparator2.Size = new System.Drawing.Size(224, 35);
+            this.bunifuSeparator2.TabIndex = 10;
+            this.bunifuSeparator2.Transparency = 255;
+            this.bunifuSeparator2.Vertical = false;
             // 
             // btnSucesos
             // 
@@ -446,6 +481,29 @@ namespace Hotel_Vanilla.Vista
             this.btnReservaciones.TextFont = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnReservaciones.Click += new System.EventHandler(this.btnReservaciones_Click);
             // 
+            // bunifuSeparator1
+            // 
+            this.bunifuSeparator1.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.bunifuSeparator1.BackColor = System.Drawing.Color.Transparent;
+            this.bunifuSeparator1.LineColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(105)))), ((int)(((byte)(105)))));
+            this.bunifuSeparator1.LineThickness = 1;
+            this.bunifuSeparator1.Location = new System.Drawing.Point(3, 152);
+            this.bunifuSeparator1.Name = "bunifuSeparator1";
+            this.bunifuSeparator1.Size = new System.Drawing.Size(224, 35);
+            this.bunifuSeparator1.TabIndex = 5;
+            this.bunifuSeparator1.Transparency = 255;
+            this.bunifuSeparator1.Vertical = false;
+            // 
+            // lblUsuario
+            // 
+            this.lblUsuario.AutoSize = true;
+            this.lblUsuario.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblUsuario.Location = new System.Drawing.Point(87, 65);
+            this.lblUsuario.Name = "lblUsuario";
+            this.lblUsuario.Size = new System.Drawing.Size(111, 17);
+            this.lblUsuario.TabIndex = 4;
+            this.lblUsuario.Text = "Nombre usuario";
+            // 
             // btnPerfil
             // 
             this.btnPerfil.ActiveBorderThickness = 1;
@@ -472,6 +530,26 @@ namespace Hotel_Vanilla.Vista
             this.btnPerfil.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.btnPerfil.Click += new System.EventHandler(this.btnPerfil_Click);
             // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(87, 41);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(62, 18);
+            this.label2.TabIndex = 2;
+            this.label2.Text = "Usuario";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(88, 9);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(54, 23);
+            this.label1.TabIndex = 1;
+            this.label1.Text = "Perfil";
+            // 
             // btnUsuarios
             // 
             this.btnUsuarios.BackColor = System.Drawing.Color.Transparent;
@@ -485,93 +563,15 @@ namespace Hotel_Vanilla.Vista
             this.btnUsuarios.TabStop = false;
             this.btnUsuarios.Zoom = 10;
             // 
-            // btnDefault
+            // bunifuElipse1
             // 
-            this.btnDefault.BackColor = System.Drawing.Color.Transparent;
-            this.btnDefault.Image = global::Hotel_Vanilla.Properties.Resources.casa;
-            this.btnDefault.ImageActive = null;
-            this.btnDefault.Location = new System.Drawing.Point(247, 17);
-            this.btnDefault.Name = "btnDefault";
-            this.btnDefault.Size = new System.Drawing.Size(50, 50);
-            this.btnDefault.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.btnDefault.TabIndex = 1;
-            this.btnDefault.TabStop = false;
-            this.btnDefault.Zoom = 10;
-            this.btnDefault.Click += new System.EventHandler(this.btnDefault_Click);
+            this.bunifuElipse1.ElipseRadius = 15;
+            this.bunifuElipse1.TargetControl = this;
             // 
-            // btnRestaurar
+            // bunifuElipse2
             // 
-            this.btnRestaurar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnRestaurar.BackColor = System.Drawing.Color.RoyalBlue;
-            this.btnRestaurar.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnRestaurar.FlatAppearance.BorderSize = 0;
-            this.btnRestaurar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnRestaurar.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnRestaurar.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.btnRestaurar.Image = global::Hotel_Vanilla.Properties.Resources.dentro;
-            this.btnRestaurar.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.btnRestaurar.Location = new System.Drawing.Point(1122, 1);
-            this.btnRestaurar.Name = "btnRestaurar";
-            this.btnRestaurar.Size = new System.Drawing.Size(36, 41);
-            this.btnRestaurar.TabIndex = 11;
-            this.btnRestaurar.UseVisualStyleBackColor = false;
-            this.btnRestaurar.Visible = false;
-            this.btnRestaurar.Click += new System.EventHandler(this.btnRestaurar_Click);
-            // 
-            // btnAmpliar
-            // 
-            this.btnAmpliar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnAmpliar.BackColor = System.Drawing.Color.RoyalBlue;
-            this.btnAmpliar.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnAmpliar.FlatAppearance.BorderSize = 0;
-            this.btnAmpliar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnAmpliar.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAmpliar.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.btnAmpliar.Image = global::Hotel_Vanilla.Properties.Resources.fuera;
-            this.btnAmpliar.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.btnAmpliar.Location = new System.Drawing.Point(1122, 3);
-            this.btnAmpliar.Name = "btnAmpliar";
-            this.btnAmpliar.Size = new System.Drawing.Size(36, 41);
-            this.btnAmpliar.TabIndex = 10;
-            this.btnAmpliar.UseVisualStyleBackColor = false;
-            this.btnAmpliar.Click += new System.EventHandler(this.btnAbrir_Click);
-            // 
-            // btnMinimizar
-            // 
-            this.btnMinimizar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnMinimizar.BackColor = System.Drawing.Color.RoyalBlue;
-            this.btnMinimizar.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnMinimizar.FlatAppearance.BorderSize = 0;
-            this.btnMinimizar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnMinimizar.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnMinimizar.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.btnMinimizar.Image = global::Hotel_Vanilla.Properties.Resources.menos;
-            this.btnMinimizar.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.btnMinimizar.Location = new System.Drawing.Point(1080, 12);
-            this.btnMinimizar.Name = "btnMinimizar";
-            this.btnMinimizar.Size = new System.Drawing.Size(36, 33);
-            this.btnMinimizar.TabIndex = 9;
-            this.btnMinimizar.UseVisualStyleBackColor = false;
-            this.btnMinimizar.Click += new System.EventHandler(this.btnMinimizar_Click);
-            // 
-            // btnCerrar
-            // 
-            this.btnCerrar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnCerrar.BackColor = System.Drawing.Color.RoyalBlue;
-            this.btnCerrar.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnCerrar.FlatAppearance.BorderSize = 0;
-            this.btnCerrar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnCerrar.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCerrar.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.btnCerrar.Image = global::Hotel_Vanilla.Properties.Resources.cerrar__1_;
-            this.btnCerrar.Location = new System.Drawing.Point(1164, 5);
-            this.btnCerrar.Name = "btnCerrar";
-            this.btnCerrar.Size = new System.Drawing.Size(33, 33);
-            this.btnCerrar.TabIndex = 8;
-            this.btnCerrar.UseVisualStyleBackColor = false;
-            this.btnCerrar.Click += new System.EventHandler(this.btnCerrar_Click);
-            this.btnCerrar.MouseEnter += new System.EventHandler(this.btnCerrar_MouseEnter);
-            this.btnCerrar.MouseLeave += new System.EventHandler(this.btnCerrar_MouseLeave);
+            this.bunifuElipse2.ElipseRadius = 20;
+            this.bunifuElipse2.TargetControl = this.panelContenedor;
             // 
             // notificacion
             // 
@@ -595,13 +595,13 @@ namespace Hotel_Vanilla.Vista
             this.Load += new System.EventHandler(this.frmInicio_Load);
             this.panelPrincipal.ResumeLayout(false);
             this.panelSuperior1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.btnDefault)).EndInit();
             this.panelInferior.ResumeLayout(false);
             this.panelInferior.PerformLayout();
             this.panelSideBar.ResumeLayout(false);
             this.panelSideBar.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btnAjustes)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnUsuarios)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.btnDefault)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -634,10 +634,10 @@ namespace Hotel_Vanilla.Vista
         private System.Windows.Forms.Panel panelContenedor;
         private Bunifu.Framework.UI.BunifuImageButton btnAjustes;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label lblHuespedes;
-        private System.Windows.Forms.Label lblHabitaciones;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.NotifyIcon notificacion;
+        public System.Windows.Forms.Label lblHuespedes;
+        public System.Windows.Forms.Label lblHabitaciones;
     }
 }

@@ -27,7 +27,6 @@ namespace Hotel_Vanilla.Vista
         public frmManejoHuespedes()
         {
             InitializeComponent();
-            txtNombres.Focus();
         }
 
         private void RellenarComboBox()
@@ -108,13 +107,16 @@ namespace Hotel_Vanilla.Vista
             {
                 CHuespedes cHuespedes = new CHuespedes();
                 Huespedes huespedes = new Huespedes();
-                huespedesBindingSource.EndEdit();
-                huespedes = (Huespedes)huespedesBindingSource.Current;
+
+                huespedes.nombres = txtNombres.Text;
+                huespedes.apellidos = txtApellidos.Text;
+                huespedes.direccion = txtDireccion.Text;
+                huespedes.telefono = txtTelefono.Text;
+                huespedes.correo = txtCorreo.Text;
+                huespedes.idEstado_FK = Convert.ToInt32(cbEstado.SelectedValue.ToString());
 
                 cHuespedes.AgregarHuesped(huespedes);
 
-                Limpiar();
-                txtNombres.Focus();
 
                 frmMensajeExito.Confirmar("Se ha Ingresado correctamente");
 
@@ -126,11 +128,16 @@ namespace Hotel_Vanilla.Vista
                 }
 
                 inicio.MostrarNotificacion(Titulo, Mensaje, ToolTipIcon.Info);
+
+                Limpiar();
+                txtNombres.Focus();
+                inicio.lblHuespedes.Text = cHuespedes.TotalHuespedes().ToString();
             }
         }
 
         private void frmManejoHuespedes_Load(object sender, EventArgs e)
         {
+            txtNombres.Focus();
             CargarEstados();
             RellenarComboBox();
             if (accion == false)

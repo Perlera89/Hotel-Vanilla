@@ -40,11 +40,11 @@ namespace Hotel_Vanilla.MODELO
         }
 
         //Modelo para eliminar huespedes con el procedimiento
-        public void EliminarHuesped(int idHuesped)
+        public void EliminarHuesped(Huespedes huesped)
         {
             string consulta = "sp_eliminarhuesped";
             DynamicParameters parametros = new DynamicParameters();
-            parametros.Add("@id", idHuesped, DbType.Int32);
+            parametros.Add("@id", huesped.idHuesped, DbType.Int32);
             conexion.Open();
             conexion.Execute(consulta, parametros, commandType: CommandType.StoredProcedure);
             conexion.Close();

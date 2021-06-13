@@ -36,11 +36,11 @@ namespace Hotel_Vanilla.Vista
         {
             Habitaciones habitaciones = new Habitaciones();
             BorrarValidacion();
-            if (ValidarCampos() && btnGuardar.Text=="Guardar")
+            if (ValidarCampos() && btnGuardar.Text == "Guardar")
             {
-                CHabitaciones Chabitacion = new CHabitaciones();
+                CHabitaciones cHabitacion = new CHabitaciones();
                 sp_MostrarHabitaciones habitacion =(sp_MostrarHabitaciones) spMostrarHabitacionesBindingSource.Current;
-                Chabitacion.AgregarHabitacion(habitacion, Convert.ToInt32(cbTipoHabitacion.SelectedValue.ToString()));
+                cHabitacion.AgregarHabitacion(habitacion, Convert.ToInt32(cbTipoHabitacion.SelectedValue.ToString()));
 
                 frmMensajeExito.Confirmar("Se ha Ingresado correctamente");
 
@@ -57,7 +57,7 @@ namespace Hotel_Vanilla.Vista
                 Limpiar();
                 numeroHabitacionTextBox.Focus();
             }
-            else if (ValidarCampos() && btnGuardar.Text=="Actualizar")
+            else if (ValidarCampos() && btnGuardar.Text == "Actualizar")
             {
                 CHabitaciones Chabitacion = new CHabitaciones();
                 //Habitaciones habitacion = (Habitaciones)habitacionesBindingSource.Current;

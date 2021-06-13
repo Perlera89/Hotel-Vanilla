@@ -37,7 +37,7 @@ namespace Hotel_Vanilla.Vista
         private void btnAgregar_Click(object sender, EventArgs e)
         {
             frmManejoHabitaciones manejoHabitacion = new frmManejoHabitaciones();
-            manejoHabitacion.btnGuardar.Text = "Agregar";
+            manejoHabitacion.btnGuardar.Text = "Guardar";
             manejoHabitacion.ShowDialog();
 
             CargarHabitaciones();

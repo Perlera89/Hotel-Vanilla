@@ -71,7 +71,6 @@ namespace Hotel_Vanilla.MODELO
                                 " y/o eliminar manualmente cada registro que haga referencia a este.");
                 conexion.Close();
             }
-
         }
 
         //Modelo para la busqueda de habitaciones

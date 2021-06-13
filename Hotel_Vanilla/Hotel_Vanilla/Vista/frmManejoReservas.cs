@@ -92,12 +92,12 @@ namespace Hotel_Vanilla.Vista
             if (ValidarCampos() && btnGuardar.Text.Equals("Guardar"))
             {
                 //tomando los datos actuales de bindin y asignandolo al objeto de ManejoReservas
-                ManejoReservas Areservas = (ManejoReservas)manejoReservasBindingSource.Current;
-
+                ManejoReservas mReservas = (ManejoReservas)manejoReservasBindingSource.Current;
                 ManejoReservas reservas = new ManejoReservas();
+
                 reservas.fechaReserva = Convert.ToDateTime(txtFechaReserva.Text);
                 reservas.fechaCheckIn = Convert.ToDateTime(txtFechaCheckIn.Text);
-                reservas.fechaCheckOut = Areservas.fechaCheckOut;
+                reservas.fechaCheckOut = mReservas.fechaCheckOut;
                 reservas.numeroDias = Convert.ToInt32(txtDiasAlojamiento.Text);
                 if (txtPagoAdelantado.Text == "")
                 {
