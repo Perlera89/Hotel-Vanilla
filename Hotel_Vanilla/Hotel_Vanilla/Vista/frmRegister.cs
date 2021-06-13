@@ -21,14 +21,7 @@ namespace Hotel_Vanilla.Vista
         public Usuarios usuarios = new Usuarios();
         private void btnCerrar_Click(object sender, EventArgs e)
         {
-            DialogResult resultado = new DialogResult();
-            frmMensajeAdvertencia advertencia = new frmMensajeAdvertencia("¿Estas seguro de cerrar el Programa?");
-            resultado = advertencia.ShowDialog();
-
-            if (resultado == DialogResult.OK)
-            {
-                Application.Exit();
-            }
+            this.Close();
         }
 
         private void btnMinimizar_Click(object sender, EventArgs e)
@@ -72,7 +65,7 @@ namespace Hotel_Vanilla.Vista
             try {
                 if (nombreTextBox.Text.Equals("") || correoTextBox.Text.Equals("") || claveTextBox.Text.Equals(""))
                 {
-                    MessageBox.Show("Debe llenar todos los campos.");
+                    frmMensajeAviso.Avisar("Debe llenar todos los campos");
                 }
                 else { 
                     Usuarios usu = new Usuarios();
@@ -82,14 +75,14 @@ namespace Hotel_Vanilla.Vista
                     usu = (Usuarios)usuariosBindingSource.Current;
 
                     cUsu.AgregarUsuario(usu);
-                    MessageBox.Show("Usuario registrado");
+                    frmMensajeExito.Confirmar("Usuario registrado");
 
                     this.Close();
                 
                 }
             }
             catch (Exception ex) {
-                MessageBox.Show("Ya existe un usuario con ese nombre.");
+                frmMensajeAviso.Avisar("Ya existe un usuario con ese nombre");
             }
         }
 

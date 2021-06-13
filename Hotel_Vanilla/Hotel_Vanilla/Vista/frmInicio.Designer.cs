@@ -62,6 +62,7 @@ namespace Hotel_Vanilla.Vista
             this.bunifuElipse1 = new Bunifu.Framework.UI.BunifuElipse(this.components);
             this.bunifuElipse2 = new Bunifu.Framework.UI.BunifuElipse(this.components);
             this.notificacion = new System.Windows.Forms.NotifyIcon(this.components);
+            this.lblPass = new System.Windows.Forms.Label();
             this.panelPrincipal.SuspendLayout();
             this.panelSuperior1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btnDefault)).BeginInit();
@@ -275,6 +276,7 @@ namespace Hotel_Vanilla.Vista
             // panelSideBar
             // 
             this.panelSideBar.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            this.panelSideBar.Controls.Add(this.lblPass);
             this.panelSideBar.Controls.Add(this.label3);
             this.panelSideBar.Controls.Add(this.btnAjustes);
             this.panelSideBar.Controls.Add(this.bunifuSeparator2);
@@ -513,7 +515,7 @@ namespace Hotel_Vanilla.Vista
             this.btnPerfil.ActiveLineColor = System.Drawing.Color.RoyalBlue;
             this.btnPerfil.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.btnPerfil.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnPerfil.BackgroundImage")));
-            this.btnPerfil.ButtonText = "Cambiar cuenta";
+            this.btnPerfil.ButtonText = "Cerrar Sesion";
             this.btnPerfil.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnPerfil.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnPerfil.ForeColor = System.Drawing.Color.SeaGreen;
@@ -579,6 +581,14 @@ namespace Hotel_Vanilla.Vista
             this.notificacion.Visible = true;
             this.notificacion.Click += new System.EventHandler(this.notificacion_Click);
             // 
+            // lblPass
+            // 
+            this.lblPass.AutoSize = true;
+            this.lblPass.Location = new System.Drawing.Point(191, 1);
+            this.lblPass.Name = "lblPass";
+            this.lblPass.Size = new System.Drawing.Size(0, 13);
+            this.lblPass.TabIndex = 13;
+            // 
             // frmInicio
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -639,5 +649,6 @@ namespace Hotel_Vanilla.Vista
         private System.Windows.Forms.NotifyIcon notificacion;
         public System.Windows.Forms.Label lblHuespedes;
         public System.Windows.Forms.Label lblHabitaciones;
+        public System.Windows.Forms.Label lblPass;
     }
 }

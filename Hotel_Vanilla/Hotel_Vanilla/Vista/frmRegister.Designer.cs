@@ -122,7 +122,7 @@ namespace Hotel_Vanilla.Vista
             this.claveTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.claveTextBox.ForeColor = System.Drawing.Color.RoyalBlue;
             this.claveTextBox.Location = new System.Drawing.Point(270, 216);
-            this.claveTextBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.claveTextBox.Margin = new System.Windows.Forms.Padding(2);
             this.claveTextBox.Name = "claveTextBox";
             this.claveTextBox.Size = new System.Drawing.Size(275, 26);
             this.claveTextBox.TabIndex = 10;
@@ -137,7 +137,7 @@ namespace Hotel_Vanilla.Vista
             this.correoTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.correoTextBox.ForeColor = System.Drawing.Color.RoyalBlue;
             this.correoTextBox.Location = new System.Drawing.Point(270, 174);
-            this.correoTextBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.correoTextBox.Margin = new System.Windows.Forms.Padding(2);
             this.correoTextBox.Name = "correoTextBox";
             this.correoTextBox.Size = new System.Drawing.Size(275, 26);
             this.correoTextBox.TabIndex = 12;
@@ -149,7 +149,7 @@ namespace Hotel_Vanilla.Vista
             this.nombreTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.nombreTextBox.ForeColor = System.Drawing.Color.RoyalBlue;
             this.nombreTextBox.Location = new System.Drawing.Point(270, 133);
-            this.nombreTextBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.nombreTextBox.Margin = new System.Windows.Forms.Padding(2);
             this.nombreTextBox.Name = "nombreTextBox";
             this.nombreTextBox.Size = new System.Drawing.Size(275, 26);
             this.nombreTextBox.TabIndex = 16;
@@ -196,8 +196,8 @@ namespace Hotel_Vanilla.Vista
             this.btnRegister.IdleFillColor = System.Drawing.Color.White;
             this.btnRegister.IdleForecolor = System.Drawing.Color.RoyalBlue;
             this.btnRegister.IdleLineColor = System.Drawing.Color.RoyalBlue;
-            this.btnRegister.Location = new System.Drawing.Point(282, 274);
-            this.btnRegister.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.btnRegister.Location = new System.Drawing.Point(283, 274);
+            this.btnRegister.Margin = new System.Windows.Forms.Padding(5);
             this.btnRegister.Name = "btnRegister";
             this.btnRegister.Size = new System.Drawing.Size(181, 41);
             this.btnRegister.TabIndex = 5;
@@ -213,7 +213,7 @@ namespace Hotel_Vanilla.Vista
             this.btnLogin.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnLogin.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.btnLogin.Image = global::Hotel_Vanilla.Properties.Resources.usuario1;
-            this.btnLogin.Location = new System.Drawing.Point(346, 351);
+            this.btnLogin.Location = new System.Drawing.Point(349, 351);
             this.btnLogin.Name = "btnLogin";
             this.btnLogin.Size = new System.Drawing.Size(46, 39);
             this.btnLogin.TabIndex = 5;
@@ -224,7 +224,7 @@ namespace Hotel_Vanilla.Vista
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(323, 320);
+            this.label1.Location = new System.Drawing.Point(325, 320);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(96, 18);
             this.label1.TabIndex = 4;

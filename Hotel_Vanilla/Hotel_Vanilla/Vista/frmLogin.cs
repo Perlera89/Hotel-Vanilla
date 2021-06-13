@@ -96,31 +96,32 @@ namespace Hotel_Vanilla
         {
             if (correoTextBox.Text.Equals("") || claveTextBox.Text.Equals(""))
             {
-                MessageBox.Show("Debe llenar todos los campos.");
+                frmMensajeAviso.Avisar("Debe llenar todos los campos");
 
             }
             else {
-                Usuarios usu;
+                Usuarios usuarios;
                 CUsuarios cUsuarios = new CUsuarios();
                 usuariosBindingSource.EndEdit();
 
-                usu = (Usuarios)usuariosBindingSource.Current;
+                usuarios = (Usuarios)usuariosBindingSource.Current;
 
-                usuariosBindingSource.DataSource = cUsuarios.CompararDatos(usu);
-                usu = (Usuarios)usuariosBindingSource.Current;
+                usuariosBindingSource.DataSource = cUsuarios.CompararDatos(usuarios);
+                usuarios = (Usuarios)usuariosBindingSource.Current;
 
-                if (usu != null)
+                if (usuarios != null)
                 {
-                    frmInicio frm = new frmInicio();
-                    MessageBox.Show("Bienvenida/o");
+                    frmInicio inicio = new frmInicio();
+                    frmMensajeExito.Confirmar("Inicio de sesion exitoso");
 
-                    frm.lblUsuario.Text = usu.nombre;
+                    inicio.lblUsuario.Text = usuarios.nombre;
+                    inicio.lblPass.Text = usuarios.clave;
                     this.Hide();
-                    frm.ShowDialog();
+                    inicio.ShowDialog();
                 }
                 else
                 {
-                    MessageBox.Show("Correo o contraseña erronea/o");
+                    frmMensajeAviso.Avisar("Correo o contraseña erronea/o");
                     usuariosBindingSource.AddNew();
                 }
             }

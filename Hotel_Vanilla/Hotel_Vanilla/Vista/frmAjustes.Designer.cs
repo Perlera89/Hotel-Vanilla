@@ -29,7 +29,6 @@ namespace Hotel_Vanilla.Vista
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmAjustes));
             this.bunifuCustomLabel1 = new Bunifu.Framework.UI.BunifuCustomLabel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
@@ -54,11 +53,11 @@ namespace Hotel_Vanilla.Vista
             this.txtEmail = new Bunifu.Framework.UI.BunifuMaterialTextbox();
             this.bunifuCheckbox3 = new Bunifu.Framework.UI.BunifuCheckbox();
             this.bunifuCustomLabel8 = new Bunifu.Framework.UI.BunifuCustomLabel();
-            this.guna2NotificationPaint1 = new Guna.UI2.WinForms.Guna2NotificationPaint(this.components);
             this.bunifuThinButton21 = new Bunifu.Framework.UI.BunifuThinButton2();
             this.bunifuMaterialTextbox1 = new Bunifu.Framework.UI.BunifuMaterialTextbox();
             this.guna2TileButton1 = new Guna.UI2.WinForms.Guna2TileButton();
             this.bunifuMaterialTextbox2 = new Bunifu.Framework.UI.BunifuMaterialTextbox();
+            this.txtAsunto = new Bunifu.Framework.UI.BunifuMaterialTextbox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.guna2NumericUpDown1)).BeginInit();
             this.SuspendLayout();
@@ -207,10 +206,10 @@ namespace Hotel_Vanilla.Vista
             this.txtMensaje.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtMensaje.ForeColor = System.Drawing.Color.RoyalBlue;
             this.txtMensaje.isPassword = false;
-            this.txtMensaje.Location = new System.Drawing.Point(685, 316);
+            this.txtMensaje.Location = new System.Drawing.Point(685, 353);
             this.txtMensaje.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.txtMensaje.Name = "txtMensaje";
-            this.txtMensaje.Size = new System.Drawing.Size(253, 148);
+            this.txtMensaje.Size = new System.Drawing.Size(253, 111);
             this.txtMensaje.TabIndex = 54;
             this.txtMensaje.Text = "Mensaje";
             this.txtMensaje.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
@@ -312,6 +311,7 @@ namespace Hotel_Vanilla.Vista
             this.btnRegister.Size = new System.Drawing.Size(136, 41);
             this.btnRegister.TabIndex = 61;
             this.btnRegister.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.btnRegister.Click += new System.EventHandler(this.btnRegister_Click);
             // 
             // bunifuCustomLabel7
             // 
@@ -413,12 +413,6 @@ namespace Hotel_Vanilla.Vista
             this.bunifuCustomLabel8.TabIndex = 68;
             this.bunifuCustomLabel8.Text = "Mostrar clave";
             // 
-            // guna2NotificationPaint1
-            // 
-            this.guna2NotificationPaint1.FillColor = System.Drawing.Color.Blue;
-            this.guna2NotificationPaint1.ForeColor = System.Drawing.Color.Gray;
-            this.guna2NotificationPaint1.TargetControl = this.pictureBox1;
-            // 
             // bunifuThinButton21
             // 
             this.bunifuThinButton21.ActiveBorderThickness = 1;
@@ -502,11 +496,34 @@ namespace Hotel_Vanilla.Vista
             this.bunifuMaterialTextbox2.TabIndex = 73;
             this.bunifuMaterialTextbox2.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             // 
+            // txtAsunto
+            // 
+            this.txtAsunto.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.txtAsunto.BackColor = System.Drawing.SystemColors.ButtonFace;
+            this.txtAsunto.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtAsunto.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtAsunto.ForeColor = System.Drawing.Color.Black;
+            this.txtAsunto.HintForeColor = System.Drawing.Color.Empty;
+            this.txtAsunto.HintText = "Asunto";
+            this.txtAsunto.isPassword = false;
+            this.txtAsunto.LineFocusedColor = System.Drawing.Color.CornflowerBlue;
+            this.txtAsunto.LineIdleColor = System.Drawing.Color.RoyalBlue;
+            this.txtAsunto.LineMouseHoverColor = System.Drawing.Color.Blue;
+            this.txtAsunto.LineThickness = 4;
+            this.txtAsunto.Location = new System.Drawing.Point(685, 311);
+            this.txtAsunto.Margin = new System.Windows.Forms.Padding(4);
+            this.txtAsunto.Name = "txtAsunto";
+            this.txtAsunto.Size = new System.Drawing.Size(241, 33);
+            this.txtAsunto.TabIndex = 74;
+            this.txtAsunto.Text = "Asunto ";
+            this.txtAsunto.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            // 
             // frmAjustes
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(951, 527);
+            this.Controls.Add(this.txtAsunto);
             this.Controls.Add(this.bunifuMaterialTextbox2);
             this.Controls.Add(this.guna2TileButton1);
             this.Controls.Add(this.bunifuMaterialTextbox1);
@@ -566,10 +583,10 @@ namespace Hotel_Vanilla.Vista
         private Bunifu.Framework.UI.BunifuMaterialTextbox txtEmail;
         private Bunifu.Framework.UI.BunifuCheckbox bunifuCheckbox3;
         private Bunifu.Framework.UI.BunifuCustomLabel bunifuCustomLabel8;
-        private Guna.UI2.WinForms.Guna2NotificationPaint guna2NotificationPaint1;
         private Bunifu.Framework.UI.BunifuThinButton2 bunifuThinButton21;
         private Bunifu.Framework.UI.BunifuMaterialTextbox bunifuMaterialTextbox1;
         private Guna.UI2.WinForms.Guna2TileButton guna2TileButton1;
         private Bunifu.Framework.UI.BunifuMaterialTextbox bunifuMaterialTextbox2;
+        private Bunifu.Framework.UI.BunifuMaterialTextbox txtAsunto;
     }
 }
