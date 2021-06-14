@@ -195,7 +195,6 @@ C:\Users\Jose\Desktop\Hotel_Vainilla\Hotel_Vanilla\Hotel_Vanilla\obj\Debug\Hotel
 C:\Users\Jose\Desktop\Hotel_Vainilla\Hotel_Vanilla\Hotel_Vanilla\obj\Debug\Hotel_Vanilla.Properties.Resources.resources
 C:\Users\Jose\Desktop\Hotel_Vainilla\Hotel_Vanilla\Hotel_Vanilla\obj\Debug\Hotel_Vanilla.Vista.frmManejoHabitaciones.resources
 C:\Users\Jose\Desktop\Hotel_Vainilla\Hotel_Vanilla\Hotel_Vanilla\obj\Debug\Hotel_Vanilla.Vista.frmManejoReservas.resources
-C:\Users\Jose\Desktop\Hotel_Vainilla\Hotel_Vanilla\Hotel_Vanilla\obj\Debug\Hotel_Vanilla.Vista.frmManejoUsuarios.resources
 C:\Users\Jose\Desktop\Hotel_Vainilla\Hotel_Vanilla\Hotel_Vanilla\obj\Debug\Hotel_Vanilla.Vista.frmMensajeAdvertencia.resources
 C:\Users\Jose\Desktop\Hotel_Vainilla\Hotel_Vanilla\Hotel_Vanilla\obj\Debug\Hotel_Vanilla.Vista.frmMensajeAviso.resources
 C:\Users\Jose\Desktop\Hotel_Vainilla\Hotel_Vanilla\Hotel_Vanilla\obj\Debug\Hotel_Vanilla.Vista.frmMensajeExito.resources
@@ -203,7 +202,6 @@ C:\Users\Jose\Desktop\Hotel_Vainilla\Hotel_Vanilla\Hotel_Vanilla\obj\Debug\Hotel
 C:\Users\Jose\Desktop\Hotel_Vainilla\Hotel_Vanilla\Hotel_Vanilla\obj\Debug\Hotel_Vanilla.Vista.frmRegister.resources
 C:\Users\Jose\Desktop\Hotel_Vainilla\Hotel_Vanilla\Hotel_Vanilla\obj\Debug\Hotel_Vanilla.Vista.frmSplash.resources
 C:\Users\Jose\Desktop\Hotel_Vainilla\Hotel_Vanilla\Hotel_Vanilla\obj\Debug\Hotel_Vanilla.Vista.frmSucesos.resources
-C:\Users\Jose\Desktop\Hotel_Vainilla\Hotel_Vanilla\Hotel_Vanilla\obj\Debug\Hotel_Vanilla.Vista.frmUsuarios.resources
 C:\Users\Jose\Desktop\Hotel_Vainilla\Hotel_Vanilla\Hotel_Vanilla\obj\Debug\Hotel_Vanilla.Vista.frmManejoHuespedes.resources
 C:\Users\Jose\Desktop\Hotel_Vainilla\Hotel_Vanilla\Hotel_Vanilla\obj\Debug\Hotel_Vanilla.csproj.GenerateResource.cache
 C:\Users\Jose\Desktop\Hotel_Vainilla\Hotel_Vanilla\Hotel_Vanilla\obj\Debug\Hotel_Vanilla.csproj.CoreCompileInputs.cache
@@ -212,9 +210,9 @@ C:\Users\Jose\Desktop\Hotel_Vainilla\Hotel_Vanilla\Hotel_Vanilla\obj\Debug\Hotel
 C:\Users\Jose\Desktop\Hotel_Vainilla\Hotel_Vanilla\Hotel_Vanilla\obj\Debug\Hotel_Vanilla.csproj.CopyComplete
 C:\Users\Jose\Desktop\Hotel_Vainilla\Hotel_Vanilla\Hotel_Vanilla\obj\Debug\Hotel Vanilla.exe
 C:\Users\Jose\Desktop\Hotel_Vainilla\Hotel_Vanilla\Hotel_Vanilla\obj\Debug\Hotel Vanilla.pdb
-C:\Users\Jose\Desktop\Hotel_Vainilla\Hotel_Vanilla\Hotel_Vanilla\obj\Debug\Hotel_Vanilla.csproj.AssemblyReference.cache
 C:\Users\Manuel Perlera\Documents\GitHub\Hotel_Vainilla\Hotel_Vanilla\Hotel_Vanilla\bin\Debug\Dapper.dll
 C:\Users\Manuel Perlera\Documents\GitHub\Hotel_Vainilla\Hotel_Vanilla\Hotel_Vanilla\bin\Debug\Dapper.xml
 C:\Users\cb272\Documents\GitHub\Hotel_Vainilla\Hotel_Vanilla\Hotel_Vanilla\bin\Debug\Dapper.dll
 C:\Users\cb272\Documents\GitHub\Hotel_Vainilla\Hotel_Vanilla\Hotel_Vanilla\bin\Debug\Dapper.xml
 C:\Users\cb272\Documents\GitHub\Hotel_Vainilla\Hotel_Vanilla\Hotel_Vanilla\obj\Debug\Hotel_Vanilla.csproj.AssemblyReference.cache
+C:\Users\Jose\Desktop\Hotel_Vainilla\Hotel_Vanilla\Hotel_Vanilla\obj\Debug\Hotel_Vanilla.csproj.AssemblyReference.cache

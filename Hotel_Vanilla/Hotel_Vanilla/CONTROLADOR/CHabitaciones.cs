@@ -21,19 +21,19 @@ namespace Hotel_Vanilla.CONTROLADOR
             return Mhabitacion.BuscarHabitaciones(buscador);
         }
 
-        public void AgregarHabitacion(sp_MostrarHabitaciones habitaciones, int id)
+        public void AgregarHabitacion(Habitaciones habitacion)
         {
-            Mhabitacion.AgregarHabitacion(habitaciones, id);
+            Mhabitacion.AgregarHabitacion(habitacion);
         }
 
-        public void ActualizarHabitacion(int codigo, String nHabitaciones, Decimal tarifa, int id)
+        public void ActualizarHabitacion(Habitaciones habitacion)
         {
-            Mhabitacion.ActualizarHabitacion(codigo, nHabitaciones, tarifa, id);
+            Mhabitacion.ActualizarHabitacion(habitacion);
         }
 
-        public void EliminarHabitacion(int id)
+        public void EliminarHabitacion(Habitaciones habitacion)
         {
-            Mhabitacion.EliminarHabitacion(id);
+            Mhabitacion.EliminarHabitacion(habitacion);
         }
 
         public int TotalHabitaciones()

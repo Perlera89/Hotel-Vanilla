@@ -26,40 +26,40 @@ namespace Hotel_Vanilla.MODELO
         }
 
         //Modelo Agregar habitacion con el procedimiento
-        public void AgregarHabitacion(sp_MostrarHabitaciones habitacion, int id)
+        public void AgregarHabitacion(Habitaciones habitacion)
         {
             string consulta = "sp_InsertarHabitacion";
             DynamicParameters parametros = new DynamicParameters();
             parametros.Add("@numeroHabitacion", habitacion.numeroHabitacion, DbType.String);
             parametros.Add("@tarifa", habitacion.tarifa, DbType.Decimal);
-            parametros.Add("@idTipoHabitacion_FK", id, DbType.Int32);
+            parametros.Add("@idTipoHabitacion_FK", habitacion.idTipoHabitacion_FK, DbType.Int32);
             conexion.Open();
             conexion.Execute(consulta, parametros, commandType: CommandType.StoredProcedure);
             conexion.Close();
         }
 
         //Modelo para Actualizar habitacion con el procedimiento
-        public void ActualizarHabitacion(int codigo, String numeroHabitacion, Decimal tarifa, int id)
+        public void ActualizarHabitacion(Habitaciones habitacion)
         {
             string consulta = "sp_ActualizarHabitacion";
             DynamicParameters parametros = new DynamicParameters();
-            parametros.Add("@idHabitacion", codigo, DbType.Int32);
-            parametros.Add("@numeroHabitacion", numeroHabitacion, DbType.String);
-            parametros.Add("@tarifa", tarifa, DbType.Decimal);
-            parametros.Add("@idTipoHabitacion_FK", id, DbType.Int32);
+            parametros.Add("@idHabitacion", habitacion.idHabitacion, DbType.Int32);
+            parametros.Add("@numeroHabitacion", habitacion.numeroHabitacion, DbType.String);
+            parametros.Add("@tarifa", habitacion.tarifa, DbType.Decimal);
+            parametros.Add("@idTipoHabitacion_FK", habitacion.idTipoHabitacion_FK, DbType.Int32);
             conexion.Open();
             conexion.Execute(consulta, parametros, commandType: CommandType.StoredProcedure);
             conexion.Close();
         }
 
         //Modelo para Eliminar habitacion con el procedimiento
-        public void EliminarHabitacion(int id)
+        public void EliminarHabitacion(Habitaciones habitacion)
         {
             try
             {
                 string consulta = "sp_EliminarHabitacion";
                 DynamicParameters parametros = new DynamicParameters();
-                parametros.Add("@id", id, DbType.Int32);
+                parametros.Add("@id", habitacion.idHabitacion, DbType.Int32);
                 conexion.Open();
                 conexion.Execute(consulta, parametros, commandType: CommandType.StoredProcedure);
                 conexion.Close();

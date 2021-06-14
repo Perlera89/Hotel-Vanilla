@@ -39,8 +39,9 @@ namespace Hotel_Vanilla.Vista
             if (ValidarCampos() && btnGuardar.Text == "Guardar")
             {
                 CHabitaciones cHabitacion = new CHabitaciones();
-                sp_MostrarHabitaciones habitacion =(sp_MostrarHabitaciones) spMostrarHabitacionesBindingSource.Current;
-                cHabitacion.AgregarHabitacion(habitacion, Convert.ToInt32(cbTipoHabitacion.SelectedValue.ToString()));
+                Habitaciones habitacion =(Habitaciones) habitacionesBindingSource.Current;
+                habitacion.idTipoHabitacion_FK = Convert.ToInt32(cbTipoHabitacion.SelectedValue.ToString());
+                cHabitacion.AgregarHabitacion(habitacion);
 
                 frmMensajeExito.Confirmar("Se ha Ingresado correctamente");
 
@@ -59,12 +60,12 @@ namespace Hotel_Vanilla.Vista
             }
             else if (ValidarCampos() && btnGuardar.Text == "Actualizar")
             {
-                CHabitaciones Chabitacion = new CHabitaciones();
-                //Habitaciones habitacion = (Habitaciones)habitacionesBindingSource.Current;
-                Chabitacion.ActualizarHabitacion(Convert.ToInt32(lblidHabitacion.Text),
-                                                numeroHabitacionTextBox.Text,
-                                                Convert.ToDecimal(tarifaTextBox.Text),
-                                                Convert.ToInt32(cbTipoHabitacion.SelectedValue.ToString()));
+                CHabitaciones cHabitacion = new CHabitaciones();
+                Habitaciones habitacion = (Habitaciones)habitacionesBindingSource.Current;
+                habitacion.numeroHabitacion = numeroHabitacionTextBox.Text;
+                habitacion.tarifa = Convert.ToDecimal(tarifaTextBox.Text);
+                habitacion.idTipoHabitacion_FK = Convert.ToInt32(cbTipoHabitacion.SelectedValue.ToString());
+                cHabitacion.ActualizarHabitacion(habitacion);
 
                 frmMensajeExito.Confirmar("Se ha Actualizado correctamente");
 
@@ -79,20 +80,26 @@ namespace Hotel_Vanilla.Vista
                 this.Close();
             }
         }
-        
+        public Habitaciones habitacion;
         private void frmManejoHabitaciones_Load(object sender, EventArgs e)
         {
-            numeroHabitacionTextBox.Focus();
-            cargarCBTipoHabitacion();
-            cbTipoHabitacion.Text=tipoHabitacion;
 
             if (accion==false)
             {
-                spMostrarHabitacionesBindingSource.AddNew();
+                habitacionesBindingSource.AddNew();
+                cargarCBTipoHabitacion();
+                cbTipoHabitacion.Text = tipoHabitacion;
             }
             else
             {
-                spMostrarHabitacionesBindingSource.EndEdit();
+                MessageBox.Show("modificar");
+                habitacionesBindingSource.EndEdit();
+                //limpiando y cargando los datos a las cajas que se traen desde habitaciones
+                habitacionesBindingSource.Clear();
+                habitacionesBindingSource.DataSource = habitacion;
+
+                cargarCBTipoHabitacion();
+                cbTipoHabitacion.Text = tipoHabitacion;
             } 
         }
 
@@ -111,7 +118,9 @@ namespace Hotel_Vanilla.Vista
         private void cargarCBTipoHabitacion()
         {
             CTipoHabitaciones cTipoHabitaciones = new CTipoHabitaciones();
-            
+            tipoHabitacionesBindingSource.Clear();
+            //tipoHabitacionesBindingSource.DataSource = cTipoHabitaciones.CargarCBTipoHabitacion().ToList();
+            //tipoHabitacionesBindingSource.DataMember = "Tipodehabitacion";
             cbTipoHabitacion.DataSource = cTipoHabitaciones.CargarCBTipoHabitacion();
             cbTipoHabitacion.DisplayMember = "Tipodehabitacion";
             cbTipoHabitacion.ValueMember = "idTipoHabitacion";
@@ -232,6 +241,11 @@ namespace Hotel_Vanilla.Vista
             {
                 btnGuardar_Click(sender, e);
             }
+        }
+
+        private void cbTipoHabitacion_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

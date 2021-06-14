@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using Hotel_Vanilla.CONTROLADOR;
+using Hotel_Vanilla.ENTIDAD;
 
 namespace Hotel_Vanilla.Vista
 {
@@ -48,10 +49,18 @@ namespace Hotel_Vanilla.Vista
         private void btnActualizar_Click(object sender, EventArgs e)
         {
             frmManejoHabitaciones manejoHabitacion = new frmManejoHabitaciones();
-            manejoHabitacion.lblidHabitacion.Text = dtgHabitaciones.CurrentRow.Cells[0].Value.ToString();
-            manejoHabitacion.numeroHabitacionTextBox.Text = dtgHabitaciones.CurrentRow.Cells[1].Value.ToString();
-            manejoHabitacion.tarifaTextBox.Text = dtgHabitaciones.CurrentRow.Cells[2].Value.ToString();
+            //manejoHabitacion.lblidHabitacion.Text = dtgHabitaciones.CurrentRow.Cells[0].Value.ToString();
+            //manejoHabitacion.numeroHabitacionTextBox.Text = dtgHabitaciones.CurrentRow.Cells[1].Value.ToString();
+            //manejoHabitacion.tarifaTextBox.Text = dtgHabitaciones.CurrentRow.Cells[2].Value.ToString();
             manejoHabitacion.tipoHabitacion = dtgHabitaciones.CurrentRow.Cells[3].Value.ToString();
+            
+            Habitaciones habitacion = new Habitaciones();
+            habitacion.idHabitacion = Convert.ToInt32(dtgHabitaciones.CurrentRow.Cells[0].Value.ToString());
+            habitacion.numeroHabitacion = dtgHabitaciones.CurrentRow.Cells[1].Value.ToString();
+            habitacion.tarifa = Convert.ToDecimal(dtgHabitaciones.CurrentRow.Cells[2].Value.ToString());
+
+            manejoHabitacion.habitacion = habitacion;
+
             manejoHabitacion.btnGuardar.Text = "Actualizar";
             manejoHabitacion.accion = true;
             manejoHabitacion.ShowDialog();
@@ -73,7 +82,10 @@ namespace Hotel_Vanilla.Vista
 
             else if (resultado == DialogResult.OK && dtgHabitaciones.SelectedRows.Count > 0)
             {
-                habitaciones.EliminarHabitacion(Convert.ToInt32(dtgHabitaciones.CurrentRow.Cells[0].Value.ToString()));
+                Habitaciones habitacion = new Habitaciones();
+                habitacion.idHabitacion = Convert.ToInt32(dtgHabitaciones.CurrentRow.Cells[0].Value.ToString());
+
+                habitaciones.EliminarHabitacion(habitacion);
 
                 frmMensajeExito.Confirmar("Se ha Eliminado correctamente");
 

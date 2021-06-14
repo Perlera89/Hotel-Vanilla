@@ -50,7 +50,7 @@ namespace Hotel_Vanilla.MODELO
         public List<Sucesos> UltimoSuceso()
         {
             List<Sucesos> Sucesos = new List<Sucesos>();
-            string consulta = "sp_UltimoSuceso";
+            string consulta = "sp_UltimoSucesos";
             cn.Open();
             Sucesos = cn.Query<Sucesos>(consulta, commandType: CommandType.StoredProcedure).ToList();
             cn.Close();
