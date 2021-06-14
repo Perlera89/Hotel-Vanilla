@@ -588,6 +588,7 @@ namespace Hotel_Vanilla.Vista
             this.lblPass.Name = "lblPass";
             this.lblPass.Size = new System.Drawing.Size(0, 13);
             this.lblPass.TabIndex = 13;
+            this.lblPass.Visible = false;
             // 
             // frmInicio
             // 

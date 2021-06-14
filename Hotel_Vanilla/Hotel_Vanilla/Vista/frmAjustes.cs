@@ -24,30 +24,50 @@ namespace Hotel_Vanilla.Vista
             InitializeComponent();
         }
 
-        private void btnRegister_Click(object sender, EventArgs e)
+        private void txtMensaje_Enter(object sender, EventArgs e)
+        {
+            if (txtMensaje.Text == "Mensaje")
+                txtMensaje.Text = "";
+        }
+
+        private void txtMensaje_Leave(object sender, EventArgs e)
+        {
+            if (txtMensaje.Text == "")
+                txtMensaje.Text = "Mensaje";
+        }
+
+        private void btnEnviar_Click(object sender, EventArgs e)
         {
             //La cadena "servidor" es el servidor de correo que enviará tu mensaje
-            string servidor = "smtp.gmail.com";
+            //string servidor = "Manukamy7@gmail.gmail.com";
             // Crea el mensaje estableciendo quién lo manda y quién lo recibe
-            MailMessage mensaje = new MailMessage(
-            Emisor = inicio.lblUsuario.Text,
-            Receptor = "Manuel Perlera",
-            txtAsunto.Text,
-            txtMensaje.Text
-                );
+            MailMessage mensaje = new MailMessage();
+
+            mensaje.To.Add("manuenitoo@gmail.com");
+            mensaje.Subject = "Ha ocurrido un problema";
+            mensaje.SubjectEncoding = System.Text.Encoding.UTF8;
+            mensaje.Bcc.Add("manukamy7@gmail.com");
+            mensaje.Body = "Mensaje";
+            mensaje.BodyEncoding = System.Text.Encoding.UTF8;
+            mensaje.IsBodyHtml = true;
+            mensaje.From = new MailAddress("manukamy7@gmail.com");
 
             //Envía el mensaje.
-            SmtpClient cliente = new SmtpClient(servidor);
-
-            cliente.UseDefaultCredentials = false;
-            cliente.Credentials = new System.Net.NetworkCredential(Emisor, inicio.lblPass.Text);
+            SmtpClient cliente = new SmtpClient();
+            cliente.Credentials = new NetworkCredential("manukamy7@gmail.com", "Kamy8930");
             cliente.Port = 587;
-            cliente.Host = "manuenitoo@gmail.com";
             cliente.EnableSsl = true;
+            cliente.Host = "smtp.gmail.com";
 
-            //Añade credenciales si el servidor lo requiere.
-            //cliente.Credentials = CredentialCache.DefaultNetworkCredentials;
-            cliente.Send(mensaje);
+            try
+            {
+                cliente.Send(mensaje);
+            }
+
+            catch (Exception)
+            {
+                frmMensajeAviso.Avisar("Error al enviar");
+            }
         }
     }
 }

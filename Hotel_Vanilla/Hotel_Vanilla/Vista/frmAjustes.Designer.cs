@@ -46,7 +46,7 @@ namespace Hotel_Vanilla.Vista
             this.chkClave = new Bunifu.Framework.UI.BunifuCheckbox();
             this.bunifuCheckbox1 = new Bunifu.Framework.UI.BunifuCheckbox();
             this.bunifuCheckbox2 = new Bunifu.Framework.UI.BunifuCheckbox();
-            this.btnRegister = new Bunifu.Framework.UI.BunifuThinButton2();
+            this.btnEnviar = new Bunifu.Framework.UI.BunifuThinButton2();
             this.bunifuCustomLabel7 = new Bunifu.Framework.UI.BunifuCustomLabel();
             this.txtUsuario = new Bunifu.Framework.UI.BunifuMaterialTextbox();
             this.txtPass = new Bunifu.Framework.UI.BunifuMaterialTextbox();
@@ -184,7 +184,7 @@ namespace Hotel_Vanilla.Vista
             // 
             // bunifuCustomLabel3
             // 
-            this.bunifuCustomLabel3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.bunifuCustomLabel3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.bunifuCustomLabel3.AutoSize = true;
             this.bunifuCustomLabel3.BackColor = System.Drawing.Color.Transparent;
             this.bunifuCustomLabel3.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -213,6 +213,8 @@ namespace Hotel_Vanilla.Vista
             this.txtMensaje.TabIndex = 54;
             this.txtMensaje.Text = "Mensaje";
             this.txtMensaje.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.txtMensaje.Enter += new System.EventHandler(this.txtMensaje_Enter);
+            this.txtMensaje.Leave += new System.EventHandler(this.txtMensaje_Leave);
             // 
             // bunifuCustomLabel4
             // 
@@ -286,32 +288,32 @@ namespace Hotel_Vanilla.Vista
             this.bunifuCheckbox2.Size = new System.Drawing.Size(20, 20);
             this.bunifuCheckbox2.TabIndex = 60;
             // 
-            // btnRegister
+            // btnEnviar
             // 
-            this.btnRegister.ActiveBorderThickness = 1;
-            this.btnRegister.ActiveCornerRadius = 20;
-            this.btnRegister.ActiveFillColor = System.Drawing.Color.RoyalBlue;
-            this.btnRegister.ActiveForecolor = System.Drawing.Color.White;
-            this.btnRegister.ActiveLineColor = System.Drawing.Color.White;
-            this.btnRegister.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnRegister.BackColor = System.Drawing.SystemColors.Control;
-            this.btnRegister.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnRegister.BackgroundImage")));
-            this.btnRegister.ButtonText = "Enviar";
-            this.btnRegister.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnRegister.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnRegister.ForeColor = System.Drawing.Color.White;
-            this.btnRegister.IdleBorderThickness = 1;
-            this.btnRegister.IdleCornerRadius = 20;
-            this.btnRegister.IdleFillColor = System.Drawing.Color.Transparent;
-            this.btnRegister.IdleForecolor = System.Drawing.Color.RoyalBlue;
-            this.btnRegister.IdleLineColor = System.Drawing.Color.RoyalBlue;
-            this.btnRegister.Location = new System.Drawing.Point(685, 474);
-            this.btnRegister.Margin = new System.Windows.Forms.Padding(5);
-            this.btnRegister.Name = "btnRegister";
-            this.btnRegister.Size = new System.Drawing.Size(136, 41);
-            this.btnRegister.TabIndex = 61;
-            this.btnRegister.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.btnRegister.Click += new System.EventHandler(this.btnRegister_Click);
+            this.btnEnviar.ActiveBorderThickness = 1;
+            this.btnEnviar.ActiveCornerRadius = 20;
+            this.btnEnviar.ActiveFillColor = System.Drawing.Color.RoyalBlue;
+            this.btnEnviar.ActiveForecolor = System.Drawing.Color.White;
+            this.btnEnviar.ActiveLineColor = System.Drawing.Color.White;
+            this.btnEnviar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnEnviar.BackColor = System.Drawing.SystemColors.Control;
+            this.btnEnviar.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnEnviar.BackgroundImage")));
+            this.btnEnviar.ButtonText = "Enviar";
+            this.btnEnviar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnEnviar.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnEnviar.ForeColor = System.Drawing.Color.White;
+            this.btnEnviar.IdleBorderThickness = 1;
+            this.btnEnviar.IdleCornerRadius = 20;
+            this.btnEnviar.IdleFillColor = System.Drawing.Color.Transparent;
+            this.btnEnviar.IdleForecolor = System.Drawing.Color.RoyalBlue;
+            this.btnEnviar.IdleLineColor = System.Drawing.Color.RoyalBlue;
+            this.btnEnviar.Location = new System.Drawing.Point(685, 474);
+            this.btnEnviar.Margin = new System.Windows.Forms.Padding(5);
+            this.btnEnviar.Name = "btnEnviar";
+            this.btnEnviar.Size = new System.Drawing.Size(136, 41);
+            this.btnEnviar.TabIndex = 61;
+            this.btnEnviar.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.btnEnviar.Click += new System.EventHandler(this.btnEnviar_Click);
             // 
             // bunifuCustomLabel7
             // 
@@ -462,6 +464,7 @@ namespace Hotel_Vanilla.Vista
             // 
             // guna2TileButton1
             // 
+            this.guna2TileButton1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.guna2TileButton1.CheckedState.Parent = this.guna2TileButton1;
             this.guna2TileButton1.CustomImages.Parent = this.guna2TileButton1;
             this.guna2TileButton1.FillColor = System.Drawing.Color.RoyalBlue;
@@ -498,7 +501,7 @@ namespace Hotel_Vanilla.Vista
             // 
             // txtAsunto
             // 
-            this.txtAsunto.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.txtAsunto.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.txtAsunto.BackColor = System.Drawing.SystemColors.ButtonFace;
             this.txtAsunto.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.txtAsunto.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -515,7 +518,6 @@ namespace Hotel_Vanilla.Vista
             this.txtAsunto.Name = "txtAsunto";
             this.txtAsunto.Size = new System.Drawing.Size(241, 33);
             this.txtAsunto.TabIndex = 74;
-            this.txtAsunto.Text = "Asunto ";
             this.txtAsunto.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             // 
             // frmAjustes
@@ -534,7 +536,7 @@ namespace Hotel_Vanilla.Vista
             this.Controls.Add(this.txtEmail);
             this.Controls.Add(this.bunifuCheckbox3);
             this.Controls.Add(this.bunifuCustomLabel7);
-            this.Controls.Add(this.btnRegister);
+            this.Controls.Add(this.btnEnviar);
             this.Controls.Add(this.bunifuCheckbox2);
             this.Controls.Add(this.bunifuCheckbox1);
             this.Controls.Add(this.chkClave);
@@ -576,7 +578,7 @@ namespace Hotel_Vanilla.Vista
         private Bunifu.Framework.UI.BunifuCheckbox bunifuCheckbox2;
         private Bunifu.Framework.UI.BunifuCheckbox bunifuCheckbox1;
         private Bunifu.Framework.UI.BunifuCheckbox chkClave;
-        private Bunifu.Framework.UI.BunifuThinButton2 btnRegister;
+        private Bunifu.Framework.UI.BunifuThinButton2 btnEnviar;
         private Bunifu.Framework.UI.BunifuCustomLabel bunifuCustomLabel7;
         private Bunifu.Framework.UI.BunifuMaterialTextbox txtUsuario;
         private Bunifu.Framework.UI.BunifuMaterialTextbox txtPass;
