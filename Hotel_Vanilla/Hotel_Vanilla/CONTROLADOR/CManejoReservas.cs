@@ -12,6 +12,7 @@ namespace Hotel_Vanilla.CONTROLADOR
     {
         MManejoReservas mReservas = new MManejoReservas();
 
+        //mostrar
         public List<spMostrarManejoReservas> ConsultarReservas()
         {
             return mReservas.ConsultarReservas();
@@ -22,16 +23,19 @@ namespace Hotel_Vanilla.CONTROLADOR
             return mReservas.BuscarReservaciones(buscador);
         }
 
+        //guardar
         public void AgregarReserva(ManejoReservas Reservas)
         {
             mReservas.AgregarReserva(Reservas);
         }
 
+        //eliminar
         public void EliminarReserva(ManejoReservas Reservas)
         {
             mReservas.EliminarReserva(Reservas);
         }
 
+        //Actualizar
         public void ActualizarReserva(ManejoReservas Reservas)
         {
             mReservas.ActualizarReserva(Reservas);

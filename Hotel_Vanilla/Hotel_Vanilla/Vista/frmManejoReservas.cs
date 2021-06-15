@@ -18,6 +18,9 @@ namespace Hotel_Vanilla.Vista
         public frmManejoReservas()
         {
             InitializeComponent();
+            //txtFechaReserva.Text = DateTime.Today.ToString();
+            //txtFechaCheckIn.Text = DateTime.Today.ToString();
+            //txtFechaCheckOut.Text = DateTime.Today.ToString();
         }
         CManejoReservas Creservas = new CManejoReservas();
         private void btnCerrar_Click(object sender, EventArgs e)
@@ -40,20 +43,25 @@ namespace Hotel_Vanilla.Vista
             cbHabitacion.Text = habitacion;
             cbIdHuesped.Text = huesped;
         }
+        public ManejoReservas reservaciones;
         private void frmManejoReservas_Load(object sender, EventArgs e)
         {
-            CargarHuespedes();
-            CargarHabitaciones();
-            RellenarCB();
             if (accion == false)
             {
                 manejoReservasBindingSource.AddNew();
+                CargarHuespedes();
+                CargarHabitaciones();
+
             }
             else if (accion)
             {
                 manejoReservasBindingSource.EndEdit();
-            }
+                manejoReservasBindingSource.DataSource = reservaciones;
+                CargarHuespedes();
+                CargarHabitaciones();
 
+                RellenarCB();
+            }
 
         }
         private void CargarHuespedes()
@@ -92,39 +100,35 @@ namespace Hotel_Vanilla.Vista
             if (ValidarCampos() && btnGuardar.Text.Equals("Guardar"))
             {
                 //tomando los datos actuales de bindin y asignandolo al objeto de ManejoReservas
-                ManejoReservas mReservas = (ManejoReservas)manejoReservasBindingSource.Current;
-                ManejoReservas reservas = new ManejoReservas();
+                ManejoReservas reservas = (ManejoReservas)manejoReservasBindingSource.Current;
+                //ManejoReservas reservas = new ManejoReservas();
 
-                reservas.fechaReserva = Convert.ToDateTime(txtFechaReserva.Text);
-                reservas.fechaCheckIn = Convert.ToDateTime(txtFechaCheckIn.Text);
-                reservas.fechaCheckOut = mReservas.fechaCheckOut;
-                reservas.numeroDias = Convert.ToInt32(txtDiasAlojamiento.Text);
+                //reservas.fechaReserva = Convert.ToDateTime(txtFechaReserva.Text);
+                //reservas.fechaCheckIn = Convert.ToDateTime(txtFechaCheckIn.Text);
+                reservas.fechaCheckOut = null;
+                //reservas.numeroDias = Convert.ToInt32(txtDiasAlojamiento.Text);
                 if (txtPagoAdelantado.Text == "")
                 {
                     reservas.pagoAdelantado = Convert.ToDecimal(0.0000);
                 }
-
-                else
-                {
-                    reservas.pagoAdelantado = Convert.ToDecimal(txtPagoAdelantado.Text);
-                }
-
+                //else
+                //{
+                //    reservas.pagoAdelantado = Convert.ToDecimal(txtPagoAdelantado.Text);
+                //}
                 if (txtDescuento.Text == "")
                 {
                     reservas.descuento = Convert.ToDecimal(0.0000);
                 }
-
-                else
-                {
-                    reservas.descuento = Convert.ToDecimal(txtDescuento.Text);
-                }
+                //else
+                //{
+                //    reservas.descuento = Convert.ToDecimal(txtDescuento.Text);
+                //}
                 reservas.total = 0;
                 reservas.idHabitacion_FK = Convert.ToInt32(cbHabitacion.SelectedValue.ToString());
                 reservas.idHuesped_FK = Convert.ToInt32(cbIdHuesped.SelectedValue.ToString());
 
                 //mandando el objeto reservas como parametro al metodo de agrregar reserva
                 Creservas.AgregarReserva(reservas);
-                Limpiar();
 
                 frmMensajeExito.Confirmar("Se ha Ingresado correctamente");
 
@@ -137,6 +141,7 @@ namespace Hotel_Vanilla.Vista
 
                 inicio.MostrarNotificacion(Titulo, Mensaje, ToolTipIcon.Info);
 
+                Limpiar();
 
             }
 
@@ -146,7 +151,7 @@ namespace Hotel_Vanilla.Vista
                 reservas.idReserva = Convert.ToInt32(txtIdReserva.Text);
                 reservas.fechaReserva = Convert.ToDateTime(txtFechaReserva.Text);
                 reservas.fechaCheckIn = Convert.ToDateTime(txtFechaCheckIn.Text);
-                reservas.fechaCheckOut = Convert.ToDateTime(txtFechaCheckOut.Text);
+                reservas.fechaCheckOut = Convert.ToDateTime(txtCheckOut.Text);
                 reservas.numeroDias = Convert.ToInt32(txtDiasAlojamiento.Text);
                 if (txtPagoAdelantado.Text == "")
                 {
@@ -194,19 +199,14 @@ namespace Hotel_Vanilla.Vista
         {
             txtFechaReserva.Text = DateTime.Now.ToString();
             txtFechaCheckIn.Text = DateTime.Now.ToString();
-            txtFechaCheckOut.Text = DateTime.Now.ToString();
+            txtCheckOut.Text = DateTime.Now.ToString();
             txtDiasAlojamiento.Value = 1;
             cbHabitacion.SelectedIndex = -1;
             txtPagoAdelantado.Text = "";
             txtDescuento.Text = "";
             txtTotal.Text = "";
             cbIdHuesped.SelectedIndex = -1;
-        }
-        private void CalcularCheckOut()
-        {
-            DateTime checkin = Convert.ToDateTime(txtFechaCheckIn.Text);
-            int dias = Convert.ToInt32(txtDiasAlojamiento.Text);
-            txtFechaCheckOut.Text = (checkin.AddDays(dias)).ToString();
+            //manejoReservasBindingSource.DataSource = null;
         }
         private void CalcularTotal()
         {
@@ -273,21 +273,9 @@ namespace Hotel_Vanilla.Vista
             errorProvider.SetError(cbIdHuesped, "Este campo es obligatorio");
         }
 
-        private void numeroDiasTextBox_Leave(object sender, EventArgs e)
-        {
-            CalcularCheckOut();
-        }
-
         private void descuentoTextBox_Leave(object sender, EventArgs e)
         {
-            try
-            {
-                CalcularTotal();
-            }
-            catch (Exception)
-            {
 
-            }
         }
 
         private void txtPagoAdelantado_KeyPress(object sender, KeyPressEventArgs e)
@@ -389,6 +377,32 @@ namespace Hotel_Vanilla.Vista
             if (e.KeyCode == Keys.Enter)
             {
                 btnGuardar_Click(sender, e);
+            }
+        }
+
+        private void txtDiasAlojamiento_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode==Keys.Enter)
+            {
+                DateTime checkin = Convert.ToDateTime(txtFechaCheckIn.Text);
+                int dias = Convert.ToInt32(txtDiasAlojamiento.Text);
+                DateTime salida = checkin.AddDays(dias);
+                txtCheckOut.Text = (salida).ToString();
+            }
+        }
+
+        private void txtDescuento_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode==Keys.Enter)
+            {
+                try
+                {
+                    CalcularTotal();
+                }
+                catch (Exception)
+                {
+
+                }
             }
         }
     }

@@ -51,19 +51,21 @@ namespace Hotel_Vanilla.Vista
             if (dtgReservas.SelectedRows.Count > 0)
             {
                 frmManejoReservas reserva = new frmManejoReservas();
-                reserva.txtIdReserva.Text = dtgReservas.CurrentRow.Cells[0].Value.ToString();
-                reserva.txtFechaReserva.Text = dtgReservas.CurrentRow.Cells[4].Value.ToString();
-                reserva.txtFechaCheckIn.Text = dtgReservas.CurrentRow.Cells[5].Value.ToString();
-                reserva.txtFechaCheckOut.Text = dtgReservas.CurrentRow.Cells[6].Value.ToString();
-                reserva.txtDiasAlojamiento.Text = dtgReservas.CurrentRow.Cells[7].Value.ToString();
-                reserva.txtPagoAdelantado.Text = dtgReservas.CurrentRow.Cells[9].Value.ToString();
-                reserva.txtDescuento.Text = dtgReservas.CurrentRow.Cells[11].Value.ToString();
-                reserva.txtTotal.Text = dtgReservas.CurrentRow.Cells[12].Value.ToString();
+                ManejoReservas reservas = new ManejoReservas();
+                reservas.idReserva = Convert.ToInt32(dtgReservas.CurrentRow.Cells[0].Value.ToString());
+                reservas.fechaReserva= Convert.ToDateTime(dtgReservas.CurrentRow.Cells[4].Value.ToString());
+                reservas.fechaCheckIn= Convert.ToDateTime(dtgReservas.CurrentRow.Cells[5].Value.ToString());
+                reserva.txtCheckOut.Text= dtgReservas.CurrentRow.Cells[6].Value.ToString();
+                reservas.numeroDias= Convert.ToInt32(dtgReservas.CurrentRow.Cells[7].Value.ToString());
+                reservas.pagoAdelantado= Convert.ToDecimal(dtgReservas.CurrentRow.Cells[9].Value.ToString());
+                reservas.descuento= Convert.ToDecimal(dtgReservas.CurrentRow.Cells[11].Value.ToString());
+                reservas.total= Convert.ToDecimal(dtgReservas.CurrentRow.Cells[12].Value.ToString());
+                reserva.reservaciones = reservas;
                 reserva.habitacion = dtgReservas.CurrentRow.Cells[3].Value.ToString();
                 reserva.huesped = dtgReservas.CurrentRow.Cells[1].Value.ToString();
 
                 reserva.btnGuardar.Text = "Actualizar";
-                reserva.txtFechaCheckOut.Visible = true;
+                reserva.txtCheckOut.Visible = true;
                 reserva.lblCheckOut.Visible = true;
                 reserva.accion = true;
                 reserva.ShowDialog();

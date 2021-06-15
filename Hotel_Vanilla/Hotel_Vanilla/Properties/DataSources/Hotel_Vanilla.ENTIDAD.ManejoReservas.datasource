@@ -9,10 +9,17 @@
    <TypeInfo>Hotel_Vanilla.ENTIDAD.ManejoReservas, Hotel Vanilla, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</TypeInfo>
    <TypeUISetting>
       <PropertyUISettings>
-         <PropertyUISetting Name="idHuesped_FK">
+         <PropertyUISetting Name="pagoAdelantado">
             <ControlSettings>
                <ControlSetting ArtifactName="Microsoft:System.Windows.Forms:Form">
-                  <BindableControlInfo Name="Guna2ComboBox" Type="Guna.UI2.WinForms.Guna2ComboBox" AssemblyName="Guna.UI2, Version=2.0.1.4, Culture=neutral, PublicKeyToken=null" AssemblyCodeBase="file:///C:/Users/Jose/Desktop/Hotel_Vainilla/Hotel_Vanilla/packages/Guna.UI2.WinForms.2.0.1.4/lib/net40/Guna.UI2.dll" Frameworks=".NETFramework,Version=v4.7.2;.NETFramework,Version=v4.8" />
+                  <BindableControlInfo Name="TextBox" Type="System.Windows.Forms.TextBox" AssemblyName="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+               </ControlSetting>
+            </ControlSettings>
+         </PropertyUISetting>
+         <PropertyUISetting Name="descuento">
+            <ControlSettings>
+               <ControlSetting ArtifactName="Microsoft:System.Windows.Forms:Form">
+                  <BindableControlInfo Name="TextBox" Type="System.Windows.Forms.TextBox" AssemblyName="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
                </ControlSetting>
             </ControlSettings>
          </PropertyUISetting>

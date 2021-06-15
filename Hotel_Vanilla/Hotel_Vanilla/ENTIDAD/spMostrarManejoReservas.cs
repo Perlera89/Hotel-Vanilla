@@ -18,7 +18,7 @@ namespace Hotel_Vanilla.ENTIDAD
         public int Dias { get; set; }
         public int Ocupantes { get; set; }
         public decimal? Pagoadelantado { get; set; }
-        public string Tipodehabitación { get; set; }
+        public string Tipodehabitacion { get; set; }
         public decimal? Descuento { get; set; }
         public decimal? Total { get; set; }
     }
