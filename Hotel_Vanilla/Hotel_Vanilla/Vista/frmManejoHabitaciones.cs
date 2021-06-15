@@ -54,7 +54,6 @@ namespace Hotel_Vanilla.Vista
 
                 inicio.MostrarNotificacion(Titulo, Mensaje, ToolTipIcon.Info);
 
-                this.Close();
                 Limpiar();
                 numeroHabitacionTextBox.Focus();
             }
@@ -92,7 +91,6 @@ namespace Hotel_Vanilla.Vista
             }
             else
             {
-                MessageBox.Show("modificar");
                 habitacionesBindingSource.EndEdit();
                 //limpiando y cargando los datos a las cajas que se traen desde habitaciones
                 habitacionesBindingSource.Clear();
@@ -118,9 +116,6 @@ namespace Hotel_Vanilla.Vista
         private void cargarCBTipoHabitacion()
         {
             CTipoHabitaciones cTipoHabitaciones = new CTipoHabitaciones();
-            tipoHabitacionesBindingSource.Clear();
-            //tipoHabitacionesBindingSource.DataSource = cTipoHabitaciones.CargarCBTipoHabitacion().ToList();
-            //tipoHabitacionesBindingSource.DataMember = "Tipodehabitacion";
             cbTipoHabitacion.DataSource = cTipoHabitaciones.CargarCBTipoHabitacion();
             cbTipoHabitacion.DisplayMember = "Tipodehabitacion";
             cbTipoHabitacion.ValueMember = "idTipoHabitacion";

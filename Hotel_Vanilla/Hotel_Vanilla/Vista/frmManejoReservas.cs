@@ -148,7 +148,7 @@ namespace Hotel_Vanilla.Vista
             else if (ValidarCampos() && btnGuardar.Text.Equals("Actualizar"))
             {
                 ManejoReservas reservas = new ManejoReservas();
-                reservas.idReserva = Convert.ToInt32(txtIdReserva.Text);
+                reservas.idReserva = Convert.ToInt32(txtId.Text);
                 reservas.fechaReserva = Convert.ToDateTime(txtFechaReserva.Text);
                 reservas.fechaCheckIn = Convert.ToDateTime(txtFechaCheckIn.Text);
                 reservas.fechaCheckOut = Convert.ToDateTime(txtCheckOut.Text);
@@ -404,6 +404,11 @@ namespace Hotel_Vanilla.Vista
 
                 }
             }
+        }
+
+        private void btnCancelar_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

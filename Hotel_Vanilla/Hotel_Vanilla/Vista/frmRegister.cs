@@ -81,8 +81,9 @@ namespace Hotel_Vanilla.Vista
                 
                 }
             }
+
             catch (Exception ex) {
-                frmMensajeAviso.Avisar("Ya existe un usuario con ese nombre");
+                frmMensajeAviso.Avisar("Ya existe un usuario con ese correo");
             }
         }
 

@@ -3,7 +3,7 @@ use VanillaBD;
 --=======================
 --METODO PARA CARGAR EL CB DE GESTION DE HABITACIONES
 go
-Create Proc sp_TipoHabitacion
+alter Proc sp_TipoHabitacion
 as
 	Select h.idTipoHabitacion, 
 	h.tipo 'Tipodehabitacion'

@@ -36,14 +36,9 @@ namespace Hotel_Vanilla.Vista
 
         private void CargarEstados()
         {
-            IDbConnection conexion = Conexion.conectar();
-            List<Estados> estados = new List<Estados>();
-            string consulta = "select * from Estados";
-            conexion.Open();
-            estados = conexion.Query<Estados>(consulta, commandType: CommandType.Text).ToList();
-            conexion.Close();
+            CEstados estados = new CEstados();
 
-            cbEstado.DataSource = estados;
+            cbEstado.DataSource = estados.MostrarEstados() ;
             cbEstado.DisplayMember = "nombreEstado";
             cbEstado.ValueMember = "idEstado";
             //cbIdHuesped.SelectedIndex = 1;

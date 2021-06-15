@@ -44,17 +44,17 @@ namespace Hotel_Vanilla.Vista
             MailMessage mensaje = new MailMessage();
 
             mensaje.To.Add("manuenitoo@gmail.com");
-            mensaje.Subject = "Ha ocurrido un problema";
+            mensaje.Subject = txtAsunto.Text;
             mensaje.SubjectEncoding = System.Text.Encoding.UTF8;
-            mensaje.Bcc.Add("manukamy7@gmail.com");
-            mensaje.Body = "Mensaje";
+            mensaje.Bcc.Add(frmInicio.Correo);
+            mensaje.Body = txtMensaje.Text;
             mensaje.BodyEncoding = System.Text.Encoding.UTF8;
             mensaje.IsBodyHtml = true;
-            mensaje.From = new MailAddress("manukamy7@gmail.com");
+            mensaje.From = new MailAddress(frmInicio.Correo);
 
             //Envía el mensaje.
             SmtpClient cliente = new SmtpClient();
-            cliente.Credentials = new NetworkCredential("manukamy7@gmail.com", "Kamy8930");
+            cliente.Credentials = new NetworkCredential(frmInicio.Correo, frmInicio.Pass);
             cliente.Port = 587;
             cliente.EnableSsl = true;
             cliente.Host = "smtp.gmail.com";
@@ -62,6 +62,7 @@ namespace Hotel_Vanilla.Vista
             try
             {
                 cliente.Send(mensaje);
+                frmMensajeAviso.Avisar("El mensaje se ha enviado con exito");
             }
 
             catch (Exception)

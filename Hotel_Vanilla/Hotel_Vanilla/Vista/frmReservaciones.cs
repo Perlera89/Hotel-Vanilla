@@ -30,15 +30,16 @@ namespace Hotel_Vanilla.Vista
         //Accion de mostrar
         private void CargarReservas()
         {
-            dtgReservas.DataSource = null;
-            dtgReservas.DataSource = cReservas.ConsultarReservas();
-            //this.sp_MostrarManejoReservasTableAdapter.ClearBeforeFill = true;
-            //this.sp_MostrarManejoReservasTableAdapter.Fill(this.vanillaBDDataSet1.sp_MostrarManejoReservas);
+            spMostrarManejoReservasBindingSource.DataSource = null;
+            spMostrarManejoReservasBindingSource.DataSource = cReservas.ConsultarReservas();
         }
 
         private void btnAgregar_Click(object sender, EventArgs e)
         {
             frmManejoReservas reserva = new frmManejoReservas();
+            reserva.lblId.Visible = false;
+            reserva.txtId.Visible = false;
+            reserva.idCaja.Visible = false;
             reserva.ShowDialog();
 
             CargarReservas();
@@ -82,7 +83,7 @@ namespace Hotel_Vanilla.Vista
         private void frmReservaciones_Load(object sender, EventArgs e)
         {
             CargarReservas();
-            //this.sp_MostrarManejoReservasTableAdapter.Fill(this.vanillaBDDataSet1.sp_MostrarManejoReservas);
+
             for (var i = 0; i < dtgReservas.Columns.Count; i++)
             {
                 dtgReservas.Columns[i].AutoSizeMode = DataGridViewAutoSizeColumnMode.DisplayedCells;
@@ -122,13 +123,14 @@ namespace Hotel_Vanilla.Vista
                     Mensaje = suceso.descripcion;
                 }
                 inicio.MostrarNotificacion(Titulo, Mensaje, ToolTipIcon.Error);
+
                 CargarReservas();
             }
         }
 
         private void btnBuscar_Click(object sender, EventArgs e)
         {
-            dtgReservas.DataSource = cReservas.BuscarReservaciones(txtBuscar.Text);
+            spMostrarManejoReservasBindingSource.DataSource = cReservas.BuscarReservaciones(txtBuscar.Text);
         }
 
         private void btnRecargar_Click(object sender, EventArgs e)
@@ -140,7 +142,7 @@ namespace Hotel_Vanilla.Vista
         {
             if (e.KeyCode == Keys.Enter)
             {
-                dtgReservas.DataSource = cReservas.BuscarReservaciones(txtBuscar.Text);
+                spMostrarManejoReservasBindingSource.DataSource = cReservas.BuscarReservaciones(txtBuscar.Text);
             }
         }
 

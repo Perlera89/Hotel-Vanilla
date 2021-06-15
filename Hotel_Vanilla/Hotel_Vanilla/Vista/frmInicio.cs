@@ -16,6 +16,9 @@ namespace Hotel_Vanilla.Vista
 {
     public partial class frmInicio : Form
     {
+        public static string Correo { get; set; }
+        public static string Pass { get; set; }
+
         CHuespedes huespedes = new CHuespedes();
         CHabitaciones habitaciones = new CHabitaciones();
         CSucesos cSucesos = new CSucesos();

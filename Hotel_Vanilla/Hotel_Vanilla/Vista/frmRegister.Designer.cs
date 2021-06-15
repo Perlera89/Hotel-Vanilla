@@ -125,7 +125,7 @@ namespace Hotel_Vanilla.Vista
             this.claveTextBox.Margin = new System.Windows.Forms.Padding(2);
             this.claveTextBox.Name = "claveTextBox";
             this.claveTextBox.Size = new System.Drawing.Size(275, 26);
-            this.claveTextBox.TabIndex = 10;
+            this.claveTextBox.TabIndex = 3;
             // 
             // usuariosBindingSource
             // 
@@ -140,7 +140,7 @@ namespace Hotel_Vanilla.Vista
             this.correoTextBox.Margin = new System.Windows.Forms.Padding(2);
             this.correoTextBox.Name = "correoTextBox";
             this.correoTextBox.Size = new System.Drawing.Size(275, 26);
-            this.correoTextBox.TabIndex = 12;
+            this.correoTextBox.TabIndex = 2;
             this.correoTextBox.TextChanged += new System.EventHandler(this.correoTextBox_TextChanged);
             // 
             // nombreTextBox
@@ -152,7 +152,7 @@ namespace Hotel_Vanilla.Vista
             this.nombreTextBox.Margin = new System.Windows.Forms.Padding(2);
             this.nombreTextBox.Name = "nombreTextBox";
             this.nombreTextBox.Size = new System.Drawing.Size(275, 26);
-            this.nombreTextBox.TabIndex = 16;
+            this.nombreTextBox.TabIndex = 1;
             // 
             // bunifuCustomLabel1
             // 

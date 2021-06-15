@@ -91,7 +91,7 @@ namespace Hotel_Vanilla.MODELO
         public List<spBuscarReservacion> BuscarReservaciones(string buscador)
         {
             List<spBuscarReservacion> Reservacion = new List<spBuscarReservacion>();
-            string consulta = "sp_BuscarHabitacion";
+            string consulta = "sp_BuscarReservacion";
             DynamicParameters parametro = new DynamicParameters();
             parametro.Add("@buscador", buscador);
             conexion.Open();

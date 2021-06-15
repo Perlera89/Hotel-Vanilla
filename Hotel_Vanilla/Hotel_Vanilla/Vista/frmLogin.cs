@@ -83,9 +83,9 @@ namespace Hotel_Vanilla
         private void chkClave_OnChange(object sender, EventArgs e)
         {
             if (chkClave.Checked == true)
-                claveTextBox.UseSystemPasswordChar = false;
+                txtPass.UseSystemPasswordChar = false;
             else
-                claveTextBox.UseSystemPasswordChar = true;
+                txtPass.UseSystemPasswordChar = true;
         }
         private void Form1_Load(object sender, EventArgs e)
         {
@@ -94,7 +94,7 @@ namespace Hotel_Vanilla
 
         private void btnLogin_Click(object sender, EventArgs e)
         {
-            if (correoTextBox.Text.Equals("") || claveTextBox.Text.Equals(""))
+            if (txtCorreo.Text.Equals("") || txtPass.Text.Equals(""))
             {
                 frmMensajeAviso.Avisar("Debe llenar todos los campos");
 
@@ -114,10 +114,11 @@ namespace Hotel_Vanilla
                     frmInicio inicio = new frmInicio();
                     frmMensajeExito.Confirmar("Inicio de sesion exitoso");
 
-                    inicio.lblUsuario.Text = usuarios.nombre;
-                    inicio.lblPass.Text = usuarios.clave;
                     this.Hide();
-                    inicio.ShowDialog();
+                    inicio.Show();
+                    inicio.lblUsuario.Text = usuarios.nombre;
+                    frmInicio.Correo = usuarios.correo;
+                    frmInicio.Pass = usuarios.clave;
                 }
                 else
                 {

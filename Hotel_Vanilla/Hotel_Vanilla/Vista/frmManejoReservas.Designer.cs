@@ -49,8 +49,8 @@ namespace Hotel_Vanilla.Vista
             this.guna2DragControl1 = new Guna.UI2.WinForms.Guna2DragControl(this.components);
             this.btnCancelar = new Bunifu.Framework.UI.BunifuFlatButton();
             this.btnGuardar = new Bunifu.Framework.UI.BunifuFlatButton();
-            this.txtIdReserv = new Guna.UI2.WinForms.Guna2TextBox();
-            this.label1 = new System.Windows.Forms.Label();
+            this.idCaja = new Guna.UI2.WinForms.Guna2TextBox();
+            this.lblId = new System.Windows.Forms.Label();
             this.cbHabitacion = new Guna.UI2.WinForms.Guna2ComboBox();
             this.cbIdHuesped = new Guna.UI2.WinForms.Guna2ComboBox();
             this.txtDiasAlojamiento = new Guna.UI2.WinForms.Guna2NumericUpDown();
@@ -60,7 +60,7 @@ namespace Hotel_Vanilla.Vista
             this.txtPagoAdelantado = new System.Windows.Forms.TextBox();
             this.txtDescuento = new System.Windows.Forms.TextBox();
             this.txtTotal = new System.Windows.Forms.TextBox();
-            this.txtIdReserva = new System.Windows.Forms.Label();
+            this.txtId = new System.Windows.Forms.Label();
             this.txtCheckOut = new Guna.UI2.WinForms.Guna2DateTimePicker();
             this.manejoReservasBindingSource = new System.Windows.Forms.BindingSource(this.components);
             descuentoLabel = new System.Windows.Forms.Label();
@@ -84,7 +84,7 @@ namespace Hotel_Vanilla.Vista
             descuentoLabel.AutoSize = true;
             descuentoLabel.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold);
             descuentoLabel.ForeColor = System.Drawing.Color.RoyalBlue;
-            descuentoLabel.Location = new System.Drawing.Point(67, 365);
+            descuentoLabel.Location = new System.Drawing.Point(67, 331);
             descuentoLabel.Name = "descuentoLabel";
             descuentoLabel.Size = new System.Drawing.Size(94, 19);
             descuentoLabel.TabIndex = 45;
@@ -120,7 +120,7 @@ namespace Hotel_Vanilla.Vista
             numeroDiasLabel.AutoSize = true;
             numeroDiasLabel.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold);
             numeroDiasLabel.ForeColor = System.Drawing.Color.RoyalBlue;
-            numeroDiasLabel.Location = new System.Drawing.Point(65, 239);
+            numeroDiasLabel.Location = new System.Drawing.Point(65, 205);
             numeroDiasLabel.Name = "numeroDiasLabel";
             numeroDiasLabel.Size = new System.Drawing.Size(168, 19);
             numeroDiasLabel.TabIndex = 59;
@@ -132,7 +132,7 @@ namespace Hotel_Vanilla.Vista
             pagoAdelantadoLabel.AutoSize = true;
             pagoAdelantadoLabel.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold);
             pagoAdelantadoLabel.ForeColor = System.Drawing.Color.RoyalBlue;
-            pagoAdelantadoLabel.Location = new System.Drawing.Point(65, 323);
+            pagoAdelantadoLabel.Location = new System.Drawing.Point(65, 289);
             pagoAdelantadoLabel.Name = "pagoAdelantadoLabel";
             pagoAdelantadoLabel.Size = new System.Drawing.Size(151, 19);
             pagoAdelantadoLabel.TabIndex = 61;
@@ -156,7 +156,7 @@ namespace Hotel_Vanilla.Vista
             habitacionLabel.AutoSize = true;
             habitacionLabel.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold);
             habitacionLabel.ForeColor = System.Drawing.Color.RoyalBlue;
-            habitacionLabel.Location = new System.Drawing.Point(67, 282);
+            habitacionLabel.Location = new System.Drawing.Point(67, 248);
             habitacionLabel.Name = "habitacionLabel";
             habitacionLabel.Size = new System.Drawing.Size(99, 19);
             habitacionLabel.TabIndex = 65;
@@ -179,7 +179,7 @@ namespace Hotel_Vanilla.Vista
             this.lblCheckOut.AutoSize = true;
             this.lblCheckOut.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold);
             this.lblCheckOut.ForeColor = System.Drawing.Color.RoyalBlue;
-            this.lblCheckOut.Location = new System.Drawing.Point(67, 198);
+            this.lblCheckOut.Location = new System.Drawing.Point(67, 374);
             this.lblCheckOut.Name = "lblCheckOut";
             this.lblCheckOut.Size = new System.Drawing.Size(173, 19);
             this.lblCheckOut.TabIndex = 49;
@@ -282,19 +282,20 @@ namespace Hotel_Vanilla.Vista
             this.btnCancelar.IconVisible = true;
             this.btnCancelar.IconZoom = 90D;
             this.btnCancelar.IsTab = false;
-            this.btnCancelar.Location = new System.Drawing.Point(510, 424);
+            this.btnCancelar.Location = new System.Drawing.Point(533, 417);
             this.btnCancelar.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btnCancelar.Name = "btnCancelar";
             this.btnCancelar.Normalcolor = System.Drawing.SystemColors.Control;
             this.btnCancelar.OnHovercolor = System.Drawing.Color.Red;
             this.btnCancelar.OnHoverTextColor = System.Drawing.SystemColors.Control;
             this.btnCancelar.selected = false;
-            this.btnCancelar.Size = new System.Drawing.Size(279, 51);
+            this.btnCancelar.Size = new System.Drawing.Size(207, 51);
             this.btnCancelar.TabIndex = 10;
             this.btnCancelar.Text = "Cancelar";
             this.btnCancelar.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.btnCancelar.Textcolor = System.Drawing.Color.Red;
             this.btnCancelar.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
             // 
             // btnGuardar
             // 
@@ -320,14 +321,14 @@ namespace Hotel_Vanilla.Vista
             this.btnGuardar.IconVisible = true;
             this.btnGuardar.IconZoom = 90D;
             this.btnGuardar.IsTab = false;
-            this.btnGuardar.Location = new System.Drawing.Point(510, 363);
+            this.btnGuardar.Location = new System.Drawing.Point(533, 356);
             this.btnGuardar.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btnGuardar.Name = "btnGuardar";
             this.btnGuardar.Normalcolor = System.Drawing.SystemColors.Control;
             this.btnGuardar.OnHovercolor = System.Drawing.Color.RoyalBlue;
             this.btnGuardar.OnHoverTextColor = System.Drawing.SystemColors.Control;
             this.btnGuardar.selected = false;
-            this.btnGuardar.Size = new System.Drawing.Size(277, 51);
+            this.btnGuardar.Size = new System.Drawing.Size(205, 51);
             this.btnGuardar.TabIndex = 9;
             this.btnGuardar.Text = "Guardar";
             this.btnGuardar.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -335,48 +336,48 @@ namespace Hotel_Vanilla.Vista
             this.btnGuardar.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnGuardar.Click += new System.EventHandler(this.btnGuardar_Click);
             // 
-            // txtIdReserv
+            // idCaja
             // 
-            this.txtIdReserv.Animated = true;
-            this.txtIdReserv.BackColor = System.Drawing.Color.RoyalBlue;
-            this.txtIdReserv.BorderColor = System.Drawing.Color.RoyalBlue;
-            this.txtIdReserv.BorderStyle = System.Drawing.Drawing2D.DashStyle.Dash;
-            this.txtIdReserv.BorderThickness = 2;
-            this.txtIdReserv.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtIdReserv.DataBindings.Add(new System.Windows.Forms.Binding("Tag", this.manejoReservasBindingSource, "idReserva", true));
-            this.txtIdReserv.DefaultText = "";
-            this.txtIdReserv.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.txtIdReserv.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.txtIdReserv.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtIdReserv.DisabledState.Parent = this.txtIdReserv;
-            this.txtIdReserv.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtIdReserv.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtIdReserv.FocusedState.Parent = this.txtIdReserv;
-            this.txtIdReserv.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold);
-            this.txtIdReserv.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtIdReserv.HoverState.Parent = this.txtIdReserv;
-            this.txtIdReserv.Location = new System.Drawing.Point(639, 67);
-            this.txtIdReserv.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
-            this.txtIdReserv.Name = "txtIdReserv";
-            this.txtIdReserv.PasswordChar = '\0';
-            this.txtIdReserv.PlaceholderText = "";
-            this.txtIdReserv.ReadOnly = true;
-            this.txtIdReserv.SelectedText = "";
-            this.txtIdReserv.ShadowDecoration.Parent = this.txtIdReserv;
-            this.txtIdReserv.Size = new System.Drawing.Size(101, 67);
-            this.txtIdReserv.TabIndex = 30;
-            this.txtIdReserv.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.idCaja.Animated = true;
+            this.idCaja.BackColor = System.Drawing.Color.RoyalBlue;
+            this.idCaja.BorderColor = System.Drawing.Color.RoyalBlue;
+            this.idCaja.BorderStyle = System.Drawing.Drawing2D.DashStyle.Dash;
+            this.idCaja.BorderThickness = 2;
+            this.idCaja.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.idCaja.DataBindings.Add(new System.Windows.Forms.Binding("Tag", this.manejoReservasBindingSource, "idReserva", true));
+            this.idCaja.DefaultText = "";
+            this.idCaja.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.idCaja.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.idCaja.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.idCaja.DisabledState.Parent = this.idCaja;
+            this.idCaja.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.idCaja.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.idCaja.FocusedState.Parent = this.idCaja;
+            this.idCaja.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold);
+            this.idCaja.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.idCaja.HoverState.Parent = this.idCaja;
+            this.idCaja.Location = new System.Drawing.Point(639, 67);
+            this.idCaja.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.idCaja.Name = "idCaja";
+            this.idCaja.PasswordChar = '\0';
+            this.idCaja.PlaceholderText = "";
+            this.idCaja.ReadOnly = true;
+            this.idCaja.SelectedText = "";
+            this.idCaja.ShadowDecoration.Parent = this.idCaja;
+            this.idCaja.Size = new System.Drawing.Size(101, 67);
+            this.idCaja.TabIndex = 30;
+            this.idCaja.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
-            // label1
+            // lblId
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.RoyalBlue;
-            this.label1.Location = new System.Drawing.Point(650, 92);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(35, 20);
-            this.label1.TabIndex = 31;
-            this.label1.Text = "Id: ";
+            this.lblId.AutoSize = true;
+            this.lblId.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblId.ForeColor = System.Drawing.Color.RoyalBlue;
+            this.lblId.Location = new System.Drawing.Point(650, 92);
+            this.lblId.Name = "lblId";
+            this.lblId.Size = new System.Drawing.Size(35, 20);
+            this.lblId.TabIndex = 31;
+            this.lblId.Text = "Id: ";
             // 
             // cbHabitacion
             // 
@@ -394,7 +395,7 @@ namespace Hotel_Vanilla.Vista
             this.cbHabitacion.HoverState.Parent = this.cbHabitacion;
             this.cbHabitacion.ItemHeight = 30;
             this.cbHabitacion.ItemsAppearance.Parent = this.cbHabitacion;
-            this.cbHabitacion.Location = new System.Drawing.Point(246, 265);
+            this.cbHabitacion.Location = new System.Drawing.Point(246, 231);
             this.cbHabitacion.Name = "cbHabitacion";
             this.cbHabitacion.ShadowDecoration.Parent = this.cbHabitacion;
             this.cbHabitacion.Size = new System.Drawing.Size(256, 36);
@@ -438,7 +439,7 @@ namespace Hotel_Vanilla.Vista
             this.txtDiasAlojamiento.FocusedState.Parent = this.txtDiasAlojamiento;
             this.txtDiasAlojamiento.Font = new System.Drawing.Font("Century Gothic", 12F);
             this.txtDiasAlojamiento.ForeColor = System.Drawing.Color.RoyalBlue;
-            this.txtDiasAlojamiento.Location = new System.Drawing.Point(246, 224);
+            this.txtDiasAlojamiento.Location = new System.Drawing.Point(246, 190);
             this.txtDiasAlojamiento.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtDiasAlojamiento.Minimum = new decimal(new int[] {
             1,
@@ -514,7 +515,7 @@ namespace Hotel_Vanilla.Vista
             this.txtPagoAdelantado.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.manejoReservasBindingSource, "pagoAdelantado", true));
             this.txtPagoAdelantado.Font = new System.Drawing.Font("Century Gothic", 12F);
             this.txtPagoAdelantado.ForeColor = System.Drawing.Color.RoyalBlue;
-            this.txtPagoAdelantado.Location = new System.Drawing.Point(246, 315);
+            this.txtPagoAdelantado.Location = new System.Drawing.Point(246, 281);
             this.txtPagoAdelantado.Name = "txtPagoAdelantado";
             this.txtPagoAdelantado.Size = new System.Drawing.Size(256, 27);
             this.txtPagoAdelantado.TabIndex = 75;
@@ -526,7 +527,7 @@ namespace Hotel_Vanilla.Vista
             this.txtDescuento.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.manejoReservasBindingSource, "descuento", true));
             this.txtDescuento.Font = new System.Drawing.Font("Century Gothic", 12F);
             this.txtDescuento.ForeColor = System.Drawing.Color.RoyalBlue;
-            this.txtDescuento.Location = new System.Drawing.Point(246, 357);
+            this.txtDescuento.Location = new System.Drawing.Point(246, 323);
             this.txtDescuento.Name = "txtDescuento";
             this.txtDescuento.Size = new System.Drawing.Size(256, 27);
             this.txtDescuento.TabIndex = 76;
@@ -545,17 +546,17 @@ namespace Hotel_Vanilla.Vista
             this.txtTotal.Size = new System.Drawing.Size(256, 27);
             this.txtTotal.TabIndex = 77;
             // 
-            // txtIdReserva
+            // txtId
             // 
-            this.txtIdReserva.AutoSize = true;
-            this.txtIdReserva.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.manejoReservasBindingSource, "idReserva", true));
-            this.txtIdReserva.Font = new System.Drawing.Font("Century Gothic", 12F);
-            this.txtIdReserva.ForeColor = System.Drawing.Color.RoyalBlue;
-            this.txtIdReserva.Location = new System.Drawing.Point(691, 92);
-            this.txtIdReserva.Name = "txtIdReserva";
-            this.txtIdReserva.Size = new System.Drawing.Size(19, 21);
-            this.txtIdReserva.TabIndex = 78;
-            this.txtIdReserva.Text = "1";
+            this.txtId.AutoSize = true;
+            this.txtId.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.manejoReservasBindingSource, "idReserva", true));
+            this.txtId.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtId.ForeColor = System.Drawing.Color.RoyalBlue;
+            this.txtId.Location = new System.Drawing.Point(691, 92);
+            this.txtId.Name = "txtId";
+            this.txtId.Size = new System.Drawing.Size(18, 19);
+            this.txtId.TabIndex = 78;
+            this.txtId.Text = "1";
             // 
             // txtCheckOut
             // 
@@ -570,7 +571,7 @@ namespace Hotel_Vanilla.Vista
             this.txtCheckOut.ForeColor = System.Drawing.Color.RoyalBlue;
             this.txtCheckOut.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
             this.txtCheckOut.HoverState.Parent = this.txtCheckOut;
-            this.txtCheckOut.Location = new System.Drawing.Point(246, 181);
+            this.txtCheckOut.Location = new System.Drawing.Point(246, 357);
             this.txtCheckOut.MaxDate = new System.DateTime(9998, 12, 31, 0, 0, 0, 0);
             this.txtCheckOut.MinDate = new System.DateTime(2021, 1, 1, 0, 0, 0, 0);
             this.txtCheckOut.Name = "txtCheckOut";
@@ -591,7 +592,7 @@ namespace Hotel_Vanilla.Vista
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(800, 559);
             this.Controls.Add(this.txtCheckOut);
-            this.Controls.Add(this.txtIdReserva);
+            this.Controls.Add(this.txtId);
             this.Controls.Add(this.txtTotal);
             this.Controls.Add(this.txtDescuento);
             this.Controls.Add(this.txtPagoAdelantado);
@@ -609,8 +610,8 @@ namespace Hotel_Vanilla.Vista
             this.Controls.Add(numeroDiasLabel);
             this.Controls.Add(pagoAdelantadoLabel);
             this.Controls.Add(totalLabel);
-            this.Controls.Add(this.label1);
-            this.Controls.Add(this.txtIdReserv);
+            this.Controls.Add(this.lblId);
+            this.Controls.Add(this.idCaja);
             this.Controls.Add(this.btnCancelar);
             this.Controls.Add(this.panelInferior);
             this.Controls.Add(this.panelSuperior);
@@ -641,12 +642,11 @@ namespace Hotel_Vanilla.Vista
         private Bunifu.Framework.UI.BunifuImageButton btnDefault;
         private Bunifu.Framework.UI.BunifuCustomLabel bunifuCustomLabel1;
         private Guna.UI2.WinForms.Guna2DragControl guna2DragControl1;
-        private System.Windows.Forms.Label label1;
         private System.Windows.Forms.BindingSource manejoReservasBindingSource;
         public Bunifu.Framework.UI.BunifuFlatButton btnGuardar;
         public System.Windows.Forms.Label lblCheckOut;
         public Guna.UI2.WinForms.Guna2ComboBox cbIdHuesped;
-        public Guna.UI2.WinForms.Guna2TextBox txtIdReserv;
+        public Guna.UI2.WinForms.Guna2TextBox idCaja;
         public Guna.UI2.WinForms.Guna2NumericUpDown txtDiasAlojamiento;
         public Guna.UI2.WinForms.Guna2DateTimePicker txtFechaReserva;
         private System.Windows.Forms.ErrorProvider errorProvider;
@@ -655,7 +655,8 @@ namespace Hotel_Vanilla.Vista
         private System.Windows.Forms.TextBox txtTotal;
         private System.Windows.Forms.TextBox txtDescuento;
         private System.Windows.Forms.TextBox txtPagoAdelantado;
-        private System.Windows.Forms.Label txtIdReserva;
         public Guna.UI2.WinForms.Guna2DateTimePicker txtCheckOut;
+        public System.Windows.Forms.Label lblId;
+        public System.Windows.Forms.Label txtId;
     }
 }

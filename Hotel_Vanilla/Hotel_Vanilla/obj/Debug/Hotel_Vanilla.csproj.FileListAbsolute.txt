@@ -56,7 +56,6 @@ C:\Users\Manuel Perlera\Documents\GitHub\Hotel_Vainilla\Hotel_Vanilla\Hotel_Vani
 C:\Users\Manuel Perlera\Documents\GitHub\Hotel_Vainilla\Hotel_Vanilla\Hotel_Vanilla\bin\Debug\EntityFramework.SqlServer.xml
 C:\Users\Manuel Perlera\Documents\GitHub\Hotel_Vainilla\Hotel_Vanilla\Hotel_Vanilla\bin\Debug\Xamarin.Forms.Core.xml
 C:\Users\Manuel Perlera\Documents\GitHub\Hotel_Vainilla\Hotel_Vanilla\Hotel_Vanilla\bin\Debug\Xamarin.Forms.Xaml.xml
-C:\Users\Manuel Perlera\Documents\GitHub\Hotel_Vainilla\Hotel_Vanilla\Hotel_Vanilla\obj\Debug\Hotel_Vanilla.csprojAssemblyReference.cache
 C:\Users\Manuel Perlera\Documents\GitHub\Hotel_Vainilla\Hotel_Vanilla\Hotel_Vanilla\obj\Debug\Hotel_Vanilla.Vista.frmHuespedes.resources
 C:\Users\Manuel Perlera\Documents\GitHub\Hotel_Vainilla\Hotel_Vanilla\Hotel_Vanilla\obj\Debug\Hotel_Vanilla.Vista.frmDefault.resources
 C:\Users\Manuel Perlera\Documents\GitHub\Hotel_Vainilla\Hotel_Vanilla\Hotel_Vanilla\obj\Debug\Hotel_Vanilla.Vista.frmHabitaciones.resources
@@ -215,3 +214,4 @@ C:\Users\Manuel Perlera\Documents\GitHub\Hotel_Vainilla\Hotel_Vanilla\Hotel_Vani
 C:\Users\cb272\Documents\GitHub\Hotel_Vainilla\Hotel_Vanilla\Hotel_Vanilla\bin\Debug\Dapper.dll
 C:\Users\cb272\Documents\GitHub\Hotel_Vainilla\Hotel_Vanilla\Hotel_Vanilla\bin\Debug\Dapper.xml
 C:\Users\cb272\Documents\GitHub\Hotel_Vainilla\Hotel_Vanilla\Hotel_Vanilla\obj\Debug\Hotel_Vanilla.csproj.AssemblyReference.cache
+C:\Users\Manuel Perlera\Documents\GitHub\Hotel_Vainilla\Hotel_Vanilla\Hotel_Vanilla\obj\Debug\Hotel_Vanilla.csprojAssemblyReference.cache

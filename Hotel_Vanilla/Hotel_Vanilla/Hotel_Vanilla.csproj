@@ -124,6 +124,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Conexion.cs" />
+    <Compile Include="CONTROLADOR\CEstados.cs" />
     <Compile Include="CONTROLADOR\CHuespedes.cs" />
     <Compile Include="CONTROLADOR\CManejoReservas.cs" />
     <Compile Include="CONTROLADOR\CHabitaciones.cs" />
@@ -144,6 +145,7 @@
     <Compile Include="ENTIDAD\Sucesos.cs" />
     <Compile Include="ENTIDAD\TipoHabitaciones.cs" />
     <Compile Include="ENTIDAD\Usuarios.cs" />
+    <Compile Include="MODELO\MEstados.cs" />
     <Compile Include="MODELO\MHuespedes.cs" />
     <Compile Include="MODELO\MManejoReservas.cs" />
     <Compile Include="MODELO\MHabitaciones.cs" />
@@ -155,11 +157,6 @@
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>VanillaBDDataSet.xsd</DependentUpon>
-    </Compile>
-    <Compile Include="VanillaBDDataSet1.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>VanillaBDDataSet1.xsd</DependentUpon>
     </Compile>
     <Compile Include="Vista\frmAjustes.cs">
       <SubType>Form</SubType>
@@ -347,17 +344,6 @@
     </None>
     <None Include="VanillaBDDataSet.xss">
       <DependentUpon>VanillaBDDataSet.xsd</DependentUpon>
-    </None>
-    <None Include="VanillaBDDataSet1.xsc">
-      <DependentUpon>VanillaBDDataSet1.xsd</DependentUpon>
-    </None>
-    <None Include="VanillaBDDataSet1.xsd">
-      <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>VanillaBDDataSet1.Designer.cs</LastGenOutput>
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="VanillaBDDataSet1.xss">
-      <DependentUpon>VanillaBDDataSet1.xsd</DependentUpon>
     </None>
   </ItemGroup>
   <ItemGroup>

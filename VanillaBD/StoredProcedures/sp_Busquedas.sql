@@ -40,11 +40,13 @@ AS
 
 BEGIN
 	SET NOCOUNT ON;
+	--Consulta con Inner join
 	SELECT a.idReserva AS 'Id', b.nombres AS 'Nombres', b.apellidos AS 'Apellidos', c.numeroHabitacion AS 'Habitacion',
-	a.fechaReserva AS 'Fecha reserva', a.fechaCheckIn AS 'Check in', a.fechaCheckOut AS 'Check out',
-	a.numeroDias AS 'Dias', d.numeroOcupantes AS 'Ocupantes', a.pagoAdelantado AS 'Pago adelantado',
-	d.tipo AS 'Tipo', a.descuento AS 'Descuento', a.total AS 'Total'
+	a.fechaReserva 'Fechareserva', a.fechaCheckIn AS 'Checkin', a.fechaCheckOut AS 'Checkout',
+	a.numeroDias AS 'Dias', d.numeroOcupantes AS 'Ocupantes', a.pagoAdelantado AS 'Pagoadelantado',
+	d.tipo AS 'Tipodehabitacion', a.descuento AS 'Descuento', a.total AS 'Total'
 	FROM ManejoReservas AS a
+
 	INNER JOIN Huespedes AS b ON a.idHuesped_FK = b.idHuesped
 	INNER JOIN Habitaciones AS c ON a.idHabitacion_FK = c.idHabitacion
 	INNER JOIN TipoHabitaciones AS d ON c.idTipoHabitacion_FK = d.idTipoHabitacion

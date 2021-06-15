@@ -39,6 +39,9 @@ namespace Hotel_Vanilla.Vista
         {
             frmManejoHabitaciones manejoHabitacion = new frmManejoHabitaciones();
             manejoHabitacion.btnGuardar.Text = "Guardar";
+            manejoHabitacion.lblId.Visible = false;
+            manejoHabitacion.lblidHabitacion.Visible = false;
+            manejoHabitacion.idCaja.Visible = false;
             manejoHabitacion.ShowDialog();
 
             CargarHabitaciones();

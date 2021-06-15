@@ -34,9 +34,9 @@ namespace Hotel_Vanilla
             System.Windows.Forms.Label claveLabel;
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.panel1 = new System.Windows.Forms.Panel();
-            this.claveTextBox = new System.Windows.Forms.TextBox();
+            this.txtPass = new System.Windows.Forms.TextBox();
             this.usuariosBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.correoTextBox = new System.Windows.Forms.TextBox();
+            this.txtCorreo = new System.Windows.Forms.TextBox();
             this.bunifuCustomLabel1 = new Bunifu.Framework.UI.BunifuCustomLabel();
             this.chkClave = new Bunifu.Framework.UI.BunifuCheckbox();
             this.btnLogin = new Bunifu.Framework.UI.BunifuThinButton2();
@@ -85,9 +85,9 @@ namespace Hotel_Vanilla
             // 
             this.panel1.BackColor = System.Drawing.Color.White;
             this.panel1.Controls.Add(claveLabel);
-            this.panel1.Controls.Add(this.claveTextBox);
+            this.panel1.Controls.Add(this.txtPass);
             this.panel1.Controls.Add(correoLabel);
-            this.panel1.Controls.Add(this.correoTextBox);
+            this.panel1.Controls.Add(this.txtCorreo);
             this.panel1.Controls.Add(this.bunifuCustomLabel1);
             this.panel1.Controls.Add(this.chkClave);
             this.panel1.Controls.Add(this.btnLogin);
@@ -99,32 +99,32 @@ namespace Hotel_Vanilla
             this.panel1.Size = new System.Drawing.Size(746, 403);
             this.panel1.TabIndex = 0;
             // 
-            // claveTextBox
+            // txtPass
             // 
-            this.claveTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.usuariosBindingSource, "clave", true));
-            this.claveTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.claveTextBox.ForeColor = System.Drawing.Color.RoyalBlue;
-            this.claveTextBox.Location = new System.Drawing.Point(255, 191);
-            this.claveTextBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.claveTextBox.Name = "claveTextBox";
-            this.claveTextBox.Size = new System.Drawing.Size(297, 26);
-            this.claveTextBox.TabIndex = 13;
-            this.claveTextBox.KeyDown += new System.Windows.Forms.KeyEventHandler(this.claveTextBox_KeyDown);
+            this.txtPass.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.usuariosBindingSource, "clave", true));
+            this.txtPass.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtPass.ForeColor = System.Drawing.Color.RoyalBlue;
+            this.txtPass.Location = new System.Drawing.Point(255, 191);
+            this.txtPass.Margin = new System.Windows.Forms.Padding(2);
+            this.txtPass.Name = "txtPass";
+            this.txtPass.Size = new System.Drawing.Size(297, 26);
+            this.txtPass.TabIndex = 13;
+            this.txtPass.KeyDown += new System.Windows.Forms.KeyEventHandler(this.claveTextBox_KeyDown);
             // 
             // usuariosBindingSource
             // 
             this.usuariosBindingSource.DataSource = typeof(Hotel_Vanilla.ENTIDAD.Usuarios);
             // 
-            // correoTextBox
+            // txtCorreo
             // 
-            this.correoTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.usuariosBindingSource, "correo", true));
-            this.correoTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.correoTextBox.ForeColor = System.Drawing.Color.RoyalBlue;
-            this.correoTextBox.Location = new System.Drawing.Point(255, 149);
-            this.correoTextBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.correoTextBox.Name = "correoTextBox";
-            this.correoTextBox.Size = new System.Drawing.Size(297, 26);
-            this.correoTextBox.TabIndex = 12;
+            this.txtCorreo.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.usuariosBindingSource, "correo", true));
+            this.txtCorreo.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtCorreo.ForeColor = System.Drawing.Color.RoyalBlue;
+            this.txtCorreo.Location = new System.Drawing.Point(255, 149);
+            this.txtCorreo.Margin = new System.Windows.Forms.Padding(2);
+            this.txtCorreo.Name = "txtCorreo";
+            this.txtCorreo.Size = new System.Drawing.Size(297, 26);
+            this.txtCorreo.TabIndex = 12;
             // 
             // bunifuCustomLabel1
             // 
@@ -169,7 +169,7 @@ namespace Hotel_Vanilla
             this.btnLogin.IdleForecolor = System.Drawing.Color.RoyalBlue;
             this.btnLogin.IdleLineColor = System.Drawing.Color.RoyalBlue;
             this.btnLogin.Location = new System.Drawing.Point(276, 270);
-            this.btnLogin.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.btnLogin.Margin = new System.Windows.Forms.Padding(5);
             this.btnLogin.Name = "btnLogin";
             this.btnLogin.Size = new System.Drawing.Size(181, 41);
             this.btnLogin.TabIndex = 4;
@@ -319,9 +319,9 @@ namespace Hotel_Vanilla
         private System.Windows.Forms.Panel panelInferior;
         private Bunifu.Framework.UI.BunifuCustomLabel bunifuCustomLabel1;
         private Bunifu.Framework.UI.BunifuCheckbox chkClave;
-        private System.Windows.Forms.TextBox claveTextBox;
+        private System.Windows.Forms.TextBox txtPass;
         private System.Windows.Forms.BindingSource usuariosBindingSource;
-        private System.Windows.Forms.TextBox correoTextBox;
+        private System.Windows.Forms.TextBox txtCorreo;
     }
 }
 

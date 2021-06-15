@@ -45,22 +45,22 @@ namespace Hotel_Vanilla.Vista
             this.bunifuElipse1 = new Bunifu.Framework.UI.BunifuElipse(this.components);
             this.guna2DragControl1 = new Guna.UI2.WinForms.Guna2DragControl(this.components);
             this.numeroHabitacionTextBox = new System.Windows.Forms.TextBox();
+            this.habitacionesBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.tarifaTextBox = new System.Windows.Forms.TextBox();
             this.lblId = new System.Windows.Forms.Label();
             this.lblidHabitacion = new System.Windows.Forms.Label();
             this.cbTipoHabitacion = new Guna.UI2.WinForms.Guna2ComboBox();
+            this.tipoHabitacionesBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.guna2AnimateWindow1 = new Guna.UI2.WinForms.Guna2AnimateWindow(this.components);
             this.errorProvider = new System.Windows.Forms.ErrorProvider(this.components);
-            this.tipoHabitacionesBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.habitacionesBindingSource = new System.Windows.Forms.BindingSource(this.components);
             numeroHabitacionLabel = new System.Windows.Forms.Label();
             tarifaLabel = new System.Windows.Forms.Label();
             tipodehabitacionLabel = new System.Windows.Forms.Label();
             this.panelSuperior.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btnDefault)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.errorProvider)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.tipoHabitacionesBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.habitacionesBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tipoHabitacionesBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider)).BeginInit();
             this.SuspendLayout();
             // 
             // numeroHabitacionLabel
@@ -216,14 +216,14 @@ namespace Hotel_Vanilla.Vista
             this.btnCancelar.IconVisible = true;
             this.btnCancelar.IconZoom = 90D;
             this.btnCancelar.IsTab = false;
-            this.btnCancelar.Location = new System.Drawing.Point(528, 345);
+            this.btnCancelar.Location = new System.Drawing.Point(534, 354);
             this.btnCancelar.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btnCancelar.Name = "btnCancelar";
             this.btnCancelar.Normalcolor = System.Drawing.SystemColors.Control;
             this.btnCancelar.OnHovercolor = System.Drawing.Color.Red;
             this.btnCancelar.OnHoverTextColor = System.Drawing.SystemColors.Control;
             this.btnCancelar.selected = false;
-            this.btnCancelar.Size = new System.Drawing.Size(212, 51);
+            this.btnCancelar.Size = new System.Drawing.Size(206, 51);
             this.btnCancelar.TabIndex = 46;
             this.btnCancelar.Text = "Cancelar";
             this.btnCancelar.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -255,14 +255,14 @@ namespace Hotel_Vanilla.Vista
             this.btnGuardar.IconVisible = true;
             this.btnGuardar.IconZoom = 90D;
             this.btnGuardar.IsTab = false;
-            this.btnGuardar.Location = new System.Drawing.Point(528, 280);
+            this.btnGuardar.Location = new System.Drawing.Point(534, 289);
             this.btnGuardar.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btnGuardar.Name = "btnGuardar";
             this.btnGuardar.Normalcolor = System.Drawing.SystemColors.Control;
             this.btnGuardar.OnHovercolor = System.Drawing.Color.RoyalBlue;
             this.btnGuardar.OnHoverTextColor = System.Drawing.SystemColors.Control;
             this.btnGuardar.selected = false;
-            this.btnGuardar.Size = new System.Drawing.Size(212, 51);
+            this.btnGuardar.Size = new System.Drawing.Size(206, 51);
             this.btnGuardar.TabIndex = 45;
             this.btnGuardar.Text = "Guardar";
             this.btnGuardar.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -289,8 +289,12 @@ namespace Hotel_Vanilla.Vista
             this.numeroHabitacionTextBox.Location = new System.Drawing.Point(234, 285);
             this.numeroHabitacionTextBox.Margin = new System.Windows.Forms.Padding(2);
             this.numeroHabitacionTextBox.Name = "numeroHabitacionTextBox";
-            this.numeroHabitacionTextBox.Size = new System.Drawing.Size(279, 27);
+            this.numeroHabitacionTextBox.Size = new System.Drawing.Size(272, 27);
             this.numeroHabitacionTextBox.TabIndex = 62;
+            // 
+            // habitacionesBindingSource
+            // 
+            this.habitacionesBindingSource.DataSource = typeof(Hotel_Vanilla.ENTIDAD.Habitaciones);
             // 
             // tarifaTextBox
             // 
@@ -300,7 +304,7 @@ namespace Hotel_Vanilla.Vista
             this.tarifaTextBox.Location = new System.Drawing.Point(234, 326);
             this.tarifaTextBox.Margin = new System.Windows.Forms.Padding(2);
             this.tarifaTextBox.Name = "tarifaTextBox";
-            this.tarifaTextBox.Size = new System.Drawing.Size(279, 27);
+            this.tarifaTextBox.Size = new System.Drawing.Size(272, 27);
             this.tarifaTextBox.TabIndex = 64;
             this.tarifaTextBox.TextChanged += new System.EventHandler(this.tarifaTextBox_TextChanged);
             this.tarifaTextBox.KeyDown += new System.Windows.Forms.KeyEventHandler(this.tarifaTextBox_KeyDown);
@@ -347,23 +351,19 @@ namespace Hotel_Vanilla.Vista
             this.cbTipoHabitacion.Location = new System.Drawing.Point(234, 365);
             this.cbTipoHabitacion.Name = "cbTipoHabitacion";
             this.cbTipoHabitacion.ShadowDecoration.Parent = this.cbTipoHabitacion;
-            this.cbTipoHabitacion.Size = new System.Drawing.Size(279, 36);
+            this.cbTipoHabitacion.Size = new System.Drawing.Size(272, 36);
             this.cbTipoHabitacion.TabIndex = 66;
             this.cbTipoHabitacion.SelectedIndexChanged += new System.EventHandler(this.cbTipoHabitacion_SelectedIndexChanged);
             this.cbTipoHabitacion.KeyDown += new System.Windows.Forms.KeyEventHandler(this.cbTipoHabitacion_KeyDown);
             this.cbTipoHabitacion.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.cbTipoHabitacion_KeyPress);
             // 
-            // errorProvider
-            // 
-            this.errorProvider.ContainerControl = this;
-            // 
             // tipoHabitacionesBindingSource
             // 
             this.tipoHabitacionesBindingSource.DataSource = typeof(Hotel_Vanilla.ENTIDAD.TipoHabitaciones);
             // 
-            // habitacionesBindingSource
+            // errorProvider
             // 
-            this.habitacionesBindingSource.DataSource = typeof(Hotel_Vanilla.ENTIDAD.Habitaciones);
+            this.errorProvider.ContainerControl = this;
             // 
             // frmManejoHabitaciones
             // 
@@ -393,16 +393,15 @@ namespace Hotel_Vanilla.Vista
             this.panelSuperior.ResumeLayout(false);
             this.panelSuperior.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btnDefault)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.errorProvider)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.tipoHabitacionesBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.habitacionesBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tipoHabitacionesBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
         }
 
         #endregion
-        private Guna.UI2.WinForms.Guna2TextBox idCaja;
         private Bunifu.Framework.UI.BunifuFlatButton btnCancelar;
         private System.Windows.Forms.Panel panelSuperior;
         private Bunifu.Framework.UI.BunifuCustomLabel bunifuCustomLabel1;
@@ -411,7 +410,6 @@ namespace Hotel_Vanilla.Vista
         private System.Windows.Forms.Panel panelInferior;
         private Bunifu.Framework.UI.BunifuElipse bunifuElipse1;
         private Guna.UI2.WinForms.Guna2DragControl guna2DragControl1;
-        private System.Windows.Forms.Label lblId;
         public Bunifu.Framework.UI.BunifuFlatButton btnGuardar;
         public System.Windows.Forms.TextBox numeroHabitacionTextBox;
         public System.Windows.Forms.TextBox tarifaTextBox;
@@ -421,5 +419,7 @@ namespace Hotel_Vanilla.Vista
         private System.Windows.Forms.ErrorProvider errorProvider;
         private System.Windows.Forms.BindingSource habitacionesBindingSource;
         private System.Windows.Forms.BindingSource tipoHabitacionesBindingSource;
+        public Guna.UI2.WinForms.Guna2TextBox idCaja;
+        public System.Windows.Forms.Label lblId;
     }
 }
