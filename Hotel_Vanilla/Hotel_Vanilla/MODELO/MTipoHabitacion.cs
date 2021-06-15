@@ -21,5 +21,15 @@ namespace Hotel_Vanilla.MODELO
             conexion.Close();
             return habitaciones;
         }
+
+        public List<sp_MostrarTipoHabitaciones> MostrarTipoHabitaciones()
+        {
+            List<sp_MostrarTipoHabitaciones> habitaciones = new List<sp_MostrarTipoHabitaciones>();
+            string consulta = "sp_MostrarTipoHabitaciones";
+            conexion.Open();
+            habitaciones = conexion.Query<sp_MostrarTipoHabitaciones>(consulta, commandType: CommandType.StoredProcedure).ToList();
+            conexion.Close();
+            return habitaciones;
+        }
     }
 }

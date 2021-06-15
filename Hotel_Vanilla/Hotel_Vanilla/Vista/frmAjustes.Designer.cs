@@ -57,23 +57,25 @@ namespace Hotel_Vanilla.Vista
             this.txtAsunto = new Bunifu.Framework.UI.BunifuMaterialTextbox();
             this.dtgEstados = new Guna.UI2.WinForms.Guna2DataGridView();
             this.bunifuCustomLabel4 = new Bunifu.Framework.UI.BunifuCustomLabel();
-            this.dtgTipoHabitaciones = new Guna.UI2.WinForms.Guna2DataGridView();
             this.bunifuCustomLabel5 = new Bunifu.Framework.UI.BunifuCustomLabel();
             this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
-            this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.tipoHabitacionesBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.dtgTipoHabitaciones = new Guna.UI2.WinForms.Guna2DataGridView();
             this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.estadosBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.sp_MostrarTipoHabitacionesBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.tipoHabitacionesBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.dataGridViewTextBoxColumn6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.guna2NumericUpDown1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dtgEstados)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dtgTipoHabitaciones)).BeginInit();
             this.guna2Panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.tipoHabitacionesBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dtgTipoHabitaciones)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.estadosBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.sp_MostrarTipoHabitacionesBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tipoHabitacionesBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // bunifuCustomLabel1
@@ -439,7 +441,7 @@ namespace Hotel_Vanilla.Vista
             this.dtgEstados.ReadOnly = true;
             this.dtgEstados.RowHeadersVisible = false;
             this.dtgEstados.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dtgEstados.Size = new System.Drawing.Size(285, 123);
+            this.dtgEstados.Size = new System.Drawing.Size(285, 159);
             this.dtgEstados.TabIndex = 75;
             this.dtgEstados.Theme = Guna.UI2.WinForms.Enums.DataGridViewPresetThemes.Default;
             this.dtgEstados.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White;
@@ -476,13 +478,41 @@ namespace Hotel_Vanilla.Vista
             this.bunifuCustomLabel4.TabIndex = 76;
             this.bunifuCustomLabel4.Text = "Estados";
             // 
+            // bunifuCustomLabel5
+            // 
+            this.bunifuCustomLabel5.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.bunifuCustomLabel5.AutoSize = true;
+            this.bunifuCustomLabel5.BackColor = System.Drawing.Color.Transparent;
+            this.bunifuCustomLabel5.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bunifuCustomLabel5.ForeColor = System.Drawing.Color.RoyalBlue;
+            this.bunifuCustomLabel5.Location = new System.Drawing.Point(335, 474);
+            this.bunifuCustomLabel5.Name = "bunifuCustomLabel5";
+            this.bunifuCustomLabel5.Size = new System.Drawing.Size(94, 19);
+            this.bunifuCustomLabel5.TabIndex = 77;
+            this.bunifuCustomLabel5.Text = "Ocupantes";
+            // 
+            // guna2Panel1
+            // 
+            this.guna2Panel1.AutoSize = true;
+            this.guna2Panel1.Controls.Add(this.dtgTipoHabitaciones);
+            this.guna2Panel1.Controls.Add(this.bunifuCustomLabel5);
+            this.guna2Panel1.Controls.Add(this.guna2NumericUpDown1);
+            this.guna2Panel1.Controls.Add(this.bunifuCustomLabel2);
+            this.guna2Panel1.Controls.Add(this.bunifuMaterialTextbox1);
+            this.guna2Panel1.Controls.Add(this.guna2TileButton1);
+            this.guna2Panel1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.guna2Panel1.Location = new System.Drawing.Point(0, 0);
+            this.guna2Panel1.Name = "guna2Panel1";
+            this.guna2Panel1.ShadowDecoration.Parent = this.guna2Panel1;
+            this.guna2Panel1.Size = new System.Drawing.Size(951, 527);
+            this.guna2Panel1.TabIndex = 78;
+            // 
             // dtgTipoHabitaciones
             // 
             this.dtgTipoHabitaciones.AllowUserToAddRows = false;
             this.dtgTipoHabitaciones.AllowUserToDeleteRows = false;
             dataGridViewCellStyle4.BackColor = System.Drawing.Color.White;
             this.dtgTipoHabitaciones.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle4;
-            this.dtgTipoHabitaciones.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.dtgTipoHabitaciones.AutoGenerateColumns = false;
             this.dtgTipoHabitaciones.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dtgTipoHabitaciones.BackgroundColor = System.Drawing.Color.White;
@@ -499,10 +529,10 @@ namespace Hotel_Vanilla.Vista
             this.dtgTipoHabitaciones.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle5;
             this.dtgTipoHabitaciones.ColumnHeadersHeight = 21;
             this.dtgTipoHabitaciones.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.dataGridViewTextBoxColumn3,
-            this.dataGridViewTextBoxColumn4,
-            this.dataGridViewTextBoxColumn5});
-            this.dtgTipoHabitaciones.DataSource = this.tipoHabitacionesBindingSource;
+            this.dataGridViewTextBoxColumn6,
+            this.dataGridViewTextBoxColumn7,
+            this.dataGridViewTextBoxColumn8});
+            this.dtgTipoHabitaciones.DataSource = this.sp_MostrarTipoHabitacionesBindingSource;
             dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle6.BackColor = System.Drawing.Color.White;
             dataGridViewCellStyle6.Font = new System.Drawing.Font("Segoe UI", 10.5F);
@@ -519,7 +549,7 @@ namespace Hotel_Vanilla.Vista
             this.dtgTipoHabitaciones.RowHeadersVisible = false;
             this.dtgTipoHabitaciones.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dtgTipoHabitaciones.Size = new System.Drawing.Size(285, 167);
-            this.dtgTipoHabitaciones.TabIndex = 76;
+            this.dtgTipoHabitaciones.TabIndex = 77;
             this.dtgTipoHabitaciones.Theme = Guna.UI2.WinForms.Enums.DataGridViewPresetThemes.Default;
             this.dtgTipoHabitaciones.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White;
             this.dtgTipoHabitaciones.ThemeStyle.AlternatingRowsStyle.Font = null;
@@ -543,59 +573,6 @@ namespace Hotel_Vanilla.Vista
             this.dtgTipoHabitaciones.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
             this.dtgTipoHabitaciones.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
             // 
-            // bunifuCustomLabel5
-            // 
-            this.bunifuCustomLabel5.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.bunifuCustomLabel5.AutoSize = true;
-            this.bunifuCustomLabel5.BackColor = System.Drawing.Color.Transparent;
-            this.bunifuCustomLabel5.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bunifuCustomLabel5.ForeColor = System.Drawing.Color.RoyalBlue;
-            this.bunifuCustomLabel5.Location = new System.Drawing.Point(335, 474);
-            this.bunifuCustomLabel5.Name = "bunifuCustomLabel5";
-            this.bunifuCustomLabel5.Size = new System.Drawing.Size(94, 19);
-            this.bunifuCustomLabel5.TabIndex = 77;
-            this.bunifuCustomLabel5.Text = "Ocupantes";
-            // 
-            // guna2Panel1
-            // 
-            this.guna2Panel1.AutoSize = true;
-            this.guna2Panel1.Controls.Add(this.bunifuCustomLabel5);
-            this.guna2Panel1.Controls.Add(this.guna2NumericUpDown1);
-            this.guna2Panel1.Controls.Add(this.bunifuCustomLabel2);
-            this.guna2Panel1.Controls.Add(this.bunifuMaterialTextbox1);
-            this.guna2Panel1.Controls.Add(this.guna2TileButton1);
-            this.guna2Panel1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.guna2Panel1.Location = new System.Drawing.Point(0, 0);
-            this.guna2Panel1.Name = "guna2Panel1";
-            this.guna2Panel1.ShadowDecoration.Parent = this.guna2Panel1;
-            this.guna2Panel1.Size = new System.Drawing.Size(951, 527);
-            this.guna2Panel1.TabIndex = 78;
-            // 
-            // dataGridViewTextBoxColumn3
-            // 
-            this.dataGridViewTextBoxColumn3.DataPropertyName = "idTipoHabitacion";
-            this.dataGridViewTextBoxColumn3.HeaderText = "Id";
-            this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
-            this.dataGridViewTextBoxColumn3.ReadOnly = true;
-            // 
-            // dataGridViewTextBoxColumn4
-            // 
-            this.dataGridViewTextBoxColumn4.DataPropertyName = "Tipodehabitacion";
-            this.dataGridViewTextBoxColumn4.HeaderText = "Tipo";
-            this.dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
-            this.dataGridViewTextBoxColumn4.ReadOnly = true;
-            // 
-            // dataGridViewTextBoxColumn5
-            // 
-            this.dataGridViewTextBoxColumn5.DataPropertyName = "numeroOcupantes";
-            this.dataGridViewTextBoxColumn5.HeaderText = "Ocupantes";
-            this.dataGridViewTextBoxColumn5.Name = "dataGridViewTextBoxColumn5";
-            this.dataGridViewTextBoxColumn5.ReadOnly = true;
-            // 
-            // tipoHabitacionesBindingSource
-            // 
-            this.tipoHabitacionesBindingSource.DataSource = typeof(Hotel_Vanilla.ENTIDAD.TipoHabitaciones);
-            // 
             // dataGridViewTextBoxColumn1
             // 
             this.dataGridViewTextBoxColumn1.DataPropertyName = "idEstado";
@@ -614,12 +591,40 @@ namespace Hotel_Vanilla.Vista
             // 
             this.estadosBindingSource.DataSource = typeof(Hotel_Vanilla.ENTIDAD.Estados);
             // 
+            // sp_MostrarTipoHabitacionesBindingSource
+            // 
+            this.sp_MostrarTipoHabitacionesBindingSource.DataSource = typeof(Hotel_Vanilla.ENTIDAD.sp_MostrarTipoHabitaciones);
+            // 
+            // tipoHabitacionesBindingSource
+            // 
+            this.tipoHabitacionesBindingSource.DataSource = typeof(Hotel_Vanilla.ENTIDAD.TipoHabitaciones);
+            // 
+            // dataGridViewTextBoxColumn6
+            // 
+            this.dataGridViewTextBoxColumn6.DataPropertyName = "idTipoHabitacion";
+            this.dataGridViewTextBoxColumn6.HeaderText = "Id";
+            this.dataGridViewTextBoxColumn6.Name = "dataGridViewTextBoxColumn6";
+            this.dataGridViewTextBoxColumn6.ReadOnly = true;
+            // 
+            // dataGridViewTextBoxColumn7
+            // 
+            this.dataGridViewTextBoxColumn7.DataPropertyName = "tipo";
+            this.dataGridViewTextBoxColumn7.HeaderText = "Tipo";
+            this.dataGridViewTextBoxColumn7.Name = "dataGridViewTextBoxColumn7";
+            this.dataGridViewTextBoxColumn7.ReadOnly = true;
+            // 
+            // dataGridViewTextBoxColumn8
+            // 
+            this.dataGridViewTextBoxColumn8.DataPropertyName = "numeroOcupantes";
+            this.dataGridViewTextBoxColumn8.HeaderText = "Ocupantes";
+            this.dataGridViewTextBoxColumn8.Name = "dataGridViewTextBoxColumn8";
+            this.dataGridViewTextBoxColumn8.ReadOnly = true;
+            // 
             // frmAjustes
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(951, 527);
-            this.Controls.Add(this.dtgTipoHabitaciones);
             this.Controls.Add(this.bunifuCustomLabel4);
             this.Controls.Add(this.dtgEstados);
             this.Controls.Add(this.txtAsunto);
@@ -644,11 +649,12 @@ namespace Hotel_Vanilla.Vista
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.guna2NumericUpDown1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dtgEstados)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dtgTipoHabitaciones)).EndInit();
             this.guna2Panel1.ResumeLayout(false);
             this.guna2Panel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.tipoHabitacionesBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dtgTipoHabitaciones)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.estadosBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.sp_MostrarTipoHabitacionesBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tipoHabitacionesBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -678,13 +684,14 @@ namespace Hotel_Vanilla.Vista
         private Guna.UI2.WinForms.Guna2DataGridView dtgEstados;
         private Bunifu.Framework.UI.BunifuCustomLabel bunifuCustomLabel4;
         private System.Windows.Forms.BindingSource tipoHabitacionesBindingSource;
-        private Guna.UI2.WinForms.Guna2DataGridView dtgTipoHabitaciones;
         private Bunifu.Framework.UI.BunifuCustomLabel bunifuCustomLabel5;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn3;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn4;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn5;
         private Guna.UI2.WinForms.Guna2Panel guna2Panel1;
+        private Guna.UI2.WinForms.Guna2DataGridView dtgTipoHabitaciones;
+        private System.Windows.Forms.BindingSource sp_MostrarTipoHabitacionesBindingSource;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn6;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn7;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn8;
     }
 }

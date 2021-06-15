@@ -116,7 +116,7 @@ namespace Hotel_Vanilla.Vista
         private void cargarCBTipoHabitacion()
         {
             CTipoHabitaciones cTipoHabitaciones = new CTipoHabitaciones();
-            cbTipoHabitacion.DataSource = cTipoHabitaciones.CargarCBTipoHabitacion();
+            cbTipoHabitacion.DataSource = cTipoHabitaciones.MostrarTipoHabitaciones();
             cbTipoHabitacion.DisplayMember = "Tipodehabitacion";
             cbTipoHabitacion.ValueMember = "idTipoHabitacion";
 

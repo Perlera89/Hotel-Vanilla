@@ -322,6 +322,7 @@
     <None Include="Properties\DataSources\Hotel_Vanilla.ENTIDAD.ManejoReservas.datasource" />
     <None Include="Properties\DataSources\Hotel_Vanilla.ENTIDAD.spMostrarHuesped.datasource" />
     <None Include="Properties\DataSources\Hotel_Vanilla.ENTIDAD.sp_MostrarHabitaciones.datasource" />
+    <None Include="Properties\DataSources\Hotel_Vanilla.ENTIDAD.sp_MostrarTipoHabitaciones.datasource" />
     <None Include="Properties\DataSources\Hotel_Vanilla.ENTIDAD.Sucesos.datasource" />
     <None Include="Properties\DataSources\Hotel_Vanilla.ENTIDAD.TipoHabitaciones.datasource" />
     <None Include="Properties\DataSources\Hotel_Vanilla.ENTIDAD.Usuarios.datasource" />

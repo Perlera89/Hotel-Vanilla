@@ -71,12 +71,18 @@ namespace Hotel_Vanilla.Vista
 
         private void frmAjustes_Load(object sender, EventArgs e)
         {
-
+            CargarEstados();
+            CargarTipoHabitaciones();
         }
 
         public void CargarEstados()
         {
-            
+            estadosBindingSource.DataSource = cEstados.MostrarEstados();
+        }
+
+        public void CargarTipoHabitaciones()
+        {
+            sp_MostrarTipoHabitacionesBindingSource.DataSource = cTipoH.MostrarTipoHabitaciones() ;
         }
     }
 }

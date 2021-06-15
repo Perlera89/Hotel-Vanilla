@@ -13,9 +13,14 @@ namespace Hotel_Vanilla.CONTROLADOR
         MTipoHabitacion mTipoHabitacion = new MTipoHabitacion();
 
         //mostrar
-        public List<TipoHabitaciones> CargarCBTipoHabitacion()
+        public List<TipoHabitaciones> MostrarTipoCB()
         {
             return mTipoHabitacion.ConsultarTipoHabitaciones();
+        }
+
+        public List<sp_MostrarTipoHabitaciones> MostrarTipoHabitaciones()
+        {
+            return mTipoHabitacion.MostrarTipoHabitaciones();
         }
 
     }
