@@ -198,6 +198,7 @@ namespace Hotel_Vanilla.Vista
             // txtMensaje
             // 
             this.txtMensaje.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtMensaje.AutoScroll = true;
             this.txtMensaje.BorderColorFocused = System.Drawing.Color.Blue;
             this.txtMensaje.BorderColorIdle = System.Drawing.Color.RoyalBlue;
             this.txtMensaje.BorderColorMouseHover = System.Drawing.Color.Blue;

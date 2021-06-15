@@ -38,9 +38,8 @@ namespace Hotel_Vanilla.Vista
 
         private void btnEnviar_Click(object sender, EventArgs e)
         {
-            //La cadena "servidor" es el servidor de correo que enviará tu mensaje
-            //string servidor = "Manukamy7@gmail.gmail.com";
-            // Crea el mensaje estableciendo quién lo manda y quién lo recibe
+            try
+            {
             MailMessage mensaje = new MailMessage();
 
             mensaje.To.Add("manuenitoo@gmail.com");
@@ -59,10 +58,8 @@ namespace Hotel_Vanilla.Vista
             cliente.EnableSsl = true;
             cliente.Host = "smtp.gmail.com";
 
-            try
-            {
                 cliente.Send(mensaje);
-                frmMensajeAviso.Avisar("El mensaje se ha enviado con exito");
+                frmMensajeExito.Confirmar("El mensaje se ha enviado con exito");
             }
 
             catch (Exception)
