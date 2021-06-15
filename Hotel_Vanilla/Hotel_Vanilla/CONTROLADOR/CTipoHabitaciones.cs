@@ -23,6 +23,17 @@ namespace Hotel_Vanilla.CONTROLADOR
             return mTipoHabitacion.MostrarTipoHabitaciones();
         }
 
+        //Agregar
+        public void AgregarTipoHabitacion(sp_MostrarTipoHabitaciones tipo)
+        {
+            mTipoHabitacion.AgregarTipoHabitacion(tipo);
+        }
+
+        public void EliminarTipoHabitacion(sp_MostrarTipoHabitaciones tipo)
+        {
+            mTipoHabitacion.EliminarTipoHabitaciones(tipo);
+        }
+
     }
 
 }

@@ -39,7 +39,7 @@ namespace Hotel_Vanilla.Vista
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
             this.bunifuCustomLabel1 = new Bunifu.Framework.UI.BunifuCustomLabel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.guna2NumericUpDown1 = new Guna.UI2.WinForms.Guna2NumericUpDown();
+            this.txtOcupantes = new Guna.UI2.WinForms.Guna2NumericUpDown();
             this.bunifuCustomLabel2 = new Bunifu.Framework.UI.BunifuCustomLabel();
             this.bunifuCustomLabel3 = new Bunifu.Framework.UI.BunifuCustomLabel();
             this.txtMensaje = new Bunifu.Framework.UI.BunifuMetroTextbox();
@@ -50,26 +50,29 @@ namespace Hotel_Vanilla.Vista
             this.txtEmail = new Bunifu.Framework.UI.BunifuMaterialTextbox();
             this.bunifuCheckbox3 = new Bunifu.Framework.UI.BunifuCheckbox();
             this.bunifuCustomLabel8 = new Bunifu.Framework.UI.BunifuCustomLabel();
-            this.bunifuThinButton21 = new Bunifu.Framework.UI.BunifuThinButton2();
-            this.bunifuMaterialTextbox1 = new Bunifu.Framework.UI.BunifuMaterialTextbox();
-            this.guna2TileButton1 = new Guna.UI2.WinForms.Guna2TileButton();
-            this.bunifuMaterialTextbox2 = new Bunifu.Framework.UI.BunifuMaterialTextbox();
+            this.btnCambiarUsuario = new Bunifu.Framework.UI.BunifuThinButton2();
+            this.txtTipo = new Bunifu.Framework.UI.BunifuMaterialTextbox();
+            this.btnGuardarEstado = new Guna.UI2.WinForms.Guna2TileButton();
+            this.txtEstado = new Bunifu.Framework.UI.BunifuMaterialTextbox();
             this.txtAsunto = new Bunifu.Framework.UI.BunifuMaterialTextbox();
             this.dtgEstados = new Guna.UI2.WinForms.Guna2DataGridView();
             this.bunifuCustomLabel4 = new Bunifu.Framework.UI.BunifuCustomLabel();
             this.bunifuCustomLabel5 = new Bunifu.Framework.UI.BunifuCustomLabel();
             this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
             this.dtgTipoHabitaciones = new Guna.UI2.WinForms.Guna2DataGridView();
+            this.btnEliminarEstado = new Guna.UI2.WinForms.Guna2TileButton();
+            this.btnEliminarTipo = new Guna.UI2.WinForms.Guna2TileButton();
+            this.btnGuardarTipo = new Guna.UI2.WinForms.Guna2TileButton();
             this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.estadosBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.sp_MostrarTipoHabitacionesBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.tipoHabitacionesBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.dataGridViewTextBoxColumn6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.sp_MostrarTipoHabitacionesBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.tipoHabitacionesBindingSource = new System.Windows.Forms.BindingSource(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.guna2NumericUpDown1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtOcupantes)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dtgEstados)).BeginInit();
             this.guna2Panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dtgTipoHabitaciones)).BeginInit();
@@ -101,26 +104,26 @@ namespace Hotel_Vanilla.Vista
             this.pictureBox1.TabIndex = 43;
             this.pictureBox1.TabStop = false;
             // 
-            // guna2NumericUpDown1
+            // txtOcupantes
             // 
-            this.guna2NumericUpDown1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.guna2NumericUpDown1.BackColor = System.Drawing.Color.Transparent;
-            this.guna2NumericUpDown1.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.guna2NumericUpDown1.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.guna2NumericUpDown1.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.guna2NumericUpDown1.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.guna2NumericUpDown1.DisabledState.Parent = this.guna2NumericUpDown1;
-            this.guna2NumericUpDown1.DisabledState.UpDownButtonFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(177)))), ((int)(((byte)(177)))), ((int)(((byte)(177)))));
-            this.guna2NumericUpDown1.DisabledState.UpDownButtonForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(203)))), ((int)(((byte)(203)))), ((int)(((byte)(203)))));
-            this.guna2NumericUpDown1.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.guna2NumericUpDown1.FocusedState.Parent = this.guna2NumericUpDown1;
-            this.guna2NumericUpDown1.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.guna2NumericUpDown1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(126)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
-            this.guna2NumericUpDown1.Location = new System.Drawing.Point(435, 462);
-            this.guna2NumericUpDown1.Name = "guna2NumericUpDown1";
-            this.guna2NumericUpDown1.ShadowDecoration.Parent = this.guna2NumericUpDown1;
-            this.guna2NumericUpDown1.Size = new System.Drawing.Size(77, 36);
-            this.guna2NumericUpDown1.TabIndex = 45;
+            this.txtOcupantes.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.txtOcupantes.BackColor = System.Drawing.Color.Transparent;
+            this.txtOcupantes.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtOcupantes.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.txtOcupantes.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.txtOcupantes.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtOcupantes.DisabledState.Parent = this.txtOcupantes;
+            this.txtOcupantes.DisabledState.UpDownButtonFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(177)))), ((int)(((byte)(177)))), ((int)(((byte)(177)))));
+            this.txtOcupantes.DisabledState.UpDownButtonForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(203)))), ((int)(((byte)(203)))), ((int)(((byte)(203)))));
+            this.txtOcupantes.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtOcupantes.FocusedState.Parent = this.txtOcupantes;
+            this.txtOcupantes.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.txtOcupantes.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(126)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
+            this.txtOcupantes.Location = new System.Drawing.Point(444, 420);
+            this.txtOcupantes.Name = "txtOcupantes";
+            this.txtOcupantes.ShadowDecoration.Parent = this.txtOcupantes;
+            this.txtOcupantes.Size = new System.Drawing.Size(77, 36);
+            this.txtOcupantes.TabIndex = 45;
             // 
             // bunifuCustomLabel2
             // 
@@ -129,7 +132,7 @@ namespace Hotel_Vanilla.Vista
             this.bunifuCustomLabel2.BackColor = System.Drawing.Color.Transparent;
             this.bunifuCustomLabel2.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bunifuCustomLabel2.ForeColor = System.Drawing.Color.Black;
-            this.bunifuCustomLabel2.Location = new System.Drawing.Point(335, 331);
+            this.bunifuCustomLabel2.Location = new System.Drawing.Point(344, 331);
             this.bunifuCustomLabel2.Name = "bunifuCustomLabel2";
             this.bunifuCustomLabel2.Size = new System.Drawing.Size(111, 19);
             this.bunifuCustomLabel2.TabIndex = 48;
@@ -142,7 +145,7 @@ namespace Hotel_Vanilla.Vista
             this.bunifuCustomLabel3.BackColor = System.Drawing.Color.Transparent;
             this.bunifuCustomLabel3.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bunifuCustomLabel3.ForeColor = System.Drawing.Color.Black;
-            this.bunifuCustomLabel3.Location = new System.Drawing.Point(681, 278);
+            this.bunifuCustomLabel3.Location = new System.Drawing.Point(681, 331);
             this.bunifuCustomLabel3.Name = "bunifuCustomLabel3";
             this.bunifuCustomLabel3.Size = new System.Drawing.Size(140, 19);
             this.bunifuCustomLabel3.TabIndex = 53;
@@ -156,17 +159,18 @@ namespace Hotel_Vanilla.Vista
             this.txtMensaje.BorderColorIdle = System.Drawing.Color.RoyalBlue;
             this.txtMensaje.BorderColorMouseHover = System.Drawing.Color.Blue;
             this.txtMensaje.BorderThickness = 2;
-            this.txtMensaje.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtMensaje.Cursor = System.Windows.Forms.Cursors.WaitCursor;
             this.txtMensaje.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtMensaje.ForeColor = System.Drawing.Color.RoyalBlue;
             this.txtMensaje.isPassword = false;
-            this.txtMensaje.Location = new System.Drawing.Point(685, 353);
+            this.txtMensaje.Location = new System.Drawing.Point(685, 407);
             this.txtMensaje.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.txtMensaje.Name = "txtMensaje";
-            this.txtMensaje.Size = new System.Drawing.Size(253, 111);
-            this.txtMensaje.TabIndex = 54;
+            this.txtMensaje.Size = new System.Drawing.Size(253, 57);
+            this.txtMensaje.TabIndex = 7;
             this.txtMensaje.Text = "Mensaje";
             this.txtMensaje.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.txtMensaje.UseWaitCursor = true;
             this.txtMensaje.Enter += new System.EventHandler(this.txtMensaje_Enter);
             this.txtMensaje.Leave += new System.EventHandler(this.txtMensaje_Leave);
             // 
@@ -204,7 +208,7 @@ namespace Hotel_Vanilla.Vista
             this.bunifuCustomLabel7.BackColor = System.Drawing.Color.Transparent;
             this.bunifuCustomLabel7.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bunifuCustomLabel7.ForeColor = System.Drawing.Color.Black;
-            this.bunifuCustomLabel7.Location = new System.Drawing.Point(481, 28);
+            this.bunifuCustomLabel7.Location = new System.Drawing.Point(503, 28);
             this.bunifuCustomLabel7.Name = "bunifuCustomLabel7";
             this.bunifuCustomLabel7.Size = new System.Drawing.Size(181, 19);
             this.bunifuCustomLabel7.TabIndex = 62;
@@ -224,11 +228,11 @@ namespace Hotel_Vanilla.Vista
             this.txtUsuario.LineIdleColor = System.Drawing.Color.RoyalBlue;
             this.txtUsuario.LineMouseHoverColor = System.Drawing.Color.Blue;
             this.txtUsuario.LineThickness = 4;
-            this.txtUsuario.Location = new System.Drawing.Point(485, 64);
+            this.txtUsuario.Location = new System.Drawing.Point(507, 64);
             this.txtUsuario.Margin = new System.Windows.Forms.Padding(4);
             this.txtUsuario.Name = "txtUsuario";
-            this.txtUsuario.Size = new System.Drawing.Size(241, 33);
-            this.txtUsuario.TabIndex = 63;
+            this.txtUsuario.Size = new System.Drawing.Size(219, 33);
+            this.txtUsuario.TabIndex = 3;
             this.txtUsuario.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             // 
             // txtPass
@@ -245,11 +249,11 @@ namespace Hotel_Vanilla.Vista
             this.txtPass.LineIdleColor = System.Drawing.Color.RoyalBlue;
             this.txtPass.LineMouseHoverColor = System.Drawing.Color.Blue;
             this.txtPass.LineThickness = 4;
-            this.txtPass.Location = new System.Drawing.Point(485, 146);
+            this.txtPass.Location = new System.Drawing.Point(507, 146);
             this.txtPass.Margin = new System.Windows.Forms.Padding(4);
             this.txtPass.Name = "txtPass";
-            this.txtPass.Size = new System.Drawing.Size(241, 33);
-            this.txtPass.TabIndex = 65;
+            this.txtPass.Size = new System.Drawing.Size(219, 33);
+            this.txtPass.TabIndex = 5;
             this.txtPass.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             // 
             // txtEmail
@@ -266,11 +270,11 @@ namespace Hotel_Vanilla.Vista
             this.txtEmail.LineIdleColor = System.Drawing.Color.RoyalBlue;
             this.txtEmail.LineMouseHoverColor = System.Drawing.Color.Blue;
             this.txtEmail.LineThickness = 4;
-            this.txtEmail.Location = new System.Drawing.Point(485, 105);
+            this.txtEmail.Location = new System.Drawing.Point(507, 105);
             this.txtEmail.Margin = new System.Windows.Forms.Padding(4);
             this.txtEmail.Name = "txtEmail";
-            this.txtEmail.Size = new System.Drawing.Size(241, 33);
-            this.txtEmail.TabIndex = 64;
+            this.txtEmail.Size = new System.Drawing.Size(219, 33);
+            this.txtEmail.TabIndex = 4;
             this.txtEmail.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             // 
             // bunifuCheckbox3
@@ -278,10 +282,10 @@ namespace Hotel_Vanilla.Vista
             this.bunifuCheckbox3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.bunifuCheckbox3.BackColor = System.Drawing.Color.RoyalBlue;
             this.bunifuCheckbox3.ChechedOffColor = System.Drawing.Color.RoyalBlue;
-            this.bunifuCheckbox3.Checked = true;
+            this.bunifuCheckbox3.Checked = false;
             this.bunifuCheckbox3.CheckedOnColor = System.Drawing.Color.RoyalBlue;
             this.bunifuCheckbox3.ForeColor = System.Drawing.Color.White;
-            this.bunifuCheckbox3.Location = new System.Drawing.Point(485, 189);
+            this.bunifuCheckbox3.Location = new System.Drawing.Point(507, 189);
             this.bunifuCheckbox3.Name = "bunifuCheckbox3";
             this.bunifuCheckbox3.Size = new System.Drawing.Size(20, 20);
             this.bunifuCheckbox3.TabIndex = 67;
@@ -291,94 +295,94 @@ namespace Hotel_Vanilla.Vista
             this.bunifuCustomLabel8.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.bunifuCustomLabel8.AutoSize = true;
             this.bunifuCustomLabel8.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bunifuCustomLabel8.Location = new System.Drawing.Point(511, 195);
+            this.bunifuCustomLabel8.Location = new System.Drawing.Point(533, 189);
             this.bunifuCustomLabel8.Name = "bunifuCustomLabel8";
             this.bunifuCustomLabel8.Size = new System.Drawing.Size(91, 17);
             this.bunifuCustomLabel8.TabIndex = 68;
             this.bunifuCustomLabel8.Text = "Mostrar clave";
             // 
-            // bunifuThinButton21
+            // btnCambiarUsuario
             // 
-            this.bunifuThinButton21.ActiveBorderThickness = 1;
-            this.bunifuThinButton21.ActiveCornerRadius = 20;
-            this.bunifuThinButton21.ActiveFillColor = System.Drawing.Color.RoyalBlue;
-            this.bunifuThinButton21.ActiveForecolor = System.Drawing.Color.White;
-            this.bunifuThinButton21.ActiveLineColor = System.Drawing.Color.White;
-            this.bunifuThinButton21.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.bunifuThinButton21.BackColor = System.Drawing.SystemColors.Control;
-            this.bunifuThinButton21.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("bunifuThinButton21.BackgroundImage")));
-            this.bunifuThinButton21.ButtonText = "Cambiar";
-            this.bunifuThinButton21.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.bunifuThinButton21.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bunifuThinButton21.ForeColor = System.Drawing.Color.White;
-            this.bunifuThinButton21.IdleBorderThickness = 1;
-            this.bunifuThinButton21.IdleCornerRadius = 20;
-            this.bunifuThinButton21.IdleFillColor = System.Drawing.Color.Transparent;
-            this.bunifuThinButton21.IdleForecolor = System.Drawing.Color.RoyalBlue;
-            this.bunifuThinButton21.IdleLineColor = System.Drawing.Color.RoyalBlue;
-            this.bunifuThinButton21.Location = new System.Drawing.Point(485, 217);
-            this.bunifuThinButton21.Margin = new System.Windows.Forms.Padding(5);
-            this.bunifuThinButton21.Name = "bunifuThinButton21";
-            this.bunifuThinButton21.Size = new System.Drawing.Size(117, 41);
-            this.bunifuThinButton21.TabIndex = 69;
-            this.bunifuThinButton21.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.btnCambiarUsuario.ActiveBorderThickness = 1;
+            this.btnCambiarUsuario.ActiveCornerRadius = 20;
+            this.btnCambiarUsuario.ActiveFillColor = System.Drawing.Color.RoyalBlue;
+            this.btnCambiarUsuario.ActiveForecolor = System.Drawing.Color.White;
+            this.btnCambiarUsuario.ActiveLineColor = System.Drawing.Color.White;
+            this.btnCambiarUsuario.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnCambiarUsuario.BackColor = System.Drawing.SystemColors.Control;
+            this.btnCambiarUsuario.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnCambiarUsuario.BackgroundImage")));
+            this.btnCambiarUsuario.ButtonText = "Cambiar";
+            this.btnCambiarUsuario.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnCambiarUsuario.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCambiarUsuario.ForeColor = System.Drawing.Color.White;
+            this.btnCambiarUsuario.IdleBorderThickness = 1;
+            this.btnCambiarUsuario.IdleCornerRadius = 20;
+            this.btnCambiarUsuario.IdleFillColor = System.Drawing.Color.Transparent;
+            this.btnCambiarUsuario.IdleForecolor = System.Drawing.Color.RoyalBlue;
+            this.btnCambiarUsuario.IdleLineColor = System.Drawing.Color.RoyalBlue;
+            this.btnCambiarUsuario.Location = new System.Drawing.Point(507, 211);
+            this.btnCambiarUsuario.Margin = new System.Windows.Forms.Padding(5);
+            this.btnCambiarUsuario.Name = "btnCambiarUsuario";
+            this.btnCambiarUsuario.Size = new System.Drawing.Size(117, 41);
+            this.btnCambiarUsuario.TabIndex = 69;
+            this.btnCambiarUsuario.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // bunifuMaterialTextbox1
+            // txtTipo
             // 
-            this.bunifuMaterialTextbox1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.bunifuMaterialTextbox1.BackColor = System.Drawing.SystemColors.ButtonFace;
-            this.bunifuMaterialTextbox1.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.bunifuMaterialTextbox1.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bunifuMaterialTextbox1.ForeColor = System.Drawing.Color.Black;
-            this.bunifuMaterialTextbox1.HintForeColor = System.Drawing.Color.Empty;
-            this.bunifuMaterialTextbox1.HintText = "Tipo";
-            this.bunifuMaterialTextbox1.isPassword = false;
-            this.bunifuMaterialTextbox1.LineFocusedColor = System.Drawing.Color.CornflowerBlue;
-            this.bunifuMaterialTextbox1.LineIdleColor = System.Drawing.Color.RoyalBlue;
-            this.bunifuMaterialTextbox1.LineMouseHoverColor = System.Drawing.Color.Blue;
-            this.bunifuMaterialTextbox1.LineThickness = 4;
-            this.bunifuMaterialTextbox1.Location = new System.Drawing.Point(339, 400);
-            this.bunifuMaterialTextbox1.Margin = new System.Windows.Forms.Padding(4);
-            this.bunifuMaterialTextbox1.Name = "bunifuMaterialTextbox1";
-            this.bunifuMaterialTextbox1.Size = new System.Drawing.Size(173, 33);
-            this.bunifuMaterialTextbox1.TabIndex = 70;
-            this.bunifuMaterialTextbox1.Text = "Tipo ";
-            this.bunifuMaterialTextbox1.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.txtTipo.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.txtTipo.BackColor = System.Drawing.SystemColors.ButtonFace;
+            this.txtTipo.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtTipo.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtTipo.ForeColor = System.Drawing.Color.Black;
+            this.txtTipo.HintForeColor = System.Drawing.Color.Empty;
+            this.txtTipo.HintText = "Tipo";
+            this.txtTipo.isPassword = false;
+            this.txtTipo.LineFocusedColor = System.Drawing.Color.CornflowerBlue;
+            this.txtTipo.LineIdleColor = System.Drawing.Color.RoyalBlue;
+            this.txtTipo.LineMouseHoverColor = System.Drawing.Color.Blue;
+            this.txtTipo.LineThickness = 4;
+            this.txtTipo.Location = new System.Drawing.Point(348, 370);
+            this.txtTipo.Margin = new System.Windows.Forms.Padding(4);
+            this.txtTipo.Name = "txtTipo";
+            this.txtTipo.Size = new System.Drawing.Size(173, 33);
+            this.txtTipo.TabIndex = 2;
+            this.txtTipo.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             // 
-            // guna2TileButton1
+            // btnGuardarEstado
             // 
-            this.guna2TileButton1.CheckedState.Parent = this.guna2TileButton1;
-            this.guna2TileButton1.CustomImages.Parent = this.guna2TileButton1;
-            this.guna2TileButton1.FillColor = System.Drawing.Color.RoyalBlue;
-            this.guna2TileButton1.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2TileButton1.ForeColor = System.Drawing.Color.White;
-            this.guna2TileButton1.HoverState.Parent = this.guna2TileButton1;
-            this.guna2TileButton1.Location = new System.Drawing.Point(227, 109);
-            this.guna2TileButton1.Name = "guna2TileButton1";
-            this.guna2TileButton1.ShadowDecoration.Parent = this.guna2TileButton1;
-            this.guna2TileButton1.Size = new System.Drawing.Size(84, 33);
-            this.guna2TileButton1.TabIndex = 72;
-            this.guna2TileButton1.Text = "Agregar";
+            this.btnGuardarEstado.CheckedState.Parent = this.btnGuardarEstado;
+            this.btnGuardarEstado.CustomImages.Parent = this.btnGuardarEstado;
+            this.btnGuardarEstado.FillColor = System.Drawing.Color.RoyalBlue;
+            this.btnGuardarEstado.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnGuardarEstado.ForeColor = System.Drawing.Color.White;
+            this.btnGuardarEstado.HoverState.Parent = this.btnGuardarEstado;
+            this.btnGuardarEstado.Location = new System.Drawing.Point(147, 109);
+            this.btnGuardarEstado.Name = "btnGuardarEstado";
+            this.btnGuardarEstado.ShadowDecoration.Parent = this.btnGuardarEstado;
+            this.btnGuardarEstado.Size = new System.Drawing.Size(84, 33);
+            this.btnGuardarEstado.TabIndex = 72;
+            this.btnGuardarEstado.Text = "Guardar";
+            this.btnGuardarEstado.Click += new System.EventHandler(this.btnGuardarEstado_Click);
             // 
-            // bunifuMaterialTextbox2
+            // txtEstado
             // 
-            this.bunifuMaterialTextbox2.BackColor = System.Drawing.SystemColors.ButtonFace;
-            this.bunifuMaterialTextbox2.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.bunifuMaterialTextbox2.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bunifuMaterialTextbox2.ForeColor = System.Drawing.Color.Black;
-            this.bunifuMaterialTextbox2.HintForeColor = System.Drawing.Color.Empty;
-            this.bunifuMaterialTextbox2.HintText = "Agregar estado ";
-            this.bunifuMaterialTextbox2.isPassword = false;
-            this.bunifuMaterialTextbox2.LineFocusedColor = System.Drawing.Color.CornflowerBlue;
-            this.bunifuMaterialTextbox2.LineIdleColor = System.Drawing.Color.RoyalBlue;
-            this.bunifuMaterialTextbox2.LineMouseHoverColor = System.Drawing.Color.Blue;
-            this.bunifuMaterialTextbox2.LineThickness = 4;
-            this.bunifuMaterialTextbox2.Location = new System.Drawing.Point(26, 109);
-            this.bunifuMaterialTextbox2.Margin = new System.Windows.Forms.Padding(4);
-            this.bunifuMaterialTextbox2.Name = "bunifuMaterialTextbox2";
-            this.bunifuMaterialTextbox2.Size = new System.Drawing.Size(194, 33);
-            this.bunifuMaterialTextbox2.TabIndex = 73;
-            this.bunifuMaterialTextbox2.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.txtEstado.BackColor = System.Drawing.SystemColors.ButtonFace;
+            this.txtEstado.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtEstado.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtEstado.ForeColor = System.Drawing.Color.Black;
+            this.txtEstado.HintForeColor = System.Drawing.Color.Empty;
+            this.txtEstado.HintText = "Estado";
+            this.txtEstado.isPassword = false;
+            this.txtEstado.LineFocusedColor = System.Drawing.Color.CornflowerBlue;
+            this.txtEstado.LineIdleColor = System.Drawing.Color.RoyalBlue;
+            this.txtEstado.LineMouseHoverColor = System.Drawing.Color.Blue;
+            this.txtEstado.LineThickness = 4;
+            this.txtEstado.Location = new System.Drawing.Point(26, 109);
+            this.txtEstado.Margin = new System.Windows.Forms.Padding(4);
+            this.txtEstado.Name = "txtEstado";
+            this.txtEstado.Size = new System.Drawing.Size(114, 33);
+            this.txtEstado.TabIndex = 1;
+            this.txtEstado.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             // 
             // txtAsunto
             // 
@@ -394,17 +398,19 @@ namespace Hotel_Vanilla.Vista
             this.txtAsunto.LineIdleColor = System.Drawing.Color.RoyalBlue;
             this.txtAsunto.LineMouseHoverColor = System.Drawing.Color.Blue;
             this.txtAsunto.LineThickness = 4;
-            this.txtAsunto.Location = new System.Drawing.Point(685, 311);
+            this.txtAsunto.Location = new System.Drawing.Point(685, 365);
             this.txtAsunto.Margin = new System.Windows.Forms.Padding(4);
             this.txtAsunto.Name = "txtAsunto";
             this.txtAsunto.Size = new System.Drawing.Size(241, 33);
-            this.txtAsunto.TabIndex = 74;
+            this.txtAsunto.TabIndex = 6;
             this.txtAsunto.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             // 
             // dtgEstados
             // 
             this.dtgEstados.AllowUserToAddRows = false;
             this.dtgEstados.AllowUserToDeleteRows = false;
+            this.dtgEstados.AllowUserToResizeColumns = false;
+            this.dtgEstados.AllowUserToResizeRows = false;
             dataGridViewCellStyle1.BackColor = System.Drawing.Color.White;
             this.dtgEstados.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
             this.dtgEstados.AutoGenerateColumns = false;
@@ -441,7 +447,7 @@ namespace Hotel_Vanilla.Vista
             this.dtgEstados.ReadOnly = true;
             this.dtgEstados.RowHeadersVisible = false;
             this.dtgEstados.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dtgEstados.Size = new System.Drawing.Size(285, 159);
+            this.dtgEstados.Size = new System.Drawing.Size(295, 159);
             this.dtgEstados.TabIndex = 75;
             this.dtgEstados.Theme = Guna.UI2.WinForms.Enums.DataGridViewPresetThemes.Default;
             this.dtgEstados.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White;
@@ -485,7 +491,7 @@ namespace Hotel_Vanilla.Vista
             this.bunifuCustomLabel5.BackColor = System.Drawing.Color.Transparent;
             this.bunifuCustomLabel5.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bunifuCustomLabel5.ForeColor = System.Drawing.Color.RoyalBlue;
-            this.bunifuCustomLabel5.Location = new System.Drawing.Point(335, 474);
+            this.bunifuCustomLabel5.Location = new System.Drawing.Point(344, 428);
             this.bunifuCustomLabel5.Name = "bunifuCustomLabel5";
             this.bunifuCustomLabel5.Size = new System.Drawing.Size(94, 19);
             this.bunifuCustomLabel5.TabIndex = 77;
@@ -494,12 +500,21 @@ namespace Hotel_Vanilla.Vista
             // guna2Panel1
             // 
             this.guna2Panel1.AutoSize = true;
+            this.guna2Panel1.Controls.Add(this.btnEliminarTipo);
+            this.guna2Panel1.Controls.Add(this.btnGuardarTipo);
+            this.guna2Panel1.Controls.Add(this.txtAsunto);
+            this.guna2Panel1.Controls.Add(this.btnEliminarEstado);
             this.guna2Panel1.Controls.Add(this.dtgTipoHabitaciones);
             this.guna2Panel1.Controls.Add(this.bunifuCustomLabel5);
-            this.guna2Panel1.Controls.Add(this.guna2NumericUpDown1);
+            this.guna2Panel1.Controls.Add(this.btnCambiarUsuario);
+            this.guna2Panel1.Controls.Add(this.txtOcupantes);
+            this.guna2Panel1.Controls.Add(this.bunifuCustomLabel3);
+            this.guna2Panel1.Controls.Add(this.bunifuCustomLabel8);
             this.guna2Panel1.Controls.Add(this.bunifuCustomLabel2);
-            this.guna2Panel1.Controls.Add(this.bunifuMaterialTextbox1);
-            this.guna2Panel1.Controls.Add(this.guna2TileButton1);
+            this.guna2Panel1.Controls.Add(this.txtTipo);
+            this.guna2Panel1.Controls.Add(this.btnGuardarEstado);
+            this.guna2Panel1.Controls.Add(this.bunifuCheckbox3);
+            this.guna2Panel1.Controls.Add(this.bunifuCustomLabel7);
             this.guna2Panel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.guna2Panel1.Location = new System.Drawing.Point(0, 0);
             this.guna2Panel1.Name = "guna2Panel1";
@@ -511,6 +526,8 @@ namespace Hotel_Vanilla.Vista
             // 
             this.dtgTipoHabitaciones.AllowUserToAddRows = false;
             this.dtgTipoHabitaciones.AllowUserToDeleteRows = false;
+            this.dtgTipoHabitaciones.AllowUserToResizeColumns = false;
+            this.dtgTipoHabitaciones.AllowUserToResizeRows = false;
             dataGridViewCellStyle4.BackColor = System.Drawing.Color.White;
             this.dtgTipoHabitaciones.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle4;
             this.dtgTipoHabitaciones.AutoGenerateColumns = false;
@@ -548,7 +565,7 @@ namespace Hotel_Vanilla.Vista
             this.dtgTipoHabitaciones.ReadOnly = true;
             this.dtgTipoHabitaciones.RowHeadersVisible = false;
             this.dtgTipoHabitaciones.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dtgTipoHabitaciones.Size = new System.Drawing.Size(285, 167);
+            this.dtgTipoHabitaciones.Size = new System.Drawing.Size(295, 167);
             this.dtgTipoHabitaciones.TabIndex = 77;
             this.dtgTipoHabitaciones.Theme = Guna.UI2.WinForms.Enums.DataGridViewPresetThemes.Default;
             this.dtgTipoHabitaciones.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White;
@@ -573,6 +590,56 @@ namespace Hotel_Vanilla.Vista
             this.dtgTipoHabitaciones.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
             this.dtgTipoHabitaciones.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
             // 
+            // btnEliminarEstado
+            // 
+            this.btnEliminarEstado.CheckedState.Parent = this.btnEliminarEstado;
+            this.btnEliminarEstado.CustomImages.Parent = this.btnEliminarEstado;
+            this.btnEliminarEstado.FillColor = System.Drawing.Color.OrangeRed;
+            this.btnEliminarEstado.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnEliminarEstado.ForeColor = System.Drawing.Color.White;
+            this.btnEliminarEstado.HoverState.Parent = this.btnEliminarEstado;
+            this.btnEliminarEstado.Location = new System.Drawing.Point(237, 109);
+            this.btnEliminarEstado.Name = "btnEliminarEstado";
+            this.btnEliminarEstado.ShadowDecoration.Parent = this.btnEliminarEstado;
+            this.btnEliminarEstado.Size = new System.Drawing.Size(84, 33);
+            this.btnEliminarEstado.TabIndex = 81;
+            this.btnEliminarEstado.Text = "Eliminar";
+            this.btnEliminarEstado.Click += new System.EventHandler(this.btnEliminarEstado_Click);
+            // 
+            // btnEliminarTipo
+            // 
+            this.btnEliminarTipo.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.btnEliminarTipo.CheckedState.Parent = this.btnEliminarTipo;
+            this.btnEliminarTipo.CustomImages.Parent = this.btnEliminarTipo;
+            this.btnEliminarTipo.FillColor = System.Drawing.Color.OrangeRed;
+            this.btnEliminarTipo.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnEliminarTipo.ForeColor = System.Drawing.Color.White;
+            this.btnEliminarTipo.HoverState.Parent = this.btnEliminarTipo;
+            this.btnEliminarTipo.Location = new System.Drawing.Point(438, 465);
+            this.btnEliminarTipo.Name = "btnEliminarTipo";
+            this.btnEliminarTipo.ShadowDecoration.Parent = this.btnEliminarTipo;
+            this.btnEliminarTipo.Size = new System.Drawing.Size(84, 33);
+            this.btnEliminarTipo.TabIndex = 83;
+            this.btnEliminarTipo.Text = "Eliminar";
+            this.btnEliminarTipo.Click += new System.EventHandler(this.btnEliminarTipo_Click);
+            // 
+            // btnGuardarTipo
+            // 
+            this.btnGuardarTipo.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.btnGuardarTipo.CheckedState.Parent = this.btnGuardarTipo;
+            this.btnGuardarTipo.CustomImages.Parent = this.btnGuardarTipo;
+            this.btnGuardarTipo.FillColor = System.Drawing.Color.RoyalBlue;
+            this.btnGuardarTipo.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnGuardarTipo.ForeColor = System.Drawing.Color.White;
+            this.btnGuardarTipo.HoverState.Parent = this.btnGuardarTipo;
+            this.btnGuardarTipo.Location = new System.Drawing.Point(348, 465);
+            this.btnGuardarTipo.Name = "btnGuardarTipo";
+            this.btnGuardarTipo.ShadowDecoration.Parent = this.btnGuardarTipo;
+            this.btnGuardarTipo.Size = new System.Drawing.Size(84, 33);
+            this.btnGuardarTipo.TabIndex = 82;
+            this.btnGuardarTipo.Text = "Guardar";
+            this.btnGuardarTipo.Click += new System.EventHandler(this.btnGuardarTipo_Click);
+            // 
             // dataGridViewTextBoxColumn1
             // 
             this.dataGridViewTextBoxColumn1.DataPropertyName = "idEstado";
@@ -590,14 +657,6 @@ namespace Hotel_Vanilla.Vista
             // estadosBindingSource
             // 
             this.estadosBindingSource.DataSource = typeof(Hotel_Vanilla.ENTIDAD.Estados);
-            // 
-            // sp_MostrarTipoHabitacionesBindingSource
-            // 
-            this.sp_MostrarTipoHabitacionesBindingSource.DataSource = typeof(Hotel_Vanilla.ENTIDAD.sp_MostrarTipoHabitaciones);
-            // 
-            // tipoHabitacionesBindingSource
-            // 
-            this.tipoHabitacionesBindingSource.DataSource = typeof(Hotel_Vanilla.ENTIDAD.TipoHabitaciones);
             // 
             // dataGridViewTextBoxColumn6
             // 
@@ -620,6 +679,14 @@ namespace Hotel_Vanilla.Vista
             this.dataGridViewTextBoxColumn8.Name = "dataGridViewTextBoxColumn8";
             this.dataGridViewTextBoxColumn8.ReadOnly = true;
             // 
+            // sp_MostrarTipoHabitacionesBindingSource
+            // 
+            this.sp_MostrarTipoHabitacionesBindingSource.DataSource = typeof(Hotel_Vanilla.ENTIDAD.sp_MostrarTipoHabitaciones);
+            // 
+            // tipoHabitacionesBindingSource
+            // 
+            this.tipoHabitacionesBindingSource.DataSource = typeof(Hotel_Vanilla.ENTIDAD.TipoHabitaciones);
+            // 
             // frmAjustes
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -627,18 +694,12 @@ namespace Hotel_Vanilla.Vista
             this.ClientSize = new System.Drawing.Size(951, 527);
             this.Controls.Add(this.bunifuCustomLabel4);
             this.Controls.Add(this.dtgEstados);
-            this.Controls.Add(this.txtAsunto);
-            this.Controls.Add(this.bunifuMaterialTextbox2);
-            this.Controls.Add(this.bunifuThinButton21);
-            this.Controls.Add(this.bunifuCustomLabel8);
+            this.Controls.Add(this.txtEstado);
             this.Controls.Add(this.txtUsuario);
             this.Controls.Add(this.txtPass);
             this.Controls.Add(this.txtEmail);
-            this.Controls.Add(this.bunifuCheckbox3);
-            this.Controls.Add(this.bunifuCustomLabel7);
             this.Controls.Add(this.btnEnviar);
             this.Controls.Add(this.txtMensaje);
-            this.Controls.Add(this.bunifuCustomLabel3);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.bunifuCustomLabel1);
             this.Controls.Add(this.guna2Panel1);
@@ -647,7 +708,7 @@ namespace Hotel_Vanilla.Vista
             this.Text = "frmAjustes";
             this.Load += new System.EventHandler(this.frmAjustes_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.guna2NumericUpDown1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtOcupantes)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dtgEstados)).EndInit();
             this.guna2Panel1.ResumeLayout(false);
             this.guna2Panel1.PerformLayout();
@@ -664,7 +725,7 @@ namespace Hotel_Vanilla.Vista
 
         private Bunifu.Framework.UI.BunifuCustomLabel bunifuCustomLabel1;
         private System.Windows.Forms.PictureBox pictureBox1;
-        private Guna.UI2.WinForms.Guna2NumericUpDown guna2NumericUpDown1;
+        private Guna.UI2.WinForms.Guna2NumericUpDown txtOcupantes;
         private Bunifu.Framework.UI.BunifuCustomLabel bunifuCustomLabel2;
         private Bunifu.Framework.UI.BunifuCustomLabel bunifuCustomLabel3;
         private Bunifu.Framework.UI.BunifuMetroTextbox txtMensaje;
@@ -675,10 +736,10 @@ namespace Hotel_Vanilla.Vista
         private Bunifu.Framework.UI.BunifuMaterialTextbox txtEmail;
         private Bunifu.Framework.UI.BunifuCheckbox bunifuCheckbox3;
         private Bunifu.Framework.UI.BunifuCustomLabel bunifuCustomLabel8;
-        private Bunifu.Framework.UI.BunifuThinButton2 bunifuThinButton21;
-        private Bunifu.Framework.UI.BunifuMaterialTextbox bunifuMaterialTextbox1;
-        private Guna.UI2.WinForms.Guna2TileButton guna2TileButton1;
-        private Bunifu.Framework.UI.BunifuMaterialTextbox bunifuMaterialTextbox2;
+        private Bunifu.Framework.UI.BunifuThinButton2 btnCambiarUsuario;
+        private Bunifu.Framework.UI.BunifuMaterialTextbox txtTipo;
+        private Guna.UI2.WinForms.Guna2TileButton btnGuardarEstado;
+        private Bunifu.Framework.UI.BunifuMaterialTextbox txtEstado;
         private Bunifu.Framework.UI.BunifuMaterialTextbox txtAsunto;
         private System.Windows.Forms.BindingSource estadosBindingSource;
         private Guna.UI2.WinForms.Guna2DataGridView dtgEstados;
@@ -693,5 +754,8 @@ namespace Hotel_Vanilla.Vista
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn6;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn7;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn8;
+        private Guna.UI2.WinForms.Guna2TileButton btnEliminarEstado;
+        private Guna.UI2.WinForms.Guna2TileButton btnEliminarTipo;
+        private Guna.UI2.WinForms.Guna2TileButton btnGuardarTipo;
     }
 }

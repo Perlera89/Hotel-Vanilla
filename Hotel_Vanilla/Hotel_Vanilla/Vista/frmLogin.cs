@@ -117,6 +117,7 @@ namespace Hotel_Vanilla
                     this.Hide();
                     inicio.Show();
                     inicio.lblUsuario.Text = usuarios.nombre;
+                    frmInicio.Usuario = usuarios.nombre;
                     frmInicio.Correo = usuarios.correo;
                     frmInicio.Pass = usuarios.clave;
                 }

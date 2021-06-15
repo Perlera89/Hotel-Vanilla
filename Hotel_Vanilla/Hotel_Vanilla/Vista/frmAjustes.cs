@@ -10,11 +10,14 @@ using System.Windows.Forms;
 using System.Net;
 using System.Net.Mail;
 using Hotel_Vanilla.CONTROLADOR;
+using Hotel_Vanilla.ENTIDAD;
 
 namespace Hotel_Vanilla.Vista
 {
     public partial class frmAjustes : Form
     {
+        public int IdUsuario { get; set; }
+
         frmInicio inicio = new frmInicio();
         CEstados cEstados = new CEstados();
         CTipoHabitaciones cTipoH = new CTipoHabitaciones();
@@ -71,6 +74,9 @@ namespace Hotel_Vanilla.Vista
 
         private void frmAjustes_Load(object sender, EventArgs e)
         {
+            txtUsuario.Text = frmInicio.Usuario;
+            txtPass.Text = frmInicio.Pass;
+            txtEmail.Text = frmInicio.Correo;
             CargarEstados();
             CargarTipoHabitaciones();
         }
@@ -83,6 +89,82 @@ namespace Hotel_Vanilla.Vista
         public void CargarTipoHabitaciones()
         {
             sp_MostrarTipoHabitacionesBindingSource.DataSource = cTipoH.MostrarTipoHabitaciones() ;
+        }
+
+        private void btnGuardarEstado_Click(object sender, EventArgs e)
+        {
+            CEstados estado = new CEstados();
+            Estados estados = new Estados();
+
+            estados.nombreEstado = txtEstado.Text;
+            estado.AgregarEstado(estados);
+
+            frmMensajeExito.Confirmar("Se ha Ingresado correctamente");
+            CargarEstados();
+        }
+
+        private void btnGuardarTipo_Click(object sender, EventArgs e)
+        {
+            CTipoHabitaciones habitacion = new CTipoHabitaciones();
+            sp_MostrarTipoHabitaciones habitaciones = new sp_MostrarTipoHabitaciones();
+
+            habitaciones.tipo = txtTipo.Text;
+            habitaciones.numeroOcupantes = Convert.ToInt32(txtOcupantes.Value);
+            habitacion.AgregarTipoHabitacion(habitaciones);
+
+            frmMensajeExito.Confirmar("Se ha Ingresado correctamente");
+            CargarTipoHabitaciones();
+        }
+
+        private void btnEliminarEstado_Click(object sender, EventArgs e)
+        {
+
+            DialogResult resultado = new DialogResult();
+            frmMensajeAdvertencia advertencia = new frmMensajeAdvertencia("¿Estas seguro de eliminar el registro?");
+            resultado = advertencia.ShowDialog();
+
+
+            if (dtgEstados.SelectedRows.Count <= 0)
+            {
+                frmMensajeAviso.Avisar("Elija un registro para ejecutar la acción");
+            }
+
+            else if (resultado == DialogResult.OK && dtgEstados.SelectedRows.Count > 0)
+            {
+                CEstados estado = new CEstados();
+                Estados estados = new Estados();
+
+                estados.idEstado = Convert.ToInt32(dtgEstados.CurrentRow.Cells[0].Value.ToString());
+                estado.EliminarEstado(estados);
+
+                frmMensajeExito.Confirmar("Se ha Eliminado correctamente");
+                CargarEstados();
+            }
+        }
+
+        private void btnEliminarTipo_Click(object sender, EventArgs e)
+        {
+            DialogResult resultado = new DialogResult();
+            frmMensajeAdvertencia advertencia = new frmMensajeAdvertencia("¿Estas seguro de eliminar el registro?");
+            resultado = advertencia.ShowDialog();
+
+
+            if (dtgTipoHabitaciones.SelectedRows.Count <= 0)
+            {
+                frmMensajeAviso.Avisar("Elija un registro para ejecutar la acción");
+            }
+
+            else if (resultado == DialogResult.OK && dtgTipoHabitaciones.SelectedRows.Count > 0)
+            {
+                CTipoHabitaciones habitacion = new CTipoHabitaciones();
+                sp_MostrarTipoHabitaciones habitaciones = new sp_MostrarTipoHabitaciones();
+
+                habitaciones.idTipoHabitacion = Convert.ToInt32(dtgTipoHabitaciones.CurrentRow.Cells[0].Value.ToString());
+                habitacion.EliminarTipoHabitacion(habitaciones);
+
+                frmMensajeExito.Confirmar("Se ha Eliminado correctamente");
+                CargarTipoHabitaciones();
+            }
         }
     }
 }

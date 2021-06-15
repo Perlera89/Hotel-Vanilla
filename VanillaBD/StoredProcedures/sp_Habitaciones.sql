@@ -76,14 +76,4 @@ EXEC sp_ActualizarHabitacion 2, 32, 35, 2;
 
 go
 
---=======================
---METODO PARA CARGAR EL CB DE GESTION DE HABITACIONES
-go
-alter Proc sp_TipoHabitacion
-as
-	Select h.idTipoHabitacion, 
-	h.tipo 'Tipodehabitacion'
-	from TipoHabitaciones h
-go
-
 

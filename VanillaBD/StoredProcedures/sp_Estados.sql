@@ -49,21 +49,3 @@ go
 --Prueba
 EXEC sp_EliminarEstado 7
 go
--------------------------------------------------------------------------------------------------
-
---Procedimiento de Actualizar Estado
-CREATE PROC sp_ActualizarEstado
-@id int,
-@nombre varchar (50)
-
-AS
-BEGIN
-	SET NOCOUNT ON;
-	UPDATE Estados SET 
-	nombreEstado = @nombre
-	WHERE idEstado = @id
-END
-go
--------------------------------------------------------------------------------------------------
---Prueba
-EXEC sp_ActualizarEstado 4, 'Vencida';
