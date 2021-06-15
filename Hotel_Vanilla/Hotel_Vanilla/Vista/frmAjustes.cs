@@ -9,16 +9,17 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Net;
 using System.Net.Mail;
+using Hotel_Vanilla.CONTROLADOR;
 
 namespace Hotel_Vanilla.Vista
 {
     public partial class frmAjustes : Form
     {
-        string Emisor { get; set; }
-        string Receptor { get; set; }
-        string Asunto { get; set; }
-        string Mensaje { get; set; }
         frmInicio inicio = new frmInicio();
+        CEstados cEstados = new CEstados();
+        CTipoHabitaciones cTipoH = new CTipoHabitaciones();
+        CUsuarios cUsuarios = new CUsuarios();
+
         public frmAjustes()
         {
             InitializeComponent();
@@ -66,6 +67,16 @@ namespace Hotel_Vanilla.Vista
             {
                 frmMensajeAviso.Avisar("Error al enviar");
             }
+        }
+
+        private void frmAjustes_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        public void CargarEstados()
+        {
+            
         }
     }
 }

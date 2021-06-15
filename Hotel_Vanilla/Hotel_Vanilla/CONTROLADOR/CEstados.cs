@@ -15,5 +15,15 @@ namespace Hotel_Vanilla.CONTROLADOR
         {
             return estados.MostrarEstados();
         }
+
+        public void AgregarEstado(Estados estado)
+        {
+            estados.AgregarEstado(estado);
+        }
+
+        public void EliminarEstado(Estados estado)
+        {
+            estados.EliminarEstado(estado);
+        }
     }
 }

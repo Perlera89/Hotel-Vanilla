@@ -29,23 +29,20 @@ namespace Hotel_Vanilla.Vista
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmAjustes));
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
             this.bunifuCustomLabel1 = new Bunifu.Framework.UI.BunifuCustomLabel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.guna2NumericUpDown1 = new Guna.UI2.WinForms.Guna2NumericUpDown();
-            this.lstActividades = new Zeroit.Framework.ListView.ZeroitListView();
-            this.columnHeader1 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeader2 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeader3 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.bunifuCustomLabel2 = new Bunifu.Framework.UI.BunifuCustomLabel();
             this.bunifuCustomLabel3 = new Bunifu.Framework.UI.BunifuCustomLabel();
             this.txtMensaje = new Bunifu.Framework.UI.BunifuMetroTextbox();
-            this.bunifuCustomLabel4 = new Bunifu.Framework.UI.BunifuCustomLabel();
-            this.bunifuCustomLabel5 = new Bunifu.Framework.UI.BunifuCustomLabel();
-            this.bunifuCustomLabel6 = new Bunifu.Framework.UI.BunifuCustomLabel();
-            this.chkClave = new Bunifu.Framework.UI.BunifuCheckbox();
-            this.bunifuCheckbox1 = new Bunifu.Framework.UI.BunifuCheckbox();
-            this.bunifuCheckbox2 = new Bunifu.Framework.UI.BunifuCheckbox();
             this.btnEnviar = new Bunifu.Framework.UI.BunifuThinButton2();
             this.bunifuCustomLabel7 = new Bunifu.Framework.UI.BunifuCustomLabel();
             this.txtUsuario = new Bunifu.Framework.UI.BunifuMaterialTextbox();
@@ -58,8 +55,25 @@ namespace Hotel_Vanilla.Vista
             this.guna2TileButton1 = new Guna.UI2.WinForms.Guna2TileButton();
             this.bunifuMaterialTextbox2 = new Bunifu.Framework.UI.BunifuMaterialTextbox();
             this.txtAsunto = new Bunifu.Framework.UI.BunifuMaterialTextbox();
+            this.dtgEstados = new Guna.UI2.WinForms.Guna2DataGridView();
+            this.bunifuCustomLabel4 = new Bunifu.Framework.UI.BunifuCustomLabel();
+            this.dtgTipoHabitaciones = new Guna.UI2.WinForms.Guna2DataGridView();
+            this.bunifuCustomLabel5 = new Bunifu.Framework.UI.BunifuCustomLabel();
+            this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
+            this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.tipoHabitacionesBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.estadosBindingSource = new System.Windows.Forms.BindingSource(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.guna2NumericUpDown1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dtgEstados)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dtgTipoHabitaciones)).BeginInit();
+            this.guna2Panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.tipoHabitacionesBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.estadosBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // bunifuCustomLabel1
@@ -78,9 +92,9 @@ namespace Hotel_Vanilla.Vista
             // 
             this.pictureBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.pictureBox1.Image = global::Hotel_Vanilla.Properties.Resources.LogoVanilla;
-            this.pictureBox1.Location = new System.Drawing.Point(716, 0);
+            this.pictureBox1.Location = new System.Drawing.Point(729, 0);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(236, 217);
+            this.pictureBox1.Size = new System.Drawing.Size(223, 209);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 43;
             this.pictureBox1.TabStop = false;
@@ -100,74 +114,11 @@ namespace Hotel_Vanilla.Vista
             this.guna2NumericUpDown1.FocusedState.Parent = this.guna2NumericUpDown1;
             this.guna2NumericUpDown1.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.guna2NumericUpDown1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(126)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
-            this.guna2NumericUpDown1.Location = new System.Drawing.Point(417, 462);
+            this.guna2NumericUpDown1.Location = new System.Drawing.Point(435, 462);
             this.guna2NumericUpDown1.Name = "guna2NumericUpDown1";
             this.guna2NumericUpDown1.ShadowDecoration.Parent = this.guna2NumericUpDown1;
-            this.guna2NumericUpDown1.Size = new System.Drawing.Size(100, 36);
+            this.guna2NumericUpDown1.Size = new System.Drawing.Size(77, 36);
             this.guna2NumericUpDown1.TabIndex = 45;
-            // 
-            // lstActividades
-            // 
-            this.lstActividades.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.lstActividades.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.lstActividades.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.lstActividades.CellBorderFocused = new Zeroit.Framework.ListView.Editors.PenPainter.PenPainter(System.Drawing.Color.White, 1F, System.Drawing.Drawing2D.DashStyle.Solid);
-            this.lstActividades.CellBorderUnFocused = new Zeroit.Framework.ListView.Editors.PenPainter.PenPainter(System.Drawing.Color.White, 1F, System.Drawing.Drawing2D.DashStyle.Solid);
-            this.lstActividades.ColumnHeader = new Zeroit.Framework.ListView.Editors.Brushes.BrushPainter(System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(124)))), ((int)(((byte)(173))))));
-            this.lstActividades.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
-            this.columnHeader1,
-            this.columnHeader2,
-            this.columnHeader3});
-            this.lstActividades.DrawMode = Zeroit.Framework.ListView.ZeroitListView.drawMode.Stylish;
-            this.lstActividades.FillFocused = new Zeroit.Framework.ListView.Editors.Brushes.BrushPainter();
-            this.lstActividades.FillUnfocused = new Zeroit.Framework.ListView.Editors.Brushes.BrushPainter(System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255))))));
-            this.lstActividades.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lstActividades.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.lstActividades.HeaderAlignment = Zeroit.Framework.ListView.ZeroitListView.headerAlignment.Center;
-            this.lstActividades.HeaderBorder = new Zeroit.Framework.ListView.Editors.PenPainter.PenPainter(System.Drawing.Color.White, 1F, System.Drawing.Drawing2D.DashStyle.Solid);
-            this.lstActividades.HeaderColor = System.Drawing.Color.White;
-            this.lstActividades.HeaderFont = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lstActividades.HideHeader = false;
-            this.lstActividades.HideSelection = false;
-            this.lstActividades.LineColor = System.Drawing.Color.White;
-            this.lstActividades.LineHeight = 1;
-            this.lstActividades.Location = new System.Drawing.Point(26, 316);
-            this.lstActividades.Name = "lstActividades";
-            this.lstActividades.NumberStyles = ((System.Globalization.NumberStyles)((((((((System.Globalization.NumberStyles.AllowLeadingWhite | System.Globalization.NumberStyles.AllowTrailingWhite) 
-            | System.Globalization.NumberStyles.AllowLeadingSign) 
-            | System.Globalization.NumberStyles.AllowTrailingSign) 
-            | System.Globalization.NumberStyles.AllowParentheses) 
-            | System.Globalization.NumberStyles.AllowDecimalPoint) 
-            | System.Globalization.NumberStyles.AllowThousands) 
-            | System.Globalization.NumberStyles.AllowCurrencySymbol)));
-            this.lstActividades.OwnerDraw = true;
-            this.lstActividades.Radius = 15F;
-            this.lstActividades.Rounding = false;
-            this.lstActividades.ShowBorder = false;
-            this.lstActividades.ShowCellBorder = false;
-            this.lstActividades.ShowHeaderLine = false;
-            this.lstActividades.Size = new System.Drawing.Size(361, 182);
-            this.lstActividades.Smoothing = System.Drawing.Drawing2D.SmoothingMode.HighQuality;
-            this.lstActividades.SubTextColor = System.Drawing.Color.Red;
-            this.lstActividades.SurrondBorder = false;
-            this.lstActividades.TabIndex = 46;
-            this.lstActividades.TextRendering = System.Drawing.Text.TextRenderingHint.AntiAlias;
-            this.lstActividades.UseCompatibleStateImageBehavior = false;
-            this.lstActividades.View = System.Windows.Forms.View.Details;
-            // 
-            // columnHeader1
-            // 
-            this.columnHeader1.Text = "Id";
-            // 
-            // columnHeader2
-            // 
-            this.columnHeader2.Text = "Tipo";
-            this.columnHeader2.Width = 150;
-            // 
-            // columnHeader3
-            // 
-            this.columnHeader3.Text = "Ocupantes";
-            this.columnHeader3.Width = 150;
             // 
             // bunifuCustomLabel2
             // 
@@ -176,7 +127,7 @@ namespace Hotel_Vanilla.Vista
             this.bunifuCustomLabel2.BackColor = System.Drawing.Color.Transparent;
             this.bunifuCustomLabel2.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bunifuCustomLabel2.ForeColor = System.Drawing.Color.Black;
-            this.bunifuCustomLabel2.Location = new System.Drawing.Point(413, 316);
+            this.bunifuCustomLabel2.Location = new System.Drawing.Point(335, 331);
             this.bunifuCustomLabel2.Name = "bunifuCustomLabel2";
             this.bunifuCustomLabel2.Size = new System.Drawing.Size(111, 19);
             this.bunifuCustomLabel2.TabIndex = 48;
@@ -217,78 +168,6 @@ namespace Hotel_Vanilla.Vista
             this.txtMensaje.Enter += new System.EventHandler(this.txtMensaje_Enter);
             this.txtMensaje.Leave += new System.EventHandler(this.txtMensaje_Leave);
             // 
-            // bunifuCustomLabel4
-            // 
-            this.bunifuCustomLabel4.AutoSize = true;
-            this.bunifuCustomLabel4.BackColor = System.Drawing.Color.Transparent;
-            this.bunifuCustomLabel4.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bunifuCustomLabel4.ForeColor = System.Drawing.Color.Black;
-            this.bunifuCustomLabel4.Location = new System.Drawing.Point(63, 86);
-            this.bunifuCustomLabel4.Name = "bunifuCustomLabel4";
-            this.bunifuCustomLabel4.Size = new System.Drawing.Size(166, 19);
-            this.bunifuCustomLabel4.TabIndex = 55;
-            this.bunifuCustomLabel4.Text = "Formato de 24 horas";
-            // 
-            // bunifuCustomLabel5
-            // 
-            this.bunifuCustomLabel5.AutoSize = true;
-            this.bunifuCustomLabel5.BackColor = System.Drawing.Color.Transparent;
-            this.bunifuCustomLabel5.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bunifuCustomLabel5.ForeColor = System.Drawing.Color.Black;
-            this.bunifuCustomLabel5.Location = new System.Drawing.Point(63, 134);
-            this.bunifuCustomLabel5.Name = "bunifuCustomLabel5";
-            this.bunifuCustomLabel5.Size = new System.Drawing.Size(166, 19);
-            this.bunifuCustomLabel5.TabIndex = 56;
-            this.bunifuCustomLabel5.Text = "Formato de 12 horas";
-            // 
-            // bunifuCustomLabel6
-            // 
-            this.bunifuCustomLabel6.AutoSize = true;
-            this.bunifuCustomLabel6.BackColor = System.Drawing.Color.Transparent;
-            this.bunifuCustomLabel6.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bunifuCustomLabel6.ForeColor = System.Drawing.Color.Black;
-            this.bunifuCustomLabel6.Location = new System.Drawing.Point(63, 183);
-            this.bunifuCustomLabel6.Name = "bunifuCustomLabel6";
-            this.bunifuCustomLabel6.Size = new System.Drawing.Size(99, 19);
-            this.bunifuCustomLabel6.TabIndex = 57;
-            this.bunifuCustomLabel6.Text = "dd/mm/aa";
-            // 
-            // chkClave
-            // 
-            this.chkClave.BackColor = System.Drawing.Color.RoyalBlue;
-            this.chkClave.ChechedOffColor = System.Drawing.Color.RoyalBlue;
-            this.chkClave.Checked = true;
-            this.chkClave.CheckedOnColor = System.Drawing.Color.RoyalBlue;
-            this.chkClave.ForeColor = System.Drawing.Color.White;
-            this.chkClave.Location = new System.Drawing.Point(37, 85);
-            this.chkClave.Name = "chkClave";
-            this.chkClave.Size = new System.Drawing.Size(20, 20);
-            this.chkClave.TabIndex = 58;
-            // 
-            // bunifuCheckbox1
-            // 
-            this.bunifuCheckbox1.BackColor = System.Drawing.Color.RoyalBlue;
-            this.bunifuCheckbox1.ChechedOffColor = System.Drawing.Color.RoyalBlue;
-            this.bunifuCheckbox1.Checked = false;
-            this.bunifuCheckbox1.CheckedOnColor = System.Drawing.Color.RoyalBlue;
-            this.bunifuCheckbox1.ForeColor = System.Drawing.Color.White;
-            this.bunifuCheckbox1.Location = new System.Drawing.Point(37, 133);
-            this.bunifuCheckbox1.Name = "bunifuCheckbox1";
-            this.bunifuCheckbox1.Size = new System.Drawing.Size(20, 20);
-            this.bunifuCheckbox1.TabIndex = 59;
-            // 
-            // bunifuCheckbox2
-            // 
-            this.bunifuCheckbox2.BackColor = System.Drawing.Color.RoyalBlue;
-            this.bunifuCheckbox2.ChechedOffColor = System.Drawing.Color.RoyalBlue;
-            this.bunifuCheckbox2.Checked = false;
-            this.bunifuCheckbox2.CheckedOnColor = System.Drawing.Color.RoyalBlue;
-            this.bunifuCheckbox2.ForeColor = System.Drawing.Color.White;
-            this.bunifuCheckbox2.Location = new System.Drawing.Point(37, 183);
-            this.bunifuCheckbox2.Name = "bunifuCheckbox2";
-            this.bunifuCheckbox2.Size = new System.Drawing.Size(20, 20);
-            this.bunifuCheckbox2.TabIndex = 60;
-            // 
             // btnEnviar
             // 
             this.btnEnviar.ActiveBorderThickness = 1;
@@ -308,7 +187,7 @@ namespace Hotel_Vanilla.Vista
             this.btnEnviar.IdleFillColor = System.Drawing.Color.Transparent;
             this.btnEnviar.IdleForecolor = System.Drawing.Color.RoyalBlue;
             this.btnEnviar.IdleLineColor = System.Drawing.Color.RoyalBlue;
-            this.btnEnviar.Location = new System.Drawing.Point(685, 474);
+            this.btnEnviar.Location = new System.Drawing.Point(801, 474);
             this.btnEnviar.Margin = new System.Windows.Forms.Padding(5);
             this.btnEnviar.Name = "btnEnviar";
             this.btnEnviar.Size = new System.Drawing.Size(136, 41);
@@ -323,7 +202,7 @@ namespace Hotel_Vanilla.Vista
             this.bunifuCustomLabel7.BackColor = System.Drawing.Color.Transparent;
             this.bunifuCustomLabel7.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bunifuCustomLabel7.ForeColor = System.Drawing.Color.Black;
-            this.bunifuCustomLabel7.Location = new System.Drawing.Point(464, 24);
+            this.bunifuCustomLabel7.Location = new System.Drawing.Point(481, 28);
             this.bunifuCustomLabel7.Name = "bunifuCustomLabel7";
             this.bunifuCustomLabel7.Size = new System.Drawing.Size(181, 19);
             this.bunifuCustomLabel7.TabIndex = 62;
@@ -343,7 +222,7 @@ namespace Hotel_Vanilla.Vista
             this.txtUsuario.LineIdleColor = System.Drawing.Color.RoyalBlue;
             this.txtUsuario.LineMouseHoverColor = System.Drawing.Color.Blue;
             this.txtUsuario.LineThickness = 4;
-            this.txtUsuario.Location = new System.Drawing.Point(468, 60);
+            this.txtUsuario.Location = new System.Drawing.Point(485, 64);
             this.txtUsuario.Margin = new System.Windows.Forms.Padding(4);
             this.txtUsuario.Name = "txtUsuario";
             this.txtUsuario.Size = new System.Drawing.Size(241, 33);
@@ -364,7 +243,7 @@ namespace Hotel_Vanilla.Vista
             this.txtPass.LineIdleColor = System.Drawing.Color.RoyalBlue;
             this.txtPass.LineMouseHoverColor = System.Drawing.Color.Blue;
             this.txtPass.LineThickness = 4;
-            this.txtPass.Location = new System.Drawing.Point(468, 142);
+            this.txtPass.Location = new System.Drawing.Point(485, 146);
             this.txtPass.Margin = new System.Windows.Forms.Padding(4);
             this.txtPass.Name = "txtPass";
             this.txtPass.Size = new System.Drawing.Size(241, 33);
@@ -385,7 +264,7 @@ namespace Hotel_Vanilla.Vista
             this.txtEmail.LineIdleColor = System.Drawing.Color.RoyalBlue;
             this.txtEmail.LineMouseHoverColor = System.Drawing.Color.Blue;
             this.txtEmail.LineThickness = 4;
-            this.txtEmail.Location = new System.Drawing.Point(468, 101);
+            this.txtEmail.Location = new System.Drawing.Point(485, 105);
             this.txtEmail.Margin = new System.Windows.Forms.Padding(4);
             this.txtEmail.Name = "txtEmail";
             this.txtEmail.Size = new System.Drawing.Size(241, 33);
@@ -400,7 +279,7 @@ namespace Hotel_Vanilla.Vista
             this.bunifuCheckbox3.Checked = true;
             this.bunifuCheckbox3.CheckedOnColor = System.Drawing.Color.RoyalBlue;
             this.bunifuCheckbox3.ForeColor = System.Drawing.Color.White;
-            this.bunifuCheckbox3.Location = new System.Drawing.Point(468, 185);
+            this.bunifuCheckbox3.Location = new System.Drawing.Point(485, 189);
             this.bunifuCheckbox3.Name = "bunifuCheckbox3";
             this.bunifuCheckbox3.Size = new System.Drawing.Size(20, 20);
             this.bunifuCheckbox3.TabIndex = 67;
@@ -410,7 +289,7 @@ namespace Hotel_Vanilla.Vista
             this.bunifuCustomLabel8.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.bunifuCustomLabel8.AutoSize = true;
             this.bunifuCustomLabel8.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bunifuCustomLabel8.Location = new System.Drawing.Point(494, 191);
+            this.bunifuCustomLabel8.Location = new System.Drawing.Point(511, 195);
             this.bunifuCustomLabel8.Name = "bunifuCustomLabel8";
             this.bunifuCustomLabel8.Size = new System.Drawing.Size(91, 17);
             this.bunifuCustomLabel8.TabIndex = 68;
@@ -435,7 +314,7 @@ namespace Hotel_Vanilla.Vista
             this.bunifuThinButton21.IdleFillColor = System.Drawing.Color.Transparent;
             this.bunifuThinButton21.IdleForecolor = System.Drawing.Color.RoyalBlue;
             this.bunifuThinButton21.IdleLineColor = System.Drawing.Color.RoyalBlue;
-            this.bunifuThinButton21.Location = new System.Drawing.Point(468, 213);
+            this.bunifuThinButton21.Location = new System.Drawing.Point(485, 217);
             this.bunifuThinButton21.Margin = new System.Windows.Forms.Padding(5);
             this.bunifuThinButton21.Name = "bunifuThinButton21";
             this.bunifuThinButton21.Size = new System.Drawing.Size(117, 41);
@@ -450,38 +329,37 @@ namespace Hotel_Vanilla.Vista
             this.bunifuMaterialTextbox1.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bunifuMaterialTextbox1.ForeColor = System.Drawing.Color.Black;
             this.bunifuMaterialTextbox1.HintForeColor = System.Drawing.Color.Empty;
-            this.bunifuMaterialTextbox1.HintText = "Pago adelantado  ";
+            this.bunifuMaterialTextbox1.HintText = "Tipo";
             this.bunifuMaterialTextbox1.isPassword = false;
             this.bunifuMaterialTextbox1.LineFocusedColor = System.Drawing.Color.CornflowerBlue;
             this.bunifuMaterialTextbox1.LineIdleColor = System.Drawing.Color.RoyalBlue;
             this.bunifuMaterialTextbox1.LineMouseHoverColor = System.Drawing.Color.Blue;
             this.bunifuMaterialTextbox1.LineThickness = 4;
-            this.bunifuMaterialTextbox1.Location = new System.Drawing.Point(417, 401);
+            this.bunifuMaterialTextbox1.Location = new System.Drawing.Point(339, 400);
             this.bunifuMaterialTextbox1.Margin = new System.Windows.Forms.Padding(4);
             this.bunifuMaterialTextbox1.Name = "bunifuMaterialTextbox1";
-            this.bunifuMaterialTextbox1.Size = new System.Drawing.Size(241, 33);
+            this.bunifuMaterialTextbox1.Size = new System.Drawing.Size(173, 33);
             this.bunifuMaterialTextbox1.TabIndex = 70;
+            this.bunifuMaterialTextbox1.Text = "Tipo ";
             this.bunifuMaterialTextbox1.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             // 
             // guna2TileButton1
             // 
-            this.guna2TileButton1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.guna2TileButton1.CheckedState.Parent = this.guna2TileButton1;
             this.guna2TileButton1.CustomImages.Parent = this.guna2TileButton1;
             this.guna2TileButton1.FillColor = System.Drawing.Color.RoyalBlue;
             this.guna2TileButton1.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.guna2TileButton1.ForeColor = System.Drawing.Color.White;
             this.guna2TileButton1.HoverState.Parent = this.guna2TileButton1;
-            this.guna2TileButton1.Location = new System.Drawing.Point(281, 253);
+            this.guna2TileButton1.Location = new System.Drawing.Point(227, 109);
             this.guna2TileButton1.Name = "guna2TileButton1";
             this.guna2TileButton1.ShadowDecoration.Parent = this.guna2TileButton1;
-            this.guna2TileButton1.Size = new System.Drawing.Size(106, 44);
+            this.guna2TileButton1.Size = new System.Drawing.Size(84, 33);
             this.guna2TileButton1.TabIndex = 72;
             this.guna2TileButton1.Text = "Agregar";
             // 
             // bunifuMaterialTextbox2
             // 
-            this.bunifuMaterialTextbox2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.bunifuMaterialTextbox2.BackColor = System.Drawing.SystemColors.ButtonFace;
             this.bunifuMaterialTextbox2.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.bunifuMaterialTextbox2.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -493,10 +371,10 @@ namespace Hotel_Vanilla.Vista
             this.bunifuMaterialTextbox2.LineIdleColor = System.Drawing.Color.RoyalBlue;
             this.bunifuMaterialTextbox2.LineMouseHoverColor = System.Drawing.Color.Blue;
             this.bunifuMaterialTextbox2.LineThickness = 4;
-            this.bunifuMaterialTextbox2.Location = new System.Drawing.Point(26, 264);
+            this.bunifuMaterialTextbox2.Location = new System.Drawing.Point(26, 109);
             this.bunifuMaterialTextbox2.Margin = new System.Windows.Forms.Padding(4);
             this.bunifuMaterialTextbox2.Name = "bunifuMaterialTextbox2";
-            this.bunifuMaterialTextbox2.Size = new System.Drawing.Size(241, 33);
+            this.bunifuMaterialTextbox2.Size = new System.Drawing.Size(194, 33);
             this.bunifuMaterialTextbox2.TabIndex = 73;
             this.bunifuMaterialTextbox2.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             // 
@@ -521,15 +399,231 @@ namespace Hotel_Vanilla.Vista
             this.txtAsunto.TabIndex = 74;
             this.txtAsunto.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             // 
+            // dtgEstados
+            // 
+            this.dtgEstados.AllowUserToAddRows = false;
+            this.dtgEstados.AllowUserToDeleteRows = false;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.White;
+            this.dtgEstados.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            this.dtgEstados.AutoGenerateColumns = false;
+            this.dtgEstados.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dtgEstados.BackgroundColor = System.Drawing.Color.White;
+            this.dtgEstados.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.dtgEstados.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
+            this.dtgEstados.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI", 10.5F);
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dtgEstados.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            this.dtgEstados.ColumnHeadersHeight = 21;
+            this.dtgEstados.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dataGridViewTextBoxColumn1,
+            this.dataGridViewTextBoxColumn2});
+            this.dtgEstados.DataSource = this.estadosBindingSource;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Segoe UI", 10.5F);
+            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dtgEstados.DefaultCellStyle = dataGridViewCellStyle3;
+            this.dtgEstados.EnableHeadersVisualStyles = false;
+            this.dtgEstados.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
+            this.dtgEstados.Location = new System.Drawing.Point(26, 148);
+            this.dtgEstados.Name = "dtgEstados";
+            this.dtgEstados.ReadOnly = true;
+            this.dtgEstados.RowHeadersVisible = false;
+            this.dtgEstados.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dtgEstados.Size = new System.Drawing.Size(285, 123);
+            this.dtgEstados.TabIndex = 75;
+            this.dtgEstados.Theme = Guna.UI2.WinForms.Enums.DataGridViewPresetThemes.Default;
+            this.dtgEstados.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White;
+            this.dtgEstados.ThemeStyle.AlternatingRowsStyle.Font = null;
+            this.dtgEstados.ThemeStyle.AlternatingRowsStyle.ForeColor = System.Drawing.Color.Empty;
+            this.dtgEstados.ThemeStyle.AlternatingRowsStyle.SelectionBackColor = System.Drawing.Color.Empty;
+            this.dtgEstados.ThemeStyle.AlternatingRowsStyle.SelectionForeColor = System.Drawing.Color.Empty;
+            this.dtgEstados.ThemeStyle.BackColor = System.Drawing.Color.White;
+            this.dtgEstados.ThemeStyle.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
+            this.dtgEstados.ThemeStyle.HeaderStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
+            this.dtgEstados.ThemeStyle.HeaderStyle.BorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            this.dtgEstados.ThemeStyle.HeaderStyle.Font = new System.Drawing.Font("Segoe UI", 10.5F);
+            this.dtgEstados.ThemeStyle.HeaderStyle.ForeColor = System.Drawing.Color.White;
+            this.dtgEstados.ThemeStyle.HeaderStyle.HeaightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
+            this.dtgEstados.ThemeStyle.HeaderStyle.Height = 21;
+            this.dtgEstados.ThemeStyle.ReadOnly = true;
+            this.dtgEstados.ThemeStyle.RowsStyle.BackColor = System.Drawing.Color.White;
+            this.dtgEstados.ThemeStyle.RowsStyle.BorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
+            this.dtgEstados.ThemeStyle.RowsStyle.Font = new System.Drawing.Font("Segoe UI", 10.5F);
+            this.dtgEstados.ThemeStyle.RowsStyle.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            this.dtgEstados.ThemeStyle.RowsStyle.Height = 22;
+            this.dtgEstados.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
+            this.dtgEstados.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            // 
+            // bunifuCustomLabel4
+            // 
+            this.bunifuCustomLabel4.AutoSize = true;
+            this.bunifuCustomLabel4.BackColor = System.Drawing.Color.Transparent;
+            this.bunifuCustomLabel4.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bunifuCustomLabel4.ForeColor = System.Drawing.Color.Black;
+            this.bunifuCustomLabel4.Location = new System.Drawing.Point(22, 82);
+            this.bunifuCustomLabel4.Name = "bunifuCustomLabel4";
+            this.bunifuCustomLabel4.Size = new System.Drawing.Size(65, 19);
+            this.bunifuCustomLabel4.TabIndex = 76;
+            this.bunifuCustomLabel4.Text = "Estados";
+            // 
+            // dtgTipoHabitaciones
+            // 
+            this.dtgTipoHabitaciones.AllowUserToAddRows = false;
+            this.dtgTipoHabitaciones.AllowUserToDeleteRows = false;
+            dataGridViewCellStyle4.BackColor = System.Drawing.Color.White;
+            this.dtgTipoHabitaciones.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle4;
+            this.dtgTipoHabitaciones.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.dtgTipoHabitaciones.AutoGenerateColumns = false;
+            this.dtgTipoHabitaciones.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dtgTipoHabitaciones.BackgroundColor = System.Drawing.Color.White;
+            this.dtgTipoHabitaciones.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.dtgTipoHabitaciones.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
+            this.dtgTipoHabitaciones.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle5.Font = new System.Drawing.Font("Segoe UI", 10.5F);
+            dataGridViewCellStyle5.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dtgTipoHabitaciones.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle5;
+            this.dtgTipoHabitaciones.ColumnHeadersHeight = 21;
+            this.dtgTipoHabitaciones.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dataGridViewTextBoxColumn3,
+            this.dataGridViewTextBoxColumn4,
+            this.dataGridViewTextBoxColumn5});
+            this.dtgTipoHabitaciones.DataSource = this.tipoHabitacionesBindingSource;
+            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle6.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle6.Font = new System.Drawing.Font("Segoe UI", 10.5F);
+            dataGridViewCellStyle6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dtgTipoHabitaciones.DefaultCellStyle = dataGridViewCellStyle6;
+            this.dtgTipoHabitaciones.EnableHeadersVisualStyles = false;
+            this.dtgTipoHabitaciones.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
+            this.dtgTipoHabitaciones.Location = new System.Drawing.Point(26, 331);
+            this.dtgTipoHabitaciones.Name = "dtgTipoHabitaciones";
+            this.dtgTipoHabitaciones.ReadOnly = true;
+            this.dtgTipoHabitaciones.RowHeadersVisible = false;
+            this.dtgTipoHabitaciones.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dtgTipoHabitaciones.Size = new System.Drawing.Size(285, 167);
+            this.dtgTipoHabitaciones.TabIndex = 76;
+            this.dtgTipoHabitaciones.Theme = Guna.UI2.WinForms.Enums.DataGridViewPresetThemes.Default;
+            this.dtgTipoHabitaciones.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White;
+            this.dtgTipoHabitaciones.ThemeStyle.AlternatingRowsStyle.Font = null;
+            this.dtgTipoHabitaciones.ThemeStyle.AlternatingRowsStyle.ForeColor = System.Drawing.Color.Empty;
+            this.dtgTipoHabitaciones.ThemeStyle.AlternatingRowsStyle.SelectionBackColor = System.Drawing.Color.Empty;
+            this.dtgTipoHabitaciones.ThemeStyle.AlternatingRowsStyle.SelectionForeColor = System.Drawing.Color.Empty;
+            this.dtgTipoHabitaciones.ThemeStyle.BackColor = System.Drawing.Color.White;
+            this.dtgTipoHabitaciones.ThemeStyle.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
+            this.dtgTipoHabitaciones.ThemeStyle.HeaderStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
+            this.dtgTipoHabitaciones.ThemeStyle.HeaderStyle.BorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            this.dtgTipoHabitaciones.ThemeStyle.HeaderStyle.Font = new System.Drawing.Font("Segoe UI", 10.5F);
+            this.dtgTipoHabitaciones.ThemeStyle.HeaderStyle.ForeColor = System.Drawing.Color.White;
+            this.dtgTipoHabitaciones.ThemeStyle.HeaderStyle.HeaightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
+            this.dtgTipoHabitaciones.ThemeStyle.HeaderStyle.Height = 21;
+            this.dtgTipoHabitaciones.ThemeStyle.ReadOnly = true;
+            this.dtgTipoHabitaciones.ThemeStyle.RowsStyle.BackColor = System.Drawing.Color.White;
+            this.dtgTipoHabitaciones.ThemeStyle.RowsStyle.BorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
+            this.dtgTipoHabitaciones.ThemeStyle.RowsStyle.Font = new System.Drawing.Font("Segoe UI", 10.5F);
+            this.dtgTipoHabitaciones.ThemeStyle.RowsStyle.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            this.dtgTipoHabitaciones.ThemeStyle.RowsStyle.Height = 22;
+            this.dtgTipoHabitaciones.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
+            this.dtgTipoHabitaciones.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            // 
+            // bunifuCustomLabel5
+            // 
+            this.bunifuCustomLabel5.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.bunifuCustomLabel5.AutoSize = true;
+            this.bunifuCustomLabel5.BackColor = System.Drawing.Color.Transparent;
+            this.bunifuCustomLabel5.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bunifuCustomLabel5.ForeColor = System.Drawing.Color.RoyalBlue;
+            this.bunifuCustomLabel5.Location = new System.Drawing.Point(335, 474);
+            this.bunifuCustomLabel5.Name = "bunifuCustomLabel5";
+            this.bunifuCustomLabel5.Size = new System.Drawing.Size(94, 19);
+            this.bunifuCustomLabel5.TabIndex = 77;
+            this.bunifuCustomLabel5.Text = "Ocupantes";
+            // 
+            // guna2Panel1
+            // 
+            this.guna2Panel1.AutoSize = true;
+            this.guna2Panel1.Controls.Add(this.bunifuCustomLabel5);
+            this.guna2Panel1.Controls.Add(this.guna2NumericUpDown1);
+            this.guna2Panel1.Controls.Add(this.bunifuCustomLabel2);
+            this.guna2Panel1.Controls.Add(this.bunifuMaterialTextbox1);
+            this.guna2Panel1.Controls.Add(this.guna2TileButton1);
+            this.guna2Panel1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.guna2Panel1.Location = new System.Drawing.Point(0, 0);
+            this.guna2Panel1.Name = "guna2Panel1";
+            this.guna2Panel1.ShadowDecoration.Parent = this.guna2Panel1;
+            this.guna2Panel1.Size = new System.Drawing.Size(951, 527);
+            this.guna2Panel1.TabIndex = 78;
+            // 
+            // dataGridViewTextBoxColumn3
+            // 
+            this.dataGridViewTextBoxColumn3.DataPropertyName = "idTipoHabitacion";
+            this.dataGridViewTextBoxColumn3.HeaderText = "Id";
+            this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
+            this.dataGridViewTextBoxColumn3.ReadOnly = true;
+            // 
+            // dataGridViewTextBoxColumn4
+            // 
+            this.dataGridViewTextBoxColumn4.DataPropertyName = "Tipodehabitacion";
+            this.dataGridViewTextBoxColumn4.HeaderText = "Tipo";
+            this.dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
+            this.dataGridViewTextBoxColumn4.ReadOnly = true;
+            // 
+            // dataGridViewTextBoxColumn5
+            // 
+            this.dataGridViewTextBoxColumn5.DataPropertyName = "numeroOcupantes";
+            this.dataGridViewTextBoxColumn5.HeaderText = "Ocupantes";
+            this.dataGridViewTextBoxColumn5.Name = "dataGridViewTextBoxColumn5";
+            this.dataGridViewTextBoxColumn5.ReadOnly = true;
+            // 
+            // tipoHabitacionesBindingSource
+            // 
+            this.tipoHabitacionesBindingSource.DataSource = typeof(Hotel_Vanilla.ENTIDAD.TipoHabitaciones);
+            // 
+            // dataGridViewTextBoxColumn1
+            // 
+            this.dataGridViewTextBoxColumn1.DataPropertyName = "idEstado";
+            this.dataGridViewTextBoxColumn1.HeaderText = "Id";
+            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
+            this.dataGridViewTextBoxColumn1.ReadOnly = true;
+            // 
+            // dataGridViewTextBoxColumn2
+            // 
+            this.dataGridViewTextBoxColumn2.DataPropertyName = "nombreEstado";
+            this.dataGridViewTextBoxColumn2.HeaderText = "Nombre estado";
+            this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
+            this.dataGridViewTextBoxColumn2.ReadOnly = true;
+            // 
+            // estadosBindingSource
+            // 
+            this.estadosBindingSource.DataSource = typeof(Hotel_Vanilla.ENTIDAD.Estados);
+            // 
             // frmAjustes
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(951, 527);
+            this.Controls.Add(this.dtgTipoHabitaciones);
+            this.Controls.Add(this.bunifuCustomLabel4);
+            this.Controls.Add(this.dtgEstados);
             this.Controls.Add(this.txtAsunto);
             this.Controls.Add(this.bunifuMaterialTextbox2);
-            this.Controls.Add(this.guna2TileButton1);
-            this.Controls.Add(this.bunifuMaterialTextbox1);
             this.Controls.Add(this.bunifuThinButton21);
             this.Controls.Add(this.bunifuCustomLabel8);
             this.Controls.Add(this.txtUsuario);
@@ -538,24 +632,23 @@ namespace Hotel_Vanilla.Vista
             this.Controls.Add(this.bunifuCheckbox3);
             this.Controls.Add(this.bunifuCustomLabel7);
             this.Controls.Add(this.btnEnviar);
-            this.Controls.Add(this.bunifuCheckbox2);
-            this.Controls.Add(this.bunifuCheckbox1);
-            this.Controls.Add(this.chkClave);
-            this.Controls.Add(this.bunifuCustomLabel6);
-            this.Controls.Add(this.bunifuCustomLabel5);
-            this.Controls.Add(this.bunifuCustomLabel4);
             this.Controls.Add(this.txtMensaje);
             this.Controls.Add(this.bunifuCustomLabel3);
-            this.Controls.Add(this.bunifuCustomLabel2);
-            this.Controls.Add(this.lstActividades);
-            this.Controls.Add(this.guna2NumericUpDown1);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.bunifuCustomLabel1);
+            this.Controls.Add(this.guna2Panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "frmAjustes";
             this.Text = "frmAjustes";
+            this.Load += new System.EventHandler(this.frmAjustes_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.guna2NumericUpDown1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dtgEstados)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dtgTipoHabitaciones)).EndInit();
+            this.guna2Panel1.ResumeLayout(false);
+            this.guna2Panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.tipoHabitacionesBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.estadosBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -566,19 +659,9 @@ namespace Hotel_Vanilla.Vista
         private Bunifu.Framework.UI.BunifuCustomLabel bunifuCustomLabel1;
         private System.Windows.Forms.PictureBox pictureBox1;
         private Guna.UI2.WinForms.Guna2NumericUpDown guna2NumericUpDown1;
-        private Zeroit.Framework.ListView.ZeroitListView lstActividades;
-        private System.Windows.Forms.ColumnHeader columnHeader1;
-        private System.Windows.Forms.ColumnHeader columnHeader2;
-        private System.Windows.Forms.ColumnHeader columnHeader3;
         private Bunifu.Framework.UI.BunifuCustomLabel bunifuCustomLabel2;
         private Bunifu.Framework.UI.BunifuCustomLabel bunifuCustomLabel3;
-        private Bunifu.Framework.UI.BunifuCustomLabel bunifuCustomLabel6;
-        private Bunifu.Framework.UI.BunifuCustomLabel bunifuCustomLabel5;
-        private Bunifu.Framework.UI.BunifuCustomLabel bunifuCustomLabel4;
         private Bunifu.Framework.UI.BunifuMetroTextbox txtMensaje;
-        private Bunifu.Framework.UI.BunifuCheckbox bunifuCheckbox2;
-        private Bunifu.Framework.UI.BunifuCheckbox bunifuCheckbox1;
-        private Bunifu.Framework.UI.BunifuCheckbox chkClave;
         private Bunifu.Framework.UI.BunifuThinButton2 btnEnviar;
         private Bunifu.Framework.UI.BunifuCustomLabel bunifuCustomLabel7;
         private Bunifu.Framework.UI.BunifuMaterialTextbox txtUsuario;
@@ -591,5 +674,17 @@ namespace Hotel_Vanilla.Vista
         private Guna.UI2.WinForms.Guna2TileButton guna2TileButton1;
         private Bunifu.Framework.UI.BunifuMaterialTextbox bunifuMaterialTextbox2;
         private Bunifu.Framework.UI.BunifuMaterialTextbox txtAsunto;
+        private System.Windows.Forms.BindingSource estadosBindingSource;
+        private Guna.UI2.WinForms.Guna2DataGridView dtgEstados;
+        private Bunifu.Framework.UI.BunifuCustomLabel bunifuCustomLabel4;
+        private System.Windows.Forms.BindingSource tipoHabitacionesBindingSource;
+        private Guna.UI2.WinForms.Guna2DataGridView dtgTipoHabitaciones;
+        private Bunifu.Framework.UI.BunifuCustomLabel bunifuCustomLabel5;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn3;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn4;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn5;
+        private Guna.UI2.WinForms.Guna2Panel guna2Panel1;
     }
 }

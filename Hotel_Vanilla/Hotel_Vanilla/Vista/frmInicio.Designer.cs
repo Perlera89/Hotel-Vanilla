@@ -588,7 +588,7 @@ namespace Hotel_Vanilla.Vista
             this.Controls.Add(this.panelPrincipal);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.MinimumSize = new System.Drawing.Size(980, 650);
+            this.MinimumSize = new System.Drawing.Size(1020, 690);
             this.Name = "frmInicio";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Hotel Vanilla - Inicio";
