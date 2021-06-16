@@ -16,6 +16,7 @@ namespace Hotel_Vanilla.Vista
 {
     public partial class frmInicio : Form
     {
+        public static int IdUsuario { get; set; }
         public static string Usuario { get; set; }
         public static string Correo { get; set; }
         public static string Pass { get; set; }

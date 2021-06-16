@@ -152,7 +152,7 @@ namespace Hotel_Vanilla.Vista
                 reservas.fechaReserva = Convert.ToDateTime(txtFechaReserva.Text);
                 reservas.fechaCheckIn = Convert.ToDateTime(txtFechaCheckIn.Text);
                 reservas.fechaCheckOut = Convert.ToDateTime(txtCheckOut.Text);
-                reservas.numeroDias = Convert.ToInt32(txtDiasAlojamiento.Text);
+                reservas.numeroDias = Convert.ToInt32(txtDiasAlojamiento.Value);
                 if (txtPagoAdelantado.Text == "")
                 {
                     reservas.pagoAdelantado = Convert.ToDecimal(0.0000);

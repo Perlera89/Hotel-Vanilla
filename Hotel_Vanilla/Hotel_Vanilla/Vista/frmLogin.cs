@@ -100,26 +100,27 @@ namespace Hotel_Vanilla
 
             }
             else {
-                Usuarios usuarios;
+                Usuarios usuario;
                 CUsuarios cUsuarios = new CUsuarios();
                 usuariosBindingSource.EndEdit();
 
-                usuarios = (Usuarios)usuariosBindingSource.Current;
+                usuario = (Usuarios)usuariosBindingSource.Current;
 
-                usuariosBindingSource.DataSource = cUsuarios.CompararDatos(usuarios);
-                usuarios = (Usuarios)usuariosBindingSource.Current;
+                usuariosBindingSource.DataSource = cUsuarios.CompararDatos(usuario);
+                usuario = (Usuarios)usuariosBindingSource.Current;
 
-                if (usuarios != null)
+                if (usuario != null)
                 {
                     frmInicio inicio = new frmInicio();
                     frmMensajeExito.Confirmar("Inicio de sesion exitoso");
 
                     this.Hide();
                     inicio.Show();
-                    inicio.lblUsuario.Text = usuarios.nombre;
-                    frmInicio.Usuario = usuarios.nombre;
-                    frmInicio.Correo = usuarios.correo;
-                    frmInicio.Pass = usuarios.clave;
+                    frmInicio.IdUsuario = usuario.idUsuario;
+                    inicio.lblUsuario.Text = usuario.nombre;
+                    frmInicio.Usuario = usuario.nombre;
+                    frmInicio.Correo = usuario.correo;
+                    frmInicio.Pass = usuario.clave;
                 }
                 else
                 {

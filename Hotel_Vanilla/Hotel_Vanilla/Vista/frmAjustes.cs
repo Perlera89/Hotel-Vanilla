@@ -74,6 +74,7 @@ namespace Hotel_Vanilla.Vista
 
         private void frmAjustes_Load(object sender, EventArgs e)
         {
+            IdUsuario = frmInicio.IdUsuario;
             txtUsuario.Text = frmInicio.Usuario;
             txtPass.Text = frmInicio.Pass;
             txtEmail.Text = frmInicio.Correo;
@@ -165,6 +166,33 @@ namespace Hotel_Vanilla.Vista
                 frmMensajeExito.Confirmar("Se ha Eliminado correctamente");
                 CargarTipoHabitaciones();
             }
+        }
+
+        private void btnCambiarUsuario_Click(object sender, EventArgs e)
+        {
+            DialogResult resultado = new DialogResult();
+            frmMensajeAdvertencia advertencia = new frmMensajeAdvertencia("¿Estas seguro de cambiar la informacion?");
+            resultado = advertencia.ShowDialog();
+
+            if (resultado == DialogResult.OK)
+            {
+                Usuarios usuario = new Usuarios();
+                usuario.idUsuario = IdUsuario;
+                usuario.nombre = txtUsuario.Text;
+                usuario.correo = txtEmail.Text;
+                usuario.clave = txtPass.Text;
+                cUsuarios.ActualizarUsuario(usuario);
+
+                frmMensajeExito.Confirmar("Los datos se han actualizado correctamente");
+            }
+        }
+
+        private void bunifuCheckbox3_OnChange(object sender, EventArgs e)
+        {
+            if (chkClave.Checked == false)
+                txtPass.isPassword = true;
+            else
+                txtPass.isPassword = false;
         }
     }
 }

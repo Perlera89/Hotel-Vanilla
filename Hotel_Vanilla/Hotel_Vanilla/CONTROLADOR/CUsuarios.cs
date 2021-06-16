@@ -20,5 +20,10 @@ namespace Hotel_Vanilla.CONTROLADOR
         {
             return mUsuarios.CompararDatos(usu);
         }
+
+        public void ActualizarUsuario(Usuarios usuario)
+        {
+            mUsuarios.ActualizarUsuario(usuario);
+        }
     }
 }
