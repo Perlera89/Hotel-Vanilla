@@ -63,7 +63,7 @@ namespace Hotel_Vanilla.Vista
             {
                 CHabitaciones cHabitacion = new CHabitaciones();
                 Habitaciones habitacion = new Habitaciones();
-                habitacion.idHabitacion = Convert.ToInt32(idCaja.Text);
+                habitacion.idHabitacion = Convert.ToInt32(lblidHabitacion.Text);
                 habitacion.numeroHabitacion = numeroHabitacionTextBox.Text;
                 habitacion.tarifa = Convert.ToDecimal(tarifaTextBox.Text);
                 habitacion.idTipoHabitacion_FK = Convert.ToInt32(cbTipoHabitacion.SelectedValue.ToString());
@@ -119,7 +119,7 @@ namespace Hotel_Vanilla.Vista
         private void cargarCBTipoHabitacion()
         {
             CTipoHabitaciones cTipoHabitaciones = new CTipoHabitaciones();
-            cbTipoHabitacion.DataSource = cTipoHabitaciones.MostrarTipoHabitaciones();
+            cbTipoHabitacion.DataSource = cTipoHabitaciones.MostrarTipoCB();
             cbTipoHabitacion.DisplayMember = "Tipodehabitacion";
             cbTipoHabitacion.ValueMember = "idTipoHabitacion";
 

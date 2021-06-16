@@ -2,7 +2,7 @@ use VanillaBD
 ---------------------------------------------------------------------------------------
 --Mostrar Huesped
 go
-create procedure sp_Mostrarhuesped
+Alter procedure sp_Mostrarhuesped
 as 
 begin
 	SET NOCOUNT ON;
@@ -12,7 +12,7 @@ end
 GO
 ---------------------------------------------------------------------------------------
 --Insertar Huesped
-Create procedure sp_InsertarHuesped
+Alter procedure sp_InsertarHuesped
 @nombres varchar(50),
 @apellidos varchar(50),
 @direccion varchar(255),
@@ -45,6 +45,7 @@ create procedure sp_ActualizarHuesped
 @apellidos varchar(50),
 @direccion varchar(255),
 @telefono varchar(20),
+@Correo varchar(100),
 @idEstado_fk int
 as 
 begin
