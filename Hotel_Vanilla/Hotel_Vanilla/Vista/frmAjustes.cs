@@ -184,6 +184,7 @@ namespace Hotel_Vanilla.Vista
                 cUsuarios.ActualizarUsuario(usuario);
 
                 frmMensajeExito.Confirmar("Los datos se han actualizado correctamente");
+                inicio.lblUsuario.Text = usuario.nombre;
             }
         }
 

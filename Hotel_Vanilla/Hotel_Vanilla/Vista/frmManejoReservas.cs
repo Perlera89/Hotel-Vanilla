@@ -101,33 +101,22 @@ namespace Hotel_Vanilla.Vista
             {
                 //tomando los datos actuales de bindin y asignandolo al objeto de ManejoReservas
                 ManejoReservas reservas = (ManejoReservas)manejoReservasBindingSource.Current;
-                //ManejoReservas reservas = new ManejoReservas();
 
-                //reservas.fechaReserva = Convert.ToDateTime(txtFechaReserva.Text);
-                //reservas.fechaCheckIn = Convert.ToDateTime(txtFechaCheckIn.Text);
                 reservas.fechaCheckOut = null;
-                //reservas.numeroDias = Convert.ToInt32(txtDiasAlojamiento.Text);
                 if (txtPagoAdelantado.Text == "")
                 {
                     reservas.pagoAdelantado = Convert.ToDecimal(0.0000);
                 }
-                //else
-                //{
-                //    reservas.pagoAdelantado = Convert.ToDecimal(txtPagoAdelantado.Text);
-                //}
+
                 if (txtDescuento.Text == "")
                 {
                     reservas.descuento = Convert.ToDecimal(0.0000);
                 }
-                //else
-                //{
-                //    reservas.descuento = Convert.ToDecimal(txtDescuento.Text);
-                //}
+
                 reservas.total = 0;
                 reservas.idHabitacion_FK = Convert.ToInt32(cbHabitacion.SelectedValue.ToString());
                 reservas.idHuesped_FK = Convert.ToInt32(cbIdHuesped.SelectedValue.ToString());
 
-                //mandando el objeto reservas como parametro al metodo de agrregar reserva
                 Creservas.AgregarReserva(reservas);
 
                 frmMensajeExito.Confirmar("Se ha Ingresado correctamente");

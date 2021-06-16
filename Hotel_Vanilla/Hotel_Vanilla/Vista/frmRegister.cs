@@ -101,5 +101,38 @@ namespace Hotel_Vanilla.Vista
         {
             usuariosBindingSource.AddNew();
         }
+
+        private void claveTextBox_KeyDown(object sender, KeyEventArgs e)
+        {
+            if(e.KeyCode == Keys.Enter)
+            {
+                try
+                {
+                    if (nombreTextBox.Text.Equals("") || correoTextBox.Text.Equals("") || claveTextBox.Text.Equals(""))
+                    {
+                        frmMensajeAviso.Avisar("Debe llenar todos los campos");
+                    }
+                    else
+                    {
+                        Usuarios usu = new Usuarios();
+                        CUsuarios cUsu = new CUsuarios();
+
+                        usuariosBindingSource.EndEdit();
+                        usu = (Usuarios)usuariosBindingSource.Current;
+
+                        cUsu.AgregarUsuario(usu);
+                        frmMensajeExito.Confirmar("Usuario registrado");
+
+                        this.Close();
+
+                    }
+                }
+
+                catch (Exception ex)
+                {
+                    frmMensajeAviso.Avisar("Ya existe un usuario con ese correo");
+                }
+            }
+        }
     }
 }

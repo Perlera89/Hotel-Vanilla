@@ -135,7 +135,41 @@ namespace Hotel_Vanilla
         {
             if (e.KeyCode == Keys.Enter)
             {
-                inicio.Show();
+                if (txtCorreo.Text.Equals("") || txtPass.Text.Equals(""))
+                {
+                    frmMensajeAviso.Avisar("Debe llenar todos los campos");
+
+                }
+                else
+                {
+                    Usuarios usuario;
+                    CUsuarios cUsuarios = new CUsuarios();
+                    usuariosBindingSource.EndEdit();
+
+                    usuario = (Usuarios)usuariosBindingSource.Current;
+
+                    usuariosBindingSource.DataSource = cUsuarios.CompararDatos(usuario);
+                    usuario = (Usuarios)usuariosBindingSource.Current;
+
+                    if (usuario != null)
+                    {
+                        frmInicio inicio = new frmInicio();
+                        frmMensajeExito.Confirmar("Inicio de sesion exitoso");
+
+                        this.Hide();
+                        inicio.Show();
+                        frmInicio.IdUsuario = usuario.idUsuario;
+                        inicio.lblUsuario.Text = usuario.nombre;
+                        frmInicio.Usuario = usuario.nombre;
+                        frmInicio.Correo = usuario.correo;
+                        frmInicio.Pass = usuario.clave;
+                    }
+                    else
+                    {
+                        frmMensajeAviso.Avisar("Correo o contraseña erronea/o");
+                        usuariosBindingSource.AddNew();
+                    }
+                }
             }
         }
 

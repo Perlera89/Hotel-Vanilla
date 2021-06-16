@@ -126,6 +126,7 @@ namespace Hotel_Vanilla.Vista
             this.claveTextBox.Name = "claveTextBox";
             this.claveTextBox.Size = new System.Drawing.Size(275, 26);
             this.claveTextBox.TabIndex = 3;
+            this.claveTextBox.KeyDown += new System.Windows.Forms.KeyEventHandler(this.claveTextBox_KeyDown);
             // 
             // usuariosBindingSource
             // 

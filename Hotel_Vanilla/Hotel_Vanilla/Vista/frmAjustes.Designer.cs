@@ -585,6 +585,7 @@ namespace Hotel_Vanilla.Vista
             this.dtgTipoHabitaciones.AllowUserToResizeRows = false;
             dataGridViewCellStyle4.BackColor = System.Drawing.Color.White;
             this.dtgTipoHabitaciones.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle4;
+            this.dtgTipoHabitaciones.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.dtgTipoHabitaciones.AutoGenerateColumns = false;
             this.dtgTipoHabitaciones.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dtgTipoHabitaciones.BackgroundColor = System.Drawing.Color.White;
