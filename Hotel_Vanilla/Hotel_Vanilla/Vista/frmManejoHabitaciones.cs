@@ -39,7 +39,9 @@ namespace Hotel_Vanilla.Vista
             if (ValidarCampos() && btnGuardar.Text == "Guardar")
             {
                 CHabitaciones cHabitacion = new CHabitaciones();
-                Habitaciones habitacion =(Habitaciones) habitacionesBindingSource.Current;
+                Habitaciones habitacion = new Habitaciones();
+                habitacion.numeroHabitacion = numeroHabitacionTextBox.Text;
+                habitacion.tarifa = Convert.ToDecimal(tarifaTextBox.Text);
                 habitacion.idTipoHabitacion_FK = Convert.ToInt32(cbTipoHabitacion.SelectedValue.ToString());
                 cHabitacion.AgregarHabitacion(habitacion);
 
@@ -60,7 +62,8 @@ namespace Hotel_Vanilla.Vista
             else if (ValidarCampos() && btnGuardar.Text == "Actualizar")
             {
                 CHabitaciones cHabitacion = new CHabitaciones();
-                Habitaciones habitacion = (Habitaciones)habitacionesBindingSource.Current;
+                Habitaciones habitacion = new Habitaciones();
+                habitacion.idHabitacion = Convert.ToInt32(idCaja.Text);
                 habitacion.numeroHabitacion = numeroHabitacionTextBox.Text;
                 habitacion.tarifa = Convert.ToDecimal(tarifaTextBox.Text);
                 habitacion.idTipoHabitacion_FK = Convert.ToInt32(cbTipoHabitacion.SelectedValue.ToString());

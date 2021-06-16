@@ -123,7 +123,7 @@ namespace Hotel_Vanilla.Vista
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "frmMensajeExito";
-            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "frmMensajeExito";
             this.Load += new System.EventHandler(this.frmMensajeExito_Load);
             this.panel1.ResumeLayout(false);

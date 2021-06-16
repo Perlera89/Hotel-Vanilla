@@ -18,9 +18,9 @@ namespace Hotel_Vanilla.Vista
         public frmManejoReservas()
         {
             InitializeComponent();
-            //txtFechaReserva.Text = DateTime.Today.ToString();
-            //txtFechaCheckIn.Text = DateTime.Today.ToString();
-            //txtFechaCheckOut.Text = DateTime.Today.ToString();
+            txtFechaReserva.Text = DateTime.Today.ToString();
+            txtFechaCheckIn.Text = DateTime.Today.ToString();
+            txtCheckOut.Text = DateTime.Today.ToString();
         }
         CManejoReservas Creservas = new CManejoReservas();
         private void btnCerrar_Click(object sender, EventArgs e)
@@ -100,17 +100,29 @@ namespace Hotel_Vanilla.Vista
             if (ValidarCampos() && btnGuardar.Text.Equals("Guardar"))
             {
                 //tomando los datos actuales de bindin y asignandolo al objeto de ManejoReservas
-                ManejoReservas reservas = (ManejoReservas)manejoReservasBindingSource.Current;
+                ManejoReservas reservas = new ManejoReservas();
 
-                reservas.fechaCheckOut = null;
+                reservas.fechaReserva = Convert.ToDateTime(txtFechaReserva.Text);
+                reservas.fechaCheckIn = Convert.ToDateTime(txtFechaCheckIn.Text);
+                reservas.fechaCheckOut = Convert.ToDateTime(txtCheckOut.Text);
+                reservas.numeroDias = Convert.ToInt32(txtDiasAlojamiento.Value.ToString());
+
                 if (txtPagoAdelantado.Text == "")
                 {
                     reservas.pagoAdelantado = Convert.ToDecimal(0.0000);
+                }
+                else
+                {
+                    reservas.pagoAdelantado = Convert.ToDecimal(txtPagoAdelantado.Text);
                 }
 
                 if (txtDescuento.Text == "")
                 {
                     reservas.descuento = Convert.ToDecimal(0.0000);
+                }
+                else
+                {
+                    reservas.descuento = Convert.ToDecimal(txtDescuento.Text);
                 }
 
                 reservas.total = 0;
@@ -146,7 +158,6 @@ namespace Hotel_Vanilla.Vista
                 {
                     reservas.pagoAdelantado = Convert.ToDecimal(0.0000);
                 }
-
                 else
                 {
                     reservas.pagoAdelantado = Convert.ToDecimal(txtPagoAdelantado.Text);
@@ -156,7 +167,6 @@ namespace Hotel_Vanilla.Vista
                 {
                     reservas.descuento = Convert.ToDecimal(0.0000);
                 }
-
                 else
                 {
                     reservas.descuento = Convert.ToDecimal(txtDescuento.Text);
@@ -189,12 +199,13 @@ namespace Hotel_Vanilla.Vista
             txtFechaReserva.Text = DateTime.Now.ToString();
             txtFechaCheckIn.Text = DateTime.Now.ToString();
             txtCheckOut.Text = DateTime.Now.ToString();
-            txtDiasAlojamiento.Value = 1;
-            cbHabitacion.SelectedIndex = -1;
-            txtPagoAdelantado.Text = "";
-            txtDescuento.Text = "";
-            txtTotal.Text = "";
-            cbIdHuesped.SelectedIndex = -1;
+            txtDiasAlojamiento.ResetText();
+            cbHabitacion.ResetText();
+            txtPagoAdelantado.Clear();
+            txtDescuento.Clear();
+            txtTotal.Clear();
+            cbIdHuesped.ResetText();
+
             //manejoReservasBindingSource.DataSource = null;
         }
         private void CalcularTotal()

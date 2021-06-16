@@ -160,7 +160,7 @@ namespace Hotel_Vanilla.Vista
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "frmMensajeAdvertencia";
-            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "frmMensajeAdvertencia";
             this.Load += new System.EventHandler(this.frmMensajeAdvertencia_Load);
             this.panel1.ResumeLayout(false);
