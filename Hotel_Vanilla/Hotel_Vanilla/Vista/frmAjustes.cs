@@ -93,11 +93,11 @@ namespace Hotel_Vanilla.Vista
 
         private void btnGuardarEstado_Click(object sender, EventArgs e)
         {
-            CEstados estado = new CEstados();
-            Estados estados = new Estados();
+            CEstados cEstado = new CEstados();
+            Estados estado = new Estados();
 
-            estados.nombreEstado = txtEstado.Text;
-            estado.AgregarEstado(estados);
+            estado.nombreEstado = txtEstado.Text;
+            cEstado.AgregarEstado(estado);
 
             frmMensajeExito.Confirmar("Se ha Ingresado correctamente");
             CargarEstados();
@@ -105,12 +105,12 @@ namespace Hotel_Vanilla.Vista
 
         private void btnGuardarTipo_Click(object sender, EventArgs e)
         {
-            CTipoHabitaciones habitacion = new CTipoHabitaciones();
-            sp_MostrarTipoHabitaciones habitaciones = new sp_MostrarTipoHabitaciones();
+            CTipoHabitaciones cTipoHabitacion = new CTipoHabitaciones();
+            sp_MostrarTipoHabitaciones tipoHabitacion = new sp_MostrarTipoHabitaciones();
 
-            habitaciones.tipo = txtTipo.Text;
-            habitaciones.numeroOcupantes = Convert.ToInt32(txtOcupantes.Value);
-            habitacion.AgregarTipoHabitacion(habitaciones);
+            tipoHabitacion.tipo = txtTipo.Text;
+            tipoHabitacion.numeroOcupantes = Convert.ToInt32(txtOcupantes.Value);
+            cTipoHabitacion.AgregarTipoHabitacion(tipoHabitacion);
 
             frmMensajeExito.Confirmar("Se ha Ingresado correctamente");
             CargarTipoHabitaciones();
@@ -131,11 +131,11 @@ namespace Hotel_Vanilla.Vista
 
             else if (resultado == DialogResult.OK && dtgEstados.SelectedRows.Count > 0)
             {
-                CEstados estado = new CEstados();
-                Estados estados = new Estados();
+                CEstados cEstado = new CEstados();
+                Estados estado = new Estados();
 
-                estados.idEstado = Convert.ToInt32(dtgEstados.CurrentRow.Cells[0].Value.ToString());
-                estado.EliminarEstado(estados);
+                estado.idEstado = Convert.ToInt32(dtgEstados.CurrentRow.Cells[0].Value.ToString());
+                cEstado.EliminarEstado(estado);
 
                 frmMensajeExito.Confirmar("Se ha Eliminado correctamente");
                 CargarEstados();
@@ -156,11 +156,11 @@ namespace Hotel_Vanilla.Vista
 
             else if (resultado == DialogResult.OK && dtgTipoHabitaciones.SelectedRows.Count > 0)
             {
-                CTipoHabitaciones habitacion = new CTipoHabitaciones();
-                sp_MostrarTipoHabitaciones habitaciones = new sp_MostrarTipoHabitaciones();
+                CTipoHabitaciones cTipoHabitacion = new CTipoHabitaciones();
+                sp_MostrarTipoHabitaciones tipoHabitacion = new sp_MostrarTipoHabitaciones();
 
-                habitaciones.idTipoHabitacion = Convert.ToInt32(dtgTipoHabitaciones.CurrentRow.Cells[0].Value.ToString());
-                habitacion.EliminarTipoHabitacion(habitaciones);
+                tipoHabitacion.idTipoHabitacion = Convert.ToInt32(dtgTipoHabitaciones.CurrentRow.Cells[0].Value.ToString());
+                cTipoHabitacion.EliminarTipoHabitacion(tipoHabitacion);
 
                 frmMensajeExito.Confirmar("Se ha Eliminado correctamente");
                 CargarTipoHabitaciones();
